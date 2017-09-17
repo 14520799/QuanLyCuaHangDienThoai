@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentation
+namespace Presentation.Employee
 {
-    public partial class Form1 : Form
+    public partial class Employee_View : Form
     {
-        public Form1()
+        public Employee_View()
         {
             InitializeComponent();
         }

@@ -46,14 +46,206 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Admin\Admin_Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Admin\Admin_Info.Designer.cs">
+      <DependentUpon>Admin_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_Logo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Logo.Designer.cs">
+      <DependentUpon>Admin_Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_Pass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_Pass.Designer.cs">
+      <DependentUpon>Admin_Pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Customer_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer_Add.Designer.cs">
+      <DependentUpon>Customer_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Customer_Logo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer_Logo.Designer.cs">
+      <DependentUpon>Customer_Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\Customer_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer\Customer_View.Designer.cs">
+      <DependentUpon>Customer_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_Add.Designer.cs">
+      <DependentUpon>Employee_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_Logo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_Logo.Designer.cs">
+      <DependentUpon>Employee_Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\Employee_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\Employee_View.Designer.cs">
+      <DependentUpon>Employee_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Factory_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Factory_Add.Designer.cs">
+      <DependentUpon>Factory_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Factory\Factory_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Factory\Factory_View.Designer.cs">
+      <DependentUpon>Factory_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Buy_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Buy_Add.Designer.cs">
+      <DependentUpon>Invoice_Buy_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Buy_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Buy_View.Designer.cs">
+      <DependentUpon>Invoice_Buy_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Logo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Logo.Designer.cs">
+      <DependentUpon>Invoice_Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Sale_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Sale_Add.Designer.cs">
+      <DependentUpon>Invoice_Sale_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Sale_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice\Invoice_Sale_View.Designer.cs">
+      <DependentUpon>Invoice_Sale_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Main.Designer.cs">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Product_Add.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Product_Add.Designer.cs">
+      <DependentUpon>Product_Add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Product_Detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Product_Detail.Designer.cs">
+      <DependentUpon>Product_Detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Product_Logo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Product_Logo.Designer.cs">
+      <DependentUpon>Product_Logo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product\Product_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Product\Product_View.Designer.cs">
+      <DependentUpon>Product_View.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\Admin_Info.resx">
+      <DependentUpon>Admin_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_Logo.resx">
+      <DependentUpon>Admin_Logo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_Pass.resx">
+      <DependentUpon>Admin_Pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\Customer_Add.resx">
+      <DependentUpon>Customer_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\Customer_Logo.resx">
+      <DependentUpon>Customer_Logo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer\Customer_View.resx">
+      <DependentUpon>Customer_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Employee_Add.resx">
+      <DependentUpon>Employee_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Employee_Logo.resx">
+      <DependentUpon>Employee_Logo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\Employee_View.resx">
+      <DependentUpon>Employee_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Factory_Add.resx">
+      <DependentUpon>Factory_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Factory\Factory_View.resx">
+      <DependentUpon>Factory_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Main.resx">
+      <DependentUpon>Form_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice\Invoice_Buy_Add.resx">
+      <DependentUpon>Invoice_Buy_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice\Invoice_Buy_View.resx">
+      <DependentUpon>Invoice_Buy_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice\Invoice_Logo.resx">
+      <DependentUpon>Invoice_Logo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice\Invoice_Sale_Add.resx">
+      <DependentUpon>Invoice_Sale_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice\Invoice_Sale_View.resx">
+      <DependentUpon>Invoice_Sale_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\Product_Add.resx">
+      <DependentUpon>Product_Add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\Product_Detail.resx">
+      <DependentUpon>Product_Detail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\Product_Logo.resx">
+      <DependentUpon>Product_Logo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Product\Product_View.resx">
+      <DependentUpon>Product_View.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
