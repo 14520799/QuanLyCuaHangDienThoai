@@ -1,3 +1,5 @@
+
+
 --- Yêu cầu ---
 - Dùng mô hình 3 lớp Entity (https://youtu.be/FvsEUsRHrM8?list=WL)
 - Các hàm lấy danh sách, thêm, xóa, sửa, tìm kiếm,... phải viết trong project BusinessLogic. Mỗi table là 1 class
