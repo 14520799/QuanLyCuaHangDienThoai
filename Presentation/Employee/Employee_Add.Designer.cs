@@ -31,25 +31,25 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_Add));
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.cbYear = new System.Windows.Forms.ComboBox();
-            this.cbMonth = new System.Windows.Forms.ComboBox();
+            this.txtDiaChi = new System.Windows.Forms.RichTextBox();
+            this.cbNam = new System.Windows.Forms.ComboBox();
+            this.cbThang = new System.Windows.Forms.ComboBox();
             this.error = new System.Windows.Forms.Label();
             this.InfoBox = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbChucVu = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.cbPermission = new System.Windows.Forms.ComboBox();
+            this.cbQuyen = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cbDay = new System.Windows.Forms.ComboBox();
+            this.cbNgay = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNewPassword1 = new System.Windows.Forms.TextBox();
+            this.txtMatKhauMoi1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtPhone = new System.Windows.Forms.TextBox();
-            this.cbGender = new System.Windows.Forms.ComboBox();
-            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtSoDT = new System.Windows.Forms.TextBox();
+            this.cbGioiTinh = new System.Windows.Forms.ComboBox();
+            this.txtMatKhauMoi2 = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtTenNV = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -86,34 +86,36 @@
             this.label8.TabIndex = 56;
             this.label8.Text = "Quyền";
             // 
-            // richTextBox1
+            // txtDiaChi
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(171, 299);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(334, 80);
-            this.richTextBox1.TabIndex = 55;
-            this.richTextBox1.Text = "";
+            this.txtDiaChi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(171, 299);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(334, 80);
+            this.txtDiaChi.TabIndex = 55;
+            this.txtDiaChi.Text = "";
             // 
-            // cbYear
+            // cbNam
             // 
-            this.cbYear.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbYear.FormattingEnabled = true;
-            this.cbYear.Location = new System.Drawing.Point(324, 91);
-            this.cbYear.Margin = new System.Windows.Forms.Padding(4);
-            this.cbYear.Name = "cbYear";
-            this.cbYear.Size = new System.Drawing.Size(76, 27);
-            this.cbYear.TabIndex = 54;
+            this.cbNam.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNam.FormattingEnabled = true;
+            this.cbNam.Location = new System.Drawing.Point(324, 91);
+            this.cbNam.Margin = new System.Windows.Forms.Padding(4);
+            this.cbNam.Name = "cbNam";
+            this.cbNam.Size = new System.Drawing.Size(76, 27);
+            this.cbNam.TabIndex = 54;
+            this.cbNam.Text = "1970";
             // 
-            // cbMonth
+            // cbThang
             // 
-            this.cbMonth.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMonth.FormattingEnabled = true;
-            this.cbMonth.Location = new System.Drawing.Point(247, 91);
-            this.cbMonth.Margin = new System.Windows.Forms.Padding(4);
-            this.cbMonth.Name = "cbMonth";
-            this.cbMonth.Size = new System.Drawing.Size(51, 27);
-            this.cbMonth.TabIndex = 53;
+            this.cbThang.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbThang.FormattingEnabled = true;
+            this.cbThang.Location = new System.Drawing.Point(247, 91);
+            this.cbThang.Margin = new System.Windows.Forms.Padding(4);
+            this.cbThang.Name = "cbThang";
+            this.cbThang.Size = new System.Drawing.Size(51, 27);
+            this.cbThang.TabIndex = 53;
+            this.cbThang.Text = "1";
             // 
             // error
             // 
@@ -130,23 +132,23 @@
             // 
             this.InfoBox.Controls.Add(this.label7);
             this.InfoBox.Controls.Add(this.label8);
-            this.InfoBox.Controls.Add(this.comboBox1);
-            this.InfoBox.Controls.Add(this.richTextBox1);
-            this.InfoBox.Controls.Add(this.cbYear);
+            this.InfoBox.Controls.Add(this.cbChucVu);
+            this.InfoBox.Controls.Add(this.txtDiaChi);
+            this.InfoBox.Controls.Add(this.cbNam);
             this.InfoBox.Controls.Add(this.label10);
-            this.InfoBox.Controls.Add(this.cbMonth);
-            this.InfoBox.Controls.Add(this.cbPermission);
+            this.InfoBox.Controls.Add(this.cbThang);
+            this.InfoBox.Controls.Add(this.cbQuyen);
             this.InfoBox.Controls.Add(this.label11);
-            this.InfoBox.Controls.Add(this.cbDay);
+            this.InfoBox.Controls.Add(this.cbNgay);
             this.InfoBox.Controls.Add(this.label4);
             this.InfoBox.Controls.Add(this.label3);
-            this.InfoBox.Controls.Add(this.txtNewPassword1);
+            this.InfoBox.Controls.Add(this.txtMatKhauMoi1);
             this.InfoBox.Controls.Add(this.label2);
-            this.InfoBox.Controls.Add(this.txtPhone);
-            this.InfoBox.Controls.Add(this.cbGender);
-            this.InfoBox.Controls.Add(this.txtAddress);
+            this.InfoBox.Controls.Add(this.txtSoDT);
+            this.InfoBox.Controls.Add(this.cbGioiTinh);
+            this.InfoBox.Controls.Add(this.txtMatKhauMoi2);
             this.InfoBox.Controls.Add(this.txtEmail);
-            this.InfoBox.Controls.Add(this.txtName);
+            this.InfoBox.Controls.Add(this.txtTenNV);
             this.InfoBox.Controls.Add(this.label6);
             this.InfoBox.Controls.Add(this.label5);
             this.InfoBox.Controls.Add(this.label1);
@@ -161,15 +163,21 @@
             this.InfoBox.TabStop = false;
             this.InfoBox.Text = "Thông tin nhân viên";
             // 
-            // comboBox1
+            // cbChucVu
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(691, 91);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(219, 27);
-            this.comboBox1.TabIndex = 57;
+            this.cbChucVu.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbChucVu.FormattingEnabled = true;
+            this.cbChucVu.Items.AddRange(new object[] {
+            "Quản lý nhân viên",
+            "Quản lý khách hàng",
+            "Quản lý sản phẩm",
+            "Quản lý hóa đơn"});
+            this.cbChucVu.Location = new System.Drawing.Point(691, 91);
+            this.cbChucVu.Margin = new System.Windows.Forms.Padding(4);
+            this.cbChucVu.Name = "cbChucVu";
+            this.cbChucVu.Size = new System.Drawing.Size(219, 27);
+            this.cbChucVu.TabIndex = 57;
+            this.cbChucVu.Text = "Quản lý nhân viên";
             // 
             // label10
             // 
@@ -184,15 +192,19 @@
             this.label10.TabIndex = 33;
             this.label10.Text = "Chức vụ";
             // 
-            // cbPermission
+            // cbQuyen
             // 
-            this.cbPermission.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbPermission.FormattingEnabled = true;
-            this.cbPermission.Location = new System.Drawing.Point(691, 40);
-            this.cbPermission.Margin = new System.Windows.Forms.Padding(4);
-            this.cbPermission.Name = "cbPermission";
-            this.cbPermission.Size = new System.Drawing.Size(120, 27);
-            this.cbPermission.TabIndex = 34;
+            this.cbQuyen.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbQuyen.FormattingEnabled = true;
+            this.cbQuyen.Items.AddRange(new object[] {
+            "Quản trị",
+            "Nhân viên"});
+            this.cbQuyen.Location = new System.Drawing.Point(691, 40);
+            this.cbQuyen.Margin = new System.Windows.Forms.Padding(4);
+            this.cbQuyen.Name = "cbQuyen";
+            this.cbQuyen.Size = new System.Drawing.Size(120, 27);
+            this.cbQuyen.TabIndex = 34;
+            this.cbQuyen.Text = "Quản trị";
             // 
             // label11
             // 
@@ -207,15 +219,16 @@
             this.label11.TabIndex = 36;
             this.label11.Text = "Nhập lại mật khẩu mới";
             // 
-            // cbDay
+            // cbNgay
             // 
-            this.cbDay.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbDay.FormattingEnabled = true;
-            this.cbDay.Location = new System.Drawing.Point(171, 91);
-            this.cbDay.Margin = new System.Windows.Forms.Padding(4);
-            this.cbDay.Name = "cbDay";
-            this.cbDay.Size = new System.Drawing.Size(51, 27);
-            this.cbDay.TabIndex = 52;
+            this.cbNgay.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbNgay.FormattingEnabled = true;
+            this.cbNgay.Location = new System.Drawing.Point(171, 91);
+            this.cbNgay.Margin = new System.Windows.Forms.Padding(4);
+            this.cbNgay.Name = "cbNgay";
+            this.cbNgay.Size = new System.Drawing.Size(51, 27);
+            this.cbNgay.TabIndex = 52;
+            this.cbNgay.Text = "1";
             // 
             // label4
             // 
@@ -243,17 +256,17 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "Số ĐT";
             // 
-            // txtNewPassword1
+            // txtMatKhauMoi1
             // 
-            this.txtNewPassword1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNewPassword1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNewPassword1.Location = new System.Drawing.Point(831, 245);
-            this.txtNewPassword1.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNewPassword1.Name = "txtNewPassword1";
-            this.txtNewPassword1.PasswordChar = '*';
-            this.txtNewPassword1.Size = new System.Drawing.Size(219, 27);
-            this.txtNewPassword1.TabIndex = 35;
-            this.txtNewPassword1.UseSystemPasswordChar = true;
+            this.txtMatKhauMoi1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMatKhauMoi1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauMoi1.Location = new System.Drawing.Point(831, 245);
+            this.txtMatKhauMoi1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMatKhauMoi1.Name = "txtMatKhauMoi1";
+            this.txtMatKhauMoi1.PasswordChar = '*';
+            this.txtMatKhauMoi1.Size = new System.Drawing.Size(219, 27);
+            this.txtMatKhauMoi1.TabIndex = 35;
+            this.txtMatKhauMoi1.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -268,39 +281,39 @@
             this.label2.TabIndex = 31;
             this.label2.Text = "Ngày sinh";
             // 
-            // txtPhone
+            // txtSoDT
             // 
-            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtPhone.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(171, 193);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(334, 27);
-            this.txtPhone.TabIndex = 38;
+            this.txtSoDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoDT.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDT.Location = new System.Drawing.Point(171, 193);
+            this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.Size = new System.Drawing.Size(334, 27);
+            this.txtSoDT.TabIndex = 38;
             // 
-            // cbGender
+            // cbGioiTinh
             // 
-            this.cbGender.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGender.FormattingEnabled = true;
-            this.cbGender.Items.AddRange(new object[] {
+            this.cbGioiTinh.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cbGender.Location = new System.Drawing.Point(171, 142);
-            this.cbGender.Margin = new System.Windows.Forms.Padding(4);
-            this.cbGender.Name = "cbGender";
-            this.cbGender.Size = new System.Drawing.Size(100, 27);
-            this.cbGender.TabIndex = 43;
+            this.cbGioiTinh.Location = new System.Drawing.Point(171, 142);
+            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(100, 27);
+            this.cbGioiTinh.TabIndex = 43;
             // 
-            // txtAddress
+            // txtMatKhauMoi2
             // 
-            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtAddress.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(831, 294);
-            this.txtAddress.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(219, 27);
-            this.txtAddress.TabIndex = 41;
-            this.txtAddress.UseSystemPasswordChar = true;
+            this.txtMatKhauMoi2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMatKhauMoi2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauMoi2.Location = new System.Drawing.Point(831, 294);
+            this.txtMatKhauMoi2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMatKhauMoi2.Name = "txtMatKhauMoi2";
+            this.txtMatKhauMoi2.Size = new System.Drawing.Size(219, 27);
+            this.txtMatKhauMoi2.TabIndex = 41;
+            this.txtMatKhauMoi2.UseSystemPasswordChar = true;
             // 
             // txtEmail
             // 
@@ -312,15 +325,15 @@
             this.txtEmail.Size = new System.Drawing.Size(334, 27);
             this.txtEmail.TabIndex = 39;
             // 
-            // txtName
+            // txtTenNV
             // 
-            this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtName.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(171, 41);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(334, 27);
-            this.txtName.TabIndex = 37;
+            this.txtTenNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenNV.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenNV.Location = new System.Drawing.Point(171, 41);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenNV.Name = "txtTenNV";
+            this.txtTenNV.Size = new System.Drawing.Size(334, 27);
+            this.txtTenNV.TabIndex = 37;
             // 
             // label6
             // 
@@ -371,6 +384,7 @@
             this.btnAdd.Size = new System.Drawing.Size(133, 43);
             this.btnAdd.TabIndex = 62;
             this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnClear
             // 
@@ -396,6 +410,7 @@
             this.Controls.Add(this.btnClear);
             this.Name = "Employee_Add";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.Employee_Add_Load);
             this.InfoBox.ResumeLayout(false);
             this.InfoBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
@@ -409,25 +424,25 @@
 
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox cbYear;
-        private System.Windows.Forms.ComboBox cbMonth;
+        private System.Windows.Forms.RichTextBox txtDiaChi;
+        private System.Windows.Forms.ComboBox cbNam;
+        private System.Windows.Forms.ComboBox cbThang;
         private System.Windows.Forms.Label error;
         private System.Windows.Forms.GroupBox InfoBox;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbChucVu;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox cbPermission;
+        private System.Windows.Forms.ComboBox cbQuyen;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.ComboBox cbDay;
+        private System.Windows.Forms.ComboBox cbNgay;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNewPassword1;
+        private System.Windows.Forms.TextBox txtMatKhauMoi1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtPhone;
-        private System.Windows.Forms.ComboBox cbGender;
-        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtSoDT;
+        private System.Windows.Forms.ComboBox cbGioiTinh;
+        private System.Windows.Forms.TextBox txtMatKhauMoi2;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtTenNV;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label1;

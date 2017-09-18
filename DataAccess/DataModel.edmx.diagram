@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d477fd59ff124aa5a2dbc02095a63bb0" Name="Diagram1">
+        <EntityTypeShape EntityType="DataModel.ChiTietBan" Width="1.5" PointX="10.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.ChiTietMua" Width="1.5" PointX="8.5" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.HangSanXuat" Width="1.5" PointX="0.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.HoaDonBan" Width="1.5" PointX="8.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.HoaDonMua" Width="1.5" PointX="2.5" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.KhachHang" Width="1.5" PointX="6.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.LoaiSanPham" Width="1.5" PointX="4.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.NhanVien" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataModel.SanPham" Width="1.5" PointX="4.5" PointY="4.75" IsExpanded="true" />
+        <AssociationConnector Association="DataModel.FK_ChiTietBan_HoaDonBan" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_ChiTietBan_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_ChiTietMua_HoaDonMua" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_ChiTietMua_SanPham" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_HoaDonMua_HangSanXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_SanPham_HangSanXuat" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_HoaDonBan_KhachHang" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_HoaDonBan_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_HoaDonMua_NhanVien" ManuallyRouted="false" />
+        <AssociationConnector Association="DataModel.FK_SanPham_LoaiSanPham" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

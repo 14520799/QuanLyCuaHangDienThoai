@@ -77,7 +77,7 @@
             this.Acountbox = new System.Windows.Forms.GroupBox();
             this.cbType = new System.Windows.Forms.ComboBox();
             this.DetailBox = new System.Windows.Forms.GroupBox();
-            this.dgvTatCaNV = new System.Windows.Forms.DataGridView();
+            this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,7 +109,7 @@
             this.InfoBox.SuspendLayout();
             this.Acountbox.SuspendLayout();
             this.DetailBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTatCaNV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
@@ -538,7 +538,7 @@
             // 
             // DetailBox
             // 
-            this.DetailBox.Controls.Add(this.dgvTatCaNV);
+            this.DetailBox.Controls.Add(this.dgvDanhSach);
             this.DetailBox.Controls.Add(this.label14);
             this.DetailBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailBox.ForeColor = System.Drawing.Color.Red;
@@ -551,12 +551,12 @@
             this.DetailBox.TabStop = false;
             this.DetailBox.Text = "Tất cả nhân viên";
             // 
-            // dgvTatCaNV
+            // dgvDanhSach
             // 
-            this.dgvTatCaNV.AllowUserToAddRows = false;
-            this.dgvTatCaNV.AllowUserToDeleteRows = false;
-            this.dgvTatCaNV.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dgvTatCaNV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn4,
@@ -566,20 +566,18 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn10,
             this.ChucVu});
-            this.dgvTatCaNV.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvTatCaNV.Location = new System.Drawing.Point(16, 28);
-            this.dgvTatCaNV.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvTatCaNV.MultiSelect = false;
-            this.dgvTatCaNV.Name = "dgvTatCaNV";
-            this.dgvTatCaNV.ReadOnly = true;
-            this.dgvTatCaNV.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvTatCaNV.RowHeadersVisible = false;
-            this.dgvTatCaNV.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvDanhSach.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvDanhSach.Location = new System.Drawing.Point(16, 28);
+            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDanhSach.MultiSelect = false;
+            this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.ReadOnly = true;
+            this.dgvDanhSach.RowHeadersVisible = false;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.dgvTatCaNV.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvTatCaNV.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTatCaNV.Size = new System.Drawing.Size(1072, 253);
-            this.dgvTatCaNV.TabIndex = 11;
+            this.dgvDanhSach.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDanhSach.Size = new System.Drawing.Size(1072, 253);
+            this.dgvDanhSach.TabIndex = 11;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -593,7 +591,7 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "HoTen";
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenNV";
             this.dataGridViewTextBoxColumn2.HeaderText = "Họ Tên";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
@@ -779,6 +777,7 @@
             this.btnSearch.Size = new System.Drawing.Size(91, 35);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtSearch
             // 
@@ -855,13 +854,14 @@
             this.Controls.Add(this.SearchBox);
             this.Name = "Employee_View";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.Employee_View_Load);
             this.InfoBox.ResumeLayout(false);
             this.InfoBox.PerformLayout();
             this.Acountbox.ResumeLayout(false);
             this.Acountbox.PerformLayout();
             this.DetailBox.ResumeLayout(false);
             this.DetailBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTatCaNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
@@ -914,16 +914,7 @@
         private System.Windows.Forms.GroupBox Acountbox;
         private System.Windows.Forms.ComboBox cbType;
         private System.Windows.Forms.GroupBox DetailBox;
-        private System.Windows.Forms.DataGridView dgvTatCaNV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ChucVu;
+        private System.Windows.Forms.DataGridView dgvDanhSach;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.PictureBox btnDelete;
         private System.Windows.Forms.PictureBox btnCancel;
@@ -943,5 +934,14 @@
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;
         private System.Windows.Forms.GroupBox SearchBox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ChucVu;
     }
 }

@@ -2,3 +2,13 @@ C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Busin
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.pdb
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.pdb
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Function.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Function.pdb

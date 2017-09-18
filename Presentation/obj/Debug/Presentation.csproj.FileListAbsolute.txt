@@ -27,3 +27,14 @@ C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presen
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.csproj.GenerateResource.Cache
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.exe
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.pdb
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\BusinessLogic.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\DataAccess.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\EntityFramework.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\BusinessLogic.pdb
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\DataAccess.pdb
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\EntityFramework.xml
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\Function.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\Function.pdb
