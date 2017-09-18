@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Presentation
+namespace Presentation.Admin
 {
-    public partial class Login : Form
+    public partial class Admin_Login : Form
     {
-        public Login()
+        public Admin_Login()
         {
             InitializeComponent();
         }

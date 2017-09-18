@@ -1,0 +1,4 @@
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.pdb

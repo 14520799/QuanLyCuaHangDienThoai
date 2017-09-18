@@ -1,0 +1,4 @@
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.pdb
