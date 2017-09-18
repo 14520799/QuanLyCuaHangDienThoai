@@ -24,7 +24,7 @@ namespace Presentation.Employee
         {
             for(int i = 1; i <= 31; i++)
             {
-                cbNgay.Items.Add(i);
+                cbNgay.Items.Add(i);    // Chưa bổ sung ràng buộc số ngày mỗi tháng
             }
 
             for (int i = 1; i <= 12; i++)
