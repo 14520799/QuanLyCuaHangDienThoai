@@ -9,8 +9,8 @@
 
 
 --- Danh sách task ---
-1. Thêm mới nhân viên + Load danh sách tất cả nhân viên
-2. Sửa thông tin nhân viên + Xóa nhân viên
+1. Thêm mới nhân viên + Load danh sách tất cả nhân viên -> Quân
+2. Sửa thông tin nhân viên + Xóa nhân viên -> Phúc
 3. Tìm kiếm nhân viên (Theo tên, quyền, chức vụ)
 4. Code form đăng nhập dành cho QTV + Load thông tin QTV
 5. Sửa thông tin QTV + Đổi mật khẩu QTV
