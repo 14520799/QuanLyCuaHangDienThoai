@@ -38,3 +38,6 @@ C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\Entity
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\Function.dll
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\Presentation\bin\Debug\Function.pdb
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\bin\Debug\Presentation.exe.config
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.exe
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.pdb

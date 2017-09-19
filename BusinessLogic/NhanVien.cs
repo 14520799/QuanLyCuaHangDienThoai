@@ -10,7 +10,7 @@ namespace BusinessLogic
 {
     public class NhanVien
     {
-        DataModelEntities model;
+        DataModelEntities model; // Thêm code ABC gì đó -> Save
 
         public NhanVien()
         {
