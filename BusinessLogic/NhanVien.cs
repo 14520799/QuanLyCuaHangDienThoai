@@ -32,5 +32,7 @@ namespace BusinessLogic
             model.NhanViens.Add(nv);
             model.SaveChanges();
         }
+
+
     }
 }

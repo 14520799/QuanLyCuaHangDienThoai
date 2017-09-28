@@ -7,3 +7,13 @@ C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFr
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.xml
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.pdb

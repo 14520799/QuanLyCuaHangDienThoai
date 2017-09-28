@@ -12,3 +12,17 @@ C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Entit
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Function.dll
 C:\Users\Admin\Google Drive\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Function.pdb
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.dll.config
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.pdb
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\DataAccess.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Function.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\DataAccess.pdb
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Function.pdb
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.dll
+C:\Users\Kai\Source\Repos\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.pdb
