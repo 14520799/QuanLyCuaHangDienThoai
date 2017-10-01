@@ -12,9 +12,11 @@ namespace Presentation
 {
     public partial class Form_Main : Form
     {
-        public Form_Main()
+        public Form_Main(string MaNV, string TenNV)
         {
             InitializeComponent();
+            lblMaNV.Text += MaNV.ToUpper();
+            lblTenNV.Text += TenNV + " !";
         }
 
         private void Form_Main_Load(object sender, EventArgs e)
@@ -361,9 +363,17 @@ namespace Presentation
             menu_invoice_buy_view.ForeColor = Color.White;
         }
 
+        // Đóng tất cả các form
         private void Form_Main_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        // Click logout
+        private void button_logout_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Admin.Admin_Login().Show();
         }
     }
 }

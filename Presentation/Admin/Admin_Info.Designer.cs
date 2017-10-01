@@ -41,9 +41,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.info = new System.Windows.Forms.GroupBox();
+            this.txtHoTen = new System.Windows.Forms.TextBox();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             this.info.SuspendLayout();
@@ -64,7 +64,7 @@
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnCancel.Location = new System.Drawing.Point(301, 455);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(133, 43);
             this.btnCancel.TabIndex = 28;
@@ -76,7 +76,7 @@
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnUpdate.Location = new System.Drawing.Point(144, 455);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(133, 43);
             this.btnUpdate.TabIndex = 27;
@@ -89,7 +89,7 @@
             this.txtSoDT.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDT.ForeColor = System.Drawing.Color.Black;
             this.txtSoDT.Location = new System.Drawing.Point(171, 188);
-            this.txtSoDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(225, 27);
             this.txtSoDT.TabIndex = 9;
@@ -113,7 +113,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.Black;
             this.txtEmail.Location = new System.Drawing.Point(171, 238);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(329, 27);
             this.txtEmail.TabIndex = 8;
@@ -200,35 +200,13 @@
             this.info.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info.ForeColor = System.Drawing.Color.Red;
             this.info.Location = new System.Drawing.Point(13, 14);
-            this.info.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.info.Margin = new System.Windows.Forms.Padding(4);
             this.info.Name = "info";
-            this.info.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.info.Padding = new System.Windows.Forms.Padding(4);
             this.info.Size = new System.Drawing.Size(551, 415);
             this.info.TabIndex = 29;
             this.info.TabStop = false;
             this.info.Text = "Thông tin quản trị viên";
-            // 
-            // dtNgaySinh
-            // 
-            this.dtNgaySinh.Location = new System.Drawing.Point(171, 89);
-            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dtNgaySinh.Name = "dtNgaySinh";
-            this.dtNgaySinh.Size = new System.Drawing.Size(328, 27);
-            this.dtNgaySinh.TabIndex = 69;
-            // 
-            // cbGioiTinh
-            // 
-            this.cbGioiTinh.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGioiTinh.ForeColor = System.Drawing.Color.Black;
-            this.cbGioiTinh.FormattingEnabled = true;
-            this.cbGioiTinh.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(171, 140);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(100, 27);
-            this.cbGioiTinh.TabIndex = 14;
             // 
             // txtHoTen
             // 
@@ -240,6 +218,29 @@
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Size = new System.Drawing.Size(225, 27);
             this.txtHoTen.TabIndex = 70;
+            // 
+            // dtNgaySinh
+            // 
+            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgaySinh.Location = new System.Drawing.Point(171, 89);
+            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(4);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(225, 27);
+            this.dtNgaySinh.TabIndex = 69;
+            // 
+            // cbGioiTinh
+            // 
+            this.cbGioiTinh.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGioiTinh.ForeColor = System.Drawing.Color.Black;
+            this.cbGioiTinh.FormattingEnabled = true;
+            this.cbGioiTinh.Items.AddRange(new object[] {
+            "Male",
+            "Female"});
+            this.cbGioiTinh.Location = new System.Drawing.Point(171, 140);
+            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
+            this.cbGioiTinh.Name = "cbGioiTinh";
+            this.cbGioiTinh.Size = new System.Drawing.Size(100, 27);
+            this.cbGioiTinh.TabIndex = 14;
             // 
             // Admin_Info
             // 

@@ -12,7 +12,7 @@ namespace BusinessLogic
     public class NhanVien
     {
         DataModel model;
-        
+
         public NhanVien()
         {
             model = new DataModel();
@@ -42,7 +42,7 @@ namespace BusinessLogic
                 model.SaveChanges();
             }
             catch {
-                
+
             }
         }
 
@@ -50,6 +50,28 @@ namespace BusinessLogic
         public List<DataAccess.NhanVien> timTheoTen(string TenNV)
         {
             return model.NhanViens.Where(nv => nv.TenNV.Contains(TenNV)).ToList();
+        }
+
+        // Tìm nhân viên theo quyền
+        public List<DataAccess.NhanVien> timTheoQuyen(string Quyen)
+        {
+            return model.NhanViens.Where(nv => nv.Quyen.Contains(Quyen)).ToList();
+        }
+
+        // Tìm nhân viên theo chức vụ
+        public List<DataAccess.NhanVien> timTheoChucVu(string ChucVu)
+        {
+            return model.NhanViens.Where(nv => nv.ChucVu.Contains(ChucVu)).ToList();
+        }
+
+        // Kiểm tra đăng nhập (QTV)
+        public string dangNhap(string MaNV, string MatKhau)
+        {
+            DataAccess.NhanVien nv = model.NhanViens.Find(MaNV);
+
+            if (nv == null || nv.Quyen != "Quản trị" || nv.MatKhau != MatKhau)
+                return string.Empty;
+            return nv.TenNV;
         }
     }
 }

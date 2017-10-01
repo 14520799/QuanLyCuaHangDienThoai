@@ -34,7 +34,7 @@
             this.btnCancel = new System.Windows.Forms.PictureBox();
             this.btnConfirm = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTaiKhoan = new System.Windows.Forms.TextBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtMatKhau = new System.Windows.Forms.TextBox();
             this.lgl3 = new System.Windows.Forms.Label();
             this.lgl2 = new System.Windows.Forms.Label();
@@ -104,15 +104,15 @@
             this.label1.TabIndex = 100;
             this.label1.Text = "Chỉ dành cho quản trị viên";
             // 
-            // txtTaiKhoan
+            // txtMaNV
             // 
-            this.txtTaiKhoan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 12.5F);
-            this.txtTaiKhoan.Location = new System.Drawing.Point(211, 87);
-            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(278, 31);
-            this.txtTaiKhoan.TabIndex = 96;
+            this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12.5F);
+            this.txtMaNV.Location = new System.Drawing.Point(211, 87);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.Size = new System.Drawing.Size(278, 31);
+            this.txtMaNV.TabIndex = 96;
             // 
             // txtMatKhau
             // 
@@ -124,6 +124,7 @@
             this.txtMatKhau.Size = new System.Drawing.Size(278, 31);
             this.txtMatKhau.TabIndex = 97;
             this.txtMatKhau.UseSystemPasswordChar = true;
+            this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
             // 
             // lgl3
             // 
@@ -166,7 +167,7 @@
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtTaiKhoan);
+            this.Controls.Add(this.txtMaNV);
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.lgl3);
             this.Controls.Add(this.lgl2);
@@ -190,7 +191,7 @@
         private System.Windows.Forms.PictureBox btnCancel;
         private System.Windows.Forms.PictureBox btnConfirm;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTaiKhoan;
+        private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.TextBox txtMatKhau;
         private System.Windows.Forms.Label lgl3;
         private System.Windows.Forms.Label lgl2;

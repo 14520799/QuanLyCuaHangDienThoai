@@ -58,7 +58,7 @@
             this.panel_logout = new System.Windows.Forms.Panel();
             this.button_logout = new System.Windows.Forms.PictureBox();
             this.label_logout = new System.Windows.Forms.Label();
-            this.label_userlogin = new System.Windows.Forms.Label();
+            this.lblMaNV = new System.Windows.Forms.Label();
             this.panel_home = new System.Windows.Forms.MenuStrip();
             this.menu_admin_info = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_admin_password = new System.Windows.Forms.ToolStripMenuItem();
@@ -69,6 +69,7 @@
             this.picture_welcome = new System.Windows.Forms.PictureBox();
             this.label_welcome = new System.Windows.Forms.Label();
             this.panel_below = new System.Windows.Forms.Panel();
+            this.lblTenNV = new System.Windows.Forms.Label();
             this.menu_bar.SuspendLayout();
             this.panel_left.SuspendLayout();
             this.panel_invoice.SuspendLayout();
@@ -412,7 +413,7 @@
             // 
             this.panel_logout.Controls.Add(this.button_logout);
             this.panel_logout.Controls.Add(this.label_logout);
-            this.panel_logout.Controls.Add(this.label_userlogin);
+            this.panel_logout.Controls.Add(this.lblMaNV);
             this.panel_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel_logout.Location = new System.Drawing.Point(0, 540);
             this.panel_logout.Margin = new System.Windows.Forms.Padding(4);
@@ -430,30 +431,30 @@
             this.button_logout.Size = new System.Drawing.Size(50, 47);
             this.button_logout.TabIndex = 2;
             this.button_logout.TabStop = false;
+            this.button_logout.Click += new System.EventHandler(this.button_logout_Click);
             // 
             // label_logout
             // 
             this.label_logout.AutoSize = true;
-            this.label_logout.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.label_logout.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_logout.ForeColor = System.Drawing.Color.White;
-            this.label_logout.Location = new System.Drawing.Point(71, 63);
+            this.label_logout.Location = new System.Drawing.Point(75, 85);
             this.label_logout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_logout.Name = "label_logout";
-            this.label_logout.Size = new System.Drawing.Size(77, 24);
+            this.label_logout.Size = new System.Drawing.Size(96, 29);
             this.label_logout.TabIndex = 3;
             this.label_logout.Text = "Logout";
             // 
-            // label_userlogin
+            // lblMaNV
             // 
-            this.label_userlogin.AutoSize = true;
-            this.label_userlogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
-            this.label_userlogin.ForeColor = System.Drawing.Color.White;
-            this.label_userlogin.Location = new System.Drawing.Point(71, 87);
-            this.label_userlogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label_userlogin.Name = "label_userlogin";
-            this.label_userlogin.Size = new System.Drawing.Size(73, 24);
-            this.label_userlogin.TabIndex = 1;
-            this.label_userlogin.Text = "User : ";
+            this.lblMaNV.AutoSize = true;
+            this.lblMaNV.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaNV.ForeColor = System.Drawing.Color.White;
+            this.lblMaNV.Location = new System.Drawing.Point(75, 59);
+            this.lblMaNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblMaNV.Name = "lblMaNV";
+            this.lblMaNV.Size = new System.Drawing.Size(0, 29);
+            this.lblMaNV.TabIndex = 1;
             // 
             // panel_home
             // 
@@ -539,6 +540,7 @@
             // panel_content
             // 
             this.panel_content.AutoScroll = true;
+            this.panel_content.Controls.Add(this.lblTenNV);
             this.panel_content.Controls.Add(this.picture_welcome);
             this.panel_content.Controls.Add(this.label_welcome);
             this.panel_content.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -579,6 +581,17 @@
             this.panel_below.Name = "panel_below";
             this.panel_below.Size = new System.Drawing.Size(1027, 12);
             this.panel_below.TabIndex = 12;
+            // 
+            // lblTenNV
+            // 
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNV.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblTenNV.Location = new System.Drawing.Point(41, 28);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(143, 35);
+            this.lblTenNV.TabIndex = 5;
+            this.lblTenNV.Text = "Welcome, ";
             // 
             // Form_Main
             // 
@@ -655,7 +668,7 @@
         private System.Windows.Forms.Panel panel_logout;
         private System.Windows.Forms.PictureBox button_logout;
         private System.Windows.Forms.Label label_logout;
-        private System.Windows.Forms.Label label_userlogin;
+        private System.Windows.Forms.Label lblMaNV;
         private System.Windows.Forms.MenuStrip panel_home;
         private System.Windows.Forms.ToolStripMenuItem menu_admin_info;
         private System.Windows.Forms.ToolStripMenuItem menu_admin_password;
@@ -666,5 +679,6 @@
         private System.Windows.Forms.PictureBox picture_welcome;
         private System.Windows.Forms.Label label_welcome;
         private System.Windows.Forms.Panel panel_below;
+        private System.Windows.Forms.Label lblTenNV;
     }
 }

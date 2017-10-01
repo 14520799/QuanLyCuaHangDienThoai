@@ -33,7 +33,15 @@ namespace Presentation.Employee
         // Tìm nhân viên
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvNhanVien.DataSource = nv.timTheoTen(txtTimKiem.Text);
+            if(cbTheoLoai.Text == "Tên NV")
+                dgvNhanVien.DataSource = nv.timTheoTen(txtTimKiem.Text);
+            else if(cbTheoLoai.Text == "Quyen")
+                dgvNhanVien.DataSource = nv.timTheoQuyen(txtTimKiem.Text);
+            else
+                dgvNhanVien.DataSource = nv.timTheoChucVu(txtTimKiem.Text);
+
+            if (dgvNhanVien.RowCount == 0)
+                MessageBox.Show("Không kết quả phù hợp !");
         }
 
         // Nạp thông tin nhân viên vào các TextBox khi click DataGridView
