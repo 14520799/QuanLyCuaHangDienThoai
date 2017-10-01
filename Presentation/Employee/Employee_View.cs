@@ -92,5 +92,20 @@ namespace Presentation.Employee
 
             }
         }
+
+        // Xóa nhân viên
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                nv.xoa(MaNV);
+                dgvNhanVien.DataSource = nv.danhSach();
+                MessageBox.Show("Xóa thành công !");
+            }
+            catch
+            {
+                MessageBox.Show("Rất tiếc. Đã xảy ra lỗi !");
+            }
+        }
     }
 }

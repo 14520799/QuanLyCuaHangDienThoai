@@ -73,5 +73,31 @@ namespace BusinessLogic
                 return string.Empty;
             return nv.TenNV;
         }
+
+        // Thêm nhân viên
+        public void them(string MaNV, string TenNV, DateTime NgaySinh, string GioiTinh, string SoDT, string Email, string DiaChi, string Quyen, string ChucVu, string MatKhau)
+        {
+            DataAccess.NhanVien nv = new DataAccess.NhanVien();
+            nv.MaNV = MaNV;
+            nv.TenNV = TenNV;
+            nv.NgaySinh = NgaySinh;
+            nv.GioiTinh = GioiTinh;
+            nv.SoDT = SoDT;
+            nv.Email = Email;
+            nv.DiaChi = DiaChi;
+            nv.Quyen = Quyen;
+            nv.ChucVu = ChucVu;
+            nv.MatKhau = MatKhau;
+            model.NhanViens.Add(nv);
+            model.SaveChanges();
+        }
+
+        // Xóa nhân viên
+        public void xoa(string MaNV)
+        {
+            DataAccess.NhanVien nv = model.NhanViens.First(x => x.MaNV.Equals(MaNV));
+            model.NhanViens.Remove(nv);
+            model.SaveChanges();
+        }
     }
 }
