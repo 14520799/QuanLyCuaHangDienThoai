@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DataModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DataModelEntity.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="ChiTietBan">
           <Key>
             <PropertyRef Name="MaCTB" />
@@ -45,7 +45,7 @@
           </Key>
           <Property Name="MaHDB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaKH" Type="int" Nullable="false" />
-          <Property Name="MaNV" Type="int" Nullable="false" />
+          <Property Name="MaNV" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="NgayBan" Type="smalldatetime" Nullable="false" />
           <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="TienNo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
@@ -56,7 +56,7 @@
           </Key>
           <Property Name="MaHDM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="MaHang" Type="varchar" MaxLength="5" Nullable="false" />
-          <Property Name="MaNV" Type="int" Nullable="false" />
+          <Property Name="MaNV" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="NgayMua" Type="smalldatetime" Nullable="false" />
           <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="TienNo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
@@ -86,16 +86,16 @@
           <Key>
             <PropertyRef Name="MaNV" />
           </Key>
-          <Property Name="MaNV" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaNV" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="TenNV" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="NgaySinh" Type="smalldatetime" Nullable="false" />
-          <Property Name="GioiTinh" Type="int" Nullable="false" />
-          <Property Name="SoDT" Type="int" Nullable="false" />
+          <Property Name="GioiTinh" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="SoDT" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="Quyen" Type="int" Nullable="false" />
+          <Property Name="Quyen" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="ChucVu" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="MatKhau" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MatKhau" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="SanPham">
           <Key>
@@ -119,6 +119,16 @@
           <Property Name="DungLuongPin" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MaHang" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="MaLoai" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
         </EntityType>
         <Association Name="FK_ChiTietBan_HoaDonBan">
           <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="1" />
@@ -240,7 +250,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DataModelStoreContainer">
+        <EntityContainer Name="DataModelEntityStoreContainer">
           <EntitySet Name="ChiTietBan" EntityType="Self.ChiTietBan" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="ChiTietMua" EntityType="Self.ChiTietMua" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="HangSanXuat" EntityType="Self.HangSanXuat" Schema="dbo" store:Type="Tables" />
@@ -250,6 +260,7 @@
           <EntitySet Name="LoaiSanPham" EntityType="Self.LoaiSanPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_ChiTietBan_HoaDonBan" Association="Self.FK_ChiTietBan_HoaDonBan">
             <End Role="HoaDonBan" EntitySet="HoaDonBan" />
             <End Role="ChiTietBan" EntitySet="ChiTietBan" />
@@ -295,7 +306,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="DataModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="DataModelEntity" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="ChiTietBan">
           <Key>
             <PropertyRef Name="MaCTB" />
@@ -342,7 +353,7 @@
           </Key>
           <Property Name="MaHDB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaKH" Type="Int32" Nullable="false" />
-          <Property Name="MaNV" Type="Int32" Nullable="false" />
+          <Property Name="MaNV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayBan" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TongTien" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="TienNo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
@@ -356,7 +367,7 @@
           </Key>
           <Property Name="MaHDM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="MaHang" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaNV" Type="Int32" Nullable="false" />
+          <Property Name="MaNV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayMua" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="TongTien" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <Property Name="TienNo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
@@ -391,16 +402,16 @@
           <Key>
             <PropertyRef Name="MaNV" />
           </Key>
-          <Property Name="MaNV" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaNV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenNV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="GioiTinh" Type="Int32" Nullable="false" />
-          <Property Name="SoDT" Type="Int32" Nullable="false" />
+          <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SoDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Quyen" Type="Int32" Nullable="false" />
+          <Property Name="Quyen" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="ChucVu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="HoaDonBans" Relationship="Self.FK_HoaDonBan_NhanVien" FromRole="NhanVien" ToRole="HoaDonBan" />
           <NavigationProperty Name="HoaDonMuas" Relationship="Self.FK_HoaDonMua_NhanVien" FromRole="NhanVien" ToRole="HoaDonMua" />
         </EntityType>
@@ -430,6 +441,16 @@
           <NavigationProperty Name="ChiTietMuas" Relationship="Self.FK_ChiTietMua_SanPham" FromRole="SanPham" ToRole="ChiTietMua" />
           <NavigationProperty Name="HangSanXuat" Relationship="Self.FK_SanPham_HangSanXuat" FromRole="SanPham" ToRole="HangSanXuat" />
           <NavigationProperty Name="LoaiSanPham" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSanPham" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_ChiTietBan_HoaDonBan">
           <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="1" />
@@ -551,7 +572,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="DataModelEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="DataModel" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="ChiTietBans" EntityType="Self.ChiTietBan" />
           <EntitySet Name="ChiTietMuas" EntityType="Self.ChiTietMua" />
           <EntitySet Name="HangSanXuats" EntityType="Self.HangSanXuat" />
@@ -561,6 +582,7 @@
           <EntitySet Name="LoaiSanPhams" EntityType="Self.LoaiSanPham" />
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <AssociationSet Name="FK_ChiTietBan_HoaDonBan" Association="Self.FK_ChiTietBan_HoaDonBan">
             <End Role="HoaDonBan" EntitySet="HoaDonBans" />
             <End Role="ChiTietBan" EntitySet="ChiTietBans" />
@@ -607,9 +629,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="DataModelEntities">
+        <EntityContainerMapping StorageEntityContainer="DataModelEntityStoreContainer" CdmEntityContainer="DataModel">
           <EntitySetMapping Name="ChiTietBans">
-            <EntityTypeMapping TypeName="DataModel.ChiTietBan">
+            <EntityTypeMapping TypeName="DataModelEntity.ChiTietBan">
               <MappingFragment StoreEntitySet="ChiTietBan">
                 <ScalarProperty Name="MaCTB" ColumnName="MaCTB" />
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
@@ -622,7 +644,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="ChiTietMuas">
-            <EntityTypeMapping TypeName="DataModel.ChiTietMua">
+            <EntityTypeMapping TypeName="DataModelEntity.ChiTietMua">
               <MappingFragment StoreEntitySet="ChiTietMua">
                 <ScalarProperty Name="MaCTM" ColumnName="MaCTM" />
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
@@ -635,7 +657,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HangSanXuats">
-            <EntityTypeMapping TypeName="DataModel.HangSanXuat">
+            <EntityTypeMapping TypeName="DataModelEntity.HangSanXuat">
               <MappingFragment StoreEntitySet="HangSanXuat">
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
                 <ScalarProperty Name="TenHang" ColumnName="TenHang" />
@@ -646,7 +668,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HoaDonBans">
-            <EntityTypeMapping TypeName="DataModel.HoaDonBan">
+            <EntityTypeMapping TypeName="DataModelEntity.HoaDonBan">
               <MappingFragment StoreEntitySet="HoaDonBan">
                 <ScalarProperty Name="MaHDB" ColumnName="MaHDB" />
                 <ScalarProperty Name="MaKH" ColumnName="MaKH" />
@@ -658,7 +680,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="HoaDonMuas">
-            <EntityTypeMapping TypeName="DataModel.HoaDonMua">
+            <EntityTypeMapping TypeName="DataModelEntity.HoaDonMua">
               <MappingFragment StoreEntitySet="HoaDonMua">
                 <ScalarProperty Name="MaHDM" ColumnName="MaHDM" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
@@ -670,7 +692,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="KhachHangs">
-            <EntityTypeMapping TypeName="DataModel.KhachHang">
+            <EntityTypeMapping TypeName="DataModelEntity.KhachHang">
               <MappingFragment StoreEntitySet="KhachHang">
                 <ScalarProperty Name="MaKH" ColumnName="MaKH" />
                 <ScalarProperty Name="TenKH" ColumnName="TenKH" />
@@ -685,7 +707,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="LoaiSanPhams">
-            <EntityTypeMapping TypeName="DataModel.LoaiSanPham">
+            <EntityTypeMapping TypeName="DataModelEntity.LoaiSanPham">
               <MappingFragment StoreEntitySet="LoaiSanPham">
                 <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
                 <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
@@ -693,7 +715,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="NhanViens">
-            <EntityTypeMapping TypeName="DataModel.NhanVien">
+            <EntityTypeMapping TypeName="DataModelEntity.NhanVien">
               <MappingFragment StoreEntitySet="NhanVien">
                 <ScalarProperty Name="MaNV" ColumnName="MaNV" />
                 <ScalarProperty Name="TenNV" ColumnName="TenNV" />
@@ -709,7 +731,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SanPhams">
-            <EntityTypeMapping TypeName="DataModel.SanPham">
+            <EntityTypeMapping TypeName="DataModelEntity.SanPham">
               <MappingFragment StoreEntitySet="SanPham">
                 <ScalarProperty Name="MaSP" ColumnName="MaSP" />
                 <ScalarProperty Name="TenSP" ColumnName="TenSP" />
@@ -729,6 +751,17 @@
                 <ScalarProperty Name="DungLuongPin" ColumnName="DungLuongPin" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
                 <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DataModelEntity.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -22,7 +22,7 @@ namespace DataAccess
     
         public int MaHDM { get; set; }
         public string MaHang { get; set; }
-        public int MaNV { get; set; }
+        public string MaNV { get; set; }
         public System.DateTime NgayMua { get; set; }
         public decimal TongTien { get; set; }
         public decimal TienNo { get; set; }

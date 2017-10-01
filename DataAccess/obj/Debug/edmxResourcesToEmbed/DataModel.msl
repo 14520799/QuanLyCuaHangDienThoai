@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DataModelStoreContainer" CdmEntityContainer="DataModelEntities">
+  <EntityContainerMapping StorageEntityContainer="DataModelEntityStoreContainer" CdmEntityContainer="DataModel">
     <EntitySetMapping Name="ChiTietBans">
-      <EntityTypeMapping TypeName="DataModel.ChiTietBan">
+      <EntityTypeMapping TypeName="DataModelEntity.ChiTietBan">
         <MappingFragment StoreEntitySet="ChiTietBan">
           <ScalarProperty Name="MaCTB" ColumnName="MaCTB" />
           <ScalarProperty Name="MaSP" ColumnName="MaSP" />
@@ -15,7 +15,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ChiTietMuas">
-      <EntityTypeMapping TypeName="DataModel.ChiTietMua">
+      <EntityTypeMapping TypeName="DataModelEntity.ChiTietMua">
         <MappingFragment StoreEntitySet="ChiTietMua">
           <ScalarProperty Name="MaCTM" ColumnName="MaCTM" />
           <ScalarProperty Name="MaSP" ColumnName="MaSP" />
@@ -28,7 +28,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HangSanXuats">
-      <EntityTypeMapping TypeName="DataModel.HangSanXuat">
+      <EntityTypeMapping TypeName="DataModelEntity.HangSanXuat">
         <MappingFragment StoreEntitySet="HangSanXuat">
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
           <ScalarProperty Name="TenHang" ColumnName="TenHang" />
@@ -39,7 +39,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HoaDonBans">
-      <EntityTypeMapping TypeName="DataModel.HoaDonBan">
+      <EntityTypeMapping TypeName="DataModelEntity.HoaDonBan">
         <MappingFragment StoreEntitySet="HoaDonBan">
           <ScalarProperty Name="MaHDB" ColumnName="MaHDB" />
           <ScalarProperty Name="MaKH" ColumnName="MaKH" />
@@ -51,7 +51,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HoaDonMuas">
-      <EntityTypeMapping TypeName="DataModel.HoaDonMua">
+      <EntityTypeMapping TypeName="DataModelEntity.HoaDonMua">
         <MappingFragment StoreEntitySet="HoaDonMua">
           <ScalarProperty Name="MaHDM" ColumnName="MaHDM" />
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
@@ -63,7 +63,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="KhachHangs">
-      <EntityTypeMapping TypeName="DataModel.KhachHang">
+      <EntityTypeMapping TypeName="DataModelEntity.KhachHang">
         <MappingFragment StoreEntitySet="KhachHang">
           <ScalarProperty Name="MaKH" ColumnName="MaKH" />
           <ScalarProperty Name="TenKH" ColumnName="TenKH" />
@@ -78,7 +78,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="LoaiSanPhams">
-      <EntityTypeMapping TypeName="DataModel.LoaiSanPham">
+      <EntityTypeMapping TypeName="DataModelEntity.LoaiSanPham">
         <MappingFragment StoreEntitySet="LoaiSanPham">
           <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
           <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
@@ -86,7 +86,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="NhanViens">
-      <EntityTypeMapping TypeName="DataModel.NhanVien">
+      <EntityTypeMapping TypeName="DataModelEntity.NhanVien">
         <MappingFragment StoreEntitySet="NhanVien">
           <ScalarProperty Name="MaNV" ColumnName="MaNV" />
           <ScalarProperty Name="TenNV" ColumnName="TenNV" />
@@ -102,7 +102,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SanPhams">
-      <EntityTypeMapping TypeName="DataModel.SanPham">
+      <EntityTypeMapping TypeName="DataModelEntity.SanPham">
         <MappingFragment StoreEntitySet="SanPham">
           <ScalarProperty Name="MaSP" ColumnName="MaSP" />
           <ScalarProperty Name="TenSP" ColumnName="TenSP" />
@@ -122,6 +122,17 @@
           <ScalarProperty Name="DungLuongPin" ColumnName="DungLuongPin" />
           <ScalarProperty Name="MaHang" ColumnName="MaHang" />
           <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DataModelEntity.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

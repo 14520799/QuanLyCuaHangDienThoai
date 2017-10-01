@@ -5,34 +5,49 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
 using Function;
+using System.Data.Entity;
 
 namespace BusinessLogic
 {
     public class NhanVien
     {
-        DataModelEntities model;
-
+        DataModel model;
+        
         public NhanVien()
         {
-            model = new DataModelEntities();
+            model = new DataModel();
         }
 
-        public List<DataAccess.NhanVien> layDanhSach()
+        public List<DataAccess.NhanVien> danhSach()
         {
             return model.NhanViens.ToList();
         }
 
-        public List<DataAccess.NhanVien> timTheoTen(string ten)
+        public void capNhat(string MaNV, string TenNV, DateTime NgaySinh, string GioiTinh, string SoDT, string Email, string DiaChi, string Quyen, string ChucVu)
         {
-            return model.NhanViens.Where(nv => nv.TenNV.Contains(ten)).ToList();
+            try
+            {
+                DataAccess.NhanVien nv = new DataAccess.NhanVien();
+                nv = model.NhanViens.First(x => x.MaNV == MaNV);
+                nv.TenNV = TenNV;
+                nv.NgaySinh = NgaySinh;
+                nv.GioiTinh = GioiTinh;
+                nv.SoDT = SoDT;
+                nv.Email = Email;
+                nv.DiaChi = DiaChi;
+                nv.Quyen = Quyen;
+                nv.ChucVu = ChucVu;
+                model.SaveChanges();
+            }
+            catch
+            {
+                
+            }
         }
 
-        public void them(DataAccess.NhanVien nv)
+        public List<DataAccess.NhanVien> timTheoTen(string TenNV)
         {
-            model.NhanViens.Add(nv);
-            model.SaveChanges();
+            return model.NhanViens.Where(nv => nv.TenNV.Contains(TenNV)).ToList();
         }
-
-
     }
 }

@@ -18,7 +18,7 @@ namespace Presentation.Admin
             InitializeComponent();
         }
 
-        SqlConnection conn = new SqlConnection(@"Data Source=desktop-r6658fp\sqlexpress;Initial Catalog=QuanLyCuaHangDienThoai;Integrated Security=True");
+        //SqlConnection conn = new SqlConnection(@"Data Source=desktop-r6658fp\sqlexpress;Initial Catalog=QuanLyCuaHangDienThoai;Integrated Security=True");
         
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -26,7 +26,7 @@ namespace Presentation.Admin
         }
 
         private void Admin_Info_Load(object sender, EventArgs e)
-        {
+        {/*
             //Load data
             DataTable dt = new DataTable();
             conn.Open();
@@ -67,11 +67,11 @@ namespace Presentation.Admin
             {
                 MessageBox.Show("Có lỗi khi load dữ liệu!\n", ex.ToString());
             }
-
+            */
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
-        {
+        {/*
             try
             {
                 conn.Open();
@@ -86,8 +86,7 @@ namespace Presentation.Admin
             catch (Exception ex)
             {
                 MessageBox.Show("ERROR", ex.ToString());
-            }
+            }*/
         }
-
     }
 }

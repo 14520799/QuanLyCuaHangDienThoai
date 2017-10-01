@@ -13,10 +13,10 @@ namespace DataAccess
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DataModelEntities : DbContext
+    public partial class DataModel : DbContext
     {
-        public DataModelEntities()
-            : base("name=DataModelEntities")
+        public DataModel()
+            : base("name=DataModel")
         {
         }
     
@@ -34,5 +34,6 @@ namespace DataAccess
         public virtual DbSet<LoaiSanPham> LoaiSanPhams { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
     }
 }

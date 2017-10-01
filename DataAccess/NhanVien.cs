@@ -21,14 +21,14 @@ namespace DataAccess
             this.HoaDonMuas = new HashSet<HoaDonMua>();
         }
     
-        public int MaNV { get; set; }
+        public string MaNV { get; set; }
         public string TenNV { get; set; }
         public System.DateTime NgaySinh { get; set; }
-        public int GioiTinh { get; set; }
-        public int SoDT { get; set; }
+        public string GioiTinh { get; set; }
+        public string SoDT { get; set; }
         public string Email { get; set; }
         public string DiaChi { get; set; }
-        public int Quyen { get; set; }
+        public string Quyen { get; set; }
         public string ChucVu { get; set; }
         public string MatKhau { get; set; }
     

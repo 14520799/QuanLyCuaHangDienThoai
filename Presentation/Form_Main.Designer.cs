@@ -97,7 +97,8 @@
             this.button_statistic});
             this.menu_bar.Location = new System.Drawing.Point(0, 0);
             this.menu_bar.Name = "menu_bar";
-            this.menu_bar.Size = new System.Drawing.Size(1020, 58);
+            this.menu_bar.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menu_bar.Size = new System.Drawing.Size(1360, 58);
             this.menu_bar.TabIndex = 8;
             this.menu_bar.Text = "menuStrip1";
             // 
@@ -107,7 +108,7 @@
             this.button_admin.ForeColor = System.Drawing.Color.OrangeRed;
             this.button_admin.Image = ((System.Drawing.Image)(resources.GetObject("button_admin.Image")));
             this.button_admin.Name = "button_admin";
-            this.button_admin.Size = new System.Drawing.Size(141, 54);
+            this.button_admin.Size = new System.Drawing.Size(155, 54);
             this.button_admin.Text = "Quản trị";
             this.button_admin.Click += new System.EventHandler(this.button_admin_Click);
             // 
@@ -117,7 +118,7 @@
             this.button_employee.ForeColor = System.Drawing.Color.OrangeRed;
             this.button_employee.Image = ((System.Drawing.Image)(resources.GetObject("button_employee.Image")));
             this.button_employee.Name = "button_employee";
-            this.button_employee.Size = new System.Drawing.Size(159, 54);
+            this.button_employee.Size = new System.Drawing.Size(177, 54);
             this.button_employee.Text = "Nhân viên";
             this.button_employee.Click += new System.EventHandler(this.button_employee_Click);
             // 
@@ -127,7 +128,7 @@
             this.button_customer.ForeColor = System.Drawing.Color.OrangeRed;
             this.button_customer.Image = ((System.Drawing.Image)(resources.GetObject("button_customer.Image")));
             this.button_customer.Name = "button_customer";
-            this.button_customer.Size = new System.Drawing.Size(175, 54);
+            this.button_customer.Size = new System.Drawing.Size(197, 54);
             this.button_customer.Text = "Khách hàng";
             this.button_customer.Click += new System.EventHandler(this.button_customer_Click);
             // 
@@ -137,7 +138,7 @@
             this.button_product.ForeColor = System.Drawing.Color.OrangeRed;
             this.button_product.Image = ((System.Drawing.Image)(resources.GetObject("button_product.Image")));
             this.button_product.Name = "button_product";
-            this.button_product.Size = new System.Drawing.Size(159, 54);
+            this.button_product.Size = new System.Drawing.Size(177, 54);
             this.button_product.Text = "Sản phẩm";
             this.button_product.Click += new System.EventHandler(this.button_product_Click);
             // 
@@ -147,7 +148,7 @@
             this.button_invoice.ForeColor = System.Drawing.Color.OrangeRed;
             this.button_invoice.Image = ((System.Drawing.Image)(resources.GetObject("button_invoice.Image")));
             this.button_invoice.Name = "button_invoice";
-            this.button_invoice.Size = new System.Drawing.Size(146, 54);
+            this.button_invoice.Size = new System.Drawing.Size(163, 54);
             this.button_invoice.Text = "Hóa đơn";
             this.button_invoice.Click += new System.EventHandler(this.button_invoice_Click);
             // 
@@ -157,7 +158,7 @@
             this.button_statistic.ForeColor = System.Drawing.Color.OrangeRed;
             this.button_statistic.Image = ((System.Drawing.Image)(resources.GetObject("button_statistic.Image")));
             this.button_statistic.Name = "button_statistic";
-            this.button_statistic.Size = new System.Drawing.Size(152, 54);
+            this.button_statistic.Size = new System.Drawing.Size(171, 54);
             this.button_statistic.Text = "Thống kê";
             // 
             // panel_above
@@ -165,8 +166,9 @@
             this.panel_above.BackColor = System.Drawing.Color.OrangeRed;
             this.panel_above.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_above.Location = new System.Drawing.Point(0, 58);
+            this.panel_above.Margin = new System.Windows.Forms.Padding(4);
             this.panel_above.Name = "panel_above";
-            this.panel_above.Size = new System.Drawing.Size(1020, 10);
+            this.panel_above.Size = new System.Drawing.Size(1360, 12);
             this.panel_above.TabIndex = 9;
             // 
             // panel_left
@@ -181,9 +183,10 @@
             this.panel_left.Controls.Add(this.panel_home);
             this.panel_left.Controls.Add(this.panel_employee);
             this.panel_left.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_left.Location = new System.Drawing.Point(0, 68);
+            this.panel_left.Location = new System.Drawing.Point(0, 70);
+            this.panel_left.Margin = new System.Windows.Forms.Padding(4);
             this.panel_left.Name = "panel_left";
-            this.panel_left.Size = new System.Drawing.Size(250, 528);
+            this.panel_left.Size = new System.Drawing.Size(333, 663);
             this.panel_left.TabIndex = 10;
             // 
             // panel_invoice
@@ -199,9 +202,10 @@
             this.menu_invoice_sale_view,
             this.menu_invoice_sale_add});
             this.panel_invoice.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.panel_invoice.Location = new System.Drawing.Point(11, 102);
+            this.panel_invoice.Location = new System.Drawing.Point(15, 126);
             this.panel_invoice.Name = "panel_invoice";
-            this.panel_invoice.Size = new System.Drawing.Size(241, 149);
+            this.panel_invoice.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.panel_invoice.Size = new System.Drawing.Size(321, 183);
             this.panel_invoice.TabIndex = 10;
             // 
             // menu_invoice_buy_view
@@ -211,7 +215,7 @@
             this.menu_invoice_buy_view.Image = ((System.Drawing.Image)(resources.GetObject("menu_invoice_buy_view.Image")));
             this.menu_invoice_buy_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_invoice_buy_view.Name = "menu_invoice_buy_view";
-            this.menu_invoice_buy_view.Size = new System.Drawing.Size(234, 34);
+            this.menu_invoice_buy_view.Size = new System.Drawing.Size(312, 34);
             this.menu_invoice_buy_view.Text = "Xem hóa đơn mua";
             this.menu_invoice_buy_view.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_invoice_buy_view.Click += new System.EventHandler(this.menu_invoice_buy_view_Click);
@@ -223,7 +227,7 @@
             this.menu_invoice_buy_add.Image = ((System.Drawing.Image)(resources.GetObject("menu_invoice_buy_add.Image")));
             this.menu_invoice_buy_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_invoice_buy_add.Name = "menu_invoice_buy_add";
-            this.menu_invoice_buy_add.Size = new System.Drawing.Size(234, 34);
+            this.menu_invoice_buy_add.Size = new System.Drawing.Size(312, 34);
             this.menu_invoice_buy_add.Text = "Thêm hóa đơn mua";
             this.menu_invoice_buy_add.Click += new System.EventHandler(this.menu_invoice_buy_add_Click);
             // 
@@ -234,7 +238,7 @@
             this.menu_invoice_sale_view.Image = ((System.Drawing.Image)(resources.GetObject("menu_invoice_sale_view.Image")));
             this.menu_invoice_sale_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_invoice_sale_view.Name = "menu_invoice_sale_view";
-            this.menu_invoice_sale_view.Size = new System.Drawing.Size(234, 34);
+            this.menu_invoice_sale_view.Size = new System.Drawing.Size(312, 34);
             this.menu_invoice_sale_view.Text = "Xem hóa đơn bán";
             this.menu_invoice_sale_view.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_invoice_sale_view.Click += new System.EventHandler(this.menu_invoice_sale_view_Click);
@@ -246,7 +250,7 @@
             this.menu_invoice_sale_add.Image = ((System.Drawing.Image)(resources.GetObject("menu_invoice_sale_add.Image")));
             this.menu_invoice_sale_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_invoice_sale_add.Name = "menu_invoice_sale_add";
-            this.menu_invoice_sale_add.Size = new System.Drawing.Size(234, 34);
+            this.menu_invoice_sale_add.Size = new System.Drawing.Size(312, 34);
             this.menu_invoice_sale_add.Text = "Thêm hóa đơn bán";
             this.menu_invoice_sale_add.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_invoice_sale_add.Click += new System.EventHandler(this.menu_invoice_sale_add_Click);
@@ -262,9 +266,10 @@
             this.menu_statistic_grow,
             this.menu_statistic_math});
             this.panel_statistic.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.panel_statistic.Location = new System.Drawing.Point(11, 102);
+            this.panel_statistic.Location = new System.Drawing.Point(15, 126);
             this.panel_statistic.Name = "panel_statistic";
-            this.panel_statistic.Size = new System.Drawing.Size(241, 136);
+            this.panel_statistic.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.panel_statistic.Size = new System.Drawing.Size(321, 167);
             this.panel_statistic.TabIndex = 9;
             // 
             // menu_statistic_grow
@@ -274,7 +279,7 @@
             this.menu_statistic_grow.Image = ((System.Drawing.Image)(resources.GetObject("menu_statistic_grow.Image")));
             this.menu_statistic_grow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_statistic_grow.Name = "menu_statistic_grow";
-            this.menu_statistic_grow.Size = new System.Drawing.Size(234, 34);
+            this.menu_statistic_grow.Size = new System.Drawing.Size(312, 34);
             this.menu_statistic_grow.Text = "Growth rate deverlop";
             this.menu_statistic_grow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -285,7 +290,7 @@
             this.menu_statistic_math.Image = ((System.Drawing.Image)(resources.GetObject("menu_statistic_math.Image")));
             this.menu_statistic_math.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_statistic_math.Name = "menu_statistic_math";
-            this.menu_statistic_math.Size = new System.Drawing.Size(234, 34);
+            this.menu_statistic_math.Size = new System.Drawing.Size(312, 34);
             this.menu_statistic_math.Text = "Statistic";
             // 
             // panel_customer
@@ -299,9 +304,10 @@
             this.menu_customer_view,
             this.menu_customer_add});
             this.panel_customer.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.panel_customer.Location = new System.Drawing.Point(11, 102);
+            this.panel_customer.Location = new System.Drawing.Point(15, 126);
             this.panel_customer.Name = "panel_customer";
-            this.panel_customer.Size = new System.Drawing.Size(241, 130);
+            this.panel_customer.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.panel_customer.Size = new System.Drawing.Size(321, 160);
             this.panel_customer.TabIndex = 8;
             // 
             // menu_customer_view
@@ -311,7 +317,7 @@
             this.menu_customer_view.Image = ((System.Drawing.Image)(resources.GetObject("menu_customer_view.Image")));
             this.menu_customer_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_customer_view.Name = "menu_customer_view";
-            this.menu_customer_view.Size = new System.Drawing.Size(234, 34);
+            this.menu_customer_view.Size = new System.Drawing.Size(312, 34);
             this.menu_customer_view.Text = "Xem khách hàng";
             this.menu_customer_view.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_customer_view.Click += new System.EventHandler(this.menu_customer_view_Click);
@@ -323,7 +329,7 @@
             this.menu_customer_add.Image = ((System.Drawing.Image)(resources.GetObject("menu_customer_add.Image")));
             this.menu_customer_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_customer_add.Name = "menu_customer_add";
-            this.menu_customer_add.Size = new System.Drawing.Size(234, 34);
+            this.menu_customer_add.Size = new System.Drawing.Size(312, 34);
             this.menu_customer_add.Text = "Thêm khách hàng";
             this.menu_customer_add.Click += new System.EventHandler(this.menu_customer_add_Click);
             // 
@@ -340,9 +346,10 @@
             this.menu_factory_view,
             this.menu_factory_add});
             this.panel_product.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.panel_product.Location = new System.Drawing.Point(11, 102);
+            this.panel_product.Location = new System.Drawing.Point(15, 126);
             this.panel_product.Name = "panel_product";
-            this.panel_product.Size = new System.Drawing.Size(241, 176);
+            this.panel_product.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.panel_product.Size = new System.Drawing.Size(321, 217);
             this.panel_product.TabIndex = 7;
             // 
             // menu_product_view
@@ -352,7 +359,7 @@
             this.menu_product_view.Image = ((System.Drawing.Image)(resources.GetObject("menu_product_view.Image")));
             this.menu_product_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_product_view.Name = "menu_product_view";
-            this.menu_product_view.Size = new System.Drawing.Size(234, 34);
+            this.menu_product_view.Size = new System.Drawing.Size(312, 34);
             this.menu_product_view.Text = "Xem sản phẩm";
             this.menu_product_view.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_product_view.Click += new System.EventHandler(this.menu_product_view_Click);
@@ -364,7 +371,7 @@
             this.menu_product_add.Image = ((System.Drawing.Image)(resources.GetObject("menu_product_add.Image")));
             this.menu_product_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_product_add.Name = "menu_product_add";
-            this.menu_product_add.Size = new System.Drawing.Size(234, 34);
+            this.menu_product_add.Size = new System.Drawing.Size(312, 34);
             this.menu_product_add.Text = "Thêm sản phẩm";
             this.menu_product_add.Click += new System.EventHandler(this.menu_product_add_Click);
             // 
@@ -375,7 +382,7 @@
             this.menu_factory_view.Image = ((System.Drawing.Image)(resources.GetObject("menu_factory_view.Image")));
             this.menu_factory_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_factory_view.Name = "menu_factory_view";
-            this.menu_factory_view.Size = new System.Drawing.Size(234, 34);
+            this.menu_factory_view.Size = new System.Drawing.Size(312, 34);
             this.menu_factory_view.Text = "Xem hãng sản xuất";
             this.menu_factory_view.Click += new System.EventHandler(this.menu_factory_view_Click);
             // 
@@ -386,7 +393,7 @@
             this.menu_factory_add.Image = ((System.Drawing.Image)(resources.GetObject("menu_factory_add.Image")));
             this.menu_factory_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_factory_add.Name = "menu_factory_add";
-            this.menu_factory_add.Size = new System.Drawing.Size(234, 34);
+            this.menu_factory_add.Size = new System.Drawing.Size(312, 34);
             this.menu_factory_add.Text = "Thêm hãng sản xuất";
             this.menu_factory_add.Click += new System.EventHandler(this.menu_factory_add_Click);
             // 
@@ -394,9 +401,10 @@
             // 
             this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
             this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logo.Location = new System.Drawing.Point(89, 6);
+            this.logo.Location = new System.Drawing.Point(119, 7);
+            this.logo.Margin = new System.Windows.Forms.Padding(4);
             this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(70, 70);
+            this.logo.Size = new System.Drawing.Size(93, 86);
             this.logo.TabIndex = 5;
             this.logo.TabStop = false;
             // 
@@ -406,40 +414,44 @@
             this.panel_logout.Controls.Add(this.label_logout);
             this.panel_logout.Controls.Add(this.label_userlogin);
             this.panel_logout.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_logout.Location = new System.Drawing.Point(0, 428);
+            this.panel_logout.Location = new System.Drawing.Point(0, 540);
+            this.panel_logout.Margin = new System.Windows.Forms.Padding(4);
             this.panel_logout.Name = "panel_logout";
-            this.panel_logout.Size = new System.Drawing.Size(250, 100);
+            this.panel_logout.Size = new System.Drawing.Size(333, 123);
             this.panel_logout.TabIndex = 4;
             // 
             // button_logout
             // 
             this.button_logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_logout.BackgroundImage")));
             this.button_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_logout.Location = new System.Drawing.Point(11, 60);
+            this.button_logout.Location = new System.Drawing.Point(13, 63);
+            this.button_logout.Margin = new System.Windows.Forms.Padding(4);
             this.button_logout.Name = "button_logout";
-            this.button_logout.Size = new System.Drawing.Size(34, 29);
+            this.button_logout.Size = new System.Drawing.Size(50, 47);
             this.button_logout.TabIndex = 2;
             this.button_logout.TabStop = false;
             // 
             // label_logout
             // 
             this.label_logout.AutoSize = true;
-            this.label_logout.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_logout.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label_logout.ForeColor = System.Drawing.Color.White;
-            this.label_logout.Location = new System.Drawing.Point(51, 60);
+            this.label_logout.Location = new System.Drawing.Point(71, 63);
+            this.label_logout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_logout.Name = "label_logout";
-            this.label_logout.Size = new System.Drawing.Size(55, 16);
+            this.label_logout.Size = new System.Drawing.Size(77, 24);
             this.label_logout.TabIndex = 3;
             this.label_logout.Text = "Logout";
             // 
             // label_userlogin
             // 
             this.label_userlogin.AutoSize = true;
-            this.label_userlogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_userlogin.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
             this.label_userlogin.ForeColor = System.Drawing.Color.White;
-            this.label_userlogin.Location = new System.Drawing.Point(51, 76);
+            this.label_userlogin.Location = new System.Drawing.Point(71, 87);
+            this.label_userlogin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_userlogin.Name = "label_userlogin";
-            this.label_userlogin.Size = new System.Drawing.Size(53, 16);
+            this.label_userlogin.Size = new System.Drawing.Size(73, 24);
             this.label_userlogin.TabIndex = 1;
             this.label_userlogin.Text = "User : ";
             // 
@@ -454,9 +466,10 @@
             this.menu_admin_info,
             this.menu_admin_password});
             this.panel_home.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.panel_home.Location = new System.Drawing.Point(11, 102);
+            this.panel_home.Location = new System.Drawing.Point(15, 126);
             this.panel_home.Name = "panel_home";
-            this.panel_home.Size = new System.Drawing.Size(241, 126);
+            this.panel_home.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.panel_home.Size = new System.Drawing.Size(321, 155);
             this.panel_home.TabIndex = 0;
             // 
             // menu_admin_info
@@ -466,7 +479,7 @@
             this.menu_admin_info.Image = ((System.Drawing.Image)(resources.GetObject("menu_admin_info.Image")));
             this.menu_admin_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_admin_info.Name = "menu_admin_info";
-            this.menu_admin_info.Size = new System.Drawing.Size(234, 34);
+            this.menu_admin_info.Size = new System.Drawing.Size(312, 34);
             this.menu_admin_info.Text = "Xem thông tin";
             this.menu_admin_info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_admin_info.Click += new System.EventHandler(this.menu_admin_info_Click);
@@ -478,7 +491,7 @@
             this.menu_admin_password.Image = ((System.Drawing.Image)(resources.GetObject("menu_admin_password.Image")));
             this.menu_admin_password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_admin_password.Name = "menu_admin_password";
-            this.menu_admin_password.Size = new System.Drawing.Size(234, 34);
+            this.menu_admin_password.Size = new System.Drawing.Size(312, 34);
             this.menu_admin_password.Text = "Đổi mật khẩu";
             this.menu_admin_password.Click += new System.EventHandler(this.menu_admin_password_Click);
             // 
@@ -493,9 +506,10 @@
             this.menu_employee_view,
             this.menu_employee_add});
             this.panel_employee.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.panel_employee.Location = new System.Drawing.Point(11, 102);
+            this.panel_employee.Location = new System.Drawing.Point(15, 126);
             this.panel_employee.Name = "panel_employee";
-            this.panel_employee.Size = new System.Drawing.Size(241, 126);
+            this.panel_employee.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.panel_employee.Size = new System.Drawing.Size(321, 155);
             this.panel_employee.TabIndex = 6;
             this.panel_employee.Text = "menuStrip1";
             // 
@@ -507,7 +521,7 @@
             this.menu_employee_view.Image = ((System.Drawing.Image)(resources.GetObject("menu_employee_view.Image")));
             this.menu_employee_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_employee_view.Name = "menu_employee_view";
-            this.menu_employee_view.Size = new System.Drawing.Size(234, 34);
+            this.menu_employee_view.Size = new System.Drawing.Size(312, 34);
             this.menu_employee_view.Text = "Xem nhân viên";
             this.menu_employee_view.Click += new System.EventHandler(this.menu_employee_view_Click);
             // 
@@ -518,7 +532,7 @@
             this.menu_employee_add.Image = ((System.Drawing.Image)(resources.GetObject("menu_employee_add.Image")));
             this.menu_employee_add.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.menu_employee_add.Name = "menu_employee_add";
-            this.menu_employee_add.Size = new System.Drawing.Size(234, 34);
+            this.menu_employee_add.Size = new System.Drawing.Size(312, 34);
             this.menu_employee_add.Text = "Thêm nhân viên";
             this.menu_employee_add.Click += new System.EventHandler(this.menu_employee_add_Click);
             // 
@@ -528,18 +542,20 @@
             this.panel_content.Controls.Add(this.picture_welcome);
             this.panel_content.Controls.Add(this.label_welcome);
             this.panel_content.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_content.Location = new System.Drawing.Point(250, 68);
+            this.panel_content.Location = new System.Drawing.Point(333, 70);
+            this.panel_content.Margin = new System.Windows.Forms.Padding(4);
             this.panel_content.Name = "panel_content";
-            this.panel_content.Size = new System.Drawing.Size(770, 528);
+            this.panel_content.Size = new System.Drawing.Size(1027, 663);
             this.panel_content.TabIndex = 11;
             // 
             // picture_welcome
             // 
             this.picture_welcome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picture_welcome.BackgroundImage")));
             this.picture_welcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picture_welcome.Location = new System.Drawing.Point(128, 86);
+            this.picture_welcome.Location = new System.Drawing.Point(170, 106);
+            this.picture_welcome.Margin = new System.Windows.Forms.Padding(4);
             this.picture_welcome.Name = "picture_welcome";
-            this.picture_welcome.Size = new System.Drawing.Size(608, 324);
+            this.picture_welcome.Size = new System.Drawing.Size(811, 399);
             this.picture_welcome.TabIndex = 4;
             this.picture_welcome.TabStop = false;
             // 
@@ -548,32 +564,33 @@
             this.label_welcome.AutoSize = true;
             this.label_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_welcome.ForeColor = System.Drawing.Color.OrangeRed;
-            this.label_welcome.Location = new System.Drawing.Point(65, 44);
+            this.label_welcome.Location = new System.Drawing.Point(87, 54);
+            this.label_welcome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_welcome.Name = "label_welcome";
-            this.label_welcome.Size = new System.Drawing.Size(0, 25);
+            this.label_welcome.Size = new System.Drawing.Size(0, 31);
             this.label_welcome.TabIndex = 0;
             // 
             // panel_below
             // 
             this.panel_below.BackColor = System.Drawing.Color.OrangeRed;
             this.panel_below.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel_below.Location = new System.Drawing.Point(250, 586);
+            this.panel_below.Location = new System.Drawing.Point(333, 721);
+            this.panel_below.Margin = new System.Windows.Forms.Padding(4);
             this.panel_below.Name = "panel_below";
-            this.panel_below.Size = new System.Drawing.Size(770, 10);
+            this.panel_below.Size = new System.Drawing.Size(1027, 12);
             this.panel_below.TabIndex = 12;
             // 
             // Form_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1020, 596);
+            this.ClientSize = new System.Drawing.Size(1360, 733);
             this.Controls.Add(this.panel_below);
             this.Controls.Add(this.panel_content);
             this.Controls.Add(this.panel_left);
             this.Controls.Add(this.panel_above);
             this.Controls.Add(this.menu_bar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form_Main";
             this.ShowIcon = false;
             this.Text = "Quản Lý Cửa Hàng Điện Thoại";
