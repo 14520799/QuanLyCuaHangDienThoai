@@ -18,17 +18,18 @@ namespace BusinessLogic
             model = new DataModel();
         }
 
+        // Lấy danh sách nhân viên
         public List<DataAccess.NhanVien> danhSach()
         {
             return model.NhanViens.ToList();
         }
 
-        public void capNhat(string MaNV, string TenNV, DateTime NgaySinh, string GioiTinh, string SoDT, string Email, string DiaChi, string Quyen, string ChucVu)
+        // Sửa thông tin nhân viên
+        public void capNhat(string MaNV, string TenNV, DateTime NgaySinh, string GioiTinh, string SoDT, string Email, string DiaChi, string Quyen, string ChucVu, string MatKhau)
         {
             try
             {
-                DataAccess.NhanVien nv = new DataAccess.NhanVien();
-                nv = model.NhanViens.First(x => x.MaNV == MaNV);
+                DataAccess.NhanVien nv = model.NhanViens.First(x => x.MaNV == MaNV);
                 nv.TenNV = TenNV;
                 nv.NgaySinh = NgaySinh;
                 nv.GioiTinh = GioiTinh;
@@ -37,14 +38,15 @@ namespace BusinessLogic
                 nv.DiaChi = DiaChi;
                 nv.Quyen = Quyen;
                 nv.ChucVu = ChucVu;
+                nv.MatKhau = MatKhau;
                 model.SaveChanges();
             }
-            catch
-            {
+            catch {
                 
             }
         }
 
+        // Tìm nhân viên theo tên
         public List<DataAccess.NhanVien> timTheoTen(string TenNV)
         {
             return model.NhanViens.Where(nv => nv.TenNV.Contains(TenNV)).ToList();

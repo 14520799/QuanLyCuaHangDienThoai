@@ -60,7 +60,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.Acountbox = new System.Windows.Forms.GroupBox();
-            this.cbType = new System.Windows.Forms.ComboBox();
+            this.cbTheoLoai = new System.Windows.Forms.ComboBox();
             this.DetailBox = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -86,7 +86,7 @@
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new System.Windows.Forms.PictureBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -308,6 +308,9 @@
             // 
             this.cbQuyen.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbQuyen.FormattingEnabled = true;
+            this.cbQuyen.Items.AddRange(new object[] {
+            "Quản trị",
+            "Nhân viên"});
             this.cbQuyen.Location = new System.Drawing.Point(160, 375);
             this.cbQuyen.Margin = new System.Windows.Forms.Padding(4);
             this.cbQuyen.Name = "cbQuyen";
@@ -392,8 +395,8 @@
             this.cbGioiTinh.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Nam",
+            "Nữ"});
             this.cbGioiTinh.Location = new System.Drawing.Point(160, 135);
             this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbGioiTinh.Name = "cbGioiTinh";
@@ -417,19 +420,19 @@
             this.Acountbox.TabStop = false;
             this.Acountbox.Text = "Mật khẩu";
             // 
-            // cbType
+            // cbTheoLoai
             // 
-            this.cbType.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbType.FormattingEnabled = true;
-            this.cbType.Items.AddRange(new object[] {
-            "Name",
-            "ID",
-            "Birth"});
-            this.cbType.Location = new System.Drawing.Point(387, 38);
-            this.cbType.Margin = new System.Windows.Forms.Padding(4);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(124, 27);
-            this.cbType.TabIndex = 3;
+            this.cbTheoLoai.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTheoLoai.FormattingEnabled = true;
+            this.cbTheoLoai.Items.AddRange(new object[] {
+            "Tên NV",
+            "Quyền",
+            "Chức vụ"});
+            this.cbTheoLoai.Location = new System.Drawing.Point(387, 38);
+            this.cbTheoLoai.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTheoLoai.Name = "cbTheoLoai";
+            this.cbTheoLoai.Size = new System.Drawing.Size(124, 27);
+            this.cbTheoLoai.TabIndex = 3;
             // 
             // DetailBox
             // 
@@ -675,15 +678,15 @@
             this.btnSearch.TabStop = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtSearch
+            // txtTimKiem
             // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(26, 37);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(278, 27);
-            this.txtSearch.TabIndex = 0;
+            this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTimKiem.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTimKiem.Location = new System.Drawing.Point(26, 37);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(278, 27);
+            this.txtTimKiem.TabIndex = 0;
             // 
             // btnNext
             // 
@@ -718,9 +721,9 @@
             // 
             this.SearchBox.Controls.Add(this.label7);
             this.SearchBox.Controls.Add(this.label13);
-            this.SearchBox.Controls.Add(this.cbType);
+            this.SearchBox.Controls.Add(this.cbTheoLoai);
             this.SearchBox.Controls.Add(this.btnSearch);
-            this.SearchBox.Controls.Add(this.txtSearch);
+            this.SearchBox.Controls.Add(this.txtTimKiem);
             this.SearchBox.Controls.Add(this.btnNext);
             this.SearchBox.Controls.Add(this.btnBack);
             this.SearchBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
@@ -849,7 +852,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox cbGioiTinh;
         private System.Windows.Forms.GroupBox Acountbox;
-        private System.Windows.Forms.ComboBox cbType;
+        private System.Windows.Forms.ComboBox cbTheoLoai;
         private System.Windows.Forms.GroupBox DetailBox;
         private System.Windows.Forms.DataGridView dgvNhanVien;
         private System.Windows.Forms.Label label14;
@@ -866,7 +869,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn17;
         private System.Windows.Forms.PictureBox btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.PictureBox btnNext;
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn18;

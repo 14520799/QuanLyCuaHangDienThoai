@@ -23,7 +23,7 @@ namespace DataAccess
     
         public string MaHang { get; set; }
         public string TenHang { get; set; }
-        public int SoDT { get; set; }
+        public string SoDT { get; set; }
         public string Email { get; set; }
         public string DiaChi { get; set; }
     

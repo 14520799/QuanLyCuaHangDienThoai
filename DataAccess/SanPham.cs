@@ -21,7 +21,7 @@ namespace DataAccess
             this.ChiTietMuas = new HashSet<ChiTietMua>();
         }
     
-        public int MaSP { get; set; }
+        public string MaSP { get; set; }
         public string TenSP { get; set; }
         public string HinhAnh { get; set; }
         public decimal DonGia { get; set; }
@@ -38,7 +38,7 @@ namespace DataAccess
         public string TheSIM { get; set; }
         public string DungLuongPin { get; set; }
         public string MaHang { get; set; }
-        public int MaLoai { get; set; }
+        public string MaLoai { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietBan> ChiTietBans { get; set; }

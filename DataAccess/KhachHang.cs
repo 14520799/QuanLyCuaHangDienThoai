@@ -20,15 +20,15 @@ namespace DataAccess
             this.HoaDonBans = new HashSet<HoaDonBan>();
         }
     
-        public int MaKH { get; set; }
+        public string MaKH { get; set; }
         public string TenKH { get; set; }
         public System.DateTime NgaySinh { get; set; }
-        public int GioiTinh { get; set; }
-        public int SoDT { get; set; }
+        public string GioiTinh { get; set; }
+        public string SoDT { get; set; }
         public string Email { get; set; }
         public string DiaChi { get; set; }
         public decimal TienNo { get; set; }
-        public int LoaiKH { get; set; }
+        public string LoaiKH { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<HoaDonBan> HoaDonBans { get; set; }

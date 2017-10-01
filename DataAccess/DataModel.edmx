@@ -9,25 +9,25 @@
           <Key>
             <PropertyRef Name="MaCTB" />
           </Key>
-          <Property Name="MaCTB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MaSP" Type="int" Nullable="false" />
-          <Property Name="DonGia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MaCTB" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="MaSP" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="DonGia" Type="decimal" Precision="18" Scale="3" Nullable="false" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
-          <Property Name="GiamGia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="ThanhTien" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="MaHDB" Type="int" Nullable="false" />
+          <Property Name="GiamGia" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ThanhTien" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="MaHDB" Type="varchar" MaxLength="5" Nullable="false" />
         </EntityType>
         <EntityType Name="ChiTietMua">
           <Key>
             <PropertyRef Name="MaCTM" />
           </Key>
-          <Property Name="MaCTM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MaSP" Type="int" Nullable="false" />
-          <Property Name="DonGia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MaCTM" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="MaSP" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="DonGia" Type="decimal" Precision="18" Scale="3" Nullable="false" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
-          <Property Name="GiamGia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="ThanhTien" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="MaHDM" Type="int" Nullable="false" />
+          <Property Name="GiamGia" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ThanhTien" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="MaHDM" Type="varchar" MaxLength="5" Nullable="false" />
         </EntityType>
         <EntityType Name="HangSanXuat">
           <Key>
@@ -35,7 +35,7 @@
           </Key>
           <Property Name="MaHang" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="TenHang" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="SoDT" Type="int" Nullable="false" />
+          <Property Name="SoDT" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
         </EntityType>
@@ -43,43 +43,43 @@
           <Key>
             <PropertyRef Name="MaHDB" />
           </Key>
-          <Property Name="MaHDB" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="MaKH" Type="int" Nullable="false" />
+          <Property Name="MaHDB" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="MaKH" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="MaNV" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="NgayBan" Type="smalldatetime" Nullable="false" />
-          <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="TienNo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TongTien" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="TienNo" Type="decimal" Precision="18" Scale="3" Nullable="false" />
         </EntityType>
         <EntityType Name="HoaDonMua">
           <Key>
             <PropertyRef Name="MaHDM" />
           </Key>
-          <Property Name="MaHDM" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaHDM" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="MaHang" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="MaNV" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="NgayMua" Type="smalldatetime" Nullable="false" />
-          <Property Name="TongTien" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="TienNo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TongTien" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="TienNo" Type="decimal" Precision="18" Scale="3" Nullable="false" />
         </EntityType>
         <EntityType Name="KhachHang">
           <Key>
             <PropertyRef Name="MaKH" />
           </Key>
-          <Property Name="MaKH" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaKH" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="TenKH" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="NgaySinh" Type="smalldatetime" Nullable="false" />
-          <Property Name="GioiTinh" Type="int" Nullable="false" />
-          <Property Name="SoDT" Type="int" Nullable="false" />
+          <Property Name="GioiTinh" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="SoDT" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="DiaChi" Type="nvarchar" MaxLength="100" Nullable="false" />
-          <Property Name="TienNo" Type="decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="LoaiKH" Type="int" Nullable="false" />
+          <Property Name="TienNo" Type="decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="LoaiKH" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="LoaiSanPham">
           <Key>
             <PropertyRef Name="MaLoai" />
           </Key>
-          <Property Name="MaLoai" Type="int" Nullable="false" />
+          <Property Name="MaLoai" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="TenLoai" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="NhanVien">
@@ -101,10 +101,10 @@
           <Key>
             <PropertyRef Name="MaSP" />
           </Key>
-          <Property Name="MaSP" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MaSP" Type="varchar" MaxLength="5" Nullable="false" />
           <Property Name="TenSP" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="HinhAnh" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="DonGia" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DonGia" Type="decimal" Precision="18" Scale="3" Nullable="false" />
           <Property Name="MoTa" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="SoLuong" Type="int" Nullable="false" />
           <Property Name="ManHinh" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -118,17 +118,7 @@
           <Property Name="TheSIM" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="DungLuongPin" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="MaHang" Type="varchar" MaxLength="5" Nullable="false" />
-          <Property Name="MaLoai" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="sysdiagrams">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-          <Property Name="principal_id" Type="int" Nullable="false" />
-          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="version" Type="int" />
-          <Property Name="definition" Type="varbinary(max)" />
+          <Property Name="MaLoai" Type="varchar" MaxLength="5" Nullable="false" />
         </EntityType>
         <Association Name="FK_ChiTietBan_HoaDonBan">
           <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="1" />
@@ -260,7 +250,6 @@
           <EntitySet Name="LoaiSanPham" EntityType="Self.LoaiSanPham" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="NhanVien" EntityType="Self.NhanVien" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_ChiTietBan_HoaDonBan" Association="Self.FK_ChiTietBan_HoaDonBan">
             <End Role="HoaDonBan" EntitySet="HoaDonBan" />
             <End Role="ChiTietBan" EntitySet="ChiTietBan" />
@@ -311,13 +300,13 @@
           <Key>
             <PropertyRef Name="MaCTB" />
           </Key>
-          <Property Name="MaCTB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaSP" Type="Int32" Nullable="false" />
-          <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MaCTB" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaSP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DonGia" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
-          <Property Name="GiamGia" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="MaHDB" Type="Int32" Nullable="false" />
+          <Property Name="GiamGia" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="MaHDB" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="HoaDonBan" Relationship="Self.FK_ChiTietBan_HoaDonBan" FromRole="ChiTietBan" ToRole="HoaDonBan" />
           <NavigationProperty Name="SanPham" Relationship="Self.FK_ChiTietBan_SanPham" FromRole="ChiTietBan" ToRole="SanPham" />
         </EntityType>
@@ -325,13 +314,13 @@
           <Key>
             <PropertyRef Name="MaCTM" />
           </Key>
-          <Property Name="MaCTM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaSP" Type="Int32" Nullable="false" />
-          <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="MaCTM" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaSP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DonGia" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
-          <Property Name="GiamGia" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="MaHDM" Type="Int32" Nullable="false" />
+          <Property Name="GiamGia" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="ThanhTien" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="MaHDM" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="HoaDonMua" Relationship="Self.FK_ChiTietMua_HoaDonMua" FromRole="ChiTietMua" ToRole="HoaDonMua" />
           <NavigationProperty Name="SanPham" Relationship="Self.FK_ChiTietMua_SanPham" FromRole="ChiTietMua" ToRole="SanPham" />
         </EntityType>
@@ -341,7 +330,7 @@
           </Key>
           <Property Name="MaHang" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenHang" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="SoDT" Type="Int32" Nullable="false" />
+          <Property Name="SoDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="HoaDonMuas" Relationship="Self.FK_HoaDonMua_HangSanXuat" FromRole="HangSanXuat" ToRole="HoaDonMua" />
@@ -351,12 +340,12 @@
           <Key>
             <PropertyRef Name="MaHDB" />
           </Key>
-          <Property Name="MaHDB" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="MaKH" Type="Int32" Nullable="false" />
+          <Property Name="MaHDB" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="MaKH" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MaNV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayBan" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="TongTien" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="TienNo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TongTien" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="TienNo" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
           <NavigationProperty Name="ChiTietBans" Relationship="Self.FK_ChiTietBan_HoaDonBan" FromRole="HoaDonBan" ToRole="ChiTietBan" />
           <NavigationProperty Name="KhachHang" Relationship="Self.FK_HoaDonBan_KhachHang" FromRole="HoaDonBan" ToRole="KhachHang" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDonBan_NhanVien" FromRole="HoaDonBan" ToRole="NhanVien" />
@@ -365,12 +354,12 @@
           <Key>
             <PropertyRef Name="MaHDM" />
           </Key>
-          <Property Name="MaHDM" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaHDM" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MaHang" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="MaNV" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="NgayMua" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="TongTien" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="TienNo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="TongTien" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="TienNo" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
           <NavigationProperty Name="ChiTietMuas" Relationship="Self.FK_ChiTietMua_HoaDonMua" FromRole="HoaDonMua" ToRole="ChiTietMua" />
           <NavigationProperty Name="HangSanXuat" Relationship="Self.FK_HoaDonMua_HangSanXuat" FromRole="HoaDonMua" ToRole="HangSanXuat" />
           <NavigationProperty Name="NhanVien" Relationship="Self.FK_HoaDonMua_NhanVien" FromRole="HoaDonMua" ToRole="NhanVien" />
@@ -379,22 +368,22 @@
           <Key>
             <PropertyRef Name="MaKH" />
           </Key>
-          <Property Name="MaKH" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaKH" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
-          <Property Name="GioiTinh" Type="Int32" Nullable="false" />
-          <Property Name="SoDT" Type="Int32" Nullable="false" />
+          <Property Name="GioiTinh" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="SoDT" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="DiaChi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="TienNo" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
-          <Property Name="LoaiKH" Type="Int32" Nullable="false" />
+          <Property Name="TienNo" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
+          <Property Name="LoaiKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="HoaDonBans" Relationship="Self.FK_HoaDonBan_KhachHang" FromRole="KhachHang" ToRole="HoaDonBan" />
         </EntityType>
         <EntityType Name="LoaiSanPham">
           <Key>
             <PropertyRef Name="MaLoai" />
           </Key>
-          <Property Name="MaLoai" Type="Int32" Nullable="false" />
+          <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenLoai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="SanPhams" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="LoaiSanPham" ToRole="SanPham" />
         </EntityType>
@@ -419,10 +408,10 @@
           <Key>
             <PropertyRef Name="MaSP" />
           </Key>
-          <Property Name="MaSP" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MaSP" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="TenSP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="HinhAnh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="DonGia" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="DonGia" Type="Decimal" Precision="18" Scale="3" Nullable="false" />
           <Property Name="MoTa" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="SoLuong" Type="Int32" Nullable="false" />
           <Property Name="ManHinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -436,21 +425,11 @@
           <Property Name="TheSIM" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DungLuongPin" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="MaHang" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="MaLoai" Type="Int32" Nullable="false" />
+          <Property Name="MaLoai" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
           <NavigationProperty Name="ChiTietBans" Relationship="Self.FK_ChiTietBan_SanPham" FromRole="SanPham" ToRole="ChiTietBan" />
           <NavigationProperty Name="ChiTietMuas" Relationship="Self.FK_ChiTietMua_SanPham" FromRole="SanPham" ToRole="ChiTietMua" />
           <NavigationProperty Name="HangSanXuat" Relationship="Self.FK_SanPham_HangSanXuat" FromRole="SanPham" ToRole="HangSanXuat" />
           <NavigationProperty Name="LoaiSanPham" Relationship="Self.FK_SanPham_LoaiSanPham" FromRole="SanPham" ToRole="LoaiSanPham" />
-        </EntityType>
-        <EntityType Name="sysdiagram">
-          <Key>
-            <PropertyRef Name="diagram_id" />
-          </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="principal_id" Type="Int32" Nullable="false" />
-          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="version" Type="Int32" />
-          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <Association Name="FK_ChiTietBan_HoaDonBan">
           <End Role="HoaDonBan" Type="Self.HoaDonBan" Multiplicity="1" />
@@ -582,7 +561,6 @@
           <EntitySet Name="LoaiSanPhams" EntityType="Self.LoaiSanPham" />
           <EntitySet Name="NhanViens" EntityType="Self.NhanVien" />
           <EntitySet Name="SanPhams" EntityType="Self.SanPham" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <AssociationSet Name="FK_ChiTietBan_HoaDonBan" Association="Self.FK_ChiTietBan_HoaDonBan">
             <End Role="HoaDonBan" EntitySet="HoaDonBans" />
             <End Role="ChiTietBan" EntitySet="ChiTietBans" />
@@ -751,17 +729,6 @@
                 <ScalarProperty Name="DungLuongPin" ColumnName="DungLuongPin" />
                 <ScalarProperty Name="MaHang" ColumnName="MaHang" />
                 <ScalarProperty Name="MaLoai" ColumnName="MaLoai" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="sysdiagrams">
-            <EntityTypeMapping TypeName="DataModelEntity.sysdiagram">
-              <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
-                <ScalarProperty Name="definition" ColumnName="definition" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

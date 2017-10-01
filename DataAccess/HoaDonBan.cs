@@ -20,8 +20,8 @@ namespace DataAccess
             this.ChiTietBans = new HashSet<ChiTietBan>();
         }
     
-        public int MaHDB { get; set; }
-        public int MaKH { get; set; }
+        public string MaHDB { get; set; }
+        public string MaKH { get; set; }
         public string MaNV { get; set; }
         public System.DateTime NgayBan { get; set; }
         public decimal TongTien { get; set; }

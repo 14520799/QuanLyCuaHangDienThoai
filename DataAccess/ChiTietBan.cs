@@ -14,13 +14,13 @@ namespace DataAccess
     
     public partial class ChiTietBan
     {
-        public int MaCTB { get; set; }
-        public int MaSP { get; set; }
+        public string MaCTB { get; set; }
+        public string MaSP { get; set; }
         public decimal DonGia { get; set; }
         public int SoLuong { get; set; }
         public decimal GiamGia { get; set; }
         public decimal ThanhTien { get; set; }
-        public int MaHDB { get; set; }
+        public string MaHDB { get; set; }
     
         public virtual HoaDonBan HoaDonBan { get; set; }
         public virtual SanPham SanPham { get; set; }

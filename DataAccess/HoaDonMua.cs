@@ -20,7 +20,7 @@ namespace DataAccess
             this.ChiTietMuas = new HashSet<ChiTietMua>();
         }
     
-        public int MaHDM { get; set; }
+        public string MaHDM { get; set; }
         public string MaHang { get; set; }
         public string MaNV { get; set; }
         public System.DateTime NgayMua { get; set; }

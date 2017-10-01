@@ -36,9 +36,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTienNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.PictureBox();
@@ -57,13 +54,7 @@
             this.btnNext = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.DetailBox = new System.Windows.Forms.GroupBox();
-            this.dgvTatCaKH = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.label14 = new System.Windows.Forms.Label();
             this.SearchBox = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,18 +66,15 @@
             this.Acountbox = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.RichTextBox();
-            this.cbNam = new System.Windows.Forms.ComboBox();
             this.InfoBox = new System.Windows.Forms.GroupBox();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSoTienNo = new System.Windows.Forms.TextBox();
             this.cbLoaiKH = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.cbThang = new System.Windows.Forms.ComboBox();
-            this.cbNgay = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
             this.txtSoDT = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtHoTen = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -94,6 +82,16 @@
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTienNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
@@ -101,31 +99,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.DetailBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTatCaKH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.SearchBox.SuspendLayout();
             this.Acountbox.SuspendLayout();
             this.InfoBox.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Email";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            // 
-            // SoTienNo
-            // 
-            this.SoTienNo.HeaderText = "Số Tiền Nợ";
-            this.SoTienNo.Name = "SoTienNo";
-            this.SoTienNo.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "LoaiKH";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Loại KH";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
             // 
             // Username
             // 
@@ -280,7 +258,7 @@
             // 
             // DetailBox
             // 
-            this.DetailBox.Controls.Add(this.dgvTatCaKH);
+            this.DetailBox.Controls.Add(this.dgvDanhSach);
             this.DetailBox.Controls.Add(this.label14);
             this.DetailBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailBox.ForeColor = System.Drawing.Color.Red;
@@ -291,15 +269,15 @@
             this.DetailBox.Size = new System.Drawing.Size(1108, 304);
             this.DetailBox.TabIndex = 52;
             this.DetailBox.TabStop = false;
-            this.DetailBox.Text = "Tất cả khách hàng";
+            this.DetailBox.Text = "Danh sách khách hàng";
             // 
-            // dgvTatCaKH
+            // dgvDanhSach
             // 
-            this.dgvTatCaKH.AllowUserToAddRows = false;
-            this.dgvTatCaKH.AllowUserToDeleteRows = false;
-            this.dgvTatCaKH.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dgvTatCaKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvTatCaKH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvDanhSach.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn4,
@@ -309,75 +287,20 @@
             this.dataGridViewTextBoxColumn6,
             this.SoTienNo,
             this.dataGridViewTextBoxColumn10});
-            this.dgvTatCaKH.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvTatCaKH.Location = new System.Drawing.Point(16, 28);
-            this.dgvTatCaKH.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvTatCaKH.MultiSelect = false;
-            this.dgvTatCaKH.Name = "dgvTatCaKH";
-            this.dgvTatCaKH.ReadOnly = true;
-            this.dgvTatCaKH.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            this.dgvTatCaKH.RowHeadersVisible = false;
-            this.dgvTatCaKH.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dgvDanhSach.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvDanhSach.Location = new System.Drawing.Point(16, 28);
+            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDanhSach.MultiSelect = false;
+            this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.ReadOnly = true;
+            this.dgvDanhSach.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dgvDanhSach.RowHeadersVisible = false;
+            this.dgvDanhSach.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.dgvTatCaKH.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.dgvTatCaKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvTatCaKH.Size = new System.Drawing.Size(1074, 253);
-            this.dgvTatCaKH.TabIndex = 11;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaNV";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 40;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "HoTen";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Họ Tên";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle5.Format = "dd/mm/yyyy";
-            dataGridViewCellStyle5.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày Sinh";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "GioiTinh";
-            dataGridViewCellStyle6.Format = "(CASE WHEN gt=\'1\' THEN \'Nam\' ELSE \'Nữ\' END) AS gt";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Giới Tính";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "SoDT";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Số ĐT";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "DiaChi";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Địa Chỉ";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 200;
+            this.dgvDanhSach.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDanhSach.Size = new System.Drawing.Size(1074, 253);
+            this.dgvDanhSach.TabIndex = 11;
             // 
             // label14
             // 
@@ -524,30 +447,18 @@
             this.txtDiaChi.TabIndex = 67;
             this.txtDiaChi.Text = "";
             // 
-            // cbNam
-            // 
-            this.cbNam.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNam.FormattingEnabled = true;
-            this.cbNam.Location = new System.Drawing.Point(322, 94);
-            this.cbNam.Margin = new System.Windows.Forms.Padding(4);
-            this.cbNam.Name = "cbNam";
-            this.cbNam.Size = new System.Drawing.Size(76, 27);
-            this.cbNam.TabIndex = 66;
-            // 
             // InfoBox
             // 
+            this.InfoBox.Controls.Add(this.dtNgaySinh);
             this.InfoBox.Controls.Add(this.label11);
             this.InfoBox.Controls.Add(this.txtSoTienNo);
             this.InfoBox.Controls.Add(this.cbLoaiKH);
             this.InfoBox.Controls.Add(this.label9);
             this.InfoBox.Controls.Add(this.txtDiaChi);
-            this.InfoBox.Controls.Add(this.cbNam);
-            this.InfoBox.Controls.Add(this.cbThang);
-            this.InfoBox.Controls.Add(this.cbNgay);
             this.InfoBox.Controls.Add(this.label10);
             this.InfoBox.Controls.Add(this.txtSoDT);
             this.InfoBox.Controls.Add(this.txtEmail);
-            this.InfoBox.Controls.Add(this.txtHoTen);
+            this.InfoBox.Controls.Add(this.txtTenKH);
             this.InfoBox.Controls.Add(this.label4);
             this.InfoBox.Controls.Add(this.label5);
             this.InfoBox.Controls.Add(this.label3);
@@ -612,26 +523,6 @@
             this.label9.TabIndex = 68;
             this.label9.Text = "Loại KH";
             // 
-            // cbThang
-            // 
-            this.cbThang.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbThang.FormattingEnabled = true;
-            this.cbThang.Location = new System.Drawing.Point(248, 94);
-            this.cbThang.Margin = new System.Windows.Forms.Padding(4);
-            this.cbThang.Name = "cbThang";
-            this.cbThang.Size = new System.Drawing.Size(51, 27);
-            this.cbThang.TabIndex = 65;
-            // 
-            // cbNgay
-            // 
-            this.cbNgay.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNgay.FormattingEnabled = true;
-            this.cbNgay.Location = new System.Drawing.Point(175, 94);
-            this.cbNgay.Margin = new System.Windows.Forms.Padding(4);
-            this.cbNgay.Name = "cbNgay";
-            this.cbNgay.Size = new System.Drawing.Size(51, 27);
-            this.cbNgay.TabIndex = 64;
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -665,15 +556,15 @@
             this.txtEmail.Size = new System.Drawing.Size(268, 27);
             this.txtEmail.TabIndex = 38;
             // 
-            // txtHoTen
+            // txtTenKH
             // 
-            this.txtHoTen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtHoTen.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHoTen.Location = new System.Drawing.Point(175, 46);
-            this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
-            this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(268, 27);
-            this.txtHoTen.TabIndex = 37;
+            this.txtTenKH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenKH.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenKH.Location = new System.Drawing.Point(175, 46);
+            this.txtTenKH.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(268, 27);
+            this.txtTenKH.TabIndex = 37;
             // 
             // label4
             // 
@@ -766,6 +657,92 @@
             this.label1.TabIndex = 30;
             this.label1.Text = "Họ tên";
             // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaKH";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã KH";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 89;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenKH";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên KH";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 96;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle5.Format = "dd/mm/yyyy";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày Sinh";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 118;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "GioiTinh";
+            dataGridViewCellStyle6.Format = "(CASE WHEN gt=\'1\' THEN \'Nam\' ELSE \'Nữ\' END) AS gt";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Giới Tính";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 110;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "SoDT";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Số ĐT";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 86;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 80;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "DiaChi";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Địa Chỉ";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 94;
+            // 
+            // SoTienNo
+            // 
+            this.SoTienNo.DataPropertyName = "TienNo";
+            this.SoTienNo.HeaderText = "Tiền Nợ";
+            this.SoTienNo.Name = "SoTienNo";
+            this.SoTienNo.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "LoaiKH";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Loại KH";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            // 
+            // dtNgaySinh
+            // 
+            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgaySinh.Location = new System.Drawing.Point(175, 93);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(223, 27);
+            this.dtNgaySinh.TabIndex = 72;
+            // 
             // Customer_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -782,6 +759,7 @@
             this.Controls.Add(this.InfoBox);
             this.Name = "Customer_View";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.Customer_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).EndInit();
@@ -790,7 +768,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.DetailBox.ResumeLayout(false);
             this.DetailBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvTatCaKH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             this.SearchBox.ResumeLayout(false);
             this.SearchBox.PerformLayout();
             this.Acountbox.ResumeLayout(false);
@@ -802,10 +780,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoTienNo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Username;
         private System.Windows.Forms.PictureBox btnDelete;
         private System.Windows.Forms.PictureBox btnCancel;
@@ -824,13 +798,7 @@
         private System.Windows.Forms.PictureBox btnNext;
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.GroupBox DetailBox;
-        private System.Windows.Forms.DataGridView dgvTatCaKH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridView dgvDanhSach;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.GroupBox SearchBox;
         private System.Windows.Forms.Label label7;
@@ -842,18 +810,15 @@
         private System.Windows.Forms.GroupBox Acountbox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.RichTextBox txtDiaChi;
-        private System.Windows.Forms.ComboBox cbNam;
         private System.Windows.Forms.GroupBox InfoBox;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtSoTienNo;
         private System.Windows.Forms.ComboBox cbLoaiKH;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox cbThang;
-        private System.Windows.Forms.ComboBox cbNgay;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtSoDT;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtHoTen;
+        private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
@@ -861,5 +826,15 @@
         private System.Windows.Forms.ComboBox cbGioiTinh;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTienNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DateTimePicker dtNgaySinh;
     }
 }
