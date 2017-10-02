@@ -13,28 +13,33 @@ namespace Presentation.Admin
 {
     public partial class Admin_Login : Form
     {
-        NhanVien nv = new NhanVien();
+        NhanVien_BL bl = new NhanVien_BL();
 
         public Admin_Login()
         {
             InitializeComponent();
         }
 
+
         // Nhấn nút Confirm đăng nhập
         private void btnConfirm_Click(object sender, EventArgs e)
-        {/*
-            string TenNV = nv.dangNhap(txtMaNV.Text, txtMatKhau.Text);
+        {
+            /*bl.MaNV = txtMaNV.Text;
+            bl.MatKhau = txtMatKhau.Text;
+
+            string TenNV = bl.dangNhap();
             if (TenNV != string.Empty)
             {
                 Hide();
-                new Form_Main(txtMaNV.Text, TenNV).Show();
+                new Form_Main(bl.MaNV, TenNV).Show();
             }
             else
                 MessageBox.Show("Sai thông tin tài khoản !");*/
-
+            
             Hide();
             new Form_Main("NV001", "Hoàng Tâm").Show();
         }
+
 
         // Nhấn nút Close đóng form
         private void btnCancel_Click(object sender, EventArgs e)

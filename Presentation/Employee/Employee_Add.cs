@@ -7,38 +7,59 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess;
 using BusinessLogic;
 
 namespace Presentation.Employee
 {
     public partial class Employee_Add : Form
     {
-        NhanVien nv;
+        NhanVien_BL bl = new NhanVien_BL();
 
         public Employee_Add()
         {
             InitializeComponent();
         }
+
         
         // Nhấn nút thêm nhân viên
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            NhanVien nv = new NhanVien();
+            nv.MaNV = txtMaNV.Text;
+            nv.TenNV = txtTenNV.Text;
+            nv.NgaySinh = dtNgaySinh.Value;
+            nv.GioiTinh = cbGioiTinh.Text;
+            nv.SoDT = txtSoDT.Text;
+            nv.Email = txtEmail.Text;
+            nv.DiaChi = txtDiaChi.Text;
+            nv.Quyen = cbQuyen.Text;
+            nv.ChucVu = cbChucVu.Text;
+
             try
             {
-                nv = new NhanVien();
-
-                if (cbQuyen.Text == "Quản trị" && txtMatKhauMoi1.Text == txtMatKhauMoi2.Text)
-                    nv.them(txtMaNV.Text, txtTenNV.Text, dtNgaySinh.Value, cbGioiTinh.Text, txtSoDT.Text, txtEmail.Text, txtDiaChi.Text, cbQuyen.Text, cbChucVu.Text, txtMatKhauMoi1.Text);
+                if (cbQuyen.Text == "Quản trị")
+                {
+                    if (txtMatKhauMoi1.Text == txtMatKhauMoi2.Text)
+                    {
+                        nv.MatKhau = txtMatKhauMoi1.Text;
+                        bl.them(nv);
+                        MessageBox.Show("Thêm thành công !");
+                    }
+                    else
+                        MessageBox.Show("Mật khẩu không trùng khớp !");
+                }
                 else
-                    nv.them(txtMaNV.Text, txtTenNV.Text, dtNgaySinh.Value, cbGioiTinh.Text, txtSoDT.Text, txtEmail.Text, txtDiaChi.Text, cbQuyen.Text, cbChucVu.Text, "");
-                
-                MessageBox.Show("Thêm thành công nhân viên : " + txtTenNV.Text);
+                {
+                    nv.MatKhau = "";
+                    bl.them(nv);
+                    MessageBox.Show("Thêm thành công !");
+                }
             }
             catch
             {
-                MessageBox.Show("Rất tiếc. Đã xảy ra lỗi !");
+                MessageBox.Show("Lỗi gì đó...");
             }
-
         }
     }
 }

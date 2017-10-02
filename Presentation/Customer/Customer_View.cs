@@ -13,7 +13,7 @@ namespace Presentation.Customer
 {
     public partial class Customer_View : Form
     {
-        KhachHang kh = new KhachHang();
+        KhachHang_BL kh = new KhachHang_BL();
 
         public Customer_View()
         {

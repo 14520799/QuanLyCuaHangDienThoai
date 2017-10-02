@@ -7,49 +7,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess;
 using BusinessLogic;
 
 namespace Presentation.Employee
 {
     public partial class Employee_View : Form
     {
-        NhanVien nv = new NhanVien();
-
-        DateTime NgaySinh;
-        string MaNV, TenNV, GioiTinh, SoDT, Email, DiaChi, Quyen, ChucVu, MatKhau;
+        NhanVien_BL bl = new NhanVien_BL();
 
         public Employee_View()
         {
             InitializeComponent();
         }
 
+
         // Lấy danh sách nhân viên
         private void Employee_View_Load(object sender, EventArgs e)
         {
             dgvNhanVien.AutoGenerateColumns = false;
-            dgvNhanVien.DataSource = nv.danhSach();
+            dgvNhanVien.DataSource = bl.danhSach();
         }
+
 
         // Tìm nhân viên
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if(cbTheoLoai.Text == "Tên NV")
-                dgvNhanVien.DataSource = nv.timTheoTen(txtTimKiem.Text);
+                dgvNhanVien.DataSource = bl.timTheoTen(txtTimKiem.Text);
             else if(cbTheoLoai.Text == "Quyen")
-                dgvNhanVien.DataSource = nv.timTheoQuyen(txtTimKiem.Text);
+                dgvNhanVien.DataSource = bl.timTheoQuyen(txtTimKiem.Text);
             else
-                dgvNhanVien.DataSource = nv.timTheoChucVu(txtTimKiem.Text);
+                dgvNhanVien.DataSource = bl.timTheoChucVu(txtTimKiem.Text);
 
             if (dgvNhanVien.RowCount == 0)
-                MessageBox.Show("Không kết quả phù hợp !");
+                MessageBox.Show("Không có kết quả phù hợp !");
         }
+
 
         // Nạp thông tin nhân viên vào các TextBox khi click DataGridView
         private void dgvNhanVien_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvNhanVien.SelectedRows.Count > 0)
             {
-                MaNV = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
+                bl.MaNV = dgvNhanVien.CurrentRow.Cells[0].Value.ToString();
                 txtTenNV.Text = dgvNhanVien.CurrentRow.Cells[1].Value.ToString();
                 dtNgaySinh.Text = dgvNhanVien.CurrentRow.Cells[2].Value.ToString();
                 cbGioiTinh.Text = dgvNhanVien.CurrentRow.Cells[3].Value.ToString();
@@ -61,50 +62,45 @@ namespace Presentation.Employee
             }
         }
 
+
         // Sửa thông tin nhân viên
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                TenNV = txtTenNV.Text;
-                NgaySinh = dtNgaySinh.Value;
-                GioiTinh = cbGioiTinh.Text;
-                SoDT = txtSoDT.Text;
-                Email = txtEmail.Text;
-                DiaChi = txtDiaChi.Text;
-                Quyen = cbQuyen.Text;
-                ChucVu = cbChucVu.Text;
-                MatKhau = txtMatKhauMoi1.Text;
+                bl.TenNV = txtTenNV.Text;
+                bl.NgaySinh = dtNgaySinh.Value;
+                bl.GioiTinh = cbGioiTinh.Text;
+                bl.SoDT = txtSoDT.Text;
+                bl.Email = txtEmail.Text;
+                bl.DiaChi = txtDiaChi.Text;
+                bl.Quyen = cbQuyen.Text;
+                bl.ChucVu = cbChucVu.Text;
 
-                if(Quyen == "Quản trị")
-                {
-                    if (txtMatKhauMoi1.Text != txtMatKhauMoi2.Text)
-                        MessageBox.Show("Mật khẩu không trùng khớp !");
-                    else
-                        nv.capNhat(MaNV, TenNV, NgaySinh, GioiTinh, SoDT, Email, DiaChi, Quyen, ChucVu, MatKhau);
-                }
-                else
-                    nv.capNhat(MaNV, TenNV, NgaySinh, GioiTinh, SoDT, Email, DiaChi, Quyen, ChucVu, "");
-
-                dgvNhanVien.DataSource = nv.danhSach();
+                bl.capNhat();
+                dgvNhanVien.DataSource = bl.danhSach();
             }
-            catch {
-
+            catch
+            {
+                MessageBox.Show("Lỗi gì đó...");
             }
         }
+
 
         // Xóa nhân viên
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            //MessageBox.Show("Xác nhận xóa ?");
+
             try
             {
-                nv.xoa(MaNV);
-                dgvNhanVien.DataSource = nv.danhSach();
+                bl.xoa();
+                dgvNhanVien.DataSource = bl.danhSach();
                 MessageBox.Show("Xóa thành công !");
             }
             catch
             {
-                MessageBox.Show("Rất tiếc. Đã xảy ra lỗi !");
+                MessageBox.Show("Lỗi gì đó...");
             }
         }
     }

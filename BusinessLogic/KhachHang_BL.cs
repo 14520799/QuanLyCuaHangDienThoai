@@ -7,16 +7,18 @@ using DataAccess;
 
 namespace BusinessLogic
 {
-    public class KhachHang
+    public class KhachHang_BL
     {
         DataModel model;
 
-        public KhachHang()
+        public KhachHang_BL()
         {
             model = new DataModel();
         }
 
-        public List<DataAccess.KhachHang> danhSach()
+
+        // Lấy danh sách tất cả khách hàng
+        public List<KhachHang> danhSach()
         {
             return model.KhachHangs.ToList();
         }
