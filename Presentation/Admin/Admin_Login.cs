@@ -44,7 +44,7 @@ namespace Presentation.Admin
         // Nhấn nút Close đóng form
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Close();
+            Application.Exit();
         }
 
         // Nhấn Enter đăng nhập
