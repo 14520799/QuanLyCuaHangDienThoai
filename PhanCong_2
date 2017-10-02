@@ -1,0 +1,21 @@
+
+--- Yêu cầu ---
+- Dùng mô hình 3 lớp Entity (https://youtu.be/FvsEUsRHrM8?list=WL)
+- Các hàm lấy danh sách, thêm, xóa, sửa, tìm kiếm,... phải viết trong project BusinessLogic. Mỗi table là 1 class
+- Các hàm chức năng linh tinh khác viết trong lớp Function
+- Bắt tất cả lỗi ràng buộc
+- Mỗi thành viên hoàn thành các task trong 1 tuần
+
+
+--- Danh sách task đợt 2 ---
+1. Thêm mới khách hàng + Load danh sách tất cả khách hàng -> Quân
+2. Sửa thông tin khách hàng + Xóa khách hàng -> Phúc
+3. Tìm kiếm khách hàng (Theo tên, loại KH, KH có tiền nợ > 0) -> Tuấn
+4. Thêm mới sản phẩm + Load danh sách tất cả sản phẩm -> Tùng
+5. Sửa thông tin sản phẩm + Xóa sản phẩm -> Phú
+
+
+
+
+
+
