@@ -55,6 +55,15 @@
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.DetailBox = new System.Windows.Forms.GroupBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTienNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.SearchBox = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,6 +76,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.RichTextBox();
             this.InfoBox = new System.Windows.Forms.GroupBox();
+            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label11 = new System.Windows.Forms.Label();
             this.txtSoTienNo = new System.Windows.Forms.TextBox();
             this.cbLoaiKH = new System.Windows.Forms.ComboBox();
@@ -82,16 +92,6 @@
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTienNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
@@ -115,21 +115,20 @@
             // 
             this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(766, 735);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Location = new System.Drawing.Point(574, 597);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(133, 43);
+            this.btnDelete.Size = new System.Drawing.Size(100, 35);
             this.btnDelete.TabIndex = 57;
             this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.Location = new System.Drawing.Point(907, 735);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(680, 597);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(133, 43);
+            this.btnCancel.Size = new System.Drawing.Size(100, 35);
             this.btnCancel.TabIndex = 56;
             this.btnCancel.TabStop = false;
             // 
@@ -137,12 +136,12 @@
             // 
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUpdate.Location = new System.Drawing.Point(625, 735);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Location = new System.Drawing.Point(469, 597);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(133, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(100, 35);
             this.btnUpdate.TabIndex = 55;
             this.btnUpdate.TabStop = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // MaAD
             // 
@@ -216,10 +215,9 @@
             // 
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(138, 78);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSearch.Location = new System.Drawing.Point(104, 63);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(91, 35);
+            this.btnSearch.Size = new System.Drawing.Size(68, 28);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.TabStop = false;
             // 
@@ -227,10 +225,9 @@
             // 
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSearch.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.txtSearch.Location = new System.Drawing.Point(39, 38);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSearch.Location = new System.Drawing.Point(29, 31);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(278, 27);
+            this.txtSearch.Size = new System.Drawing.Size(209, 23);
             this.txtSearch.TabIndex = 0;
             // 
             // btnNext
@@ -238,10 +235,9 @@
             this.btnNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNext.BackgroundImage")));
             this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnNext.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnNext.InitialImage")));
-            this.btnNext.Location = new System.Drawing.Point(494, 88);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNext.Location = new System.Drawing.Point(370, 72);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(33, 31);
+            this.btnNext.Size = new System.Drawing.Size(25, 25);
             this.btnNext.TabIndex = 53;
             this.btnNext.TabStop = false;
             // 
@@ -249,10 +245,9 @@
             // 
             this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
             this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.Location = new System.Drawing.Point(347, 88);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
+            this.btnBack.Location = new System.Drawing.Point(260, 72);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(33, 31);
+            this.btnBack.Size = new System.Drawing.Size(25, 25);
             this.btnBack.TabIndex = 52;
             this.btnBack.TabStop = false;
             // 
@@ -262,11 +257,9 @@
             this.DetailBox.Controls.Add(this.label14);
             this.DetailBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailBox.ForeColor = System.Drawing.Color.Red;
-            this.DetailBox.Location = new System.Drawing.Point(13, 13);
-            this.DetailBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DetailBox.Location = new System.Drawing.Point(10, 11);
             this.DetailBox.Name = "DetailBox";
-            this.DetailBox.Padding = new System.Windows.Forms.Padding(4);
-            this.DetailBox.Size = new System.Drawing.Size(1108, 304);
+            this.DetailBox.Size = new System.Drawing.Size(831, 247);
             this.DetailBox.TabIndex = 52;
             this.DetailBox.TabStop = false;
             this.DetailBox.Text = "Danh sách khách hàng";
@@ -288,8 +281,7 @@
             this.SoTienNo,
             this.dataGridViewTextBoxColumn10});
             this.dgvDanhSach.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvDanhSach.Location = new System.Drawing.Point(16, 28);
-            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDanhSach.Location = new System.Drawing.Point(12, 23);
             this.dgvDanhSach.MultiSelect = false;
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.ReadOnly = true;
@@ -299,17 +291,96 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.OrangeRed;
             this.dgvDanhSach.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSach.Size = new System.Drawing.Size(1074, 253);
+            this.dgvDanhSach.Size = new System.Drawing.Size(806, 206);
             this.dgvDanhSach.TabIndex = 11;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaKH";
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridViewTextBoxColumn1.HeaderText = "Mã KH";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 78;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenKH";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Tên KH";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 82;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle5.Format = "dd/mm/yyyy";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày Sinh";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.Width = 102;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "GioiTinh";
+            dataGridViewCellStyle6.Format = "(CASE WHEN gt=\'1\' THEN \'Nam\' ELSE \'Nữ\' END) AS gt";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle6;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Giới Tính";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Width = 96;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "SoDT";
+            this.dataGridViewTextBoxColumn7.HeaderText = "Số ĐT";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 73;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            this.dataGridViewTextBoxColumn8.DataPropertyName = "Email";
+            this.dataGridViewTextBoxColumn8.HeaderText = "Email";
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 70;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "DiaChi";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Địa Chỉ";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            this.dataGridViewTextBoxColumn6.Width = 82;
+            // 
+            // SoTienNo
+            // 
+            this.SoTienNo.DataPropertyName = "TienNo";
+            this.SoTienNo.HeaderText = "Tiền Nợ";
+            this.SoTienNo.Name = "SoTienNo";
+            this.SoTienNo.ReadOnly = true;
+            this.SoTienNo.Width = 87;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "LoaiKH";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Loại KH";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 86;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(360, 68);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(270, 55);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(288, 42);
+            this.label14.Size = new System.Drawing.Size(227, 33);
             this.label14.TabIndex = 10;
             this.label14.Text = "Data not found!";
             // 
@@ -324,11 +395,9 @@
             this.SearchBox.Controls.Add(this.btnBack);
             this.SearchBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.SearchBox.ForeColor = System.Drawing.Color.Red;
-            this.SearchBox.Location = new System.Drawing.Point(546, 542);
-            this.SearchBox.Margin = new System.Windows.Forms.Padding(4);
+            this.SearchBox.Location = new System.Drawing.Point(410, 440);
             this.SearchBox.Name = "SearchBox";
-            this.SearchBox.Padding = new System.Windows.Forms.Padding(4);
-            this.SearchBox.Size = new System.Drawing.Size(575, 142);
+            this.SearchBox.Size = new System.Drawing.Size(431, 115);
             this.SearchBox.TabIndex = 53;
             this.SearchBox.TabStop = false;
             this.SearchBox.Text = "Tìm kiếm";
@@ -339,10 +408,9 @@
             this.label7.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(388, 94);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(291, 76);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 19);
+            this.label7.Size = new System.Drawing.Size(85, 16);
             this.label7.TabIndex = 46;
             this.label7.Text = "Back | Next";
             // 
@@ -352,10 +420,9 @@
             this.label13.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label13.ForeColor = System.Drawing.Color.Black;
             this.label13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label13.Location = new System.Drawing.Point(337, 42);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(253, 34);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(44, 19);
+            this.label13.Size = new System.Drawing.Size(40, 16);
             this.label13.TabIndex = 40;
             this.label13.Text = "theo";
             // 
@@ -367,20 +434,18 @@
             "Name",
             "ID",
             "Birth"});
-            this.cbType.Location = new System.Drawing.Point(403, 37);
-            this.cbType.Margin = new System.Windows.Forms.Padding(4);
+            this.cbType.Location = new System.Drawing.Point(302, 30);
             this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(124, 27);
+            this.cbType.Size = new System.Drawing.Size(94, 24);
             this.cbType.TabIndex = 3;
             // 
             // txtMatKhauMoi2
             // 
             this.txtMatKhauMoi2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMatKhauMoi2.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.txtMatKhauMoi2.Location = new System.Drawing.Point(283, 87);
-            this.txtMatKhauMoi2.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMatKhauMoi2.Location = new System.Drawing.Point(212, 71);
             this.txtMatKhauMoi2.Name = "txtMatKhauMoi2";
-            this.txtMatKhauMoi2.Size = new System.Drawing.Size(261, 27);
+            this.txtMatKhauMoi2.Size = new System.Drawing.Size(196, 23);
             this.txtMatKhauMoi2.TabIndex = 44;
             this.txtMatKhauMoi2.UseSystemPasswordChar = true;
             // 
@@ -390,10 +455,9 @@
             this.label12.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label12.ForeColor = System.Drawing.Color.Black;
             this.label12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label12.Location = new System.Drawing.Point(45, 44);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(34, 36);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(162, 19);
+            this.label12.Size = new System.Drawing.Size(141, 16);
             this.label12.TabIndex = 32;
             this.label12.Text = "Nhập mật khẩu mới";
             // 
@@ -401,10 +465,9 @@
             // 
             this.txtMatKhauMoi1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMatKhauMoi1.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.txtMatKhauMoi1.Location = new System.Drawing.Point(283, 40);
-            this.txtMatKhauMoi1.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMatKhauMoi1.Location = new System.Drawing.Point(212, 32);
             this.txtMatKhauMoi1.Name = "txtMatKhauMoi1";
-            this.txtMatKhauMoi1.Size = new System.Drawing.Size(261, 27);
+            this.txtMatKhauMoi1.Size = new System.Drawing.Size(196, 23);
             this.txtMatKhauMoi1.TabIndex = 31;
             this.txtMatKhauMoi1.UseSystemPasswordChar = true;
             // 
@@ -416,11 +479,9 @@
             this.Acountbox.Controls.Add(this.txtMatKhauMoi1);
             this.Acountbox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.Acountbox.ForeColor = System.Drawing.Color.Red;
-            this.Acountbox.Location = new System.Drawing.Point(546, 355);
-            this.Acountbox.Margin = new System.Windows.Forms.Padding(4);
+            this.Acountbox.Location = new System.Drawing.Point(410, 288);
             this.Acountbox.Name = "Acountbox";
-            this.Acountbox.Padding = new System.Windows.Forms.Padding(4);
-            this.Acountbox.Size = new System.Drawing.Size(575, 147);
+            this.Acountbox.Size = new System.Drawing.Size(431, 119);
             this.Acountbox.TabIndex = 58;
             this.Acountbox.TabStop = false;
             this.Acountbox.Text = "Mật khẩu";
@@ -431,19 +492,19 @@
             this.label8.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.Black;
             this.label8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label8.Location = new System.Drawing.Point(45, 91);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(34, 74);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(184, 19);
+            this.label8.Size = new System.Drawing.Size(161, 16);
             this.label8.TabIndex = 45;
             this.label8.Text = "Nhập lại mật khẩu mới";
             // 
             // txtDiaChi
             // 
             this.txtDiaChi.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(175, 296);
+            this.txtDiaChi.Location = new System.Drawing.Point(131, 240);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(268, 64);
+            this.txtDiaChi.Size = new System.Drawing.Size(202, 53);
             this.txtDiaChi.TabIndex = 67;
             this.txtDiaChi.Text = "";
             // 
@@ -468,14 +529,21 @@
             this.InfoBox.Controls.Add(this.label1);
             this.InfoBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.InfoBox.ForeColor = System.Drawing.Color.Red;
-            this.InfoBox.Location = new System.Drawing.Point(13, 355);
-            this.InfoBox.Margin = new System.Windows.Forms.Padding(4);
+            this.InfoBox.Location = new System.Drawing.Point(10, 288);
             this.InfoBox.Name = "InfoBox";
-            this.InfoBox.Padding = new System.Windows.Forms.Padding(4);
-            this.InfoBox.Size = new System.Drawing.Size(497, 494);
+            this.InfoBox.Size = new System.Drawing.Size(373, 401);
             this.InfoBox.TabIndex = 54;
             this.InfoBox.TabStop = false;
             this.InfoBox.Text = "Chi tiết khách hàng";
+            // 
+            // dtNgaySinh
+            // 
+            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtNgaySinh.Location = new System.Drawing.Point(131, 76);
+            this.dtNgaySinh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtNgaySinh.Name = "dtNgaySinh";
+            this.dtNgaySinh.Size = new System.Drawing.Size(168, 23);
+            this.dtNgaySinh.TabIndex = 72;
             // 
             // label11
             // 
@@ -483,10 +551,9 @@
             this.label11.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label11.ForeColor = System.Drawing.Color.Black;
             this.label11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label11.Location = new System.Drawing.Point(399, 387);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(299, 314);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(44, 19);
+            this.label11.Size = new System.Drawing.Size(37, 16);
             this.label11.TabIndex = 71;
             this.label11.Text = "VNĐ";
             // 
@@ -494,20 +561,18 @@
             // 
             this.txtSoTienNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoTienNo.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoTienNo.Location = new System.Drawing.Point(175, 382);
-            this.txtSoTienNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoTienNo.Location = new System.Drawing.Point(131, 310);
             this.txtSoTienNo.Name = "txtSoTienNo";
-            this.txtSoTienNo.Size = new System.Drawing.Size(216, 27);
+            this.txtSoTienNo.Size = new System.Drawing.Size(162, 23);
             this.txtSoTienNo.TabIndex = 70;
             // 
             // cbLoaiKH
             // 
             this.cbLoaiKH.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbLoaiKH.FormattingEnabled = true;
-            this.cbLoaiKH.Location = new System.Drawing.Point(175, 434);
-            this.cbLoaiKH.Margin = new System.Windows.Forms.Padding(4);
+            this.cbLoaiKH.Location = new System.Drawing.Point(131, 353);
             this.cbLoaiKH.Name = "cbLoaiKH";
-            this.cbLoaiKH.Size = new System.Drawing.Size(100, 27);
+            this.cbLoaiKH.Size = new System.Drawing.Size(76, 24);
             this.cbLoaiKH.TabIndex = 69;
             // 
             // label9
@@ -516,10 +581,9 @@
             this.label9.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(46, 439);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(34, 357);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(71, 19);
+            this.label9.Size = new System.Drawing.Size(61, 16);
             this.label9.TabIndex = 68;
             this.label9.Text = "Loại KH";
             // 
@@ -529,10 +593,9 @@
             this.label10.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(46, 386);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(34, 314);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 19);
+            this.label10.Size = new System.Drawing.Size(80, 16);
             this.label10.TabIndex = 33;
             this.label10.Text = "Số tiền nợ";
             // 
@@ -540,30 +603,27 @@
             // 
             this.txtSoDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoDT.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDT.Location = new System.Drawing.Point(175, 195);
-            this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoDT.Location = new System.Drawing.Point(131, 158);
             this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.Size = new System.Drawing.Size(223, 27);
+            this.txtSoDT.Size = new System.Drawing.Size(168, 23);
             this.txtSoDT.TabIndex = 39;
             // 
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(175, 244);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Location = new System.Drawing.Point(131, 198);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(268, 27);
+            this.txtEmail.Size = new System.Drawing.Size(202, 23);
             this.txtEmail.TabIndex = 38;
             // 
             // txtTenKH
             // 
             this.txtTenKH.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTenKH.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenKH.Location = new System.Drawing.Point(175, 46);
-            this.txtTenKH.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenKH.Location = new System.Drawing.Point(131, 37);
             this.txtTenKH.Name = "txtTenKH";
-            this.txtTenKH.Size = new System.Drawing.Size(268, 27);
+            this.txtTenKH.Size = new System.Drawing.Size(202, 23);
             this.txtTenKH.TabIndex = 37;
             // 
             // label4
@@ -572,10 +632,9 @@
             this.label4.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(46, 246);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(34, 200);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 19);
+            this.label4.Size = new System.Drawing.Size(45, 16);
             this.label4.TabIndex = 33;
             this.label4.Text = "Email";
             // 
@@ -585,10 +644,9 @@
             this.label5.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(46, 296);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(34, 240);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(62, 19);
+            this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 34;
             this.label5.Text = "Địa chỉ";
             // 
@@ -598,10 +656,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(46, 199);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(34, 162);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(57, 19);
+            this.label3.Size = new System.Drawing.Size(48, 16);
             this.label3.TabIndex = 32;
             this.label3.Text = "Số ĐT";
             // 
@@ -611,10 +668,9 @@
             this.label2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(46, 99);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(34, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 19);
+            this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 31;
             this.label2.Text = "Ngày sinh";
             // 
@@ -625,10 +681,9 @@
             this.cbGioiTinh.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(175, 146);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
+            this.cbGioiTinh.Location = new System.Drawing.Point(131, 119);
             this.cbGioiTinh.Name = "cbGioiTinh";
-            this.cbGioiTinh.Size = new System.Drawing.Size(100, 27);
+            this.cbGioiTinh.Size = new System.Drawing.Size(76, 24);
             this.cbGioiTinh.TabIndex = 43;
             // 
             // label6
@@ -637,10 +692,9 @@
             this.label6.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(46, 148);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(34, 120);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 19);
+            this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 35;
             this.label6.Text = "Giới tính";
             // 
@@ -650,106 +704,19 @@
             this.label1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(46, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(34, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 19);
+            this.label1.Size = new System.Drawing.Size(53, 16);
             this.label1.TabIndex = 30;
             this.label1.Text = "Họ tên";
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaKH";
-            dataGridViewCellStyle4.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dataGridViewTextBoxColumn1.HeaderText = "Mã KH";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 89;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TenKH";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Tên KH";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.Width = 96;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle5.Format = "dd/mm/yyyy";
-            dataGridViewCellStyle5.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Ngày Sinh";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            this.dataGridViewTextBoxColumn4.Width = 118;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "GioiTinh";
-            dataGridViewCellStyle6.Format = "(CASE WHEN gt=\'1\' THEN \'Nam\' ELSE \'Nữ\' END) AS gt";
-            dataGridViewCellStyle6.NullValue = null;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Giới Tính";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            this.dataGridViewTextBoxColumn3.Width = 110;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "SoDT";
-            this.dataGridViewTextBoxColumn7.HeaderText = "Số ĐT";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
-            this.dataGridViewTextBoxColumn7.Width = 86;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            this.dataGridViewTextBoxColumn8.DataPropertyName = "Email";
-            this.dataGridViewTextBoxColumn8.HeaderText = "Email";
-            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            this.dataGridViewTextBoxColumn8.ReadOnly = true;
-            this.dataGridViewTextBoxColumn8.Width = 80;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "DiaChi";
-            this.dataGridViewTextBoxColumn6.HeaderText = "Địa Chỉ";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            this.dataGridViewTextBoxColumn6.Width = 94;
-            // 
-            // SoTienNo
-            // 
-            this.SoTienNo.DataPropertyName = "TienNo";
-            this.SoTienNo.HeaderText = "Tiền Nợ";
-            this.SoTienNo.Name = "SoTienNo";
-            this.SoTienNo.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn10
-            // 
-            this.dataGridViewTextBoxColumn10.DataPropertyName = "LoaiKH";
-            this.dataGridViewTextBoxColumn10.HeaderText = "Loại KH";
-            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
-            this.dataGridViewTextBoxColumn10.ReadOnly = true;
-            // 
-            // dtNgaySinh
-            // 
-            this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtNgaySinh.Location = new System.Drawing.Point(175, 93);
-            this.dtNgaySinh.Name = "dtNgaySinh";
-            this.dtNgaySinh.Size = new System.Drawing.Size(223, 27);
-            this.dtNgaySinh.TabIndex = 72;
-            // 
             // Customer_View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1155, 733);
+            this.ClientSize = new System.Drawing.Size(866, 596);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
@@ -757,6 +724,7 @@
             this.Controls.Add(this.SearchBox);
             this.Controls.Add(this.Acountbox);
             this.Controls.Add(this.InfoBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Customer_View";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Customer_View_Load);

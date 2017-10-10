@@ -27,5 +27,40 @@ namespace Presentation.Customer
             dgvDanhSach.AutoGenerateColumns = false;
             dgvDanhSach.DataSource = kh.danhSach();
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                kh.TenKH = txtTenKH.Text;
+                kh.NgaySinh = dtNgaySinh.Value;
+                kh.GioiTinh = cbGioiTinh.Text;
+                kh.SoDT = txtSoDT.Text;
+                kh.Email = txtEmail.Text;
+                kh.DiaChi = txtDiaChi.Text;
+                kh.TienNo = decimal.Parse(txtSoTienNo.Text);
+                kh.LoaiKH = cbLoaiKH.Text;
+                kh.capNhat();
+                dgvDanhSach.DataSource = kh.danhSach();
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi gì đó...");
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                kh.xoa();
+                dgvDanhSach.DataSource = kh.danhSach();
+                MessageBox.Show("Xóa thành công !");
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi gì đó...");
+            }
+        }
     }
 }
