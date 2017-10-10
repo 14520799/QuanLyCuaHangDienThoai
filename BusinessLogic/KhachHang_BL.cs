@@ -26,7 +26,7 @@ namespace BusinessLogic
             return model.KhachHangs.ToList();
         }
 
-        // Xóa nhân viên
+        // Xóa khách hàng
         public void xoa()
         {
             KhachHang kh = model.KhachHangs.First(x => x.MaKH.Equals(MaKH));

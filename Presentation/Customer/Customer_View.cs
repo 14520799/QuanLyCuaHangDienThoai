@@ -13,7 +13,7 @@ namespace Presentation.Customer
 {
     public partial class Customer_View : Form
     {
-        KhachHang_BL kh = new KhachHang_BL();
+        KhachHang_BL bl = new KhachHang_BL();
 
         public Customer_View()
         {
@@ -24,24 +24,42 @@ namespace Presentation.Customer
         // Lấy danh sách khách hàng
         private void Customer_View_Load(object sender, EventArgs e)
         {
-            dgvDanhSach.AutoGenerateColumns = false;
-            dgvDanhSach.DataSource = kh.danhSach();
+            dgvKhachHang.AutoGenerateColumns = false;
+            dgvKhachHang.DataSource = bl.danhSach();
         }
 
+        private void dgvKhachHang_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvKhachHang.SelectedRows.Count > 0)
+            {
+                bl.MaKH = dgvKhachHang.CurrentRow.Cells[0].Value.ToString();
+                txtTenKH.Text = dgvKhachHang.CurrentRow.Cells[1].Value.ToString();
+                dtNgaySinh.Text = dgvKhachHang.CurrentRow.Cells[2].Value.ToString();
+                cbGioiTinh.Text = dgvKhachHang.CurrentRow.Cells[3].Value.ToString();
+                txtSoDT.Text = dgvKhachHang.CurrentRow.Cells[4].Value.ToString();
+                txtEmail.Text = dgvKhachHang.CurrentRow.Cells[5].Value.ToString();
+                txtDiaChi.Text = dgvKhachHang.CurrentRow.Cells[6].Value.ToString();
+                txtTienNo.Text = dgvKhachHang.CurrentRow.Cells[7].Value.ToString();
+                cbLoaiKH.Text = dgvKhachHang.CurrentRow.Cells[8].Value.ToString();
+            }
+        }
+
+        // Sửa khách hàng
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                kh.TenKH = txtTenKH.Text;
-                kh.NgaySinh = dtNgaySinh.Value;
-                kh.GioiTinh = cbGioiTinh.Text;
-                kh.SoDT = txtSoDT.Text;
-                kh.Email = txtEmail.Text;
-                kh.DiaChi = txtDiaChi.Text;
-                kh.TienNo = decimal.Parse(txtSoTienNo.Text);
-                kh.LoaiKH = cbLoaiKH.Text;
-                kh.capNhat();
-                dgvDanhSach.DataSource = kh.danhSach();
+                bl.TenKH = txtTenKH.Text;
+                bl.NgaySinh = dtNgaySinh.Value;
+                bl.GioiTinh = cbGioiTinh.Text;
+                bl.SoDT = txtSoDT.Text;
+                bl.Email = txtEmail.Text;
+                bl.DiaChi = txtDiaChi.Text;
+                bl.TienNo = decimal.Parse(txtTienNo.Text);
+                bl.LoaiKH = cbLoaiKH.Text;
+
+                bl.capNhat();
+                dgvKhachHang.DataSource = bl.danhSach();
             }
             catch
             {
@@ -53,8 +71,8 @@ namespace Presentation.Customer
         {
             try
             {
-                kh.xoa();
-                dgvDanhSach.DataSource = kh.danhSach();
+                bl.xoa();
+                dgvKhachHang.DataSource = bl.danhSach();
                 MessageBox.Show("Xóa thành công !");
             }
             catch
