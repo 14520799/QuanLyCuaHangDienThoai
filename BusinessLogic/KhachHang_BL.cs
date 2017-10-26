@@ -26,6 +26,20 @@ namespace BusinessLogic
             return model.KhachHangs.ToList();
         }
 
+        // Thêm khách hàng
+        public void them(KhachHang kh)
+        {
+            try
+            {
+                model.KhachHangs.Add(kh);
+                model.SaveChanges();
+            }
+            catch
+            {
+
+            }
+        }
+
         // Xóa khách hàng
         public void xoa()
         {
@@ -54,6 +68,27 @@ namespace BusinessLogic
             {
 
             }
+        }
+
+
+        // Tìm khách hàng teo tên
+        public List<KhachHang> timTheoTen(string TenKH)
+        {
+            return model.KhachHangs.Where(x => x.TenKH.Contains(TenKH)).ToList();
+        }
+
+
+        // Tìm khách hàng theo loại KH
+        public List<KhachHang> timTheoLoai(string LoaiKH)
+        {
+            return model.KhachHangs.Where(x => x.LoaiKH.Equals(LoaiKH)).ToList();
+        }
+
+
+        // Tìm khách hàng còn nợ
+        public List<KhachHang> timTheoNo()
+        {
+            return model.KhachHangs.Where(x => x.TienNo > 0).ToList();
         }
     }
 }

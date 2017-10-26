@@ -80,5 +80,20 @@ namespace Presentation.Customer
                 MessageBox.Show("Lỗi gì đó...");
             }
         }
+
+
+        // Tìm kiếm khách hàng
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            // Theo tên KH
+            if(cbTheoLoai.Text == "Tên KH")
+                dgvKhachHang.DataSource = bl.timTheoTen(txtTimKiem.Text);
+            else if(cbTheoLoai.Text == "Loại KH")
+                dgvKhachHang.DataSource = bl.timTheoLoai(txtTimKiem.Text);
+            else
+                dgvKhachHang.DataSource = bl.timTheoNo();
+        }
     }
 }
+// Các dạng của hê thống thông tin
+// Tông quan ve pp phat trien phan mem SDLC

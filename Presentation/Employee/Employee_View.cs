@@ -14,6 +14,7 @@ namespace Presentation.Employee
 {
     public partial class Employee_View : Form
     {
+        NhanVien nv = new NhanVien();
         NhanVien_BL bl = new NhanVien_BL();
 
         public Employee_View()
@@ -74,8 +75,8 @@ namespace Presentation.Employee
                 bl.SoDT = txtSoDT.Text;
                 bl.Email = txtEmail.Text;
                 bl.DiaChi = txtDiaChi.Text;
-                bl.Quyen = cbQuyen.Text;
                 bl.ChucVu = cbChucVu.Text;
+                bl.MatKhau = string.Empty;
 
                 bl.capNhat();
                 dgvNhanVien.DataSource = bl.danhSach();

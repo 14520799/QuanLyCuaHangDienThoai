@@ -1,10 +1,10 @@
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\bin\Debug\Function.dll
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\bin\Debug\Function.pdb
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\obj\Debug\Function.csprojResolveAssemblyReference.cache
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\obj\Debug\Function.dll
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\obj\Debug\Function.pdb
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Function\bin\Debug\Function.dll
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Function\bin\Debug\Function.pdb
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Function\obj\Debug\Function.csprojResolveAssemblyReference.cache
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Function\obj\Debug\Function.dll
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Function\obj\Debug\Function.pdb
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\bin\Debug\Function.dll
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\bin\Debug\Function.pdb
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\obj\Debug\Function.csprojResolveAssemblyReference.cache
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\obj\Debug\Function.dll
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Function\obj\Debug\Function.pdb

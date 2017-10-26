@@ -24,7 +24,7 @@ namespace BusinessLogic
         // Lấy danh sách nhân viên
         public List<NhanVien> danhSach()
         {
-            return model.NhanViens.ToList();
+            return model.NhanViens.Where(x => x.Quyen.Equals("Nhân viên")).ToList();
         }
 
         
@@ -40,8 +40,8 @@ namespace BusinessLogic
                 nv.SoDT = SoDT;
                 nv.Email = Email;
                 nv.DiaChi = DiaChi;
-                nv.Quyen = Quyen;
                 nv.ChucVu = ChucVu;
+                nv.MatKhau = MatKhau;
                 model.SaveChanges();
             }
             catch
@@ -72,14 +72,18 @@ namespace BusinessLogic
         }
 
 
-        // Kiểm tra đăng nhập (QTV)
-        public string dangNhap()
+        // Tìm nhân viên theo MaNV
+        public NhanVien timTheoID(string MaNV)
         {
-            NhanVien nv = model.NhanViens.First(x => x.MaNV.Equals(MaNV));
-
-            if (nv == null || nv.Quyen != "Quản trị" || nv.MatKhau != MatKhau)
-                return string.Empty;
-            return nv.TenNV;
+            try
+            {
+                NhanVien nv = model.NhanViens.First(x => x.MaNV.Equals(MaNV));
+                return nv;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
 

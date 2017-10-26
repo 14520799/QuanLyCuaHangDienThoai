@@ -66,6 +66,7 @@
             this.btnSubmit.Size = new System.Drawing.Size(133, 43);
             this.btnSubmit.TabIndex = 14;
             this.btnSubmit.TabStop = false;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // txtMatKhauCu
             // 
@@ -181,6 +182,7 @@
             this.txtMaNV.Location = new System.Drawing.Point(232, 44);
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.ReadOnly = true;
             this.txtMaNV.Size = new System.Drawing.Size(243, 27);
             this.txtMaNV.TabIndex = 10;
             // 
@@ -195,6 +197,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Admin_Pass";
             this.ShowIcon = false;
+            this.Load += new System.EventHandler(this.Admin_Pass_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnSubmit)).EndInit();
             this.groupBox1.ResumeLayout(false);

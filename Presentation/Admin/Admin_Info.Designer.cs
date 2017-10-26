@@ -234,13 +234,14 @@
             this.cbGioiTinh.ForeColor = System.Drawing.Color.Black;
             this.cbGioiTinh.FormattingEnabled = true;
             this.cbGioiTinh.Items.AddRange(new object[] {
-            "Male",
-            "Female"});
+            "Nam",
+            "Nữ"});
             this.cbGioiTinh.Location = new System.Drawing.Point(171, 140);
             this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(100, 27);
             this.cbGioiTinh.TabIndex = 14;
+            this.cbGioiTinh.Text = "Nam";
             // 
             // Admin_Info
             // 

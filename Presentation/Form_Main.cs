@@ -12,11 +12,14 @@ namespace Presentation
 {
     public partial class Form_Main : Form
     {
+        string MaNV;
+
         public Form_Main(string MaNV, string TenNV)
         {
             InitializeComponent();
             lblMaNV.Text += MaNV.ToUpper();
             lblTenNV.Text += TenNV + " !";
+            this.MaNV = MaNV;
         }
 
         private void Form_Main_Load(object sender, EventArgs e)
@@ -43,7 +46,7 @@ namespace Presentation
 
         private void button_admin_Click(object sender, EventArgs e)
         {
-            Admin.Admin_Info admin_info = new Admin.Admin_Info();
+            Admin.Admin_Info admin_info = new Admin.Admin_Info(MaNV);
             embed(admin_info);
 
             panel_home.Visible = true;
@@ -62,7 +65,7 @@ namespace Presentation
 
         private void menu_admin_info_Click(object sender, EventArgs e)
         {
-            Admin.Admin_Info admin_info = new Admin.Admin_Info();
+            Admin.Admin_Info admin_info = new Admin.Admin_Info(MaNV);
             embed(admin_info);
 
             menu_admin_info.BackColor = Color.White;
@@ -74,7 +77,7 @@ namespace Presentation
 
         private void menu_admin_password_Click(object sender, EventArgs e)
         {
-            Admin.Admin_Pass admin_pass = new Admin.Admin_Pass();
+            Admin.Admin_Pass admin_pass = new Admin.Admin_Pass(MaNV);
             embed(admin_pass);
 
             menu_admin_info.BackColor = Color.OrangeRed;

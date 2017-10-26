@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess;
 using BusinessLogic;
 
 namespace Presentation.Admin
@@ -24,14 +25,12 @@ namespace Presentation.Admin
         // Nhấn nút Confirm đăng nhập
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            /*bl.MaNV = txtMaNV.Text;
-            bl.MatKhau = txtMatKhau.Text;
+            /*NhanVien nv = bl.timTheoID(txtMaNV.Text);
 
-            string TenNV = bl.dangNhap();
-            if (TenNV != string.Empty)
+            if (nv != null && nv.MatKhau == txtMatKhau.Text)
             {
                 Hide();
-                new Form_Main(bl.MaNV, TenNV).Show();
+                new Form_Main(nv.MaNV, nv.TenNV).Show();
             }
             else
                 MessageBox.Show("Sai thông tin tài khoản !");*/

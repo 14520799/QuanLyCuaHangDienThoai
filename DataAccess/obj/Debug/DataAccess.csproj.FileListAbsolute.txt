@@ -1,13 +1,3 @@
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.dll.config
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.dll
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.pdb
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.dll
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.xml
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.dll
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.pdb
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.dll.config
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.dll
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.pdb
@@ -18,3 +8,13 @@ G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityF
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.dll
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.dll.config
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\DataAccess\obj\Debug\DataAccess.pdb

@@ -8,85 +8,48 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using DataAccess;
+using BusinessLogic;
 
 namespace Presentation.Admin
 {
     public partial class Admin_Info : Form
     {
-        public Admin_Info()
+        NhanVien nv = new NhanVien();
+        NhanVien_BL bl = new NhanVien_BL();
+
+        public Admin_Info(string MaNV)
         {            
             InitializeComponent();
-        }
-
-        //SqlConnection conn = new SqlConnection(@"Data Source=desktop-r6658fp\sqlexpress;Initial Catalog=QuanLyCuaHangDienThoai;Integrated Security=True");
-        
-        private void btnCancel_Click(object sender, EventArgs e)
-        {
-            Admin_Info_Load(sender, e);
+            bl.MaNV = MaNV;
         }
 
         private void Admin_Info_Load(object sender, EventArgs e)
-        {/*
-            //Load data
-            DataTable dt = new DataTable();
-            conn.Open();
-            try
-            {
-                SqlDataAdapter da = new SqlDataAdapter("Select * From NhanVien", conn);
-                da.Fill(dt);                
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Error " + ex.ToString());
-            }
-
-            try
-            {
-                cbHoTen.DataSource = dt;
-                cbHoTen.DisplayMember = "Tên Nhân Viên";
-                cbHoTen.ValueMember = "TenNV";
-                //cbGioiTinh.DataSource = dt;
-                //cbGioiTinh.DisplayMember = "Male";
-                //cbGioiTinh.ValueMember = "GioiTinh"; 
-                conn.Open();
-                SqlDataAdapter adt = new SqlDataAdapter("Select * from NhanVien", conn);
-                DataTable dtab = new DataTable();
-                adt.Fill(dtab);
-                dtpNgaySinh.DataBindings.Clear();
-                dtpNgaySinh.DataBindings.Add("Value", dtab, "NgaySinh", true);
-                txtSoDT.DataBindings.Clear();
-                txtSoDT.DataBindings.Add("Text", dtab, "SoDT", true);
-                txtEmail.DataBindings.Clear();
-                txtEmail.DataBindings.Add("Text", dtab, "Email", true);
-                txtDiaChi.DataBindings.Clear();
-                txtDiaChi.DataBindings.Add("Text", dtab, "DiaChi", true);
-                conn.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Có lỗi khi load dữ liệu!\n", ex.ToString());
-            }
-            */
+        {
+            nv = bl.timTheoID(bl.MaNV);
+            txtHoTen.Text = nv.TenNV;
+            cbGioiTinh.Text = nv.GioiTinh;
+            txtSoDT.Text = nv.SoDT;
+            txtEmail.Text = nv.Email;
+            txtDiaChi.Text = nv.DiaChi;
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
-        {/*
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand();
-                cmd.Connection = conn;
-                cmd.CommandText = "Update NhanVien\nSet SoDT = values('" + txtSoDT.Text + "'), Email = values('" + txtEmail.Text + "'), DiaChi = values('" + txtDiaChi.Text + "')";
-                cmd.ExecuteNonQuery();
-                conn.Close();
-                MessageBox.Show("Sửa thông tin QTV thành công!\n");
-                //TenNV = values('" + cbHoTen.ValueMember + "'),  GioiTinh = values('" + cbGioiTinh.ValueMember + "'), NgaySinh = values('" + dtpNgaySinh.Value + "'), 
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("ERROR", ex.ToString());
-            }*/
+        {
+            bl.TenNV = txtHoTen.Text;
+            bl.NgaySinh = nv.NgaySinh;
+            bl.GioiTinh = nv.GioiTinh;
+            bl.SoDT = txtSoDT.Text;
+            bl.Email = txtEmail.Text;
+            bl.DiaChi = txtDiaChi.Text;
+            bl.ChucVu = nv.ChucVu;
+            bl.MatKhau = nv.MatKhau;
+            bl.capNhat();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Customer_View));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Username = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.PictureBox();
@@ -50,7 +50,7 @@
             this.Email1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSearch = new System.Windows.Forms.PictureBox();
-            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnNext = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
             this.DetailBox = new System.Windows.Forms.GroupBox();
@@ -68,7 +68,7 @@
             this.SearchBox = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.cbType = new System.Windows.Forms.ComboBox();
+            this.cbTheoLoai = new System.Windows.Forms.ComboBox();
             this.txtMatKhauMoi2 = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.txtMatKhauMoi1 = new System.Windows.Forms.TextBox();
@@ -149,8 +149,8 @@
             // MaAD
             // 
             this.MaAD.DataPropertyName = "MaAD";
-            dataGridViewCellStyle8.NullValue = null;
-            this.MaAD.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.NullValue = null;
+            this.MaAD.DefaultCellStyle = dataGridViewCellStyle1;
             this.MaAD.HeaderText = "ID";
             this.MaAD.Name = "MaAD";
             this.MaAD.Width = 40;
@@ -165,9 +165,9 @@
             // GioiTinh
             // 
             this.GioiTinh.DataPropertyName = "GioiTinh";
-            dataGridViewCellStyle9.Format = "(CASE WHEN gt=\'1\' THEN \'Nam\' ELSE \'Nữ\' END) AS gt";
-            dataGridViewCellStyle9.NullValue = null;
-            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Format = "(CASE WHEN gt=\'1\' THEN \'Nam\' ELSE \'Nữ\' END) AS gt";
+            dataGridViewCellStyle2.NullValue = null;
+            this.GioiTinh.DefaultCellStyle = dataGridViewCellStyle2;
             this.GioiTinh.HeaderText = "Giới Tính";
             this.GioiTinh.Name = "GioiTinh";
             this.GioiTinh.Width = 80;
@@ -175,9 +175,9 @@
             // NgaySinh
             // 
             this.NgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle10.Format = "dd/mm/yyyy";
-            dataGridViewCellStyle10.NullValue = null;
-            this.NgaySinh.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Format = "dd/mm/yyyy";
+            dataGridViewCellStyle3.NullValue = null;
+            this.NgaySinh.DefaultCellStyle = dataGridViewCellStyle3;
             this.NgaySinh.HeaderText = "Ngày Sinh";
             this.NgaySinh.Name = "NgaySinh";
             this.NgaySinh.Width = 80;
@@ -224,16 +224,17 @@
             this.btnSearch.Size = new System.Drawing.Size(91, 34);
             this.btnSearch.TabIndex = 1;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtSearch
+            // txtTimKiem
             // 
-            this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.txtSearch.Location = new System.Drawing.Point(39, 38);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(278, 27);
-            this.txtSearch.TabIndex = 0;
+            this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTimKiem.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.txtTimKiem.Location = new System.Drawing.Point(39, 38);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(278, 27);
+            this.txtTimKiem.TabIndex = 0;
             // 
             // btnNext
             // 
@@ -298,8 +299,8 @@
             this.dgvKhachHang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvKhachHang.RowHeadersVisible = false;
             this.dgvKhachHang.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.dgvKhachHang.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.dgvKhachHang.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvKhachHang.Size = new System.Drawing.Size(1075, 254);
             this.dgvKhachHang.TabIndex = 11;
@@ -308,8 +309,8 @@
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "MaKH";
-            dataGridViewCellStyle11.NullValue = null;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.NullValue = null;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn1.HeaderText = "Mã KH";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -326,9 +327,9 @@
             // dataGridViewTextBoxColumn4
             // 
             this.dataGridViewTextBoxColumn4.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle12.Format = "dd/mm/yyyy";
-            dataGridViewCellStyle12.NullValue = null;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Format = "dd/mm/yyyy";
+            dataGridViewCellStyle5.NullValue = null;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewTextBoxColumn4.HeaderText = "Ngày Sinh";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
@@ -337,9 +338,9 @@
             // dataGridViewTextBoxColumn3
             // 
             this.dataGridViewTextBoxColumn3.DataPropertyName = "GioiTinh";
-            dataGridViewCellStyle13.Format = "(CASE WHEN gt=\'1\' THEN \'Nam\' ELSE \'Nữ\' END) AS gt";
-            dataGridViewCellStyle13.NullValue = null;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Format = "(CASE WHEN gt=\'1\' THEN \'Nam\' ELSE \'Nữ\' END) AS gt";
+            dataGridViewCellStyle6.NullValue = null;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewTextBoxColumn3.HeaderText = "Giới Tính";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -398,9 +399,9 @@
             // 
             this.SearchBox.Controls.Add(this.label7);
             this.SearchBox.Controls.Add(this.label13);
-            this.SearchBox.Controls.Add(this.cbType);
+            this.SearchBox.Controls.Add(this.cbTheoLoai);
             this.SearchBox.Controls.Add(this.btnSearch);
-            this.SearchBox.Controls.Add(this.txtSearch);
+            this.SearchBox.Controls.Add(this.txtTimKiem);
             this.SearchBox.Controls.Add(this.btnNext);
             this.SearchBox.Controls.Add(this.btnBack);
             this.SearchBox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold);
@@ -440,19 +441,19 @@
             this.label13.TabIndex = 40;
             this.label13.Text = "theo";
             // 
-            // cbType
+            // cbTheoLoai
             // 
-            this.cbType.Font = new System.Drawing.Font("Arial", 10.2F);
-            this.cbType.FormattingEnabled = true;
-            this.cbType.Items.AddRange(new object[] {
-            "Name",
-            "ID",
-            "Birth"});
-            this.cbType.Location = new System.Drawing.Point(403, 37);
-            this.cbType.Margin = new System.Windows.Forms.Padding(4);
-            this.cbType.Name = "cbType";
-            this.cbType.Size = new System.Drawing.Size(124, 27);
-            this.cbType.TabIndex = 3;
+            this.cbTheoLoai.Font = new System.Drawing.Font("Arial", 10.2F);
+            this.cbTheoLoai.FormattingEnabled = true;
+            this.cbTheoLoai.Items.AddRange(new object[] {
+            "Tên KH",
+            "Loại KH",
+            "Còn nợ"});
+            this.cbTheoLoai.Location = new System.Drawing.Point(403, 37);
+            this.cbTheoLoai.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTheoLoai.Name = "cbTheoLoai";
+            this.cbTheoLoai.Size = new System.Drawing.Size(124, 27);
+            this.cbTheoLoai.TabIndex = 3;
             // 
             // txtMatKhauMoi2
             // 
@@ -800,7 +801,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Email1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Password;
         private System.Windows.Forms.PictureBox btnSearch;
-        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.PictureBox btnNext;
         private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.GroupBox DetailBox;
@@ -809,7 +810,7 @@
         private System.Windows.Forms.GroupBox SearchBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox cbType;
+        private System.Windows.Forms.ComboBox cbTheoLoai;
         private System.Windows.Forms.TextBox txtMatKhauMoi2;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox txtMatKhauMoi1;
