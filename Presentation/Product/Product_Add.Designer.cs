@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Product_Add));
             this.txtDungLuongPin = new System.Windows.Forms.TextBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.txtMoTa = new System.Windows.Forms.RichTextBox();
             this.d = new System.Windows.Forms.Label();
             this.txtCPU = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
@@ -50,22 +50,22 @@
             this.txtRAM = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.erroradd2 = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.clas = new System.Windows.Forms.ComboBox();
-            this.factory = new System.Windows.Forms.ComboBox();
-            this.id = new System.Windows.Forms.TextBox();
+            this.cbMaHang = new System.Windows.Forms.ComboBox();
+            this.cbMaLoai = new System.Windows.Forms.ComboBox();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
             this.btnLoad = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.picture = new System.Windows.Forms.PictureBox();
+            this.picHinhAnh = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.salecost = new System.Windows.Forms.TextBox();
+            this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.nameproducts = new System.Windows.Forms.TextBox();
+            this.txtTenSP = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Giaitri = new System.Windows.Forms.GroupBox();
@@ -74,7 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLoad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).BeginInit();
             this.Giaitri.SuspendLayout();
             this.infobox.SuspendLayout();
             this.SuspendLayout();
@@ -89,14 +89,14 @@
             this.txtDungLuongPin.Size = new System.Drawing.Size(265, 27);
             this.txtDungLuongPin.TabIndex = 19;
             // 
-            // richTextBox1
+            // txtMoTa
             // 
-            this.richTextBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.richTextBox1.Location = new System.Drawing.Point(215, 348);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(270, 96);
-            this.richTextBox1.TabIndex = 70;
-            this.richTextBox1.Text = "";
+            this.txtMoTa.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMoTa.Location = new System.Drawing.Point(215, 348);
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(270, 96);
+            this.txtMoTa.TabIndex = 70;
+            this.txtMoTa.Text = "";
             // 
             // d
             // 
@@ -310,15 +310,15 @@
             this.label9.TabIndex = 0;
             this.label9.Text = "Màn hình";
             // 
-            // textBox1
+            // txtSoLuong
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(215, 297);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(270, 27);
-            this.textBox1.TabIndex = 68;
+            this.txtSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoLuong.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong.Location = new System.Drawing.Point(215, 297);
+            this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(270, 27);
+            this.txtSoLuong.TabIndex = 68;
             // 
             // erroradd2
             // 
@@ -364,6 +364,7 @@
             this.btnAdd.Size = new System.Drawing.Size(145, 47);
             this.btnAdd.TabIndex = 72;
             this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label3
             // 
@@ -377,38 +378,38 @@
             this.label3.TabIndex = 67;
             this.label3.Text = "Số lượng";
             // 
-            // clas
+            // cbMaHang
             // 
-            this.clas.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clas.FormattingEnabled = true;
-            this.clas.Items.AddRange(new object[] {
+            this.cbMaHang.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaHang.FormattingEnabled = true;
+            this.cbMaHang.Items.AddRange(new object[] {
             "Smart phone",
             "Phổ thông"});
-            this.clas.Location = new System.Drawing.Point(215, 196);
-            this.clas.Margin = new System.Windows.Forms.Padding(4);
-            this.clas.Name = "clas";
-            this.clas.Size = new System.Drawing.Size(270, 27);
-            this.clas.TabIndex = 63;
+            this.cbMaHang.Location = new System.Drawing.Point(215, 196);
+            this.cbMaHang.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMaHang.Name = "cbMaHang";
+            this.cbMaHang.Size = new System.Drawing.Size(270, 27);
+            this.cbMaHang.TabIndex = 63;
             // 
-            // factory
+            // cbMaLoai
             // 
-            this.factory.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.factory.FormattingEnabled = true;
-            this.factory.Location = new System.Drawing.Point(215, 144);
-            this.factory.Margin = new System.Windows.Forms.Padding(4);
-            this.factory.Name = "factory";
-            this.factory.Size = new System.Drawing.Size(270, 27);
-            this.factory.TabIndex = 21;
+            this.cbMaLoai.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaLoai.FormattingEnabled = true;
+            this.cbMaLoai.Location = new System.Drawing.Point(215, 144);
+            this.cbMaLoai.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMaLoai.Name = "cbMaLoai";
+            this.cbMaLoai.Size = new System.Drawing.Size(270, 27);
+            this.cbMaLoai.TabIndex = 21;
             // 
-            // id
+            // txtMaSP
             // 
-            this.id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.id.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.id.Location = new System.Drawing.Point(215, 43);
-            this.id.Margin = new System.Windows.Forms.Padding(4);
-            this.id.Name = "id";
-            this.id.Size = new System.Drawing.Size(113, 27);
-            this.id.TabIndex = 20;
+            this.txtMaSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaSP.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaSP.Location = new System.Drawing.Point(215, 43);
+            this.txtMaSP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.Size = new System.Drawing.Size(113, 27);
+            this.txtMaSP.TabIndex = 20;
             // 
             // btnLoad
             // 
@@ -420,6 +421,7 @@
             this.btnLoad.Size = new System.Drawing.Size(95, 32);
             this.btnLoad.TabIndex = 18;
             this.btnLoad.TabStop = false;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 
             // label5
             // 
@@ -433,16 +435,16 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Loại sản phẩm";
             // 
-            // picture
+            // picHinhAnh
             // 
-            this.picture.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture.Location = new System.Drawing.Point(578, 76);
-            this.picture.Margin = new System.Windows.Forms.Padding(4);
-            this.picture.Name = "picture";
-            this.picture.Size = new System.Drawing.Size(287, 284);
-            this.picture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picture.TabIndex = 16;
-            this.picture.TabStop = false;
+            this.picHinhAnh.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picHinhAnh.Location = new System.Drawing.Point(578, 76);
+            this.picHinhAnh.Margin = new System.Windows.Forms.Padding(4);
+            this.picHinhAnh.Name = "picHinhAnh";
+            this.picHinhAnh.Size = new System.Drawing.Size(287, 284);
+            this.picHinhAnh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picHinhAnh.TabIndex = 16;
+            this.picHinhAnh.TabStop = false;
             // 
             // label7
             // 
@@ -456,15 +458,15 @@
             this.label7.TabIndex = 14;
             this.label7.Text = "Đơn giá";
             // 
-            // salecost
+            // txtDonGia
             // 
-            this.salecost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.salecost.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salecost.Location = new System.Drawing.Point(215, 247);
-            this.salecost.Margin = new System.Windows.Forms.Padding(4);
-            this.salecost.Name = "salecost";
-            this.salecost.Size = new System.Drawing.Size(270, 27);
-            this.salecost.TabIndex = 11;
+            this.txtDonGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDonGia.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonGia.Location = new System.Drawing.Point(215, 247);
+            this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDonGia.Name = "txtDonGia";
+            this.txtDonGia.Size = new System.Drawing.Size(270, 27);
+            this.txtDonGia.TabIndex = 11;
             // 
             // label4
             // 
@@ -478,15 +480,15 @@
             this.label4.TabIndex = 10;
             this.label4.Text = "Hãng sản xuất";
             // 
-            // nameproducts
+            // txtTenSP
             // 
-            this.nameproducts.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameproducts.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nameproducts.Location = new System.Drawing.Point(215, 93);
-            this.nameproducts.Margin = new System.Windows.Forms.Padding(4);
-            this.nameproducts.Name = "nameproducts";
-            this.nameproducts.Size = new System.Drawing.Size(270, 27);
-            this.nameproducts.TabIndex = 7;
+            this.txtTenSP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenSP.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenSP.Location = new System.Drawing.Point(215, 93);
+            this.txtTenSP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenSP.Name = "txtTenSP";
+            this.txtTenSP.Size = new System.Drawing.Size(270, 27);
+            this.txtTenSP.TabIndex = 7;
             // 
             // label2
             // 
@@ -557,21 +559,21 @@
             // 
             // infobox
             // 
-            this.infobox.Controls.Add(this.richTextBox1);
+            this.infobox.Controls.Add(this.txtMoTa);
             this.infobox.Controls.Add(this.label6);
-            this.infobox.Controls.Add(this.textBox1);
+            this.infobox.Controls.Add(this.txtSoLuong);
             this.infobox.Controls.Add(this.label3);
-            this.infobox.Controls.Add(this.clas);
-            this.infobox.Controls.Add(this.factory);
-            this.infobox.Controls.Add(this.id);
+            this.infobox.Controls.Add(this.cbMaHang);
+            this.infobox.Controls.Add(this.cbMaLoai);
+            this.infobox.Controls.Add(this.txtMaSP);
             this.infobox.Controls.Add(this.btnLoad);
             this.infobox.Controls.Add(this.label8);
             this.infobox.Controls.Add(this.label5);
-            this.infobox.Controls.Add(this.picture);
+            this.infobox.Controls.Add(this.picHinhAnh);
             this.infobox.Controls.Add(this.label7);
-            this.infobox.Controls.Add(this.salecost);
+            this.infobox.Controls.Add(this.txtDonGia);
             this.infobox.Controls.Add(this.label4);
-            this.infobox.Controls.Add(this.nameproducts);
+            this.infobox.Controls.Add(this.txtTenSP);
             this.infobox.Controls.Add(this.label2);
             this.infobox.Controls.Add(this.label1);
             this.infobox.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -602,7 +604,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnLoad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picHinhAnh)).EndInit();
             this.Giaitri.ResumeLayout(false);
             this.Giaitri.PerformLayout();
             this.infobox.ResumeLayout(false);
@@ -615,7 +617,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox txtDungLuongPin;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox txtMoTa;
         private System.Windows.Forms.Label d;
         private System.Windows.Forms.TextBox txtCPU;
         private System.Windows.Forms.Label label18;
@@ -635,22 +637,22 @@
         private System.Windows.Forms.TextBox txtRAM;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label erroradd2;
         private System.Windows.Forms.PictureBox btnClear;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox btnAdd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox clas;
-        private System.Windows.Forms.ComboBox factory;
-        private System.Windows.Forms.TextBox id;
+        private System.Windows.Forms.ComboBox cbMaHang;
+        private System.Windows.Forms.ComboBox cbMaLoai;
+        private System.Windows.Forms.TextBox txtMaSP;
         private System.Windows.Forms.PictureBox btnLoad;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox picture;
+        private System.Windows.Forms.PictureBox picHinhAnh;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox salecost;
+        private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox nameproducts;
+        private System.Windows.Forms.TextBox txtTenSP;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox Giaitri;
