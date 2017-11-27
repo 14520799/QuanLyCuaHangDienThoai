@@ -39,7 +39,7 @@ namespace BusinessLogic
 
 
         // Lấy danh sách sản phẩm
-        public List<SanPham> danhSach()
+        public List<SanPham> load()
         {
             return model.SanPhams.ToList();
         }
