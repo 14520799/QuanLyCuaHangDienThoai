@@ -14,7 +14,6 @@ namespace Presentation.Employee
 {
     public partial class Employee_View : Form
     {
-        NhanVien nv = new NhanVien();
         NhanVien_BL bl = new NhanVien_BL();
 
         public Employee_View()

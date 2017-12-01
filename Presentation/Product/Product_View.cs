@@ -34,6 +34,7 @@ namespace Presentation.Product
                 bl.MaSP = dgvSanPham.CurrentRow.Cells[0].Value.ToString();
                 txtTenSP.Text = dgvSanPham.CurrentRow.Cells[1].Value.ToString();
                 picHinhAnh.Image = Image.FromFile(Application.StartupPath + @"\Image\" + dgvSanPham.CurrentRow.Cells[2].Value.ToString());
+                picHinhAnh.Text = dgvSanPham.CurrentRow.Cells[2].Value.ToString();
                 txtSoLuong.Text = dgvSanPham.CurrentRow.Cells[3].Value.ToString();
                 txtDonGia.Text = dgvSanPham.CurrentRow.Cells[4].Value.ToString();
                 txtMoTa.Text = dgvSanPham.CurrentRow.Cells[5].Value.ToString();
@@ -57,7 +58,8 @@ namespace Presentation.Product
             try
             {
                 bl.TenSP = txtTenSP.Text;
-                bl.HinhAnh = picHinhAnh.Image.ToString();
+                bl.HinhAnh = picHinhAnh.Text;
+                picHinhAnh.Image.Save(@"Image\" + picHinhAnh.Text);
                 bl.SoLuong = int.Parse(txtSoLuong.Text);
                 bl.DonGia = decimal.Parse(txtDonGia.Text);
                 bl.MoTa = txtMoTa.Text;
@@ -75,7 +77,32 @@ namespace Presentation.Product
                 bl.MaHang = cbMaHang.Text;
 
                 bl.sua();
+                MessageBox.Show("Sửa thành công !");
                 dgvSanPham.DataSource = bl.load();
+            }
+            catch
+            {
+                MessageBox.Show("Lỗi gì đó...");
+            }
+        }
+
+        private void btnLoad_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            if (ofd.ShowDialog() == DialogResult.OK)
+            {
+                picHinhAnh.Image = Image.FromFile(ofd.FileName);
+                picHinhAnh.Text = ofd.SafeFileName;
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bl.xoa();
+                dgvSanPham.DataSource = bl.load();
+                MessageBox.Show("Xóa thành công !");
             }
             catch
             {

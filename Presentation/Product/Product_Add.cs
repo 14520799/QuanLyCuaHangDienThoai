@@ -16,7 +16,6 @@ namespace Presentation.Product
     public partial class Product_Add : Form
     {
         SanPham_BL bl = new SanPham_BL();
-        Image img;
 
         public Product_Add()
         {
@@ -48,7 +47,9 @@ namespace Presentation.Product
 
             if (!Directory.Exists("Image"))
                 Directory.CreateDirectory("Image");
-            img.Save(@"Image\" + picHinhAnh.Text);
+
+            picHinhAnh.Image.Save(@"Image\" + picHinhAnh.Text);
+
             try
             {
                 bl.them(sp);
@@ -67,8 +68,7 @@ namespace Presentation.Product
             OpenFileDialog ofd = new OpenFileDialog();
             if(ofd.ShowDialog() == DialogResult.OK)
             {
-                img = Image.FromFile(ofd.FileName);
-                picHinhAnh.Image = img;
+                picHinhAnh.Image = Image.FromFile(ofd.FileName);
                 picHinhAnh.Text = ofd.SafeFileName;
             }
         }

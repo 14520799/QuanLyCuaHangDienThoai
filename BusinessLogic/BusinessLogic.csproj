@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HangSX_BL.cs" />
+    <Compile Include="HoaDonMua_BL.cs" />
     <Compile Include="KhachHang_BL.cs" />
     <Compile Include="NhanVien_BL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

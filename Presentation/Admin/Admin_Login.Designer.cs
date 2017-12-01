@@ -49,12 +49,12 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(205, 18);
+            this.label2.Location = new System.Drawing.Point(135, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 35);
+            this.label2.Size = new System.Drawing.Size(134, 29);
             this.label2.TabIndex = 104;
             this.label2.Text = "Đăng Nhập";
             // 
@@ -62,10 +62,10 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(15, 262);
+            this.pictureBox1.Location = new System.Drawing.Point(17, 233);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(60, 53);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 40);
             this.pictureBox1.TabIndex = 103;
             this.pictureBox1.TabStop = false;
             // 
@@ -73,10 +73,10 @@
             // 
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.Location = new System.Drawing.Point(292, 189);
+            this.btnCancel.Location = new System.Drawing.Point(203, 171);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(116, 40);
+            this.btnCancel.Size = new System.Drawing.Size(110, 40);
             this.btnCancel.TabIndex = 102;
             this.btnCancel.TabStop = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -85,10 +85,10 @@
             // 
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
             this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirm.Location = new System.Drawing.Point(158, 189);
+            this.btnConfirm.Location = new System.Drawing.Point(85, 171);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(116, 40);
+            this.btnConfirm.Size = new System.Drawing.Size(110, 40);
             this.btnConfirm.TabIndex = 101;
             this.btnConfirm.TabStop = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
@@ -97,7 +97,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(83, 278);
+            this.label1.Location = new System.Drawing.Point(67, 251);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 22);
@@ -107,21 +107,21 @@
             // txtMaNV
             // 
             this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12.5F);
-            this.txtMaNV.Location = new System.Drawing.Point(211, 87);
+            this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaNV.Location = new System.Drawing.Point(140, 76);
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(278, 31);
+            this.txtMaNV.Size = new System.Drawing.Size(271, 30);
             this.txtMaNV.TabIndex = 96;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 12.5F);
-            this.txtMatKhau.Location = new System.Drawing.Point(211, 129);
+            this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhau.Location = new System.Drawing.Point(140, 118);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(278, 31);
+            this.txtMatKhau.Size = new System.Drawing.Size(271, 30);
             this.txtMatKhau.TabIndex = 97;
             this.txtMatKhau.UseSystemPasswordChar = true;
             this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
@@ -132,14 +132,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lgl3.AutoSize = true;
-            this.lgl3.Font = new System.Drawing.Font("Times New Roman", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lgl3.ForeColor = System.Drawing.Color.Red;
-            this.lgl3.Location = new System.Drawing.Point(80, 135);
+            this.lgl3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lgl3.ForeColor = System.Drawing.Color.Black;
+            this.lgl3.Location = new System.Drawing.Point(13, 122);
             this.lgl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lgl3.Name = "lgl3";
-            this.lgl3.Size = new System.Drawing.Size(96, 24);
+            this.lgl3.Size = new System.Drawing.Size(94, 23);
             this.lgl3.TabIndex = 99;
-            this.lgl3.Text = "Mật khẩu";
+            this.lgl3.Text = "Mật Khẩu";
             // 
             // lgl2
             // 
@@ -147,21 +147,21 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lgl2.AutoSize = true;
-            this.lgl2.Font = new System.Drawing.Font("Times New Roman", 12.5F, System.Drawing.FontStyle.Bold);
-            this.lgl2.ForeColor = System.Drawing.Color.Red;
-            this.lgl2.Location = new System.Drawing.Point(80, 92);
+            this.lgl2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lgl2.ForeColor = System.Drawing.Color.Black;
+            this.lgl2.Location = new System.Drawing.Point(13, 80);
             this.lgl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lgl2.Name = "lgl2";
-            this.lgl2.Size = new System.Drawing.Size(99, 24);
+            this.lgl2.Size = new System.Drawing.Size(97, 23);
             this.lgl2.TabIndex = 98;
-            this.lgl2.Text = "Tài khoản";
+            this.lgl2.Text = "Tài Khoản";
             // 
             // Admin_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(577, 325);
+            this.ClientSize = new System.Drawing.Size(429, 292);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancel);
