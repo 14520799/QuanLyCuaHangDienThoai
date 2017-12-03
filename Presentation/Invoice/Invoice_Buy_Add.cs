@@ -15,6 +15,7 @@ namespace Presentation.Invoice
     public partial class Invoice_Buy_Add : Form
     {
         HoaDonMua_BL bl = new HoaDonMua_BL();
+        decimal tongTien = 0;
 
         public Invoice_Buy_Add()
         {
@@ -30,7 +31,7 @@ namespace Presentation.Invoice
             }
         }
 
-
+        
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             dgvChiTietMua.DataSource = null;
@@ -115,7 +116,6 @@ namespace Presentation.Invoice
                     MessageBox.Show("Thêm thành công");
                     dgvChiTietMua.DataSource = bl.readCTM();
 
-                    decimal tongTien = 0;
 
                     foreach (ChiTietMua item in bl.readCTM())
                     {

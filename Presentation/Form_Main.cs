@@ -73,6 +73,9 @@ namespace Presentation
 
             menu_admin_password.BackColor = Color.OrangeRed;
             menu_admin_password.ForeColor = Color.White;
+
+            menu_admin_search.BackColor = Color.OrangeRed;
+            menu_admin_search.ForeColor = Color.White;
         }
 
         private void menu_admin_password_Click(object sender, EventArgs e)
@@ -85,6 +88,24 @@ namespace Presentation
 
             menu_admin_password.BackColor = Color.White;
             menu_admin_password.ForeColor = Color.OrangeRed;
+
+            menu_admin_search.BackColor = Color.OrangeRed;
+            menu_admin_search.ForeColor = Color.White;
+        }
+
+        private void menu_admin_search_Click(object sender, EventArgs e)
+        {
+            Admin.Admin_Search admin_search = new Admin.Admin_Search();
+            embed(admin_search);
+
+            menu_admin_info.BackColor = Color.OrangeRed;
+            menu_admin_info.ForeColor = Color.White;
+
+            menu_admin_password.BackColor = Color.OrangeRed;
+            menu_admin_password.ForeColor = Color.White;
+
+            menu_admin_search.BackColor = Color.White;
+            menu_admin_search.ForeColor = Color.OrangeRed;
         }
 
         private void button_employee_Click(object sender, EventArgs e)

@@ -66,10 +66,11 @@
             this.menu_employee_view = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_employee_add = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_content = new System.Windows.Forms.Panel();
+            this.lblTenNV = new System.Windows.Forms.Label();
             this.picture_welcome = new System.Windows.Forms.PictureBox();
             this.label_welcome = new System.Windows.Forms.Label();
             this.panel_below = new System.Windows.Forms.Panel();
-            this.lblTenNV = new System.Windows.Forms.Label();
+            this.menu_admin_search = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_bar.SuspendLayout();
             this.panel_left.SuspendLayout();
             this.panel_invoice.SuspendLayout();
@@ -178,10 +179,10 @@
             this.panel_left.Controls.Add(this.panel_invoice);
             this.panel_left.Controls.Add(this.panel_statistic);
             this.panel_left.Controls.Add(this.panel_customer);
+            this.panel_left.Controls.Add(this.panel_home);
             this.panel_left.Controls.Add(this.panel_product);
             this.panel_left.Controls.Add(this.logo);
             this.panel_left.Controls.Add(this.panel_logout);
-            this.panel_left.Controls.Add(this.panel_home);
             this.panel_left.Controls.Add(this.panel_employee);
             this.panel_left.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_left.Location = new System.Drawing.Point(0, 70);
@@ -465,7 +466,8 @@
             this.panel_home.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.panel_home.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menu_admin_info,
-            this.menu_admin_password});
+            this.menu_admin_password,
+            this.menu_admin_search});
             this.panel_home.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.panel_home.Location = new System.Drawing.Point(15, 126);
             this.panel_home.Name = "panel_home";
@@ -550,6 +552,17 @@
             this.panel_content.Size = new System.Drawing.Size(1027, 663);
             this.panel_content.TabIndex = 11;
             // 
+            // lblTenNV
+            // 
+            this.lblTenNV.AutoSize = true;
+            this.lblTenNV.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTenNV.ForeColor = System.Drawing.Color.OrangeRed;
+            this.lblTenNV.Location = new System.Drawing.Point(41, 28);
+            this.lblTenNV.Name = "lblTenNV";
+            this.lblTenNV.Size = new System.Drawing.Size(143, 35);
+            this.lblTenNV.TabIndex = 5;
+            this.lblTenNV.Text = "Welcome, ";
+            // 
             // picture_welcome
             // 
             this.picture_welcome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picture_welcome.BackgroundImage")));
@@ -582,16 +595,17 @@
             this.panel_below.Size = new System.Drawing.Size(1027, 12);
             this.panel_below.TabIndex = 12;
             // 
-            // lblTenNV
+            // menu_admin_search
             // 
-            this.lblTenNV.AutoSize = true;
-            this.lblTenNV.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNV.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblTenNV.Location = new System.Drawing.Point(41, 28);
-            this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(143, 35);
-            this.lblTenNV.TabIndex = 5;
-            this.lblTenNV.Text = "Welcome, ";
+            this.menu_admin_search.BackColor = System.Drawing.Color.OrangeRed;
+            this.menu_admin_search.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.menu_admin_search.ForeColor = System.Drawing.Color.White;
+            this.menu_admin_search.Image = ((System.Drawing.Image)(resources.GetObject("menu_admin_search.Image")));
+            this.menu_admin_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu_admin_search.Name = "menu_admin_search";
+            this.menu_admin_search.Size = new System.Drawing.Size(312, 34);
+            this.menu_admin_search.Text = "Tra cứu";
+            this.menu_admin_search.Click += new System.EventHandler(this.menu_admin_search_Click);
             // 
             // Form_Main
             // 
@@ -680,5 +694,6 @@
         private System.Windows.Forms.Label label_welcome;
         private System.Windows.Forms.Panel panel_below;
         private System.Windows.Forms.Label lblTenNV;
+        private System.Windows.Forms.ToolStripMenuItem menu_admin_search;
     }
 }

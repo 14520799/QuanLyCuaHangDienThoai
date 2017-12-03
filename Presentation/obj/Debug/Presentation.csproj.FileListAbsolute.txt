@@ -78,3 +78,4 @@ C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\bin\Debug\EntityFramew
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.exe
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.pdb
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Admin.Admin_Search.resources
