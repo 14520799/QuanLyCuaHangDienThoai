@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
+using Function;
 
 namespace BusinessLogic
 {
@@ -45,10 +46,54 @@ namespace BusinessLogic
 
             return thuocTinh;
         }
-
-        public List<NhanVien> findMaNV(string MaNV)
+        
+        /*** TRA CỨU NHÂN VIÊN ***/
+        public List<NhanVien> timMaNV(string MaNV)
         {
             return model.NhanViens.Where(x => x.MaNV.Contains(MaNV)).ToList();
+        }
+
+        public List<NhanVien> timTenNV(string TenNV)
+        {
+            List<NhanVien> result = new List<NhanVien>();
+
+            foreach(NhanVien nv in model.NhanViens)
+            {
+                if (Algorithm.convertText(nv.TenNV).Contains(Algorithm.convertText(TenNV)))
+                    result.Add(nv);
+            }
+
+            return result;
+        }
+
+        public List<NhanVien> timChucVu(string ChucVu)
+        {
+            return model.NhanViens.Where(x => x.ChucVu.Contains(ChucVu)).ToList();
+        }
+
+
+        /*** TRA CỨU KHÁCH HÀNG ***/
+        public List<KhachHang> timTenKH(string TenKH)
+        {
+            List<KhachHang> result = new List<KhachHang>();
+
+            foreach (KhachHang kh in model.KhachHangs)
+            {
+                if (Algorithm.convertText(kh.TenKH).Contains(Algorithm.convertText(TenKH)))
+                    result.Add(kh);
+            }
+
+            return result;
+        }
+
+        public List<KhachHang> timSoDT(string SoDT)
+        {
+            return model.KhachHangs.Where(x => x.SoDT.Contains(SoDT)).ToList();
+        }
+
+        public List<KhachHang> timTienNo()
+        {
+            return model.KhachHangs.Where(x => x.TienNo > 0).ToList();
         }
     }
 }

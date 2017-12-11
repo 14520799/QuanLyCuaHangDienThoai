@@ -12,7 +12,6 @@ G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Enti
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.dll
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.pdb
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.dll.config
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.dll
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\BusinessLogic.pdb
@@ -24,5 +23,6 @@ C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\DataAccess.
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\Function.pdb
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.xml
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.csprojResolveAssemblyReference.cache
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.dll
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\BusinessLogic\obj\Debug\BusinessLogic.pdb

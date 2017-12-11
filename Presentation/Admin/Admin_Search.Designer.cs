@@ -49,7 +49,7 @@
             // 
             this.cbThuocTinh.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbThuocTinh.FormattingEnabled = true;
-            this.cbThuocTinh.Location = new System.Drawing.Point(184, 46);
+            this.cbThuocTinh.Location = new System.Drawing.Point(209, 46);
             this.cbThuocTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbThuocTinh.Name = "cbThuocTinh";
             this.cbThuocTinh.Size = new System.Drawing.Size(148, 29);
@@ -79,7 +79,7 @@
             // 
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(624, 41);
+            this.btnSearch.Location = new System.Drawing.Point(569, 41);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(107, 40);
@@ -158,10 +158,10 @@
             "Hãng Sản Xuất",
             "Hóa Đơn Mua",
             "Hóa Đơn Bán"});
-            this.cbTuKhoa.Location = new System.Drawing.Point(340, 46);
+            this.cbTuKhoa.Location = new System.Drawing.Point(389, 46);
             this.cbTuKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cbTuKhoa.Name = "cbTuKhoa";
-            this.cbTuKhoa.Size = new System.Drawing.Size(272, 29);
+            this.cbTuKhoa.Size = new System.Drawing.Size(148, 29);
             this.cbTuKhoa.TabIndex = 62;
             this.cbTuKhoa.Text = "Từ khóa";
             this.cbTuKhoa.TextChanged += new System.EventHandler(this.cbTuKhoa_TextChanged);

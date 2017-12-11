@@ -49,6 +49,10 @@
             this.panel_customer = new System.Windows.Forms.MenuStrip();
             this.menu_customer_view = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_customer_add = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel_home = new System.Windows.Forms.MenuStrip();
+            this.menu_admin_info = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_admin_password = new System.Windows.Forms.ToolStripMenuItem();
+            this.menu_admin_search = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_product = new System.Windows.Forms.MenuStrip();
             this.menu_product_view = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_product_add = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,9 +63,6 @@
             this.button_logout = new System.Windows.Forms.PictureBox();
             this.label_logout = new System.Windows.Forms.Label();
             this.lblMaNV = new System.Windows.Forms.Label();
-            this.panel_home = new System.Windows.Forms.MenuStrip();
-            this.menu_admin_info = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_admin_password = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_employee = new System.Windows.Forms.MenuStrip();
             this.menu_employee_view = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_employee_add = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,17 +71,16 @@
             this.picture_welcome = new System.Windows.Forms.PictureBox();
             this.label_welcome = new System.Windows.Forms.Label();
             this.panel_below = new System.Windows.Forms.Panel();
-            this.menu_admin_search = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_bar.SuspendLayout();
             this.panel_left.SuspendLayout();
             this.panel_invoice.SuspendLayout();
             this.panel_statistic.SuspendLayout();
             this.panel_customer.SuspendLayout();
+            this.panel_home.SuspendLayout();
             this.panel_product.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
             this.panel_logout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button_logout)).BeginInit();
-            this.panel_home.SuspendLayout();
             this.panel_employee.SuspendLayout();
             this.panel_content.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_welcome)).BeginInit();
@@ -335,6 +335,59 @@
             this.menu_customer_add.Text = "Thêm khách hàng";
             this.menu_customer_add.Click += new System.EventHandler(this.menu_customer_add_Click);
             // 
+            // panel_home
+            // 
+            this.panel_home.AutoSize = false;
+            this.panel_home.BackColor = System.Drawing.Color.OrangeRed;
+            this.panel_home.Dock = System.Windows.Forms.DockStyle.None;
+            this.panel_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_home.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.panel_home.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menu_admin_info,
+            this.menu_admin_password,
+            this.menu_admin_search});
+            this.panel_home.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
+            this.panel_home.Location = new System.Drawing.Point(15, 126);
+            this.panel_home.Name = "panel_home";
+            this.panel_home.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.panel_home.Size = new System.Drawing.Size(321, 155);
+            this.panel_home.TabIndex = 0;
+            // 
+            // menu_admin_info
+            // 
+            this.menu_admin_info.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.menu_admin_info.ForeColor = System.Drawing.Color.White;
+            this.menu_admin_info.Image = ((System.Drawing.Image)(resources.GetObject("menu_admin_info.Image")));
+            this.menu_admin_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu_admin_info.Name = "menu_admin_info";
+            this.menu_admin_info.Size = new System.Drawing.Size(312, 34);
+            this.menu_admin_info.Text = "Xem thông tin";
+            this.menu_admin_info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu_admin_info.Click += new System.EventHandler(this.menu_admin_info_Click);
+            // 
+            // menu_admin_password
+            // 
+            this.menu_admin_password.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.menu_admin_password.ForeColor = System.Drawing.Color.White;
+            this.menu_admin_password.Image = ((System.Drawing.Image)(resources.GetObject("menu_admin_password.Image")));
+            this.menu_admin_password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu_admin_password.Name = "menu_admin_password";
+            this.menu_admin_password.Size = new System.Drawing.Size(312, 34);
+            this.menu_admin_password.Text = "Đổi mật khẩu";
+            this.menu_admin_password.Click += new System.EventHandler(this.menu_admin_password_Click);
+            // 
+            // menu_admin_search
+            // 
+            this.menu_admin_search.BackColor = System.Drawing.Color.OrangeRed;
+            this.menu_admin_search.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            this.menu_admin_search.ForeColor = System.Drawing.Color.White;
+            this.menu_admin_search.Image = ((System.Drawing.Image)(resources.GetObject("menu_admin_search.Image")));
+            this.menu_admin_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.menu_admin_search.Name = "menu_admin_search";
+            this.menu_admin_search.Size = new System.Drawing.Size(312, 34);
+            this.menu_admin_search.Text = "Tra cứu";
+            this.menu_admin_search.Click += new System.EventHandler(this.menu_admin_search_Click);
+            // 
             // panel_product
             // 
             this.panel_product.AutoSize = false;
@@ -437,66 +490,25 @@
             // label_logout
             // 
             this.label_logout.AutoSize = true;
-            this.label_logout.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_logout.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_logout.ForeColor = System.Drawing.Color.White;
             this.label_logout.Location = new System.Drawing.Point(75, 85);
             this.label_logout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_logout.Name = "label_logout";
-            this.label_logout.Size = new System.Drawing.Size(96, 29);
+            this.label_logout.Size = new System.Drawing.Size(85, 26);
             this.label_logout.TabIndex = 3;
             this.label_logout.Text = "Logout";
             // 
             // lblMaNV
             // 
             this.lblMaNV.AutoSize = true;
-            this.lblMaNV.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMaNV.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaNV.ForeColor = System.Drawing.Color.White;
             this.lblMaNV.Location = new System.Drawing.Point(75, 59);
             this.lblMaNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(0, 29);
+            this.lblMaNV.Size = new System.Drawing.Size(0, 26);
             this.lblMaNV.TabIndex = 1;
-            // 
-            // panel_home
-            // 
-            this.panel_home.AutoSize = false;
-            this.panel_home.BackColor = System.Drawing.Color.OrangeRed;
-            this.panel_home.Dock = System.Windows.Forms.DockStyle.None;
-            this.panel_home.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_home.ImageScalingSize = new System.Drawing.Size(30, 30);
-            this.panel_home.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_admin_info,
-            this.menu_admin_password,
-            this.menu_admin_search});
-            this.panel_home.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
-            this.panel_home.Location = new System.Drawing.Point(15, 126);
-            this.panel_home.Name = "panel_home";
-            this.panel_home.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.panel_home.Size = new System.Drawing.Size(321, 155);
-            this.panel_home.TabIndex = 0;
-            // 
-            // menu_admin_info
-            // 
-            this.menu_admin_info.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.menu_admin_info.ForeColor = System.Drawing.Color.White;
-            this.menu_admin_info.Image = ((System.Drawing.Image)(resources.GetObject("menu_admin_info.Image")));
-            this.menu_admin_info.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_admin_info.Name = "menu_admin_info";
-            this.menu_admin_info.Size = new System.Drawing.Size(312, 34);
-            this.menu_admin_info.Text = "Xem thông tin";
-            this.menu_admin_info.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_admin_info.Click += new System.EventHandler(this.menu_admin_info_Click);
-            // 
-            // menu_admin_password
-            // 
-            this.menu_admin_password.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.menu_admin_password.ForeColor = System.Drawing.Color.White;
-            this.menu_admin_password.Image = ((System.Drawing.Image)(resources.GetObject("menu_admin_password.Image")));
-            this.menu_admin_password.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_admin_password.Name = "menu_admin_password";
-            this.menu_admin_password.Size = new System.Drawing.Size(312, 34);
-            this.menu_admin_password.Text = "Đổi mật khẩu";
-            this.menu_admin_password.Click += new System.EventHandler(this.menu_admin_password_Click);
             // 
             // panel_employee
             // 
@@ -595,18 +607,6 @@
             this.panel_below.Size = new System.Drawing.Size(1027, 12);
             this.panel_below.TabIndex = 12;
             // 
-            // menu_admin_search
-            // 
-            this.menu_admin_search.BackColor = System.Drawing.Color.OrangeRed;
-            this.menu_admin_search.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.menu_admin_search.ForeColor = System.Drawing.Color.White;
-            this.menu_admin_search.Image = ((System.Drawing.Image)(resources.GetObject("menu_admin_search.Image")));
-            this.menu_admin_search.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_admin_search.Name = "menu_admin_search";
-            this.menu_admin_search.Size = new System.Drawing.Size(312, 34);
-            this.menu_admin_search.Text = "Tra cứu";
-            this.menu_admin_search.Click += new System.EventHandler(this.menu_admin_search_Click);
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -633,14 +633,14 @@
             this.panel_statistic.PerformLayout();
             this.panel_customer.ResumeLayout(false);
             this.panel_customer.PerformLayout();
+            this.panel_home.ResumeLayout(false);
+            this.panel_home.PerformLayout();
             this.panel_product.ResumeLayout(false);
             this.panel_product.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
             this.panel_logout.ResumeLayout(false);
             this.panel_logout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button_logout)).EndInit();
-            this.panel_home.ResumeLayout(false);
-            this.panel_home.PerformLayout();
             this.panel_employee.ResumeLayout(false);
             this.panel_employee.PerformLayout();
             this.panel_content.ResumeLayout(false);

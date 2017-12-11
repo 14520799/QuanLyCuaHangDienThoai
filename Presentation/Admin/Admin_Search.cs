@@ -25,6 +25,7 @@ namespace Presentation.Admin
         private void Admin_Search_Load(object sender, EventArgs e)
         {
             dgvKetQua.RowHeadersVisible = false;
+            dgvKetQua.AllowUserToAddRows = false;
             dgvKetQua.AutoGenerateColumns = false;
             dgvKetQua.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvKetQua.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
@@ -35,6 +36,7 @@ namespace Presentation.Admin
         {
             try
             {
+                cbTuKhoa.Text = "Từ khóa";
                 cbThuocTinh.Items.Clear();
                 cbThuocTinh.Text = "Thuộc tính";
                 List<string> thuocTinh = bl.loadThuocTinh(cbDanhMuc.Text);
@@ -56,6 +58,7 @@ namespace Presentation.Admin
 
             if (cbThuocTinh.Text.Equals("Chức Vụ"))
             {
+                cbTuKhoa.Text = string.Empty;
                 cbTuKhoa.DropDownStyle = ComboBoxStyle.DropDown;
                 cbTuKhoa.Items.AddRange(new[] { "Bán Hàng", "Tiếp Thị", "Bảo Hành" });
             }
@@ -75,50 +78,119 @@ namespace Presentation.Admin
             switch (cbDanhMuc.Text)
             {
                 case "Nhân Viên":
-                    DataGridViewTextBoxColumn MaNV = new DataGridViewTextBoxColumn();
-                    DataGridViewTextBoxColumn TenNV = new DataGridViewTextBoxColumn();
-                    DataGridViewTextBoxColumn NgaySinh = new DataGridViewTextBoxColumn();
-                    DataGridViewTextBoxColumn GioiTinh = new DataGridViewTextBoxColumn();
-                    DataGridViewTextBoxColumn SoDT = new DataGridViewTextBoxColumn();
-                    DataGridViewTextBoxColumn Email = new DataGridViewTextBoxColumn();
-                    DataGridViewTextBoxColumn DiaChi = new DataGridViewTextBoxColumn();
-                    DataGridViewTextBoxColumn ChucVu = new DataGridViewTextBoxColumn();
-
-                    MaNV.DataPropertyName = "MaNV";
-                    MaNV.HeaderText = "Mã NV";
-
-                    TenNV.DataPropertyName = "TenNV";
-                    TenNV.HeaderText = "Tên NV";
-
-                    NgaySinh.DataPropertyName = "NgaySinh";
-                    NgaySinh.HeaderText = "Ngày Sinh";
-
-                    GioiTinh.DataPropertyName = "GioiTinh";
-                    GioiTinh.HeaderText = "Giới Tính";
-
-                    SoDT.DataPropertyName = "SoDT";
-                    SoDT.HeaderText = "Số ĐT";
-
-                    Email.DataPropertyName = "Email";
-                    Email.HeaderText = "Email";
-
-                    DiaChi.DataPropertyName = "DiaChi";
-                    DiaChi.HeaderText = "Địa Chỉ";
-
-                    ChucVu.DataPropertyName = "ChucVu";
-                    ChucVu.HeaderText = "Chức Vụ";
-
-                    dgvKetQua.Columns.AddRange(new DataGridViewColumn[] { MaNV, TenNV, NgaySinh, GioiTinh, SoDT, Email, DiaChi, ChucVu });
-                    
-                    switch (cbThuocTinh.Text)
                     {
-                        case "Mã NV":
-                            dgvKetQua.DataSource = bl.findMaNV(cbTuKhoa.Text);
-                            break;
+                        DataGridViewTextBoxColumn MaNV = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TenNV = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn NgaySinh = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn GioiTinh = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn SoDT = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn Email = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn DiaChi = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn ChucVu = new DataGridViewTextBoxColumn();
+
+                        MaNV.DataPropertyName = "MaNV";
+                        MaNV.HeaderText = "Mã NV";
+
+                        TenNV.DataPropertyName = "TenNV";
+                        TenNV.HeaderText = "Tên NV";
+
+                        NgaySinh.DataPropertyName = "NgaySinh";
+                        NgaySinh.HeaderText = "Ngày Sinh";
+
+                        GioiTinh.DataPropertyName = "GioiTinh";
+                        GioiTinh.HeaderText = "Giới Tính";
+
+                        SoDT.DataPropertyName = "SoDT";
+                        SoDT.HeaderText = "Số ĐT";
+
+                        Email.DataPropertyName = "Email";
+                        Email.HeaderText = "Email";
+
+                        DiaChi.DataPropertyName = "DiaChi";
+                        DiaChi.HeaderText = "Địa Chỉ";
+
+                        ChucVu.DataPropertyName = "ChucVu";
+                        ChucVu.HeaderText = "Chức Vụ";
+
+                        dgvKetQua.Columns.AddRange(new DataGridViewColumn[] { MaNV, TenNV, NgaySinh, GioiTinh, SoDT, Email, DiaChi, ChucVu });
+
+                        switch (cbThuocTinh.Text)
+                        {
+                            case "Mã NV":
+                                dgvKetQua.DataSource = bl.timMaNV(cbTuKhoa.Text);
+                                break;
+                            case "Tên NV":
+                                dgvKetQua.DataSource = bl.timTenNV(cbTuKhoa.Text);
+                                break;
+                            case "Chức Vụ":
+                                dgvKetQua.DataSource = bl.timChucVu(cbTuKhoa.Text);
+                                break;
+                            default:
+                                break;
+                        }
                     }
+
                     break;
-                case "Khách Hàng":
+
+                case "Khách Hàng":
+                    {
+                        DataGridViewTextBoxColumn MaKH = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TenKH = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn NgaySinh = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn GioiTinh = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn SoDT = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn Email = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn DiaChi = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TienNo = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn LoaiKH = new DataGridViewTextBoxColumn();
+
+                        MaKH.DataPropertyName = "MaKH";
+                        MaKH.HeaderText = "Mã KH";
+
+                        TenKH.DataPropertyName = "TenKH";
+                        TenKH.HeaderText = "Tên KH";
+
+                        NgaySinh.DataPropertyName = "NgaySinh";
+                        NgaySinh.HeaderText = "Ngày Sinh";
+
+                        GioiTinh.DataPropertyName = "GioiTinh";
+                        GioiTinh.HeaderText = "Giới Tính";
+
+                        SoDT.DataPropertyName = "SoDT";
+                        SoDT.HeaderText = "Số ĐT";
+
+                        Email.DataPropertyName = "Email";
+                        Email.HeaderText = "Email";
+
+                        DiaChi.DataPropertyName = "DiaChi";
+                        DiaChi.HeaderText = "Địa Chỉ";
+
+                        TienNo.DataPropertyName = "TienNo";
+                        TienNo.HeaderText = "Tiền Nợ";
+
+                        LoaiKH.DataPropertyName = "LoaiKH";
+                        LoaiKH.HeaderText = "Loại KH";
+
+                        dgvKetQua.Columns.AddRange(new DataGridViewColumn[] { MaKH, TenKH, NgaySinh, GioiTinh, SoDT, Email, DiaChi, TienNo, LoaiKH });
+
+                        switch (cbThuocTinh.Text)
+                        {
+                            case "Tên KH":
+                                dgvKetQua.DataSource = bl.timTenKH(cbTuKhoa.Text);
+                                break;
+                            case "Số ĐT":
+                                dgvKetQua.DataSource = bl.timSoDT(cbTuKhoa.Text);
+                                break;
+                            case "Còn Nợ":
+                                dgvKetQua.DataSource = bl.timTienNo();
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+
                     break;
+
                 default:
                     break;
             }
