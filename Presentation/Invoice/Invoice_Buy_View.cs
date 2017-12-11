@@ -25,7 +25,7 @@ namespace Presentation.Invoice
         private void Invoice_Buy_View_Load(object sender, EventArgs e)
         {
             dgvHoaDonMua.AutoGenerateColumns = false;
-
+            dgvHoaDonMua.DataSource = bl.readHDM();
         }
     }
 }

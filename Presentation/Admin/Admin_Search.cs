@@ -22,6 +22,7 @@ namespace Presentation.Admin
         }
 
 
+        /*** ĐỊNH DẠNG DATAGRIDVIEW ***/
         private void Admin_Search_Load(object sender, EventArgs e)
         {
             dgvKetQua.RowHeadersVisible = false;
@@ -32,6 +33,8 @@ namespace Presentation.Admin
 
         }
         
+
+        /*** EVENT THAY ĐỔI VALUE CÁC COMBOBOX ***/
         private void cbDanhMuc_TextChanged(object sender, EventArgs e)
         {
             try
@@ -39,9 +42,8 @@ namespace Presentation.Admin
                 cbTuKhoa.Text = "Từ khóa";
                 cbThuocTinh.Items.Clear();
                 cbThuocTinh.Text = "Thuộc tính";
-                List<string> thuocTinh = bl.layThuocTinh(cbDanhMuc.Text);
 
-                foreach (string item in thuocTinh)
+                foreach (string item in bl.layThuocTinh(cbDanhMuc.Text))
                 {
                     cbThuocTinh.Items.Add(item);
                 }
@@ -66,9 +68,10 @@ namespace Presentation.Admin
                     cbTuKhoa.Text = string.Empty;
                     cbTuKhoa.DropDownStyle = ComboBoxStyle.DropDown;
 
-                    foreach(string item in bl.layChucVu())
+                    foreach(NhanVien nv in bl.nvTheoChucVu(""))
                     {
-                        cbTuKhoa.Items.Add(item);
+                        if(!cbTuKhoa.Items.Contains(nv.ChucVu))
+                            cbTuKhoa.Items.Add(nv.ChucVu);
                     }
 
                     break;
@@ -79,17 +82,16 @@ namespace Presentation.Admin
                     cbTuKhoa.Text = string.Empty;
                     break;
 
-                // Sản Phẩm
+                // Sản Phẩm & Hóa Đơn Mua
                 case "Hãng SX":
                     cbTuKhoa.Text = string.Empty;
                     cbTuKhoa.DropDownStyle = ComboBoxStyle.DropDown;
 
-                    foreach (KeyValuePair<SanPham, HangSanXuat> item in bl.layHangSX())
+                    foreach (HangSanXuat hsx in bl.layHangSX())
                     {
-                        if(!cbTuKhoa.Items.Contains(item.Value.TenHang))
-                            cbTuKhoa.Items.Add(item.Value.TenHang);
+                        cbTuKhoa.Items.Add(hsx.TenHang);
                     }
-                    
+
                     break;
 
                 case "Còn Hàng":
@@ -109,7 +111,7 @@ namespace Presentation.Admin
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            dgvKetQua.Columns.Clear();
+            dgvKetQua.DataSource = null;
 
             switch (cbDanhMuc.Text)
             {
@@ -153,13 +155,13 @@ namespace Presentation.Admin
                         switch (cbThuocTinh.Text)
                         {
                             case "Mã NV":
-                                dgvKetQua.DataSource = bl.timMaNV(cbTuKhoa.Text);
+                                dgvKetQua.DataSource = bl.nvTheoMaNV(cbTuKhoa.Text);
                                 break;
                             case "Tên NV":
-                                dgvKetQua.DataSource = bl.timTenNV(cbTuKhoa.Text);
+                                dgvKetQua.DataSource = bl.nvTheoTenNV(cbTuKhoa.Text);
                                 break;
                             case "Chức Vụ":
-                                dgvKetQua.DataSource = bl.timChucVu(cbTuKhoa.Text);
+                                dgvKetQua.DataSource = bl.nvTheoChucVu(cbTuKhoa.Text);
                                 break;
                             default:
                                 break;
@@ -212,13 +214,13 @@ namespace Presentation.Admin
                         switch (cbThuocTinh.Text)
                         {
                             case "Tên KH":
-                                dgvKetQua.DataSource = bl.timTenKH(cbTuKhoa.Text);
+                                dgvKetQua.DataSource = bl.khTheoTenKH(cbTuKhoa.Text);
                                 break;
                             case "Số ĐT":
-                                dgvKetQua.DataSource = bl.timSoDT(cbTuKhoa.Text);
+                                dgvKetQua.DataSource = bl.khTheoSoDT(cbTuKhoa.Text);
                                 break;
                             case "Còn Nợ":
-                                dgvKetQua.DataSource = bl.timTienNo();
+                                dgvKetQua.DataSource = bl.khTheoConNo();
                                 break;
                             default:
                                 break;
@@ -307,26 +309,83 @@ namespace Presentation.Admin
                         switch (cbThuocTinh.Text)
                         {
                             case "Tên SP":
-                                dgvKetQua.DataSource = bl.timTenSP(cbTuKhoa.Text);
+                                dgvKetQua.DataSource = bl.spTheoTenSP(cbTuKhoa.Text);
                                 break;
 
                             case "Hãng SX":
-                                List<SanPham> sp = new List<SanPham>();
-
-                                foreach(KeyValuePair<SanPham, HangSanXuat> item in bl.layHangSX())
+                                foreach(HangSanXuat hsx in bl.layHangSX())
                                 {
-                                    if (cbTuKhoa.Text.Equals(item.Value.TenHang))
-                                        sp.Add(item.Key);
+                                    if (hsx.TenHang.Equals(cbTuKhoa.Text))
+                                        dgvKetQua.DataSource = bl.spTheoHangSX(hsx.MaHang);
                                 }
 
-                                dgvKetQua.DataSource = sp.ToList();
                                 break;
 
                             case "Còn Hàng":
-                                dgvKetQua.DataSource = bl.timSoLuong();
+                                dgvKetQua.DataSource = bl.spTheoConHang();
                                 break;
 
                             default:
+                                break;
+                        }
+                    }
+
+                    break;
+
+                case "Hóa Đơn Mua":
+                    {
+                        DataGridViewTextBoxColumn MaHDM = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn MaHang = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn MaNV = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn NgayMua = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TongTien = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TienNo = new DataGridViewTextBoxColumn();
+
+                        MaHDM.DataPropertyName = "MaHDM";
+                        MaHDM.HeaderText = "Mã HDM";
+
+                        MaHang.DataPropertyName = "MaHang";
+                        MaHang.HeaderText = "Hãng SX";
+
+                        MaNV.DataPropertyName = "MaNV";
+                        MaNV.HeaderText = "Nhân Viên";
+
+                        NgayMua.DataPropertyName = "NgayMua";
+                        NgayMua.HeaderText = "Ngày Mua";
+
+                        TongTien.DataPropertyName = "TongTien";
+                        TongTien.HeaderText = "Tổng Tiền";
+
+                        TienNo.DataPropertyName = "TienNo";
+                        TienNo.HeaderText = "Tiền Nợ";
+
+                        dgvKetQua.Columns.AddRange(new DataGridViewColumn[] { MaHDM, MaHang, MaNV, NgayMua, TongTien, TienNo });
+
+                        switch (cbThuocTinh.Text)
+                        {
+                            case "Mã HĐM":
+                                dgvKetQua.DataSource = bl.hdmTheoMaHDM(cbTuKhoa.Text);
+                                break;
+
+                            case "Hãng SX":
+                                foreach(HangSanXuat hsx in bl.layHangSX())
+                                {
+                                    if (hsx.TenHang.Equals(cbTuKhoa.Text))
+                                        dgvKetQua.DataSource = bl.hdmTheoHangSX(hsx.MaHang);
+                                }
+
+                                break;
+
+                            case "Nhân Viên":
+                                dgvKetQua.DataSource = bl.hdmTheoNhanVien(cbTuKhoa.Text);
+                                break;
+
+                            case "Còn Nợ":
+                                dgvKetQua.DataSource = bl.hdmTheoConNo();
+                                break;
+
+                            default:
+                                MessageBox.Show("dsssssss");
                                 break;
                         }
                     }
