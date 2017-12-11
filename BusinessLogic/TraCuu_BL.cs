@@ -24,11 +24,31 @@ namespace BusinessLogic
             switch (danhMuc)
             {
                 case "Nhân Viên":
-                    thuocTinh.AddRange(new[] { "Tên NV", "Số ĐT", "Chức Vụ" });
+                    thuocTinh.AddRange(new [] { "Mã NV", "Tên NV", "Chức Vụ" });
+                    break;
+                case "Khách Hàng":
+                    thuocTinh.AddRange(new [] { "Tên KH", "Số ĐT", "Còn Nợ" });
+                    break;
+                case "Sản Phẩm":
+                    thuocTinh.AddRange(new [] { "Tên SP", "Loại SP", "Hãng SX" });
+                    break;
+                case "Hóa Đơn Mua":
+                    thuocTinh.AddRange(new [] { "Mã HDM", "Nhân Viên", "Còn Nợ" });
+                    break;
+                case "Hóa Đơn Bán":
+                    thuocTinh.AddRange(new [] { "Mã HDB", "Nhân Viên", "Khách Hàng", "Còn Nợ" });
+                    break;
+                default:
+                    thuocTinh.Clear();
                     break;
             }
 
             return thuocTinh;
+        }
+
+        public List<NhanVien> findMaNV(string MaNV)
+        {
+            return model.NhanViens.Where(x => x.MaNV.Contains(MaNV)).ToList();
         }
     }
 }

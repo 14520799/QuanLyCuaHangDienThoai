@@ -51,7 +51,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(135, 21);
+            this.label2.Location = new System.Drawing.Point(166, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(134, 29);
@@ -62,7 +62,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(17, 233);
+            this.pictureBox1.Location = new System.Drawing.Point(20, 232);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(42, 40);
@@ -73,7 +73,7 @@
             // 
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.Location = new System.Drawing.Point(203, 171);
+            this.btnCancel.Location = new System.Drawing.Point(250, 170);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(110, 40);
@@ -85,7 +85,7 @@
             // 
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
             this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirm.Location = new System.Drawing.Point(85, 171);
+            this.btnConfirm.Location = new System.Drawing.Point(132, 170);
             this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(110, 40);
@@ -97,7 +97,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(67, 251);
+            this.label1.Location = new System.Drawing.Point(70, 250);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 22);
@@ -108,20 +108,20 @@
             // 
             this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNV.Location = new System.Drawing.Point(140, 76);
+            this.txtMaNV.Location = new System.Drawing.Point(187, 75);
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.Size = new System.Drawing.Size(271, 30);
+            this.txtMaNV.Size = new System.Drawing.Size(244, 30);
             this.txtMaNV.TabIndex = 96;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Location = new System.Drawing.Point(140, 118);
+            this.txtMatKhau.Location = new System.Drawing.Point(187, 117);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhau.Name = "txtMatKhau";
-            this.txtMatKhau.Size = new System.Drawing.Size(271, 30);
+            this.txtMatKhau.Size = new System.Drawing.Size(244, 30);
             this.txtMatKhau.TabIndex = 97;
             this.txtMatKhau.UseSystemPasswordChar = true;
             this.txtMatKhau.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMatKhau_KeyDown);
@@ -134,7 +134,7 @@
             this.lgl3.AutoSize = true;
             this.lgl3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lgl3.ForeColor = System.Drawing.Color.Black;
-            this.lgl3.Location = new System.Drawing.Point(13, 122);
+            this.lgl3.Location = new System.Drawing.Point(60, 121);
             this.lgl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lgl3.Name = "lgl3";
             this.lgl3.Size = new System.Drawing.Size(94, 23);
@@ -149,7 +149,7 @@
             this.lgl2.AutoSize = true;
             this.lgl2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lgl2.ForeColor = System.Drawing.Color.Black;
-            this.lgl2.Location = new System.Drawing.Point(13, 80);
+            this.lgl2.Location = new System.Drawing.Point(60, 79);
             this.lgl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lgl2.Name = "lgl2";
             this.lgl2.Size = new System.Drawing.Size(97, 23);
@@ -161,7 +161,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(429, 292);
+            this.ClientSize = new System.Drawing.Size(496, 291);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancel);
@@ -176,6 +176,7 @@
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng Nhập";
+            this.Load += new System.EventHandler(this.Admin_Login_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnConfirm)).EndInit();

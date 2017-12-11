@@ -32,14 +32,14 @@
             this.cbThuocTinh = new System.Windows.Forms.ComboBox();
             this.cbDanhMuc = new System.Windows.Forms.ComboBox();
             this.btnSearch = new System.Windows.Forms.PictureBox();
-            this.txtTuKhoa = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvKetQua = new System.Windows.Forms.DataGridView();
             this.SearchBox = new System.Windows.Forms.GroupBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.PictureBox();
             this.btnBack = new System.Windows.Forms.PictureBox();
+            this.cbTuKhoa = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
             this.SearchBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
@@ -49,12 +49,13 @@
             // 
             this.cbThuocTinh.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbThuocTinh.FormattingEnabled = true;
-            this.cbThuocTinh.Location = new System.Drawing.Point(390, 39);
+            this.cbThuocTinh.Location = new System.Drawing.Point(184, 46);
             this.cbThuocTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbThuocTinh.Name = "cbThuocTinh";
             this.cbThuocTinh.Size = new System.Drawing.Size(148, 29);
             this.cbThuocTinh.TabIndex = 58;
             this.cbThuocTinh.Text = "Thuộc tính";
+            this.cbThuocTinh.TextChanged += new System.EventHandler(this.cbThuocTinh_TextChanged);
             // 
             // cbDanhMuc
             // 
@@ -64,50 +65,40 @@
             "Nhân Viên",
             "Khách Hàng",
             "Sản Phẩm",
-            "Hãng Sản Xuất",
             "Hóa Đơn Mua",
             "Hóa Đơn Bán"});
-            this.cbDanhMuc.Location = new System.Drawing.Point(209, 39);
+            this.cbDanhMuc.Location = new System.Drawing.Point(28, 46);
             this.cbDanhMuc.Margin = new System.Windows.Forms.Padding(4);
             this.cbDanhMuc.Name = "cbDanhMuc";
             this.cbDanhMuc.Size = new System.Drawing.Size(148, 29);
             this.cbDanhMuc.TabIndex = 57;
             this.cbDanhMuc.Text = "Danh mục";
-            this.cbDanhMuc.SelectionChangeCommitted += new System.EventHandler(this.cbDanhMuc_SelectionChangeCommitted);
+            this.cbDanhMuc.TextChanged += new System.EventHandler(this.cbDanhMuc_TextChanged);
             // 
             // btnSearch
             // 
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(571, 35);
+            this.btnSearch.Location = new System.Drawing.Point(624, 41);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(107, 40);
             this.btnSearch.TabIndex = 56;
             this.btnSearch.TabStop = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
-            // txtTuKhoa
+            // dgvKetQua
             // 
-            this.txtTuKhoa.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTuKhoa.Location = new System.Drawing.Point(28, 39);
-            this.txtTuKhoa.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTuKhoa.Name = "txtTuKhoa";
-            this.txtTuKhoa.Size = new System.Drawing.Size(148, 28);
-            this.txtTuKhoa.TabIndex = 55;
-            this.txtTuKhoa.Text = "Từ khóa";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(681, 255);
-            this.dataGridView1.TabIndex = 55;
+            this.dgvKetQua.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvKetQua.Location = new System.Drawing.Point(22, 40);
+            this.dgvKetQua.Name = "dgvKetQua";
+            this.dgvKetQua.RowTemplate.Height = 24;
+            this.dgvKetQua.Size = new System.Drawing.Size(681, 255);
+            this.dgvKetQua.TabIndex = 55;
             // 
             // SearchBox
             // 
-            this.SearchBox.Controls.Add(this.dataGridView1);
+            this.SearchBox.Controls.Add(this.dgvKetQua);
             this.SearchBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.ForeColor = System.Drawing.Color.Red;
             this.SearchBox.Location = new System.Drawing.Point(28, 97);
@@ -155,25 +146,45 @@
             this.btnBack.TabIndex = 60;
             this.btnBack.TabStop = false;
             // 
+            // cbTuKhoa
+            // 
+            this.cbTuKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cbTuKhoa.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbTuKhoa.FormattingEnabled = true;
+            this.cbTuKhoa.Items.AddRange(new object[] {
+            "Nhân Viên",
+            "Khách Hàng",
+            "Sản Phẩm",
+            "Hãng Sản Xuất",
+            "Hóa Đơn Mua",
+            "Hóa Đơn Bán"});
+            this.cbTuKhoa.Location = new System.Drawing.Point(340, 46);
+            this.cbTuKhoa.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTuKhoa.Name = "cbTuKhoa";
+            this.cbTuKhoa.Size = new System.Drawing.Size(272, 29);
+            this.cbTuKhoa.TabIndex = 62;
+            this.cbTuKhoa.Text = "Từ khóa";
+            this.cbTuKhoa.TextChanged += new System.EventHandler(this.cbTuKhoa_TextChanged);
+            // 
             // Admin_Search
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(760, 505);
+            this.ClientSize = new System.Drawing.Size(885, 505);
+            this.Controls.Add(this.cbTuKhoa);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbThuocTinh);
             this.Controls.Add(this.cbDanhMuc);
             this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.txtTuKhoa);
             this.Controls.Add(this.SearchBox);
             this.Name = "Admin_Search";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Admin_Search_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).EndInit();
             this.SearchBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
@@ -187,11 +198,11 @@
         private System.Windows.Forms.ComboBox cbThuocTinh;
         private System.Windows.Forms.ComboBox cbDanhMuc;
         private System.Windows.Forms.PictureBox btnSearch;
-        private System.Windows.Forms.TextBox txtTuKhoa;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvKetQua;
         private System.Windows.Forms.GroupBox SearchBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox btnNext;
         private System.Windows.Forms.PictureBox btnBack;
+        private System.Windows.Forms.ComboBox cbTuKhoa;
     }
 }

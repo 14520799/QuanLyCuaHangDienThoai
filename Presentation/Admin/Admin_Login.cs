@@ -52,5 +52,10 @@ namespace Presentation.Admin
             if(e.KeyCode == Keys.Enter)
                 btnConfirm_Click(sender, e);
         }
+
+        private void Admin_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
