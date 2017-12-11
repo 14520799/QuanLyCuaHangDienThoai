@@ -39,7 +39,7 @@ namespace Presentation.Admin
                 cbTuKhoa.Text = "Từ khóa";
                 cbThuocTinh.Items.Clear();
                 cbThuocTinh.Text = "Thuộc tính";
-                List<string> thuocTinh = bl.loadThuocTinh(cbDanhMuc.Text);
+                List<string> thuocTinh = bl.layThuocTinh(cbDanhMuc.Text);
 
                 foreach (string item in thuocTinh)
                 {
@@ -55,15 +55,51 @@ namespace Presentation.Admin
         private void cbThuocTinh_TextChanged(object sender, EventArgs e)
         {
             cbTuKhoa.Items.Clear();
+            cbTuKhoa.Enabled = true;
+            cbTuKhoa.Text = "Từ khóa";
+            cbTuKhoa.DropDownStyle = ComboBoxStyle.Simple;
 
-            if (cbThuocTinh.Text.Equals("Chức Vụ"))
+            switch (cbThuocTinh.Text)
             {
-                cbTuKhoa.Text = string.Empty;
-                cbTuKhoa.DropDownStyle = ComboBoxStyle.DropDown;
-                cbTuKhoa.Items.AddRange(new[] { "Bán Hàng", "Tiếp Thị", "Bảo Hành" });
+                // Nhân Viên
+                case "Chức Vụ":
+                    cbTuKhoa.Text = string.Empty;
+                    cbTuKhoa.DropDownStyle = ComboBoxStyle.DropDown;
+
+                    foreach(string item in bl.layChucVu())
+                    {
+                        cbTuKhoa.Items.Add(item);
+                    }
+
+                    break;
+                
+                // Khách Hàng
+                case "Còn Nợ":
+                    cbTuKhoa.Enabled = false;
+                    cbTuKhoa.Text = string.Empty;
+                    break;
+
+                // Sản Phẩm
+                case "Hãng SX":
+                    cbTuKhoa.Text = string.Empty;
+                    cbTuKhoa.DropDownStyle = ComboBoxStyle.DropDown;
+
+                    foreach (KeyValuePair<SanPham, HangSanXuat> item in bl.layHangSX())
+                    {
+                        if(!cbTuKhoa.Items.Contains(item.Value.TenHang))
+                            cbTuKhoa.Items.Add(item.Value.TenHang);
+                    }
+                    
+                    break;
+
+                case "Còn Hàng":
+                    cbTuKhoa.Enabled = false;
+                    cbTuKhoa.Text = string.Empty;
+                    break;
+
+                default:
+                    break;
             }
-            else
-                cbTuKhoa.DropDownStyle = ComboBoxStyle.Simple;
         }
 
         private void cbTuKhoa_TextChanged(object sender, EventArgs e)
@@ -184,6 +220,112 @@ namespace Presentation.Admin
                             case "Còn Nợ":
                                 dgvKetQua.DataSource = bl.timTienNo();
                                 break;
+                            default:
+                                break;
+                        }
+                    }
+
+                    break;
+
+                case "Sản Phẩm":
+                    {
+                        DataGridViewTextBoxColumn MaSP = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TenSP = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn HinhAnh = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn DonGia = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn MoTa = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn SoLuong = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn ManHinh = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn HDH = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn CameraTruoc = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn CameraSau = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn CPU = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn RAM = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn BoNhoTrong = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TheNho = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TheSIM = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn DungLuongPin = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn MaHang = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn MaLoai = new DataGridViewTextBoxColumn();
+
+                        MaSP.DataPropertyName = "MaSP";
+                        MaSP.HeaderText = "Mã SP";
+
+                        TenSP.DataPropertyName = "TenSP";
+                        TenSP.HeaderText = "Tên SP";
+
+                        HinhAnh.DataPropertyName = "HinhAnh";
+                        HinhAnh.HeaderText = "Hình Ảnh";
+
+                        DonGia.DataPropertyName = "DonGia";
+                        DonGia.HeaderText = "Đơn Giá";
+
+                        MoTa.DataPropertyName = "MoTa";
+                        MoTa.HeaderText = "Mô Tả";
+
+                        SoLuong.DataPropertyName = "SoLuong";
+                        SoLuong.HeaderText = "Số Lượng";
+
+                        ManHinh.DataPropertyName = "ManHinh";
+                        ManHinh.HeaderText = "Màn Hình";
+
+                        HDH.DataPropertyName = "HDH";
+                        HDH.HeaderText = "HĐH";
+
+                        CameraTruoc.DataPropertyName = "CameraTruoc";
+                        CameraTruoc.HeaderText = "Camera Trước";
+
+                        CameraSau.DataPropertyName = "CameraSau";
+                        CameraSau.HeaderText = "Camera Sau";
+
+                        CPU.DataPropertyName = "CPU";
+                        CPU.HeaderText = "CPU";
+
+                        RAM.DataPropertyName = "RAM";
+                        RAM.HeaderText = "RAM";
+
+                        BoNhoTrong.DataPropertyName = "BoNhoTrong";
+                        BoNhoTrong.HeaderText = "Bộ Nhớ Trong";
+
+                        TheNho.DataPropertyName = "TheNho";
+                        TheNho.HeaderText = "Thẻ Nhớ";
+
+                        TheSIM.DataPropertyName = "TheSIM";
+                        TheSIM.HeaderText = "Thẻ SIM";
+
+                        DungLuongPin.DataPropertyName = "DungLuongPin";
+                        DungLuongPin.HeaderText = "Dung Lượng Pin";
+
+                        MaHang.DataPropertyName = "MaHang";
+                        MaHang.HeaderText = "Hãng SX";
+
+                        MaLoai.DataPropertyName = "MaLoai";
+                        MaLoai.HeaderText = "Loại SP";
+
+                        dgvKetQua.Columns.AddRange(new DataGridViewColumn[] { MaSP, TenSP, HinhAnh, DonGia, MoTa, SoLuong, ManHinh, HDH, CameraTruoc, CameraSau, CPU, RAM, BoNhoTrong, TheNho, TheSIM, DungLuongPin, MaHang, MaLoai });
+
+                        switch (cbThuocTinh.Text)
+                        {
+                            case "Tên SP":
+                                dgvKetQua.DataSource = bl.timTenSP(cbTuKhoa.Text);
+                                break;
+
+                            case "Hãng SX":
+                                List<SanPham> sp = new List<SanPham>();
+
+                                foreach(KeyValuePair<SanPham, HangSanXuat> item in bl.layHangSX())
+                                {
+                                    if (cbTuKhoa.Text.Equals(item.Value.TenHang))
+                                        sp.Add(item.Key);
+                                }
+
+                                dgvKetQua.DataSource = sp.ToList();
+                                break;
+
+                            case "Còn Hàng":
+                                dgvKetQua.DataSource = bl.timSoLuong();
+                                break;
+
                             default:
                                 break;
                         }

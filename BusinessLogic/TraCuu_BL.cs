@@ -18,7 +18,7 @@ namespace BusinessLogic
         }
 
 
-        public List<string> loadThuocTinh(string danhMuc)
+        public List<string> layThuocTinh(string danhMuc)
         {
             List<string> thuocTinh = new List<string>();
 
@@ -31,7 +31,7 @@ namespace BusinessLogic
                     thuocTinh.AddRange(new [] { "Tên KH", "Số ĐT", "Còn Nợ" });
                     break;
                 case "Sản Phẩm":
-                    thuocTinh.AddRange(new [] { "Tên SP", "Loại SP", "Hãng SX" });
+                    thuocTinh.AddRange(new [] { "Tên SP", "Hãng SX", "Còn Hàng" });
                     break;
                 case "Hóa Đơn Mua":
                     thuocTinh.AddRange(new [] { "Mã HDM", "Nhân Viên", "Còn Nợ" });
@@ -46,8 +46,20 @@ namespace BusinessLogic
 
             return thuocTinh;
         }
-        
+
         /*** TRA CỨU NHÂN VIÊN ***/
+        public List<string> layChucVu()
+        {
+            List<string> result = new List<string>();
+
+            foreach (NhanVien nv in model.NhanViens)
+            {
+                result.Add(nv.ChucVu);
+            }
+
+            return result.Distinct().ToList();
+        }
+
         public List<NhanVien> timMaNV(string MaNV)
         {
             return model.NhanViens.Where(x => x.MaNV.Contains(MaNV)).ToList();
@@ -94,6 +106,42 @@ namespace BusinessLogic
         public List<KhachHang> timTienNo()
         {
             return model.KhachHangs.Where(x => x.TienNo > 0).ToList();
+        }
+
+
+        /*** TRA CỨU SẢN PHẨM ***/
+        public Dictionary<SanPham, HangSanXuat> layHangSX()
+        {
+            Dictionary<SanPham, HangSanXuat> result = new Dictionary<SanPham, HangSanXuat> ();
+
+            foreach (HangSanXuat hsx in model.HangSanXuats)
+            {
+                foreach(SanPham sp in model.SanPhams)
+                {
+                    if (hsx.MaHang.Equals(sp.MaHang))
+                        result.Add(sp, hsx);
+                }
+            }
+
+            return result;
+        }
+
+        public List<SanPham> timTenSP(string TenSP)
+        {
+            List<SanPham> result = new List<SanPham>();
+
+            foreach (SanPham sp in model.SanPhams)
+            {
+                if (Algorithm.convertText(sp.TenSP).Contains(Algorithm.convertText(TenSP)))
+                    result.Add(sp);
+            }
+
+            return result;
+        }
+
+        public List<SanPham> timSoLuong()
+        {
+            return model.SanPhams.Where(x => x.SoLuong > 0).ToList();
         }
     }
 }
