@@ -75,9 +75,9 @@ namespace Presentation.Admin
                     }
 
                     break;
-                
+
                 // Khách Hàng
-                case "Còn Nợ":
+                case "Còn Nợ":
                     cbTuKhoa.Enabled = false;
                     cbTuKhoa.Text = string.Empty;
                     break;
@@ -112,6 +112,7 @@ namespace Presentation.Admin
         private void btnSearch_Click(object sender, EventArgs e)
         {
             dgvKetQua.DataSource = null;
+            dgvKetQua.Columns.Clear();
 
             switch (cbDanhMuc.Text)
             {
@@ -219,7 +220,7 @@ namespace Presentation.Admin
                             case "Số ĐT":
                                 dgvKetQua.DataSource = bl.khTheoSoDT(cbTuKhoa.Text);
                                 break;
-                            case "Còn Nợ":
+                            case "Còn Nợ":
                                 dgvKetQua.DataSource = bl.khTheoConNo();
                                 break;
                             default:
@@ -348,7 +349,7 @@ namespace Presentation.Admin
                         MaHang.HeaderText = "Hãng SX";
 
                         MaNV.DataPropertyName = "MaNV";
-                        MaNV.HeaderText = "Nhân Viên";
+                        MaNV.HeaderText = "Mã NV";
 
                         NgayMua.DataPropertyName = "NgayMua";
                         NgayMua.HeaderText = "Ngày Mua";
@@ -363,7 +364,7 @@ namespace Presentation.Admin
 
                         switch (cbThuocTinh.Text)
                         {
-                            case "Mã HĐM":
+                            case "Mã HDM":
                                 dgvKetQua.DataSource = bl.hdmTheoMaHDM(cbTuKhoa.Text);
                                 break;
 
@@ -376,16 +377,69 @@ namespace Presentation.Admin
 
                                 break;
 
-                            case "Nhân Viên":
-                                dgvKetQua.DataSource = bl.hdmTheoNhanVien(cbTuKhoa.Text);
+                            case "Mã NV":
+                                dgvKetQua.DataSource = bl.hdmTheoMaNV(cbTuKhoa.Text);
                                 break;
 
-                            case "Còn Nợ":
+                            case "Còn Nợ":
                                 dgvKetQua.DataSource = bl.hdmTheoConNo();
                                 break;
 
                             default:
-                                MessageBox.Show("dsssssss");
+                                break;
+                        }
+                    }
+
+                    break;
+
+                case "Hóa Đơn Bán":
+                    {
+                        DataGridViewTextBoxColumn MaHDB = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn MaKH = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn MaNV = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn NgayBan = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TongTien = new DataGridViewTextBoxColumn();
+                        DataGridViewTextBoxColumn TienNo = new DataGridViewTextBoxColumn();
+
+                        MaHDB.DataPropertyName = "MaHDB";
+                        MaHDB.HeaderText = "Mã HDB";
+
+                        MaKH.DataPropertyName = "MaKH";
+                        MaKH.HeaderText = "Mã KH";
+
+                        MaNV.DataPropertyName = "MaNV";
+                        MaNV.HeaderText = "Mã NV";
+
+                        NgayBan.DataPropertyName = "NgayBan";
+                        NgayBan.HeaderText = "Ngày Bán";
+
+                        TongTien.DataPropertyName = "TongTien";
+                        TongTien.HeaderText = "Tổng Tiền";
+
+                        TienNo.DataPropertyName = "TienNo";
+                        TienNo.HeaderText = "Tiền Nợ";
+
+                        dgvKetQua.Columns.AddRange(new DataGridViewColumn[] { MaHDB, MaKH, MaNV, NgayBan, TongTien, TienNo });
+
+                        switch (cbThuocTinh.Text)
+                        {
+                            case "Mã HDB":
+                                dgvKetQua.DataSource = bl.hdbTheoMaHDB(cbTuKhoa.Text);
+                                break;
+
+                            case "Mã NV":
+                                dgvKetQua.DataSource = bl.hdbTheoMaNV(cbTuKhoa.Text);
+                                break;
+
+                            case "Mã KH":
+                                dgvKetQua.DataSource = bl.hdbTheoMaKH(cbTuKhoa.Text);
+                                break;
+
+                            case "Còn Nợ":
+                                dgvKetQua.DataSource = bl.hdmTheoConNo();
+                                break;
+
+                            default:
                                 break;
                         }
                     }

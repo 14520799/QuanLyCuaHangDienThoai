@@ -72,7 +72,6 @@ C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Invoice.Invoice_Sale_Add.resources
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Invoice.Invoice_Sale_View.resources
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Product.Product_Add.resources
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Product.Product_Detail.resources
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Product.Product_Logo.resources
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Product.Product_View.resources
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Properties.Resources.resources

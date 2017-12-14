@@ -24,7 +24,7 @@ namespace Function
 
             foreach (Control item in control.Controls)
             {
-                if (item is TextBox || item is ComboBox)
+                if (item is TextBox)
                     ((TextBox)item).Text = "";
 
                 clearInput(item);

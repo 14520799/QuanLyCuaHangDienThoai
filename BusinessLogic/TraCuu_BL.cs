@@ -28,16 +28,16 @@ namespace BusinessLogic
                     listThuocTinh.AddRange(new [] { "Mã NV", "Tên NV", "Chức Vụ" });
                     break;
                 case "Khách Hàng":
-                    listThuocTinh.AddRange(new [] { "Tên KH", "Số ĐT", "Còn Nợ" });
+                    listThuocTinh.AddRange(new [] { "Tên KH", "Số ĐT", "Còn Nợ" });
                     break;
                 case "Sản Phẩm":
                     listThuocTinh.AddRange(new [] { "Tên SP", "Hãng SX", "Còn Hàng" });
                     break;
                 case "Hóa Đơn Mua":
-                    listThuocTinh.AddRange(new [] { "Mã HĐM", "Hãng SX", "Nhân Viên", "Còn Nợ" });
+                    listThuocTinh.AddRange(new [] { "Mã HDM", "Hãng SX", "Mã NV", "Còn Nợ" });
                     break;
-                case "Hóa Đơn Bán":
-                    listThuocTinh.AddRange(new [] { "Mã HĐB", "Nhân Viên", "Khách Hàng", "Còn Nợ" });
+                case "Hóa Đơn Bán":
+                    listThuocTinh.AddRange(new [] { "Mã HDB", "Mã NV", "Mã KH", "Còn Nợ" });
                     break;
                 default:
                     listThuocTinh.Clear();
@@ -160,7 +160,7 @@ namespace BusinessLogic
             return listHDM;
         }
 
-        public List<HoaDonMua> hdmTheoNhanVien(string MaNV)
+        public List<HoaDonMua> hdmTheoMaNV(string MaNV)
         {
             return model.HoaDonMuas.Where(hdm => hdm.MaNV.Contains(MaNV)).ToList();
         }
@@ -168,6 +168,28 @@ namespace BusinessLogic
         public List<HoaDonMua> hdmTheoConNo()
         {
             return model.HoaDonMuas.Where(hdm => hdm.TienNo > 0).ToList();
+        }
+
+
+        /*** TRA CỨU HÓA ĐƠN BÁN ***/
+        public List<HoaDonBan> hdbTheoMaHDB(string MaHDB)
+        {
+            return model.HoaDonBans.Where(hdb => hdb.MaHDB.Contains(MaHDB)).ToList();
+        }
+
+        public List<HoaDonBan> hdbTheoMaNV(string MaNV)
+        {
+            return model.HoaDonBans.Where(hdb => hdb.MaNV.Contains(MaNV)).ToList();
+        }
+
+        public List<HoaDonBan> hdbTheoMaKH(string MaKH)
+        {
+            return model.HoaDonBans.Where(hdb => hdb.MaKH.Contains(MaKH)).ToList();
+        }
+
+        public List<HoaDonBan> hdbTheoConNo()
+        {
+            return model.HoaDonBans.Where(hdb => hdb.TienNo > 0).ToList();
         }
     }
 }
