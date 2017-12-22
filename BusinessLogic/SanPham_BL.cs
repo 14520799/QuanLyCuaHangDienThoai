@@ -71,7 +71,7 @@ namespace BusinessLogic
         {
             try
             {
-                SanPham sp = model.SanPhams.First(x => x.MaSP.Equals(MaSP));
+                SanPham sp = model.SanPhams.Find(MaSP);
                 sp.TenSP = TenSP;
                 sp.HinhAnh = HinhAnh;
                 sp.MoTa = MoTa;

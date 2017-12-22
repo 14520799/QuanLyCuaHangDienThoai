@@ -4,25 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
-using System.Windows.Forms;
 
 namespace BusinessLogic
 {
-    public class HoaDonMua_BL
+    public class HoaDonBan_BL
     {
         private DataModel model;
 
-        // Hóa Đơn Mua
-        public string MaHDM, MaHang, MaNV;
-        public DateTime NgayMua;
+        // Hóa Đơn Bán
+        public string MaHDB, MaNV, MaKH;
+        public DateTime NgayBan;
         public decimal TongTien, TienNo;
 
-        // Chi Tiết Mua
-        public string MaCTM, MaSP;
+        // Chi Tiết Bán
+        public string MaCTB, MaSP;
         public decimal DonGia, GiamGia, ThanhTien;
         public int SoLuong;
 
-        public HoaDonMua_BL()
+        public HoaDonBan_BL()
         {
             model = new DataModel();
         }
@@ -40,11 +39,11 @@ namespace BusinessLogic
         }
 
 
-        public bool timMaHDM(string MaHDM)
+        public bool timMaHDB(string MaHDB)
         {
-            foreach(HoaDonMua hdm in model.HoaDonMuas)
+            foreach (HoaDonBan hdb in model.HoaDonBans)
             {
-                if (hdm.MaHDM.Equals(MaHDM))
+                if (hdb.MaHDB.Equals(MaHDB))
                     return true;
             }
 
@@ -54,7 +53,7 @@ namespace BusinessLogic
 
         public bool timMaNV(string MaNV)
         {
-            foreach(NhanVien nv in model.NhanViens)
+            foreach (NhanVien nv in model.NhanViens)
             {
                 if (nv.MaNV.Equals(MaNV))
                     return true;
@@ -64,11 +63,11 @@ namespace BusinessLogic
         }
 
 
-        public bool timMaCTM(string MaCTM)
+        public bool timMaKH(string MaKH)
         {
-            foreach (ChiTietMua ctm in model.ChiTietMuas)
+            foreach (KhachHang kh in model.KhachHangs)
             {
-                if (ctm.MaCTM.Equals(MaCTM))
+                if (kh.MaKH.Equals(MaKH))
                     return true;
             }
 
@@ -76,32 +75,44 @@ namespace BusinessLogic
         }
 
 
-        public List<HoaDonMua> xemHDM()
+        public bool timMaCTB(string MaCTB)
         {
-            return model.HoaDonMuas.ToList();
+            foreach (ChiTietBan ctb in model.ChiTietBans)
+            {
+                if (ctb.MaCTB.Equals(MaCTB))
+                    return true;
+            }
+
+            return false;
         }
 
 
-        public void themHDM(HoaDonMua hdm)
+        public List<HoaDonBan> xemHDB()
+        {
+            return model.HoaDonBans.ToList();
+        }
+
+
+        public void themHDB(HoaDonBan hdb)
         {
             try
             {
-                model.HoaDonMuas.Add(hdm);
+                model.HoaDonBans.Add(hdb);
                 model.SaveChangesAsync();
             }
             catch
             {
-                
+
             }
         }
 
 
-        public void xoaHDM()
+        public void xoaHDB()
         {
             try
             {
-                HoaDonMua hdm = model.HoaDonMuas.Find(MaHDM);
-                model.HoaDonMuas.Remove(hdm);
+                HoaDonBan hdb = model.HoaDonBans.Find(MaHDB);
+                model.HoaDonBans.Remove(hdb);
                 model.SaveChanges();
             }
             catch
@@ -111,13 +122,13 @@ namespace BusinessLogic
         }
 
 
-        public void suaHDM()
+        public void suaHDB()
         {
             try
             {
-                HoaDonMua hdm = model.HoaDonMuas.Find(MaHDM);
-                hdm.TienNo = TienNo;
-                hdm.TongTien = TongTien;
+                HoaDonBan hdb = model.HoaDonBans.Find(MaHDB);
+                hdb.TienNo = TienNo;
+                hdb.TongTien = TongTien;
                 model.SaveChanges();
             }
             catch
@@ -127,17 +138,17 @@ namespace BusinessLogic
         }
 
 
-        public List<ChiTietMua> xemCTM(string MaHDM)
+        public List<ChiTietBan> xemCTB(string MaHDB)
         {
-            return model.ChiTietMuas.Where(ctm => ctm.MaHDM.Equals(MaHDM)).ToList();
+            return model.ChiTietBans.Where(ctb => ctb.MaHDB.Equals(MaHDB)).ToList();
         }
 
 
-        public void themCTM(ChiTietMua ctm)
+        public void themCTB(ChiTietBan ctb)
         {
             try
             {
-                model.ChiTietMuas.Add(ctm);
+                model.ChiTietBans.Add(ctb);
                 model.SaveChanges();
             }
             catch
