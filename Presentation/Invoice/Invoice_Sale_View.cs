@@ -21,22 +21,26 @@ namespace Presentation.Invoice
             InitializeComponent();
         }
 
+        // Xem danh sách hóa đơn bán + chi tiết bán tương ứng
         private void Invoice_Sale_View_Load(object sender, EventArgs e)
         {
             dgvHoaDonBan.AutoGenerateColumns = false;
             dgvChiTietBan.AutoGenerateColumns = false;
-            dgvHoaDonBan.DataSource = bl.xemHDB();
+            bl.xoaHDB(bl.layHDB());
+            dgvHoaDonBan.DataSource = bl.layHDB();
         }
 
+        // Sự kiện thay đổi lựa chọn trên dgvHoaDonBan => Load danh sách chi tiết bán tương ứng
         private void dgvHoaDonBan_SelectionChanged(object sender, EventArgs e)
         {
-            dgvChiTietBan.DataSource = bl.xemCTB(dgvHoaDonBan.CurrentRow.Cells[0].Value.ToString());
+            dgvChiTietBan.DataSource = bl.ctbTheoMaHDB(dgvHoaDonBan.CurrentRow.Cells[0].Value.ToString());
 
+            // Định dạng các giá trị trong DataGridView 
             foreach (DataGridViewRow row in dgvChiTietBan.Rows)
             {
                 foreach (SanPham sp in bl.laySanPham())
                 {
-                    if (sp.MaSP.Equals(row.Cells[1].Value.ToString()))
+                    if (sp.MaSP.Equals(row.Cells[1].Value))
                     {
                         row.Cells[1].Value = sp.TenSP;
                         break;

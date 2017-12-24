@@ -55,23 +55,27 @@ namespace BusinessLogic
             }
         }
 
-        // Xóa hóa đơn mua
-        public bool xoaHDM()
+        // Xóa hóa đơn mua không có chi tiết mua
+        public void xoaHDM(List<HoaDonMua> hdm)
         {
             try
             {
-                HoaDonMua hdm = model.HoaDonMuas.Find(MaHDM);
-                model.HoaDonMuas.Remove(hdm);
-                model.SaveChangesAsync();
-                return true;
+                foreach(HoaDonMua item in hdm)
+                {
+                    if (item.TongTien.Equals(0))
+                    {
+                        model.HoaDonMuas.Remove(item);
+                        model.SaveChangesAsync();
+                    }
+                }
             }
             catch
             {
-                return false;
+                
             }
         }
 
-
+        // Sửa hóa đơn mua
         public bool suaHDM()
         {
             try
@@ -89,11 +93,11 @@ namespace BusinessLogic
         }
 
         // Lấy danh sách chi tiết mua
-        public List<ChiTietMua> layCTM(string MaHDM)
+        public List<ChiTietMua> layCTM()
         {
             try
             {
-                return model.ChiTietMuas.Where(ctm => ctm.MaHDM.Equals(MaHDM)).ToList();
+                return model.ChiTietMuas.ToList();
             }
             catch
             {
@@ -135,6 +139,32 @@ namespace BusinessLogic
             try
             {
                 return model.SanPhams.ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // Lấy danh sách nhân viên
+        public List<NhanVien> layNhanVien()
+        {
+            try
+            {
+                return model.NhanViens.ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // Tìm chi tiết mua theo Mã HDM
+        public List<ChiTietMua> ctmTheoMaHDM(string MaHDM)
+        {
+            try
+            {
+                return model.ChiTietMuas.Where(ctm => ctm.MaHDM.Equals(MaHDM)).ToList();
             }
             catch
             {

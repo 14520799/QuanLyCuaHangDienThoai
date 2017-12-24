@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice_Buy_Add));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbTenHang = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -82,12 +82,12 @@
             // cbTenHang
             // 
             this.cbTenHang.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.cbTenHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.cbTenHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenHang.FormattingEnabled = true;
             this.cbTenHang.Location = new System.Drawing.Point(158, 83);
             this.cbTenHang.Margin = new System.Windows.Forms.Padding(4);
             this.cbTenHang.Name = "cbTenHang";
-            this.cbTenHang.Size = new System.Drawing.Size(193, 31);
+            this.cbTenHang.Size = new System.Drawing.Size(193, 30);
             this.cbTenHang.TabIndex = 81;
             this.cbTenHang.TextChanged += new System.EventHandler(this.cbTenHang_TextChanged);
             // 
@@ -144,6 +144,7 @@
             // dtNgayMua
             // 
             this.dtNgayMua.CustomFormat = "dd/MM/yyyy";
+            this.dtNgayMua.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNgayMua.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgayMua.Location = new System.Drawing.Point(558, 49);
             this.dtNgayMua.Name = "dtNgayMua";
@@ -206,7 +207,7 @@
             // 
             this.txtMaHDM.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtMaHDM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaHDM.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHDM.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHDM.Location = new System.Drawing.Point(158, 45);
             this.txtMaHDM.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHDM.Name = "txtMaHDM";
@@ -251,7 +252,7 @@
             // 
             this.txtMaNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.Location = new System.Drawing.Point(158, 122);
             this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Name = "txtMaNV";
@@ -262,12 +263,12 @@
             // 
             this.txtDonGia.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtDonGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDonGia.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDonGia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonGia.Location = new System.Drawing.Point(558, 48);
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.ReadOnly = true;
-            this.txtDonGia.Size = new System.Drawing.Size(193, 27);
+            this.txtDonGia.Size = new System.Drawing.Size(193, 30);
             this.txtDonGia.TabIndex = 74;
             this.txtDonGia.Text = "0";
             this.txtDonGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -299,11 +300,11 @@
             // txtGiamGia
             // 
             this.txtGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtGiamGia.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGiamGia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGiamGia.Location = new System.Drawing.Point(558, 83);
             this.txtGiamGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiamGia.Name = "txtGiamGia";
-            this.txtGiamGia.Size = new System.Drawing.Size(193, 27);
+            this.txtGiamGia.Size = new System.Drawing.Size(193, 30);
             this.txtGiamGia.TabIndex = 84;
             this.txtGiamGia.Text = "0";
             this.txtGiamGia.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -324,11 +325,11 @@
             // txtSoLuong
             // 
             this.txtSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoLuong.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoLuong.Location = new System.Drawing.Point(166, 118);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoLuong.Name = "txtSoLuong";
-            this.txtSoLuong.Size = new System.Drawing.Size(193, 27);
+            this.txtSoLuong.Size = new System.Drawing.Size(193, 30);
             this.txtSoLuong.TabIndex = 82;
             this.txtSoLuong.Text = "1";
             this.txtSoLuong.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -363,7 +364,7 @@
             this.btnDelete.Location = new System.Drawing.Point(659, 160);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(92, 35);
+            this.btnDelete.Size = new System.Drawing.Size(94, 35);
             this.btnDelete.TabIndex = 79;
             this.btnDelete.TabStop = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
@@ -375,7 +376,7 @@
             this.btnAdd.Location = new System.Drawing.Point(558, 160);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(92, 35);
+            this.btnAdd.Size = new System.Drawing.Size(94, 35);
             this.btnAdd.TabIndex = 77;
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -397,12 +398,11 @@
             this.dgvChiTietMua.Name = "dgvChiTietMua";
             this.dgvChiTietMua.ReadOnly = true;
             this.dgvChiTietMua.RowHeadersVisible = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.dgvChiTietMua.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.dgvChiTietMua.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChiTietMua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChiTietMua.Size = new System.Drawing.Size(752, 263);
             this.dgvChiTietMua.TabIndex = 2;
-            this.dgvChiTietMua.SelectionChanged += new System.EventHandler(this.dgvChiTietMua_SelectionChanged);
             // 
             // Column1
             // 
@@ -414,7 +414,7 @@
             // MaSP
             // 
             this.MaSP.DataPropertyName = "MaSP";
-            this.MaSP.HeaderText = "Sản Phẩm";
+            this.MaSP.HeaderText = "Sản phẩm";
             this.MaSP.Name = "MaSP";
             this.MaSP.ReadOnly = true;
             this.MaSP.Width = 200;
@@ -422,28 +422,28 @@
             // MaSX
             // 
             this.MaSX.DataPropertyName = "DonGia";
-            this.MaSX.HeaderText = "Đơn Giá";
+            this.MaSX.HeaderText = "Đơn giá";
             this.MaSX.Name = "MaSX";
             this.MaSX.ReadOnly = true;
             // 
             // SLMua
             // 
             this.SLMua.DataPropertyName = "SoLuong";
-            this.SLMua.HeaderText = "Số Lượng";
+            this.SLMua.HeaderText = "Số lượng";
             this.SLMua.Name = "SLMua";
             this.SLMua.ReadOnly = true;
             // 
             // GiaMua
             // 
             this.GiaMua.DataPropertyName = "GiamGia";
-            this.GiaMua.HeaderText = "Giảm Giá";
+            this.GiaMua.HeaderText = "Giảm giá";
             this.GiaMua.Name = "GiaMua";
             this.GiaMua.ReadOnly = true;
             // 
             // ThanhTien
             // 
             this.ThanhTien.DataPropertyName = "ThanhTien";
-            this.ThanhTien.HeaderText = "Thành Tiền";
+            this.ThanhTien.HeaderText = "Thành tiền";
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
             // 
@@ -478,12 +478,12 @@
             // 
             // cbTenSP
             // 
-            this.cbTenSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.cbTenSP.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenSP.FormattingEnabled = true;
             this.cbTenSP.Location = new System.Drawing.Point(166, 81);
             this.cbTenSP.Margin = new System.Windows.Forms.Padding(4);
             this.cbTenSP.Name = "cbTenSP";
-            this.cbTenSP.Size = new System.Drawing.Size(193, 31);
+            this.cbTenSP.Size = new System.Drawing.Size(193, 30);
             this.cbTenSP.TabIndex = 90;
             this.cbTenSP.TextChanged += new System.EventHandler(this.cbTenSP_TextChanged);
             // 
@@ -491,12 +491,12 @@
             // 
             this.txtThanhTien.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtThanhTien.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtThanhTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtThanhTien.Location = new System.Drawing.Point(558, 118);
             this.txtThanhTien.Margin = new System.Windows.Forms.Padding(4);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.ReadOnly = true;
-            this.txtThanhTien.Size = new System.Drawing.Size(193, 27);
+            this.txtThanhTien.Size = new System.Drawing.Size(193, 30);
             this.txtThanhTien.TabIndex = 88;
             this.txtThanhTien.Text = "0";
             this.txtThanhTien.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -516,11 +516,11 @@
             // txtMaCTM
             // 
             this.txtMaCTM.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaCTM.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaCTM.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaCTM.Location = new System.Drawing.Point(166, 48);
             this.txtMaCTM.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaCTM.Name = "txtMaCTM";
-            this.txtMaCTM.Size = new System.Drawing.Size(193, 27);
+            this.txtMaCTM.Size = new System.Drawing.Size(193, 30);
             this.txtMaCTM.TabIndex = 86;
             // 
             // label6
@@ -542,7 +542,7 @@
             this.btnSubmit.Location = new System.Drawing.Point(293, 815);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(133, 48);
+            this.btnSubmit.Size = new System.Drawing.Size(125, 48);
             this.btnSubmit.TabIndex = 98;
             this.btnSubmit.TabStop = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -554,9 +554,10 @@
             this.btnAddNew.Location = new System.Drawing.Point(435, 815);
             this.btnAddNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(133, 48);
+            this.btnAddNew.Size = new System.Drawing.Size(125, 48);
             this.btnAddNew.TabIndex = 97;
             this.btnAddNew.TabStop = false;
+            this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
             // 
             // label8
             // 

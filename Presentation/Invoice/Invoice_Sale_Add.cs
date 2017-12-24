@@ -22,79 +22,126 @@ namespace Presentation.Invoice
             InitializeComponent();
         }
 
+        // Lấy danh sách hãng sản xuất
         private void Invoice_Sale_Add_Load(object sender, EventArgs e)
         {
-            // Khởi tạo giá trị cho các ComboBox
+            dgvChiTietBan.AutoGenerateColumns = false;
+
             foreach (HangSanXuat hsx in bl.layHangSX())
             {
                 cbTenHang.Items.Add(hsx.TenHang);
             }
-
-            dgvChiTietBan.AutoGenerateColumns = false;
         }
 
+        // Click Add để thêm hóa đơn bán + thêm chi tiết bán vào DataGridView
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (!txtMaHDB.ReadOnly)
+            try
             {
-                try
+                if (!txtMaHDB.ReadOnly) // Nếu hóa đơn bán chưa được tạo
                 {
-                    HoaDonBan hdb = new HoaDonBan();
-
-                    if (!bl.timMaHDB(txtMaHDB.Text) && bl.timMaNV(txtMaNV.Text) && bl.timMaKH(txtMaKH.Text))
+                    foreach (HoaDonBan item in bl.layHDB())
                     {
-                        hdb.MaHDB = bl.MaHDB = txtMaHDB.Text;
-                        hdb.MaNV = bl.MaNV = txtMaNV.Text;
-                        hdb.MaKH = bl.MaKH = txtMaKH.Text;
+                        if (item.MaHDB.Equals(txtMaHDB.Text))
+                        {
+                            MessageBox.Show("Mã HDB đã tồn tại");
+                            return;
+                        }
                     }
-                        
 
+                    HoaDonBan hdb = new HoaDonBan();
+                    hdb.MaHDB = bl.MaHDB = txtMaHDB.Text;
+
+                    foreach (NhanVien nv in bl.layNhanVien())
+                    {
+                        if (nv.MaNV.Equals(txtMaNV.Text))
+                        {
+                            hdb.MaNV = bl.MaNV = txtMaNV.Text;
+                            break;
+                        }
+                    }
+
+                    foreach (KhachHang kh in bl.layKhachHang())
+                    {
+                        if (kh.MaKH.Equals(txtMaKH.Text))
+                        {
+                            hdb.MaKH = bl.MaKH = txtMaKH.Text;
+                            break;
+                        }
+                    }
+                    
                     hdb.NgayBan = bl.NgayBan = DateTime.Parse(dtNgayBan.Text);
                     hdb.TongTien = bl.TongTien = decimal.Parse(txtTongTien.Text);
                     hdb.TienNo = bl.TienNo = decimal.Parse(txtTienNo.Text);
 
-                    bl.themHDB(hdb);
-                    MessageBox.Show("Thêm thành công !");
-                    txtMaHDB.ReadOnly = true;
-                    txtMaNV.ReadOnly = true;
-                    txtMaKH.ReadOnly = true;
+                    // Mã HDB readonly nếu được tạo thành công
+                    // Không được phép chỉnh sửa nếu đã tạo hóa đơn bán
+                    if (bl.themHDB(hdb))
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        txtMaHDB.ReadOnly = true;   
+                        txtMaNV.ReadOnly = true;    
+                        txtMaKH.ReadOnly = true;
+                    }
+                    else
+                        MessageBox.Show("Vui lòng kiểm tra lại");
                 }
-                catch
-                {
-                    MessageBox.Show("Lỗi rồi kìa !");
-                }
-            }
 
-            if (bl.timMaCTB(txtMaCTB.Text))
-                MessageBox.Show("Chi tiết bán đã tồn tại !");
-            else
-            {
+                foreach (ChiTietBan ctb in bl.layCTB())
+                {
+                    if (ctb.MaCTB.Equals(txtMaCTB.Text))
+                    {
+                        MessageBox.Show("Mã CTB đã tồn tại");
+                        return;
+                    }
+                }
+
+                foreach (DataGridViewRow row in dgvChiTietBan.Rows)
+                {
+                    if (row.Cells[0].Value.Equals(txtMaCTB.Text))
+                    {
+                        MessageBox.Show("Mã CTB đã tồn tại");
+                        return;
+                    }
+                }
+
                 bl.TongTien += decimal.Parse(txtThanhTien.Text);
                 txtTongTien.Text = bl.TongTien.ToString();
                 dgvChiTietBan.Rows.Add(txtMaCTB.Text, cbTenSP.Text, txtDonGia.Text, txtSoLuong.Text, txtGiamGia.Text, txtThanhTien.Text);
-                txtMaCTB.Text = cbTenHang.Text = cbTenSP.Text = txtSoLuong.Text = txtDonGia.Text = txtGiamGia.Text = txtThanhTien.Text = string.Empty;
+                txtMaCTB.Text = string.Empty;
+                cbTenSP.Text = string.Empty;
+                txtSoLuong.Text = "1";
+                txtDonGia.Text = "0";
+                txtGiamGia.Text = "0";
+                txtThanhTien.Text = "0";
+            }
+            catch
+            {
+
             }
         }
 
+        // Click Delete để xóa một chi tiết bán khỏi DataGridView
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            dgvChiTietBan.Rows.RemoveAt(dgvChiTietBan.CurrentRow.Index);
+            dgvChiTietBan.Rows.Remove(dgvChiTietBan.CurrentRow);
         }
 
+        // Click Submit để thêm tất cả chi tiết bán trong DataGridView
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (dgvChiTietBan.Rows.Count != 0)
+            try
             {
-                foreach (DataGridViewRow row in dgvChiTietBan.Rows)
+                if (dgvChiTietBan.Rows.Count != 0)
                 {
-                    try
+                    foreach (DataGridViewRow row in dgvChiTietBan.Rows)
                     {
                         ChiTietBan ctb = new ChiTietBan();
                         ctb.MaCTB = row.Cells[0].Value.ToString();
 
                         foreach (SanPham sp in bl.laySanPham())
                         {
-                            if (sp.TenSP.Equals(row.Cells[1].Value.ToString()))
+                            if (sp.TenSP.Equals(row.Cells[1].Value))
                             {
                                 ctb.MaSP = sp.MaSP;
                                 break;
@@ -105,46 +152,51 @@ namespace Presentation.Invoice
                         ctb.SoLuong = int.Parse(row.Cells[3].Value.ToString());
                         ctb.GiamGia = decimal.Parse(row.Cells[4].Value.ToString());
                         ctb.ThanhTien = decimal.Parse(row.Cells[5].Value.ToString());
-
-
                         ctb.MaHDB = bl.MaHDB;
-                        bl.themCTB(ctb);
-                        MessageBox.Show("Thêm thành công");
-                        bl.TienNo = decimal.Parse(txtTienNo.Text);
-                        bl.suaHDB();
+
+                        if (bl.themCTB(ctb))
+                            MessageBox.Show("Thêm " + ctb.MaCTB + " thành công");
+                        else
+                            MessageBox.Show("Vui lòng kiểm tra " + ctb.MaCTB);
                     }
-                    catch
-                    {
-                        MessageBox.Show("Chi tiết bán đã tồn tại");
-                    }
+
+                    // Cập nhật tổng tiền + tiền nợ của hóa đơn bán
+                    bl.TienNo = decimal.Parse(txtTienNo.Text);
+
+                    if (bl.suaHDB())
+                        MessageBox.Show("Thêm hóa đơn thành công");
+                    else
+                        MessageBox.Show("Vui lòng kiểm tra lại");
                 }
             }
-            else
+            catch
             {
-                bl.xoaHDB();
+
             }
         }
 
+        // Click AddNew để clear các input
         private void btnAddNew_Click(object sender, EventArgs e)
         {
             dgvChiTietBan.DataSource = null;
             Algorithm.clearInput(this);
-            cbTenHang.Text = "";
-            cbTenSP.Text = "";
-            txtDonGia.Text = "0";
             txtSoLuong.Text = "1";
+            txtDonGia.Text = "0";
             txtGiamGia.Text = "0";
             txtThanhTien.Text = "0";
             txtTongTien.Text = "0";
             txtTienNo.Text = "0";
+
+            // Cho phép thêm hóa đơn bán
             txtMaHDB.ReadOnly = false;
             txtMaNV.ReadOnly = false;
             txtMaKH.ReadOnly = false;
         }
 
+        // Sự kiện khi thay đổi tên hãng sản xuất
         private void cbTenHang_TextChanged(object sender, EventArgs e)
         {
-            cbTenSP.Text = "";
+            cbTenSP.Text = string.Empty;
             cbTenSP.Items.Clear();
             txtSoLuong.Text = "1";
             txtDonGia.Text = "0";
@@ -161,15 +213,15 @@ namespace Presentation.Invoice
                             cbTenSP.Items.Add(sp.TenSP);
                     }
 
-                    break;
+                    return;
                 }
             }
         }
 
+        // Sự kiện khi thay đổi tên sản phẩm
         private void cbTenSP_TextChanged(object sender, EventArgs e)
         {
             txtSoLuong.Text = "1";
-            txtDonGia.Text = "0";
             txtGiamGia.Text = "0";
 
             foreach (SanPham sp in bl.laySanPham())
@@ -178,27 +230,29 @@ namespace Presentation.Invoice
                 {
                     bl.MaSP = sp.MaSP;
                     txtDonGia.Text = sp.DonGia.ToString();
-                    txtThanhTien.Text = (decimal.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text) - decimal.Parse(txtGiamGia.Text)).ToString();
+                    txtThanhTien.Text = (int.Parse(txtSoLuong.Text) * decimal.Parse(txtDonGia.Text) - decimal.Parse(txtGiamGia.Text)).ToString();
                     return;
                 }
             }
         }
 
+        // Sự kiện khi thay đổi số lượng
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
         {
-            if (txtSoLuong.Text != string.Empty && txtGiamGia.Text != string.Empty)
-                txtThanhTien.Text = (decimal.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text) - decimal.Parse(txtGiamGia.Text)).ToString();
+            if (!txtSoLuong.Text.Equals(string.Empty) && !txtGiamGia.Text.Equals(string.Empty))
+                txtThanhTien.Text = (int.Parse(txtSoLuong.Text) * decimal.Parse(txtDonGia.Text) - decimal.Parse(txtGiamGia.Text)).ToString();
         }
 
+        // Sự kiện khi thay đổi giảm giá
         private void txtGiamGia_TextChanged(object sender, EventArgs e)
         {
-            if (txtSoLuong.Text != string.Empty && txtGiamGia.Text != string.Empty)
-                txtThanhTien.Text = (decimal.Parse(txtDonGia.Text) * int.Parse(txtSoLuong.Text) - decimal.Parse(txtGiamGia.Text)).ToString();
+            txtSoLuong_TextChanged(sender, e);
         }
 
-        private void dgvChiTietBan_SelectionChanged(object sender, EventArgs e)
+        // Tính tổng tiền khi thêm một chi tiết bán
+        private void txtTongTien_TextChanged(object sender, EventArgs e)
         {
-
+            bl.TongTien = decimal.Parse(txtTongTien.Text);
         }
     }
 }

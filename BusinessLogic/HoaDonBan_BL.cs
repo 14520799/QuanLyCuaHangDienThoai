@@ -54,19 +54,23 @@ namespace BusinessLogic
             }
         }
 
-        // Xóa hóa đơn bán
-        public bool xoaHDB()
+        // Xóa hóa đơn bán không có chi tiết bán
+        public void xoaHDB(List<HoaDonBan> hdb)
         {
             try
             {
-                HoaDonBan hdb = model.HoaDonBans.Find(MaHDB);
-                model.HoaDonBans.Remove(hdb);
-                model.SaveChangesAsync();
-                return true;
+                foreach (HoaDonBan item in hdb)
+                {
+                    if (item.TongTien.Equals(0))
+                    {
+                        model.HoaDonBans.Remove(item);
+                        model.SaveChangesAsync();
+                    }
+                }
             }
             catch
             {
-                return false;
+
             }
         }
 
@@ -88,11 +92,11 @@ namespace BusinessLogic
         }
 
         // Lấy danh sách chi tiết bán
-        public List<ChiTietBan> layCTB(string MaHDB)
+        public List<ChiTietBan> layCTB()
         {
             try
             {
-                return model.ChiTietBans.Where(ctb => ctb.MaHDB.Equals(MaHDB)).ToList();
+                return model.ChiTietBans.ToList();
             }
             catch
             {
@@ -134,6 +138,45 @@ namespace BusinessLogic
             try
             {
                 return model.SanPhams.ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // Lấy danh sách nhân viên
+        public List<NhanVien> layNhanVien()
+        {
+            try
+            {
+                return model.NhanViens.ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // Lấy danh sách khách hàng
+        public List<KhachHang> layKhachHang()
+        {
+            try
+            {
+                return model.KhachHangs.ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // Tìm chi tiết bán theo Mã HDB
+        public List<ChiTietBan> ctbTheoMaHDB(string MaHDB)
+        {
+            try
+            {
+                return model.ChiTietBans.Where(ctb => ctb.MaHDB.Equals(MaHDB)).ToList();
             }
             catch
             {

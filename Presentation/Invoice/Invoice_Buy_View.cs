@@ -21,23 +21,26 @@ namespace Presentation.Invoice
             InitializeComponent();
         }
 
-
+        // Xem danh sách hóa đơn mua + chi tiết mua tương ứng
         private void Invoice_Buy_View_Load(object sender, EventArgs e)
         {
             dgvHoaDonMua.AutoGenerateColumns = false;
             dgvChiTietMua.AutoGenerateColumns = false;
-            dgvHoaDonMua.DataSource = bl.xemHDM();
+            bl.xoaHDM(bl.layHDM());
+            dgvHoaDonMua.DataSource = bl.layHDM();
         }
 
+        // Sự kiện thay đổi lựa chọn trên dgvHoaDonMua => Load danh sách chi tiết mua tương ứng
         private void dgvHoaDonMua_SelectionChanged(object sender, EventArgs e)
         {
-            dgvChiTietMua.DataSource = bl.xemCTM(dgvHoaDonMua.CurrentRow.Cells[0].Value.ToString());
+            dgvChiTietMua.DataSource = bl.ctmTheoMaHDM(dgvHoaDonMua.CurrentRow.Cells[0].Value.ToString());
 
+            // Định dạng các giá trị trong DataGridView 
             foreach (DataGridViewRow row in dgvChiTietMua.Rows)
             {
                 foreach (SanPham sp in bl.laySanPham())
                 {
-                    if (sp.MaSP.Equals(row.Cells[1].Value.ToString()))
+                    if (sp.MaSP.Equals(row.Cells[1].Value))
                     {
                         row.Cells[1].Value = sp.TenSP;
                         break;
