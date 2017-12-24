@@ -34,15 +34,10 @@
             this.btnSearch = new System.Windows.Forms.PictureBox();
             this.dgvKetQua = new System.Windows.Forms.DataGridView();
             this.SearchBox = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.btnNext = new System.Windows.Forms.PictureBox();
-            this.btnBack = new System.Windows.Forms.PictureBox();
             this.cbTuKhoa = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).BeginInit();
             this.SearchBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnNext)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
             this.SuspendLayout();
             // 
             // cbThuocTinh
@@ -62,11 +57,11 @@
             this.cbDanhMuc.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbDanhMuc.FormattingEnabled = true;
             this.cbDanhMuc.Items.AddRange(new object[] {
-            "Nhân Viên",
-            "Khách Hàng",
-            "Sản Phẩm",
-            "Hóa Đơn Mua",
-            "Hóa Đơn Bán"});
+            "Nhân viên",
+            "Khách hàng",
+            "Sản phẩm",
+            "Hóa đơn mua",
+            "Hóa đơn bán"});
             this.cbDanhMuc.Location = new System.Drawing.Point(28, 46);
             this.cbDanhMuc.Margin = new System.Windows.Forms.Padding(4);
             this.cbDanhMuc.Name = "cbDanhMuc";
@@ -79,7 +74,7 @@
             // 
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(569, 41);
+            this.btnSearch.Location = new System.Drawing.Point(642, 41);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(107, 40);
@@ -110,42 +105,6 @@
             this.SearchBox.TabStop = false;
             this.SearchBox.Text = "TÌM KIẾM";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(573, 448);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(107, 23);
-            this.label7.TabIndex = 59;
-            this.label7.Text = "Back | Next";
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNext.BackgroundImage")));
-            this.btnNext.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnNext.InitialImage = ((System.Drawing.Image)(resources.GetObject("btnNext.InitialImage")));
-            this.btnNext.Location = new System.Drawing.Point(688, 444);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(33, 31);
-            this.btnNext.TabIndex = 61;
-            this.btnNext.TabStop = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnBack.BackgroundImage")));
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.Location = new System.Drawing.Point(532, 444);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(33, 31);
-            this.btnBack.TabIndex = 60;
-            this.btnBack.TabStop = false;
-            // 
             // cbTuKhoa
             // 
             this.cbTuKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
@@ -161,10 +120,9 @@
             this.cbTuKhoa.Location = new System.Drawing.Point(389, 46);
             this.cbTuKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cbTuKhoa.Name = "cbTuKhoa";
-            this.cbTuKhoa.Size = new System.Drawing.Size(148, 29);
+            this.cbTuKhoa.Size = new System.Drawing.Size(220, 29);
             this.cbTuKhoa.TabIndex = 62;
             this.cbTuKhoa.Text = "Từ khóa";
-            this.cbTuKhoa.TextChanged += new System.EventHandler(this.cbTuKhoa_TextChanged);
             // 
             // Admin_Search
             // 
@@ -173,9 +131,6 @@
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(885, 505);
             this.Controls.Add(this.cbTuKhoa);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.btnNext);
-            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.cbThuocTinh);
             this.Controls.Add(this.cbDanhMuc);
             this.Controls.Add(this.btnSearch);
@@ -186,10 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKetQua)).EndInit();
             this.SearchBox.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnNext)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -200,9 +152,6 @@
         private System.Windows.Forms.PictureBox btnSearch;
         private System.Windows.Forms.DataGridView dgvKetQua;
         private System.Windows.Forms.GroupBox SearchBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox btnNext;
-        private System.Windows.Forms.PictureBox btnBack;
         private System.Windows.Forms.ComboBox cbTuKhoa;
     }
 }

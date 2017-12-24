@@ -34,11 +34,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.gbHangSX = new System.Windows.Forms.GroupBox();
             this.dgvHangSX = new System.Windows.Forms.DataGridView();
-            this.MaSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.error = new System.Windows.Forms.Label();
             this.InfoBox = new System.Windows.Forms.GroupBox();
             this.cbTenHang = new System.Windows.Forms.ComboBox();
@@ -50,14 +45,19 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSanPhamHang = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCancel = new System.Windows.Forms.PictureBox();
             this.btnUpdate = new System.Windows.Forms.PictureBox();
             this.btnDelete = new System.Windows.Forms.PictureBox();
+            this.MaSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbHangSX.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangSX)).BeginInit();
             this.InfoBox.SuspendLayout();
@@ -119,46 +119,6 @@
             this.dgvHangSX.Size = new System.Drawing.Size(1052, 168);
             this.dgvHangSX.TabIndex = 2;
             this.dgvHangSX.SelectionChanged += new System.EventHandler(this.dgvHangSX_SelectionChanged);
-            // 
-            // MaSX
-            // 
-            this.MaSX.DataPropertyName = "MaHang";
-            this.MaSX.HeaderText = "Mã Hãng";
-            this.MaSX.Name = "MaSX";
-            this.MaSX.ReadOnly = true;
-            this.MaSX.Width = 117;
-            // 
-            // TenSX
-            // 
-            this.TenSX.DataPropertyName = "TenHang";
-            this.TenSX.HeaderText = "Tên Hãng";
-            this.TenSX.Name = "TenSX";
-            this.TenSX.ReadOnly = true;
-            this.TenSX.Width = 121;
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SoDT";
-            this.SDT.HeaderText = "Số ĐT";
-            this.SDT.Name = "SDT";
-            this.SDT.ReadOnly = true;
-            this.SDT.Width = 92;
-            // 
-            // Email1
-            // 
-            this.Email1.DataPropertyName = "Email";
-            this.Email1.HeaderText = "Email";
-            this.Email1.Name = "Email1";
-            this.Email1.ReadOnly = true;
-            this.Email1.Width = 87;
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa Chỉ";
-            this.DiaChi.Name = "DiaChi";
-            this.DiaChi.ReadOnly = true;
             // 
             // error
             // 
@@ -239,9 +199,9 @@
             this.label5.Location = new System.Drawing.Point(36, 161);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 23);
+            this.label5.Size = new System.Drawing.Size(68, 23);
             this.label5.TabIndex = 34;
-            this.label5.Text = "Địa Chỉ";
+            this.label5.Text = "Địa chỉ";
             // 
             // label4
             // 
@@ -278,9 +238,9 @@
             this.label1.Location = new System.Drawing.Point(36, 47);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 23);
+            this.label1.Size = new System.Drawing.Size(87, 23);
             this.label1.TabIndex = 30;
-            this.label1.Text = "Tên Hãng";
+            this.label1.Text = "Tên hãng";
             // 
             // dgvSanPhamHang
             // 
@@ -305,35 +265,6 @@
             this.dgvSanPhamHang.Size = new System.Drawing.Size(544, 220);
             this.dgvSanPhamHang.TabIndex = 3;
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaHang";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Tên Hãng";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "TenSP";
-            this.TenSP.HeaderText = "Sản Phẩm";
-            this.TenSP.Name = "TenSP";
-            this.TenSP.ReadOnly = true;
-            this.TenSP.Width = 150;
-            // 
-            // GiaBan
-            // 
-            this.GiaBan.DataPropertyName = "DonGia";
-            this.GiaBan.HeaderText = "Đơn Giá";
-            this.GiaBan.Name = "GiaBan";
-            this.GiaBan.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "SoLuong";
-            this.Column1.HeaderText = "Số Lượng";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvSanPhamHang);
@@ -352,12 +283,13 @@
             // 
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.Location = new System.Drawing.Point(352, 516);
+            this.btnCancel.Location = new System.Drawing.Point(317, 516);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(133, 43);
+            this.btnCancel.Size = new System.Drawing.Size(125, 43);
             this.btnCancel.TabIndex = 32;
             this.btnCancel.TabStop = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
@@ -366,7 +298,7 @@
             this.btnUpdate.Location = new System.Drawing.Point(51, 516);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(133, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(125, 43);
             this.btnUpdate.TabIndex = 31;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -375,13 +307,82 @@
             // 
             this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(201, 516);
+            this.btnDelete.Location = new System.Drawing.Point(184, 516);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(133, 43);
+            this.btnDelete.Size = new System.Drawing.Size(125, 43);
             this.btnDelete.TabIndex = 33;
             this.btnDelete.TabStop = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // MaSX
+            // 
+            this.MaSX.DataPropertyName = "MaHang";
+            this.MaSX.HeaderText = "Mã hãng";
+            this.MaSX.Name = "MaSX";
+            this.MaSX.ReadOnly = true;
+            this.MaSX.Width = 112;
+            // 
+            // TenSX
+            // 
+            this.TenSX.DataPropertyName = "TenHang";
+            this.TenSX.HeaderText = "Tên hãng";
+            this.TenSX.Name = "TenSX";
+            this.TenSX.ReadOnly = true;
+            this.TenSX.Width = 116;
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SoDT";
+            this.SDT.HeaderText = "Số ĐT";
+            this.SDT.Name = "SDT";
+            this.SDT.ReadOnly = true;
+            this.SDT.Width = 92;
+            // 
+            // Email1
+            // 
+            this.Email1.DataPropertyName = "Email";
+            this.Email1.HeaderText = "Email";
+            this.Email1.Name = "Email1";
+            this.Email1.ReadOnly = true;
+            this.Email1.Width = 87;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "MaHang";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Tên hãng";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Sản phẩm";
+            this.TenSP.Name = "TenSP";
+            this.TenSP.ReadOnly = true;
+            this.TenSP.Width = 150;
+            // 
+            // GiaBan
+            // 
+            this.GiaBan.DataPropertyName = "DonGia";
+            this.GiaBan.HeaderText = "Đơn giá";
+            this.GiaBan.Name = "GiaBan";
+            this.GiaBan.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "SoLuong";
+            this.Column1.HeaderText = "Số lượng";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
             // Factory_View
             // 
@@ -433,6 +434,7 @@
         private System.Windows.Forms.PictureBox btnCancel;
         private System.Windows.Forms.PictureBox btnUpdate;
         private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.ComboBox cbTenHang;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaSX;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSX;
         private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
@@ -442,6 +444,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaBan;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.ComboBox cbTenHang;
     }
 }

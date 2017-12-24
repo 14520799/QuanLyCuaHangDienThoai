@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using DataAccess;
-using Function;
 
 namespace BusinessLogic
 {
@@ -19,66 +18,13 @@ namespace BusinessLogic
         {
             model = new DataModel();
         }
-
-
-        // Lấy danh sách nhân viên
-        public List<NhanVien> danhSach()
-        {
-            return model.NhanViens.Where(x => x.Quyen.Equals("Nhân viên")).ToList();
-        }
-
         
-        // Sửa thông tin nhân viên
-        public void capNhat()
+        // Lấy danh sách nhân viên
+        public List<NhanVien> layNhanVien()
         {
             try
             {
-                NhanVien nv = model.NhanViens.First(x => x.MaNV.Equals(MaNV));
-                nv.TenNV = TenNV;
-                nv.NgaySinh = NgaySinh;
-                nv.GioiTinh = GioiTinh;
-                nv.SoDT = SoDT;
-                nv.Email = Email;
-                nv.DiaChi = DiaChi;
-                nv.ChucVu = ChucVu;
-                nv.MatKhau = MatKhau;
-                model.SaveChanges();
-            }
-            catch
-            {
-
-            }
-        }
-
-
-        // Tìm nhân viên theo tên
-        public List<NhanVien> timTheoTen(string TenNV)
-        {
-            return model.NhanViens.Where(x => x.TenNV.Contains(TenNV)).ToList();
-        }
-
-
-        // Tìm nhân viên theo quyền
-        public List<NhanVien> timTheoQuyen(string Quyen)
-        {
-            return model.NhanViens.Where(x => x.Quyen.Contains(Quyen)).ToList();
-        }
-
-
-        // Tìm nhân viên theo chức vụ
-        public List<NhanVien> timTheoChucVu(string ChucVu)
-        {
-            return model.NhanViens.Where(x => x.ChucVu.Contains(ChucVu)).ToList();
-        }
-
-
-        // Tìm nhân viên theo MaNV
-        public NhanVien timTheoID(string MaNV)
-        {
-            try
-            {
-                NhanVien nv = model.NhanViens.First(x => x.MaNV.Equals(MaNV));
-                return nv;
+                return model.NhanViens.ToList();
             }
             catch
             {
@@ -86,28 +32,59 @@ namespace BusinessLogic
             }
         }
 
-
         // Thêm nhân viên
-        public void them(NhanVien nv)
+        public bool themNhanVien(NhanVien nv)
         {
             try
             {
                 model.NhanViens.Add(nv);
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
+            }
+        }
+        
+        // Xóa nhân viên
+        public bool xoaNhanVien()
+        {
+            try
+            {
+                NhanVien nv = model.NhanViens.Find(MaNV);
+                model.NhanViens.Remove(nv);
+                model.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
             }
         }
 
-
-        // Xóa nhân viên
-        public void xoa()
+        // Sửa thông tin nhân viên
+        public bool suaNhanVien()
         {
-            NhanVien nv = model.NhanViens.First(x => x.MaNV.Equals(MaNV));
-            model.NhanViens.Remove(nv);
-            model.SaveChanges();
+            try
+            {
+                NhanVien nv = model.NhanViens.Find(MaNV);
+                nv.TenNV = TenNV;
+                nv.NgaySinh = NgaySinh;
+                nv.GioiTinh = GioiTinh;
+                nv.SoDT = SoDT;
+                nv.Email = Email;
+                nv.DiaChi = DiaChi;
+                nv.Quyen = Quyen;
+                nv.ChucVu = ChucVu;
+                nv.MatKhau = MatKhau;
+                model.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
     }
 }

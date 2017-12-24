@@ -21,13 +21,61 @@ namespace Presentation.Customer
 
         }
 
-        // Lấy danh sách khách hàng
+        // Xem danh sách khách hàng
         private void Customer_View_Load(object sender, EventArgs e)
         {
             dgvKhachHang.AutoGenerateColumns = false;
-            dgvKhachHang.DataSource = bl.danhSach();
+            dgvKhachHang.DataSource = bl.layKhachHang();
         }
 
+        // Click Delete để xóa khách hàng
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (bl.xoaKhachHang())
+                {
+                    MessageBox.Show("Xóa thành công");
+                    dgvKhachHang.DataSource = bl.layKhachHang();
+                }
+                else
+                    MessageBox.Show("Vui lòng thử lại sau");
+            }
+            catch
+            {
+                
+            }
+        }
+        
+        // Click Update để sửa khách hàng
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bl.TenKH = txtTenKH.Text;
+                bl.NgaySinh = dtNgaySinh.Value;
+                bl.GioiTinh = cbGioiTinh.Text;
+                bl.SoDT = txtSoDT.Text;
+                bl.Email = txtEmail.Text;
+                bl.DiaChi = txtDiaChi.Text;
+                bl.TienNo = decimal.Parse(txtTienNo.Text);
+                bl.LoaiKH = cbLoaiKH.Text;
+
+                if (bl.suaKhachHang())
+                {
+                    MessageBox.Show("Cập nhật thành công");
+                    dgvKhachHang.DataSource = bl.layKhachHang();
+                }
+                else
+                    MessageBox.Show("Vui lòng kiểm tra lại");
+            }
+            catch
+            {
+                
+            }
+        }
+
+        // Sự kiện thay đổi lựa chọn trên DataGridView => Lưu trữ biến bl.MaKH
         private void dgvKhachHang_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvKhachHang.SelectedRows.Count > 0)
@@ -44,56 +92,10 @@ namespace Presentation.Customer
             }
         }
 
-        // Sửa khách hàng
-        private void btnUpdate_Click(object sender, EventArgs e)
+        // Click Cancel để hủy cập nhật
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            try
-            {
-                bl.TenKH = txtTenKH.Text;
-                bl.NgaySinh = dtNgaySinh.Value;
-                bl.GioiTinh = cbGioiTinh.Text;
-                bl.SoDT = txtSoDT.Text;
-                bl.Email = txtEmail.Text;
-                bl.DiaChi = txtDiaChi.Text;
-                bl.TienNo = decimal.Parse(txtTienNo.Text);
-                bl.LoaiKH = cbLoaiKH.Text;
-
-                bl.capNhat();
-                dgvKhachHang.DataSource = bl.danhSach();
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi gì đó...");
-            }
-        }
-
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                bl.xoa();
-                dgvKhachHang.DataSource = bl.danhSach();
-                MessageBox.Show("Xóa thành công !");
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi gì đó...");
-            }
-        }
-
-
-        // Tìm kiếm khách hàng
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            // Theo tên KH
-            if(cbTheoLoai.Text == "Tên KH")
-                dgvKhachHang.DataSource = bl.timTheoTen(txtTimKiem.Text);
-            else if(cbTheoLoai.Text == "Loại KH")
-                dgvKhachHang.DataSource = bl.timTheoLoai(txtTimKiem.Text);
-            else
-                dgvKhachHang.DataSource = bl.timTheoNo();
+            Customer_View_Load(sender, e);
         }
     }
 }
-// Các dạng của hê thống thông tin
-// Tông quan ve pp phat trien phan mem SDLC

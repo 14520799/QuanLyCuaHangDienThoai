@@ -20,42 +20,41 @@ namespace Presentation.Admin
         {
             InitializeComponent();
         }
-
-
-        // Nhấn nút Confirm đăng nhập
+        
+        // Click Confirm để đăng nhập
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            /*NhanVien nv = bl.timTheoID(txtMaNV.Text);
-
-            if (nv != null && nv.MatKhau == txtMatKhau.Text)
+            foreach(NhanVien nv in bl.layNhanVien())
             {
-                Hide();
-                new Form_Main(nv.MaNV, nv.TenNV).Show();
+                if (nv.Quyen.Equals("Quản trị") && nv.MaNV.Equals(txtMaNV.Text) && nv.MatKhau.Equals(txtMatKhau.Text))  // Kiểm tra Username + Password
+                {
+                    Hide();
+                    new Form_Main(nv.MaNV, nv.TenNV).Show();
+                    return;
+                }
             }
-            else
-                MessageBox.Show("Sai thông tin tài khoản !");*/
-            
-            Hide();
-            new Form_Main("NV001", "Hoàng Tâm").Show();
+
+            MessageBox.Show("Vui lòng kiểm tra lại");
         }
 
-
-        // Nhấn nút Close đóng form
+        // Nhấn Enter để đăng nhập
+        private void txtMaNV_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnConfirm_Click(sender, e);
+        }
+        
+        // Nhấn Enter để đăng nhập
+        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnConfirm_Click(sender, e);
+        }
+        
+        // Click Close để đóng Form
         private void btnCancel_Click(object sender, EventArgs e)
         {
             Application.Exit();
-        }
-
-        // Nhấn Enter đăng nhập
-        private void txtMatKhau_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-                btnConfirm_Click(sender, e);
-        }
-
-        private void Admin_Login_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

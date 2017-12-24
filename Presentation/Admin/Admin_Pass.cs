@@ -14,47 +14,53 @@ namespace Presentation.Admin
 {
     public partial class Admin_Pass : Form
     {
-        NhanVien nv = new NhanVien();
         NhanVien_BL bl = new NhanVien_BL();
 
         public Admin_Pass(string MaNV)
         {
             InitializeComponent();
-            bl.MaNV = MaNV;
+            txtMaNV.Text = bl.MaNV = MaNV;
         }
 
-        private void Admin_Pass_Load(object sender, EventArgs e)
-        {
-            nv = bl.timTheoID(bl.MaNV);
-            txtMaNV.Text = nv.MaNV;
-        }
-
-        private void btnSubmit_Click(object sender, EventArgs e)
+        // Click Update để đổi mật khẩu
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtMatKhauCu.Text == nv.MatKhau && txtMatKhauMoi1.Text == txtMatKhauMoi2.Text)
+                foreach (NhanVien nv in bl.layNhanVien())
                 {
-                    bl.TenNV = nv.TenNV;
-                    bl.NgaySinh = nv.NgaySinh;
-                    bl.GioiTinh = nv.GioiTinh;
-                    bl.SoDT = nv.SoDT;
-                    bl.Email = nv.Email;
-                    bl.DiaChi = nv.DiaChi;
-                    bl.ChucVu = nv.ChucVu;
-                    bl.MatKhau = txtMatKhauMoi1.Text;
-                    bl.capNhat();
-                    MessageBox.Show("Đổi mật khẩu thành công !");
+                    if (nv.MaNV.Equals(bl.MaNV) && nv.MatKhau.Equals(txtMatKhauCu.Text) && txtMatKhauMoi1.Text.Equals(txtMatKhauMoi2.Text))
+                    {
+                        bl.TenNV = nv.TenNV;
+                        bl.NgaySinh = nv.NgaySinh;
+                        bl.GioiTinh = nv.GioiTinh;
+                        bl.SoDT = nv.SoDT;
+                        bl.Email = nv.Email;
+                        bl.DiaChi = nv.DiaChi;
+                        bl.Quyen = nv.Quyen;
+                        bl.ChucVu = nv.ChucVu;
+                        bl.MatKhau = txtMatKhauMoi1.Text;
+
+                        if (bl.suaNhanVien())
+                        {
+                            MessageBox.Show("Cập nhật thành công");
+                            return;
+                        }
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Vui lòng kiểm tra lại mật khẩu !");
-                }
+
+                MessageBox.Show("Vui lòng kiểm tra lại");
             }
             catch
             {
-
+                MessageBox.Show("Vui lòng kiểm tra lại");
             }
+        }
+
+        // Click Cancel để hủy cập nhật
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtMatKhauCu.Text = txtMatKhauMoi1.Text = txtMatKhauMoi2.Text = string.Empty;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace BusinessLogic
 {
     public class KhachHang_BL
     {
-        DataModel model;
+        private DataModel model;
         public DateTime NgaySinh;
         public string MaKH, TenKH, GioiTinh, SoDT, Email, DiaChi, LoaiKH;
         public decimal TienNo;
@@ -19,41 +19,56 @@ namespace BusinessLogic
             model = new DataModel();
         }
 
-
-        // Lấy danh sách tất cả khách hàng
-        public List<KhachHang> danhSach()
+        // Lấy danh sách khách hàng
+        public List<KhachHang> layKhachHang()
         {
-            return model.KhachHangs.ToList();
+            try
+            {
+                return model.KhachHangs.ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         // Thêm khách hàng
-        public void them(KhachHang kh)
+        public bool themKhachHang(KhachHang kh)
         {
             try
             {
                 model.KhachHangs.Add(kh);
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
         // Xóa khách hàng
-        public void xoa()
-        {
-            KhachHang kh = model.KhachHangs.First(x => x.MaKH.Equals(MaKH));
-            model.KhachHangs.Remove(kh);
-            model.SaveChanges();
-        }
-
-        // Cập nhật khách hàng
-        public void capNhat()
+        public bool xoaKhachHang()
         {
             try
             {
-                KhachHang kh = model.KhachHangs.First(x => x.MaKH.Equals(MaKH));
+                KhachHang kh = model.KhachHangs.Find(MaKH);
+                model.KhachHangs.Remove(kh);
+                model.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        // Sửa khách hàng
+        public bool suaKhachHang()
+        {
+            try
+            {
+                KhachHang kh = model.KhachHangs.Find(MaKH);
                 kh.TenKH = TenKH;
                 kh.NgaySinh = NgaySinh;
                 kh.GioiTinh = GioiTinh;
@@ -62,33 +77,13 @@ namespace BusinessLogic
                 kh.DiaChi = DiaChi;
                 kh.TienNo = TienNo;
                 kh.LoaiKH = LoaiKH;
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
-        }
-
-
-        // Tìm khách hàng teo tên
-        public List<KhachHang> timTheoTen(string TenKH)
-        {
-            return model.KhachHangs.Where(x => x.TenKH.Contains(TenKH)).ToList();
-        }
-
-
-        // Tìm khách hàng theo loại KH
-        public List<KhachHang> timTheoLoai(string LoaiKH)
-        {
-            return model.KhachHangs.Where(x => x.LoaiKH.Equals(LoaiKH)).ToList();
-        }
-
-
-        // Tìm khách hàng còn nợ
-        public List<KhachHang> timTheoNo()
-        {
-            return model.KhachHangs.Where(x => x.TienNo > 0).ToList();
         }
     }
 }

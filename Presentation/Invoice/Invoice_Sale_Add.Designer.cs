@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice_Sale_Add));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtGiamGia = new System.Windows.Forms.TextBox();
             this.btnAddNew = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.grde = new System.Windows.Forms.GroupBox();
-            this.cbHangSX = new System.Windows.Forms.ComboBox();
+            this.cbTenHang = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbTenSP = new System.Windows.Forms.ComboBox();
             this.txtThanhTien = new System.Windows.Forms.TextBox();
@@ -120,7 +120,7 @@
             // 
             // grde
             // 
-            this.grde.Controls.Add(this.cbHangSX);
+            this.grde.Controls.Add(this.cbTenHang);
             this.grde.Controls.Add(this.label9);
             this.grde.Controls.Add(this.cbTenSP);
             this.grde.Controls.Add(this.txtThanhTien);
@@ -149,16 +149,16 @@
             this.grde.TabStop = false;
             this.grde.Text = "CHI TIẾT HÓA ĐƠN BÁN";
             // 
-            // cbHangSX
+            // cbTenHang
             // 
-            this.cbHangSX.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
-            this.cbHangSX.FormattingEnabled = true;
-            this.cbHangSX.Location = new System.Drawing.Point(166, 83);
-            this.cbHangSX.Margin = new System.Windows.Forms.Padding(4);
-            this.cbHangSX.Name = "cbHangSX";
-            this.cbHangSX.Size = new System.Drawing.Size(193, 31);
-            this.cbHangSX.TabIndex = 92;
-            this.cbHangSX.TextChanged += new System.EventHandler(this.cbHangSX_TextChanged);
+            this.cbTenHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.cbTenHang.FormattingEnabled = true;
+            this.cbTenHang.Location = new System.Drawing.Point(166, 83);
+            this.cbTenHang.Margin = new System.Windows.Forms.Padding(4);
+            this.cbTenHang.Name = "cbTenHang";
+            this.cbTenHang.Size = new System.Drawing.Size(193, 31);
+            this.cbTenHang.TabIndex = 92;
+            this.cbTenHang.TextChanged += new System.EventHandler(this.cbTenHang_TextChanged);
             // 
             // label9
             // 
@@ -307,8 +307,8 @@
             this.dgvChiTietBan.Name = "dgvChiTietBan";
             this.dgvChiTietBan.ReadOnly = true;
             this.dgvChiTietBan.RowHeadersVisible = false;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.dgvChiTietBan.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.dgvChiTietBan.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvChiTietBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChiTietBan.Size = new System.Drawing.Size(752, 263);
             this.dgvChiTietBan.TabIndex = 2;
@@ -663,7 +663,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn SLMua;
         private System.Windows.Forms.DataGridViewTextBoxColumn GiaMua;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThanhTien;
-        private System.Windows.Forms.ComboBox cbHangSX;
+        private System.Windows.Forms.ComboBox cbTenHang;
         private System.Windows.Forms.Label label9;
     }
 }

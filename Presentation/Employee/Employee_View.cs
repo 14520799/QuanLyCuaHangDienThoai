@@ -20,32 +20,60 @@ namespace Presentation.Employee
         {
             InitializeComponent();
         }
-
-
-        // Lấy danh sách nhân viên
+        
+        // Xem danh sách nhân viên
         private void Employee_View_Load(object sender, EventArgs e)
         {
             dgvNhanVien.AutoGenerateColumns = false;
-            dgvNhanVien.DataSource = bl.danhSach();
+            dgvNhanVien.DataSource = bl.layNhanVien();
         }
 
-
-        // Tìm nhân viên
-        private void btnSearch_Click(object sender, EventArgs e)
+        // Click Delete để xóa nhân viên
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            if(cbTheoLoai.Text == "Tên NV")
-                dgvNhanVien.DataSource = bl.timTheoTen(txtTimKiem.Text);
-            else if(cbTheoLoai.Text == "Quyen")
-                dgvNhanVien.DataSource = bl.timTheoQuyen(txtTimKiem.Text);
-            else
-                dgvNhanVien.DataSource = bl.timTheoChucVu(txtTimKiem.Text);
+            try
+            {
+                if (bl.xoaNhanVien())
+                {
+                    MessageBox.Show("Xóa thành công");
+                    dgvNhanVien.DataSource = bl.layNhanVien();
+                }
+                else
+                    MessageBox.Show("Vui lòng thử lại sau");
+            }
+            catch
+            {
 
-            if (dgvNhanVien.RowCount == 0)
-                MessageBox.Show("Không có kết quả phù hợp !");
+            }
         }
 
+        // Click Update để sửa nhân viên
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bl.TenNV = txtTenNV.Text;
+                bl.NgaySinh = dtNgaySinh.Value;
+                bl.GioiTinh = cbGioiTinh.Text;
+                bl.SoDT = txtSoDT.Text;
+                bl.Email = txtEmail.Text;
+                bl.DiaChi = txtDiaChi.Text;
+                bl.Quyen = "Nhân viên";
+                bl.ChucVu = cbChucVu.Text;
+                bl.MatKhau = null;
 
-        // Nạp thông tin nhân viên vào các TextBox khi click DataGridView
+                if (bl.suaNhanVien())
+                    MessageBox.Show("Cập nhật thành công");
+                else
+                    MessageBox.Show("Vui lòng kiểm tra lại");
+            }
+            catch
+            {
+                
+            }
+        }
+        
+        // Sự kiện thay đổi lựa chọn trên DataGridView => Lưu trữ biến bl.MaNV
         private void dgvNhanVien_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvNhanVien.SelectedRows.Count > 0)
@@ -62,46 +90,10 @@ namespace Presentation.Employee
             }
         }
 
-
-        // Sửa thông tin nhân viên
-        private void btnUpdate_Click(object sender, EventArgs e)
+        // Click Cancel để hủy cập nhật
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            try
-            {
-                bl.TenNV = txtTenNV.Text;
-                bl.NgaySinh = dtNgaySinh.Value;
-                bl.GioiTinh = cbGioiTinh.Text;
-                bl.SoDT = txtSoDT.Text;
-                bl.Email = txtEmail.Text;
-                bl.DiaChi = txtDiaChi.Text;
-                bl.ChucVu = cbChucVu.Text;
-                bl.MatKhau = string.Empty;
-
-                bl.capNhat();
-                dgvNhanVien.DataSource = bl.danhSach();
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi gì đó...");
-            }
-        }
-
-
-        // Xóa nhân viên
-        private void btnDelete_Click(object sender, EventArgs e)
-        {
-            //MessageBox.Show("Xác nhận xóa ?");
-
-            try
-            {
-                bl.xoa();
-                dgvNhanVien.DataSource = bl.danhSach();
-                MessageBox.Show("Xóa thành công !");
-            }
-            catch
-            {
-                MessageBox.Show("Lỗi gì đó...");
-            }
+            Employee_View_Load(sender, e);
         }
     }
 }

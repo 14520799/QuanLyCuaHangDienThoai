@@ -27,122 +27,118 @@ namespace BusinessLogic
             model = new DataModel();
         }
 
-
-        public List<HangSanXuat> layHangSX()
+        // Lấy danh sách hóa đơn mua
+        public List<HoaDonMua> layHDM()
         {
-            return model.HangSanXuats.ToList();
-        }
-
-
-        public List<SanPham> laySanPham()
-        {
-            return model.SanPhams.ToList();
-        }
-
-
-        public bool timMaHDM(string MaHDM)
-        {
-            foreach(HoaDonMua hdm in model.HoaDonMuas)
+            try
             {
-                if (hdm.MaHDM.Equals(MaHDM))
-                    return true;
+                return model.HoaDonMuas.ToList();
             }
-
-            return false;
-        }
-
-
-        public bool timMaNV(string MaNV)
-        {
-            foreach(NhanVien nv in model.NhanViens)
+            catch
             {
-                if (nv.MaNV.Equals(MaNV))
-                    return true;
+                return null;
             }
-
-            return false;
         }
 
-
-        public bool timMaCTM(string MaCTM)
-        {
-            foreach (ChiTietMua ctm in model.ChiTietMuas)
-            {
-                if (ctm.MaCTM.Equals(MaCTM))
-                    return true;
-            }
-
-            return false;
-        }
-
-
-        public List<HoaDonMua> xemHDM()
-        {
-            return model.HoaDonMuas.ToList();
-        }
-
-
-        public void themHDM(HoaDonMua hdm)
+        // Thêm hóa đơn mua
+        public bool themHDM(HoaDonMua hdm)
         {
             try
             {
                 model.HoaDonMuas.Add(hdm);
                 model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-                
+                return false;
             }
         }
 
-
-        public void xoaHDM()
+        // Xóa hóa đơn mua
+        public bool xoaHDM()
         {
             try
             {
                 HoaDonMua hdm = model.HoaDonMuas.Find(MaHDM);
                 model.HoaDonMuas.Remove(hdm);
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
 
-        public void suaHDM()
+        public bool suaHDM()
         {
             try
             {
                 HoaDonMua hdm = model.HoaDonMuas.Find(MaHDM);
-                hdm.TienNo = TienNo;
                 hdm.TongTien = TongTien;
-                model.SaveChanges();
+                hdm.TienNo = TienNo;
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
-
-        public List<ChiTietMua> xemCTM(string MaHDM)
+        // Lấy danh sách chi tiết mua
+        public List<ChiTietMua> layCTM(string MaHDM)
         {
-            return model.ChiTietMuas.Where(ctm => ctm.MaHDM.Equals(MaHDM)).ToList();
+            try
+            {
+                return model.ChiTietMuas.Where(ctm => ctm.MaHDM.Equals(MaHDM)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-
-        public void themCTM(ChiTietMua ctm)
+        // Thêm chi tiết mua
+        public bool themCTM(ChiTietMua ctm)
         {
             try
             {
                 model.ChiTietMuas.Add(ctm);
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
+                return false;
+            }
+        }
+        
+        // Lấy danh sách hãng sản xuất
+        public List<HangSanXuat> layHangSX()
+        {
+            try
+            {
+                return model.HangSanXuats.ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
+        // Lấy danh sách sản phẩm
+        public List<SanPham> laySanPham()
+        {
+            try
+            {
+                return model.SanPhams.ToList();
+            }
+            catch
+            {
+                return null;
             }
         }
     }

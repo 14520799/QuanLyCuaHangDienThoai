@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using BusinessLogic;
+using Function;
 
 namespace Presentation.Factory
 {
@@ -21,25 +22,33 @@ namespace Presentation.Factory
             InitializeComponent();
         }
 
-
+        // Click Add để thêm hãng sản xuất
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            HangSanXuat hsx = new HangSanXuat();
-            hsx.MaHang = txtMaHang.Text;
-            hsx.TenHang = txtTenHang.Text;
-            hsx.SoDT = txtSoDT.Text;
-            hsx.Email = txtEmail.Text;
-            hsx.DiaChi = txtDiaChi.Text;
-
             try
             {
-                bl.create(hsx);
-                MessageBox.Show("Thêm thành công !");
+                HangSanXuat hsx = new HangSanXuat();
+                hsx.MaHang = txtMaHang.Text;
+                hsx.TenHang = txtTenHang.Text;
+                hsx.SoDT = txtSoDT.Text;
+                hsx.Email = txtEmail.Text;
+                hsx.DiaChi = txtDiaChi.Text;
+
+                if (bl.themHangSX(hsx))
+                    MessageBox.Show("Thêm thành công");
+                else
+                    MessageBox.Show("Vui lòng kiểm tra lại");
             }
             catch
             {
 
             }
+        }
+
+        // Clear các input
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Algorithm.clearInput(this);
         }
     }
 }

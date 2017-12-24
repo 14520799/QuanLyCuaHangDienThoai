@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
-using Function;
 
 namespace BusinessLogic
 {
@@ -12,50 +11,58 @@ namespace BusinessLogic
     {
         private DataModel model;
         public string MaHang, TenHang, SoDT, Email, DiaChi;
-
-
+        
         public HangSX_BL()
         {
             model = new DataModel();
         }
 
+        // Lấy danh sách hãng sản xuất
+        public List<HangSanXuat> layHangSX()
+        {
+            try
+            {
+                return model.HangSanXuats.ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
-        public void create(HangSanXuat hsx)
+        // Thêm hãng sản xuất
+        public bool themHangSX(HangSanXuat hsx)
         {
             try
             {
                 model.HangSanXuats.Add(hsx);
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
-
-        public List<HangSanXuat> read()
-        {
-            return model.HangSanXuats.ToList();
-        }
-
-
-        public void delete()
+        // Xóa hãng sản xuất
+        public bool xoaHangSX()
         {
             try
             {
                 HangSanXuat hsx = model.HangSanXuats.Find(MaHang);
                 model.HangSanXuats.Remove(hsx);
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
-
-        public void update()
+        // Sửa hãng sản xuất
+        public bool suaHangSX()
         {
             try
             {
@@ -64,29 +71,26 @@ namespace BusinessLogic
                 hsx.SoDT = SoDT;
                 hsx.Email = Email;
                 hsx.DiaChi = DiaChi;
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
-
-        public List<SanPham> sanPhamHang(string id)
+        // Tìm sản phẩm theo Mã Hãng
+        public List<SanPham> spTheoMaHang(string MaHang)
         {
-            List<SanPham> sp = new List<SanPham>();
-
             try
             {
-                sp = model.SanPhams.Where(x => x.MaHang.Equals(id)).ToList();
+                return model.SanPhams.Where(sp => sp.MaHang.Equals(MaHang)).ToList();
             }
             catch
             {
-
+                return null;
             }
-
-            return sp;
         }
     }
 }

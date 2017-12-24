@@ -10,7 +10,7 @@ namespace Function
 {
     public static class Algorithm
     {
-        // Hàm chuyển đổi Tiếng Việt sang không dấu => Dùng cho chức năng tìm kiếm
+        // Đổi tiếng Việt sang không dấu => Dùng để tìm kiếm theo tên
         public static string convertText(string text)
         {
             Regex regex = new Regex("\\p{IsCombiningDiacriticalMarks}+");
@@ -21,11 +21,13 @@ namespace Function
         // Hàm clear input
         public static void clearInput(Control control)
         {
-
             foreach (Control item in control.Controls)
             {
                 if (item is TextBox)
-                    ((TextBox)item).Text = "";
+                    ((TextBox)item).Text = null;
+
+                if (item is ComboBox)
+                    ((ComboBox)item).Text = null;
 
                 clearInput(item);
             }

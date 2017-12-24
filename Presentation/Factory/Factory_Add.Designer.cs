@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Factory_Add));
             this.InfoBox = new System.Windows.Forms.GroupBox();
-            this.txtDiaChi = new System.Windows.Forms.RichTextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtMaHang = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -73,21 +73,21 @@
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(157, 198);
+            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(157, 204);
+            this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(271, 96);
+            this.txtDiaChi.Size = new System.Drawing.Size(271, 30);
             this.txtDiaChi.TabIndex = 40;
-            this.txtDiaChi.Text = "";
             // 
             // txtMaHang
             // 
             this.txtMaHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtMaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaHang.Location = new System.Drawing.Point(157, 47);
             this.txtMaHang.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaHang.Name = "txtMaHang";
-            this.txtMaHang.Size = new System.Drawing.Size(136, 30);
+            this.txtMaHang.Size = new System.Drawing.Size(271, 30);
             this.txtMaHang.TabIndex = 32;
             // 
             // label9
@@ -106,7 +106,7 @@
             // txtEmail
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(157, 161);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
@@ -116,7 +116,7 @@
             // txtSoDT
             // 
             this.txtSoDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSoDT.Location = new System.Drawing.Point(157, 123);
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
@@ -126,7 +126,7 @@
             // txtTenHang
             // 
             this.txtTenHang.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtTenHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTenHang.Location = new System.Drawing.Point(157, 85);
             this.txtTenHang.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenHang.Name = "txtTenHang";
@@ -203,9 +203,10 @@
             this.btnClear.Location = new System.Drawing.Point(287, 370);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(133, 43);
+            this.btnClear.Size = new System.Drawing.Size(125, 43);
             this.btnClear.TabIndex = 65;
             this.btnClear.TabStop = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnAdd
             // 
@@ -214,7 +215,7 @@
             this.btnAdd.Location = new System.Drawing.Point(127, 370);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(133, 43);
+            this.btnAdd.Size = new System.Drawing.Size(125, 43);
             this.btnAdd.TabIndex = 64;
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -245,7 +246,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox InfoBox;
-        private System.Windows.Forms.RichTextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtMaHang;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtEmail;
@@ -258,5 +258,6 @@
         private System.Windows.Forms.Label error;
         private System.Windows.Forms.PictureBox btnClear;
         private System.Windows.Forms.PictureBox btnAdd;
+        private System.Windows.Forms.TextBox txtDiaChi;
     }
 }

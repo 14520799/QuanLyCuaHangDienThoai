@@ -22,14 +22,12 @@ namespace BusinessLogic
             model = new DataModel();
         }
 
-
-        // Tìm sản phẩm theo MaSP
-        public SanPham timTheoID(string MaSP)
+        // Lấy danh sách sản phẩm
+        public List<SanPham> laySanPham()
         {
             try
             {
-                SanPham sp = model.SanPhams.First(x => x.MaSP.Equals(MaSP));
-                return sp;
+                return model.SanPhams.ToList();
             }
             catch
             {
@@ -37,44 +35,48 @@ namespace BusinessLogic
             }
         }
 
-
-        // Lấy danh sách sản phẩm
-        public List<SanPham> load()
-        {
-            return model.SanPhams.ToList();
-        }
-
         // Thêm sản phẩm
-        public void them(SanPham sp)
+        public bool themSanPham(SanPham sp)
         {
             try
             {
                 model.SanPhams.Add(sp);
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
         // Xóa sản phẩm
-        public void xoa()
+        public bool xoaSanPham()
         {
-            SanPham sp = model.SanPhams.First(x => x.MaSP.Equals(MaSP));
-            model.SanPhams.Remove(sp);
-            model.SaveChanges();
+            try
+            {
+                SanPham sp = model.SanPhams.Find(MaSP);
+                model.SanPhams.Remove(sp);
+                model.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        // Sửa thông tin sản phẩm
-        public void sua()
+        // Sửa sản phẩm
+        public bool suaSanPham()
         {
             try
             {
                 SanPham sp = model.SanPhams.Find(MaSP);
                 sp.TenSP = TenSP;
                 sp.HinhAnh = HinhAnh;
+                sp.DonGia = DonGia;
                 sp.MoTa = MoTa;
+                sp.SoLuong = SoLuong;
                 sp.ManHinh = ManHinh;
                 sp.HDH = HDH;
                 sp.CameraTruoc = CameraTruoc;
@@ -85,12 +87,37 @@ namespace BusinessLogic
                 sp.TheNho = TheNho;
                 sp.TheSIM = TheSIM;
                 sp.DungLuongPin = DungLuongPin;
-                model.SaveChanges();
+                sp.MaHang = MaHang;
+                sp.MaLoai = MaLoai;
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
+        }
+
+        // Lấy danh sách hãng sản xuất
+        public List<HangSanXuat> layHangSX()
+        {
+            try
+            {
+                return model.HangSanXuats.ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // Tìm Mã Loại tương ứng với Tên Loại
+        public string timMaLoai(string TenLoai)
+        {
+            if (TenLoai.Equals("Điện thoại"))
+                return "LSP01";
+
+            return "LSP02";
         }
     }
 }

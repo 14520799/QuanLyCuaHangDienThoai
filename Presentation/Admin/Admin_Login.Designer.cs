@@ -51,21 +51,21 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 15F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(166, 18);
+            this.label2.Location = new System.Drawing.Point(165, 21);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 29);
+            this.label2.Size = new System.Drawing.Size(168, 29);
             this.label2.TabIndex = 104;
-            this.label2.Text = "Đăng Nhập";
+            this.label2.Text = "ĐĂNG  NHẬP";
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(20, 232);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(16, 230);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(42, 40);
+            this.pictureBox1.Size = new System.Drawing.Size(42, 43);
             this.pictureBox1.TabIndex = 103;
             this.pictureBox1.TabStop = false;
             // 
@@ -73,10 +73,10 @@
             // 
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.Location = new System.Drawing.Point(250, 170);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Location = new System.Drawing.Point(258, 170);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(110, 40);
+            this.btnCancel.Size = new System.Drawing.Size(108, 40);
             this.btnCancel.TabIndex = 102;
             this.btnCancel.TabStop = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -85,19 +85,19 @@
             // 
             this.btnConfirm.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnConfirm.BackgroundImage")));
             this.btnConfirm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfirm.Location = new System.Drawing.Point(132, 170);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConfirm.Location = new System.Drawing.Point(142, 170);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(110, 40);
+            this.btnConfirm.Size = new System.Drawing.Size(108, 40);
             this.btnConfirm.TabIndex = 101;
             this.btnConfirm.TabStop = false;
             this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Red;
-            this.label1.Location = new System.Drawing.Point(70, 250);
+            this.label1.Location = new System.Drawing.Point(66, 249);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(300, 22);
@@ -106,20 +106,20 @@
             // 
             // txtMaNV
             // 
-            this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMaNV.Location = new System.Drawing.Point(187, 75);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMaNV.Location = new System.Drawing.Point(187, 73);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(244, 30);
             this.txtMaNV.TabIndex = 96;
+            this.txtMaNV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaNV_KeyDown);
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMatKhau.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhau.Location = new System.Drawing.Point(187, 117);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMatKhau.Location = new System.Drawing.Point(187, 115);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(244, 30);
             this.txtMatKhau.TabIndex = 97;
@@ -137,9 +137,9 @@
             this.lgl3.Location = new System.Drawing.Point(60, 121);
             this.lgl3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lgl3.Name = "lgl3";
-            this.lgl3.Size = new System.Drawing.Size(94, 23);
+            this.lgl3.Size = new System.Drawing.Size(91, 23);
             this.lgl3.TabIndex = 99;
-            this.lgl3.Text = "Mật Khẩu";
+            this.lgl3.Text = "Mật khẩu";
             // 
             // lgl2
             // 
@@ -152,16 +152,16 @@
             this.lgl2.Location = new System.Drawing.Point(60, 79);
             this.lgl2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lgl2.Name = "lgl2";
-            this.lgl2.Size = new System.Drawing.Size(97, 23);
+            this.lgl2.Size = new System.Drawing.Size(94, 23);
             this.lgl2.TabIndex = 98;
-            this.lgl2.Text = "Tài Khoản";
+            this.lgl2.Text = "Tài khoản";
             // 
             // Admin_Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(496, 291);
+            this.ClientSize = new System.Drawing.Size(505, 291);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancel);
@@ -171,12 +171,14 @@
             this.Controls.Add(this.txtMatKhau);
             this.Controls.Add(this.lgl3);
             this.Controls.Add(this.lgl2);
+            this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "Admin_Login";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Đăng Nhập";
-            this.Load += new System.EventHandler(this.Admin_Login_Load);
+            this.Text = "Đăng nhập";
+            this.TopMost = true;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnConfirm)).EndInit();

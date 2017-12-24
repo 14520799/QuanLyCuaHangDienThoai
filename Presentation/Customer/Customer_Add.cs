@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using BusinessLogic;
+using Function;
 
 namespace Presentation.Customer
 {
@@ -21,7 +22,7 @@ namespace Presentation.Customer
             InitializeComponent();
         }
 
-
+        // Click Add để thêm khách hàng
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
@@ -37,13 +38,21 @@ namespace Presentation.Customer
                 kh.TienNo = Decimal.Parse(txtTienNo.Text);
                 kh.LoaiKH = cbLoaiKH.Text;
 
-                bl.them(kh);
-                MessageBox.Show("Thêm khách hàng thành công !");
+                if (bl.themKhachHang(kh))
+                    MessageBox.Show("Thêm thành công");
+                else
+                    MessageBox.Show("Vui lòng kiểm tra lại");
             }
             catch
             {
-                MessageBox.Show("Lỗi gì đó...");
+                
             }
+        }
+
+        // Clear các input
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Algorithm.clearInput(this);
         }
     }
 }

@@ -26,134 +26,118 @@ namespace BusinessLogic
             model = new DataModel();
         }
 
-
-        public List<HangSanXuat> layHangSX()
+        // Lấy danh sách hóa đơn bán
+        public List<HoaDonBan> layHDB()
         {
-            return model.HangSanXuats.ToList();
-        }
-
-
-        public List<SanPham> laySanPham()
-        {
-            return model.SanPhams.ToList();
-        }
-
-
-        public bool timMaHDB(string MaHDB)
-        {
-            foreach (HoaDonBan hdb in model.HoaDonBans)
+            try
             {
-                if (hdb.MaHDB.Equals(MaHDB))
-                    return true;
+                return model.HoaDonBans.ToList();
             }
-
-            return false;
-        }
-
-
-        public bool timMaNV(string MaNV)
-        {
-            foreach (NhanVien nv in model.NhanViens)
+            catch
             {
-                if (nv.MaNV.Equals(MaNV))
-                    return true;
+                return null;
             }
-
-            return false;
         }
 
-
-        public bool timMaKH(string MaKH)
-        {
-            foreach (KhachHang kh in model.KhachHangs)
-            {
-                if (kh.MaKH.Equals(MaKH))
-                    return true;
-            }
-
-            return false;
-        }
-
-
-        public bool timMaCTB(string MaCTB)
-        {
-            foreach (ChiTietBan ctb in model.ChiTietBans)
-            {
-                if (ctb.MaCTB.Equals(MaCTB))
-                    return true;
-            }
-
-            return false;
-        }
-
-
-        public List<HoaDonBan> xemHDB()
-        {
-            return model.HoaDonBans.ToList();
-        }
-
-
-        public void themHDB(HoaDonBan hdb)
+        // Thêm hóa đơn bán
+        public bool themHDB(HoaDonBan hdb)
         {
             try
             {
                 model.HoaDonBans.Add(hdb);
                 model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
-
-        public void xoaHDB()
+        // Xóa hóa đơn bán
+        public bool xoaHDB()
         {
             try
             {
                 HoaDonBan hdb = model.HoaDonBans.Find(MaHDB);
                 model.HoaDonBans.Remove(hdb);
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
-
-        public void suaHDB()
+        // Sửa hóa đơn bán
+        public bool suaHDB()
         {
             try
             {
                 HoaDonBan hdb = model.HoaDonBans.Find(MaHDB);
-                hdb.TienNo = TienNo;
                 hdb.TongTien = TongTien;
-                model.SaveChanges();
+                hdb.TienNo = TienNo;
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
-
+                return false;
             }
         }
 
-
-        public List<ChiTietBan> xemCTB(string MaHDB)
+        // Lấy danh sách chi tiết bán
+        public List<ChiTietBan> layCTB(string MaHDB)
         {
-            return model.ChiTietBans.Where(ctb => ctb.MaHDB.Equals(MaHDB)).ToList();
+            try
+            {
+                return model.ChiTietBans.Where(ctb => ctb.MaHDB.Equals(MaHDB)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-
-        public void themCTB(ChiTietBan ctb)
+        // Thêm chi tiết bán
+        public bool themCTB(ChiTietBan ctb)
         {
             try
             {
                 model.ChiTietBans.Add(ctb);
-                model.SaveChanges();
+                model.SaveChangesAsync();
+                return true;
             }
             catch
             {
+                return false;
+            }
+        }
 
+        // Lấy danh sách hãng sản xuất
+        public List<HangSanXuat> layHangSX()
+        {
+            try
+            {
+                return model.HangSanXuats.ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // Lấy danh sách sản phẩm
+        public List<SanPham> laySanPham()
+        {
+            try
+            {
+                return model.SanPhams.ToList();
+            }
+            catch
+            {
+                return null;
             }
         }
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using BusinessLogic;
+using Function;
 
 namespace Presentation.Employee
 {
@@ -21,45 +22,48 @@ namespace Presentation.Employee
             InitializeComponent();
         }
 
-        
-        // Nhấn nút thêm nhân viên
+        // Lấy danh sách chức vụ nhân viên
+        private void Employee_Add_Load(object sender, EventArgs e)
+        {
+            foreach(NhanVien nv in bl.layNhanVien())
+            {
+                if(nv.Quyen.Equals("Nhân viên"))
+                    cbChucVu.Items.Add(nv.ChucVu);
+            }
+        }
+
+        // Click Add để thêm nhân viên
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            NhanVien nv = new NhanVien();
-            nv.MaNV = txtMaNV.Text;
-            nv.TenNV = txtTenNV.Text;
-            nv.NgaySinh = dtNgaySinh.Value;
-            nv.GioiTinh = cbGioiTinh.Text;
-            nv.SoDT = txtSoDT.Text;
-            nv.Email = txtEmail.Text;
-            nv.DiaChi = txtDiaChi.Text;
-            nv.Quyen = cbQuyen.Text;
-            nv.ChucVu = cbChucVu.Text;
-
             try
             {
-                if (cbQuyen.Text == "Quản trị")
-                {
-                    if (txtMatKhauMoi1.Text == txtMatKhauMoi2.Text)
-                    {
-                        nv.MatKhau = txtMatKhauMoi1.Text;
-                        bl.them(nv);
-                        MessageBox.Show("Thêm thành công !");
-                    }
-                    else
-                        MessageBox.Show("Mật khẩu không trùng khớp !");
-                }
+                NhanVien nv = new NhanVien();
+                nv.MaNV = txtMaNV.Text;
+                nv.TenNV = txtTenNV.Text;
+                nv.NgaySinh = dtNgaySinh.Value;
+                nv.GioiTinh = cbGioiTinh.Text;
+                nv.SoDT = txtSoDT.Text;
+                nv.Email = txtEmail.Text;
+                nv.DiaChi = txtDiaChi.Text;
+                nv.Quyen = "Nhân viên";
+                nv.ChucVu = cbChucVu.Text;
+                nv.MatKhau = null;
+
+                if (bl.themNhanVien(nv))
+                    MessageBox.Show("Thêm thành công");
                 else
-                {
-                    nv.MatKhau = "";
-                    bl.them(nv);
-                    MessageBox.Show("Thêm thành công !");
-                }
+                    MessageBox.Show("Vui lòng kiểm tra lại");
             }
             catch
             {
-                MessageBox.Show("Lỗi gì đó...");
+
             }
+        }
+
+        // Clear các TextBox
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Algorithm.clearInput(this);
         }
     }
 }

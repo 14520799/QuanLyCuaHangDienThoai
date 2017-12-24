@@ -15,7 +15,6 @@ namespace Presentation.Admin
 {
     public partial class Admin_Info : Form
     {
-        NhanVien nv = new NhanVien();
         NhanVien_BL bl = new NhanVien_BL();
 
         public Admin_Info(string MaNV)
@@ -24,32 +23,56 @@ namespace Presentation.Admin
             bl.MaNV = MaNV;
         }
 
+        // Load thông tin người đăng nhập
         private void Admin_Info_Load(object sender, EventArgs e)
         {
-            nv = bl.timTheoID(bl.MaNV);
-            txtHoTen.Text = nv.TenNV;
-            cbGioiTinh.Text = nv.GioiTinh;
-            txtSoDT.Text = nv.SoDT;
-            txtEmail.Text = nv.Email;
-            txtDiaChi.Text = nv.DiaChi;
+            foreach(NhanVien nv in bl.layNhanVien())
+            {
+                if (nv.MaNV.Equals(bl.MaNV))
+                {
+                    txtMaNV.Text = bl.MaNV;
+                    txtTenNV.Text = bl.TenNV = nv.TenNV;
+                    bl.NgaySinh = nv.NgaySinh;
+                    dtNgaySinh.Text = bl.NgaySinh.ToString();
+                    cbGioiTinh.Text = bl.GioiTinh = nv.GioiTinh;
+                    txtSoDT.Text = bl.SoDT = nv.SoDT;
+                    txtEmail.Text = bl.Email = nv.Email;
+                    txtDiaChi.Text = bl.DiaChi = nv.DiaChi;
+                    bl.Quyen = nv.Quyen;
+                    bl.ChucVu = nv.ChucVu;
+                    bl.MatKhau = nv.MatKhau;
+                    return;
+                }
+            }
         }
 
+        // Click Update để sửa thông tin quản trị viên
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            bl.TenNV = txtHoTen.Text;
-            bl.NgaySinh = nv.NgaySinh;
-            bl.GioiTinh = nv.GioiTinh;
+            bl.TenNV = txtTenNV.Text;
+            bl.NgaySinh = DateTime.Parse(dtNgaySinh.Text);
+            bl.GioiTinh = cbGioiTinh.Text;
             bl.SoDT = txtSoDT.Text;
             bl.Email = txtEmail.Text;
             bl.DiaChi = txtDiaChi.Text;
-            bl.ChucVu = nv.ChucVu;
-            bl.MatKhau = nv.MatKhau;
-            bl.capNhat();
+
+            try
+            {
+                if (bl.suaNhanVien())
+                    MessageBox.Show("Cập nhật thành công");
+                else
+                    MessageBox.Show("Vui lòng kiểm tra lại");
+            }
+            catch
+            {
+                
+            }
         }
 
+        // Hủy cập nhật => Trả về giá trị ban đầu
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            
+            Admin_Info_Load(sender, e);
         }
     }
 }

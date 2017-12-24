@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess;
 using BusinessLogic;
+using Function;
 
 namespace Presentation.Factory
 {
@@ -21,72 +22,38 @@ namespace Presentation.Factory
             InitializeComponent();
         }
 
-
+        // Xem danh sách hãng sản xuất
         private void Factory_View_Load(object sender, EventArgs e)
         {
             dgvHangSX.AutoGenerateColumns = false;
-            dgvHangSX.DataSource = bl.read();
+            dgvHangSX.DataSource = bl.layHangSX();
 
-            foreach (HangSanXuat hsx in bl.read())
+            foreach (HangSanXuat hsx in bl.layHangSX())
             {
                 cbTenHang.Items.Add(hsx.TenHang);
             }
         }
 
-
-        private void dgvHangSX_SelectionChanged(object sender, EventArgs e)
+        // Click Delete để xóa hãng sản xuất
+        private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (dgvHangSX.SelectedRows.Count > 0)
-            {
-                bl.MaHang = dgvHangSX.CurrentRow.Cells[0].Value.ToString();
-                cbTenHang.Text = dgvHangSX.CurrentRow.Cells[1].Value.ToString();
-                txtSoDT.Text = dgvHangSX.CurrentRow.Cells[2].Value.ToString();
-                txtEmail.Text = dgvHangSX.CurrentRow.Cells[3].Value.ToString();
-                txtDiaChi.Text = dgvHangSX.CurrentRow.Cells[4].Value.ToString();
-            }
-
             try
             {
-                dgvSanPhamHang.AutoGenerateColumns = false;
-                dgvSanPhamHang.DataSource = bl.sanPhamHang(bl.MaHang);
-
-                foreach (DataGridViewRow row in dgvSanPhamHang.Rows)
+                if (bl.xoaHangSX())
                 {
-                    switch (row.Cells[0].Value.ToString())
-                    {
-                        case "HSX01":
-                            row.Cells[0].Value = "iPhone";
-                            break;
-                        case "HSX02":
-                            row.Cells[0].Value = "Samsung";
-                            break;
-                        case "HSX03":
-                            row.Cells[0].Value = "OPPO";
-                            break;
-                        case "HSX04":
-                            row.Cells[0].Value = "Nokia";
-                            break;
-                        case "HSX05":
-                            row.Cells[0].Value = "Zenfone";
-                            break;
-                        case "HSX06":
-                            row.Cells[0].Value = "Philips";
-                            break;
-                        case "HSX07":
-                            row.Cells[0].Value = "Mobiistar";
-                            break;
-                        default:
-                            break;
-                    }
+                    MessageBox.Show("Xóa thành công");
+                    dgvHangSX.DataSource = bl.layHangSX();
                 }
+                else
+                    MessageBox.Show("Vui lòng thử lại sau");
             }
             catch
             {
-
+                
             }
         }
 
-
+        // Click Update để sửa hãng sản xuất
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -96,29 +63,48 @@ namespace Presentation.Factory
                 bl.Email = txtEmail.Text;
                 bl.DiaChi = txtDiaChi.Text;
 
-                bl.update();
-                MessageBox.Show("Sửa thành công !");
-                dgvHangSX.DataSource = bl.read();
+                if (bl.suaHangSX())
+                {
+                    MessageBox.Show("Cập nhật thành công");
+                    dgvHangSX.DataSource = bl.layHangSX();
+                }
+                else
+                    MessageBox.Show("Vui lòng kiểm tra lại");
+                
             }
             catch
             {
-                MessageBox.Show("Lỗi gì đó...");
+                
             }
         }
 
-
-        private void btnDelete_Click(object sender, EventArgs e)
+        // Sự kiện thay đổi lựa chọn trên DataGridView => Lưu trữ biến bl.MaHang
+        private void dgvHangSX_SelectionChanged(object sender, EventArgs e)
         {
-            try
+            if (dgvHangSX.SelectedRows.Count > 0)
             {
-                bl.delete();
-                dgvHangSX.DataSource = bl.read();
-                MessageBox.Show("Xóa thành công !");
+                bl.MaHang = dgvHangSX.CurrentRow.Cells[0].Value.ToString();
+                cbTenHang.Text = dgvHangSX.CurrentRow.Cells[1].Value.ToString();
+                txtSoDT.Text = dgvHangSX.CurrentRow.Cells[2].Value.ToString();
+                txtEmail.Text = dgvHangSX.CurrentRow.Cells[3].Value.ToString();
+                txtDiaChi.Text = dgvHangSX.CurrentRow.Cells[4].Value.ToString();
+
+                try
+                {
+                    dgvSanPhamHang.DataSource = null;
+                    dgvSanPhamHang.DataSource = bl.spTheoMaHang(bl.MaHang);
+                }
+                catch
+                {
+
+                }
             }
-            catch
-            {
-                MessageBox.Show("Lỗi gì đó...");
-            }
+        }
+        
+        // Clear các input
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Algorithm.clearInput(this);
         }
     }
 }

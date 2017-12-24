@@ -17,179 +17,306 @@ namespace BusinessLogic
             model = new DataModel();
         }
 
-
+        // Lấy danh sách thuộc tính tương ứng với danh mục
         public List<string> layThuocTinh(string danhMuc)
         {
-            List<string> listThuocTinh = new List<string>();
+            List<string> thuocTinh = new List<string>();
 
             switch (danhMuc)
             {
-                case "Nhân Viên":
-                    listThuocTinh.AddRange(new [] { "Mã NV", "Tên NV", "Chức Vụ" });
+                case "Nhân viên":
+                    thuocTinh.AddRange(new [] { "Mã NV", "Tên NV", "Chức vụ" });
                     break;
-                case "Khách Hàng":
-                    listThuocTinh.AddRange(new [] { "Tên KH", "Số ĐT", "Còn Nợ" });
+                case "Khách hàng":
+                    thuocTinh.AddRange(new [] { "Tên KH", "Số ĐT", "Còn nợ" });
                     break;
-                case "Sản Phẩm":
-                    listThuocTinh.AddRange(new [] { "Tên SP", "Hãng SX", "Còn Hàng" });
+                case "Sản phẩm":
+                    thuocTinh.AddRange(new [] { "Tên SP", "Hãng SX", "Còn hàng" });
                     break;
-                case "Hóa Đơn Mua":
-                    listThuocTinh.AddRange(new [] { "Mã HDM", "Hãng SX", "Mã NV", "Còn Nợ" });
+                case "Hóa đơn mua":
+                    thuocTinh.AddRange(new [] { "Mã HDM", "Hãng SX", "Mã NV", "Còn nợ" });
                     break;
-                case "Hóa Đơn Bán":
-                    listThuocTinh.AddRange(new [] { "Mã HDB", "Mã NV", "Mã KH", "Còn Nợ" });
+                case "Hóa đơn bán":
+                    thuocTinh.AddRange(new [] { "Mã HDB", "Mã NV", "Mã KH", "Còn nợ" });
                     break;
                 default:
-                    listThuocTinh.Clear();
+                    thuocTinh.Clear();
                     break;
             }
 
-            return listThuocTinh;
+            return thuocTinh;
         }
 
-        /*** TRA CỨU NHÂN VIÊN ***/
+        /***** TRA CỨU NHÂN VIÊN *****/
+
+        // Tìm nhân viên theo Mã NV
         public List<NhanVien> nvTheoMaNV(string MaNV)
         {
-            return model.NhanViens.Where(nv => nv.MaNV.Contains(MaNV)).ToList();
+            try
+            {
+                return model.NhanViens.Where(nv => nv.MaNV.Contains(MaNV)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
+        // Tìm nhân viên theo Tên NV
         public List<NhanVien> nvTheoTenNV(string TenNV)
         {
-            List<NhanVien> listNhanVien = new List<NhanVien>();
-
-            foreach(NhanVien nv in model.NhanViens)
+            try
             {
-                if (Algorithm.convertText(nv.TenNV).Contains(Algorithm.convertText(TenNV)))
-                    listNhanVien.Add(nv);
-            }
+                List<NhanVien> nhanVien = new List<NhanVien>();
 
-            return listNhanVien;
+                foreach (NhanVien nv in model.NhanViens)
+                {
+                    if (Algorithm.convertText(nv.TenNV).Contains(Algorithm.convertText(TenNV)))
+                        nhanVien.Add(nv);
+                }
+
+                return nhanVien;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
+        // Tìm nhân viên theo Chức vụ
         public List<NhanVien> nvTheoChucVu(string ChucVu)
         {
-            return model.NhanViens.Where(nv => nv.ChucVu.Contains(ChucVu)).ToList();
+            try
+            {
+                return model.NhanViens.Where(nv => nv.ChucVu.Contains(ChucVu)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
 
-        /*** TRA CỨU KHÁCH HÀNG ***/
+        /***** TRA CỨU KHÁCH HÀNG *****/
+
+        // Tìm khách hàng theo Tên KH
         public List<KhachHang> khTheoTenKH(string TenKH)
         {
-            List<KhachHang> listKhachHang = new List<KhachHang>();
-
-            foreach (KhachHang kh in model.KhachHangs)
+            try
             {
-                if (Algorithm.convertText(kh.TenKH).Contains(Algorithm.convertText(TenKH)))
-                    listKhachHang.Add(kh);
-            }
+                List<KhachHang> khachHang = new List<KhachHang>();
 
-            return listKhachHang;
+                foreach (KhachHang kh in model.KhachHangs)
+                {
+                    if (Algorithm.convertText(kh.TenKH).Contains(Algorithm.convertText(TenKH)))
+                        khachHang.Add(kh);
+                }
+
+                return khachHang;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
+        // Tìm khách hàng theo Số ĐT
         public List<KhachHang> khTheoSoDT(string SoDT)
         {
-            return model.KhachHangs.Where(kh => kh.SoDT.Contains(SoDT)).ToList();
+            try
+            {
+                return model.KhachHangs.Where(kh => kh.SoDT.Contains(SoDT)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        public List<KhachHang> khTheoConNo()
+        // Tìm khách hàng theo Còn nợ
+        public List<KhachHang> khTheoTienNo()
         {
-            return model.KhachHangs.Where(kh => kh.TienNo > 0).ToList();
+            try
+            {
+                return model.KhachHangs.Where(kh => kh.TienNo > 0).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
 
-        /*** TRA CỨU SẢN PHẨM ***/
+        /***** TRA CỨU SẢN PHẨM *****/
+
+        // Tìm sản phẩm theo Tên SP
         public List<SanPham> spTheoTenSP(string TenSP)
         {
-            List<SanPham> listSanPham = new List<SanPham>();
-
-            foreach (SanPham sp in model.SanPhams)
+            try
             {
-                if (Algorithm.convertText(sp.TenSP).Contains(Algorithm.convertText(TenSP)))
-                    listSanPham.Add(sp);
-            }
+                List<SanPham> sanPham = new List<SanPham>();
 
-            return listSanPham;
+                foreach (SanPham sp in model.SanPhams)
+                {
+                    if (Algorithm.convertText(sp.TenSP).Contains(Algorithm.convertText(TenSP)))
+                        sanPham.Add(sp);
+                }
+
+                return sanPham;
+            }
+            catch
+            {
+                return null;
+            }
         }
 
+        // Lấy danh sách hãng sản xuất
         public List<HangSanXuat> layHangSX()
         {
-            return model.HangSanXuats.ToList();
-        }
-
-        public List<SanPham> spTheoHangSX(string MaHang)
-        {
-            List<SanPham> listSanPham = new List<SanPham>();
-
             try
             {
-                listSanPham = model.SanPhams.Where(sp => sp.MaHang.Equals(MaHang)).ToList();
+                return model.HangSanXuats.ToList();
             }
             catch
             {
-
+                return null;
             }
-
-            return listSanPham;
         }
 
-        public List<SanPham> spTheoConHang()
+        // Tìm sản phẩm theo Hãng SX
+        public List<SanPham> spTheoMaHang(string MaHang)
         {
-            return model.SanPhams.Where(sp => sp.SoLuong > 0).ToList();
+            try
+            {
+                return model.SanPhams.Where(sp => sp.MaHang.Equals(MaHang)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // Tìm sản phẩm theo Còn hàng
+        public List<SanPham> spTheoSoLuong()
+        {
+            try
+            {
+                return model.SanPhams.Where(sp => sp.SoLuong > 0).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
 
-        /*** TRA CỨU HÓA ĐƠN MUA ***/
+        /***** TRA CỨU HÓA ĐƠN MUA *****/
+
+        // Tìm hóa đơn mua theo Mã HDM
         public List<HoaDonMua> hdmTheoMaHDM(string MaHDM)
         {
-            return model.HoaDonMuas.Where(hdm => hdm.MaHDM.Contains(MaHDM)).ToList();
-        }
-
-        public List<HoaDonMua> hdmTheoHangSX(string MaHang)
-        {
-            List<HoaDonMua> listHDM = new List<HoaDonMua>();
-
             try
             {
-                listHDM = model.HoaDonMuas.Where(hdm => hdm.MaHang.Equals(MaHang)).ToList();
+                return model.HoaDonMuas.Where(hdm => hdm.MaHDM.Contains(MaHDM)).ToList();
             }
             catch
             {
-
+                return null;
             }
-
-            return listHDM;
         }
 
+        // Tìm hóa đơn mua theo Hãng SX
+        public List<HoaDonMua> hdmTheoMaHang(string MaHang)
+        {
+            try
+            {
+                return model.HoaDonMuas.Where(hdm => hdm.MaHang.Equals(MaHang)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
+        }
+
+        // Tìm hóa đơn mua theo Mã NV
         public List<HoaDonMua> hdmTheoMaNV(string MaNV)
         {
-            return model.HoaDonMuas.Where(hdm => hdm.MaNV.Contains(MaNV)).ToList();
+            try
+            {
+                return model.HoaDonMuas.Where(hdm => hdm.MaNV.Contains(MaNV)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        public List<HoaDonMua> hdmTheoConNo()
+        // Tìm hóa đơn mua theo Còn nợ
+        public List<HoaDonMua> hdmTheoTienNo()
         {
-            return model.HoaDonMuas.Where(hdm => hdm.TienNo > 0).ToList();
+            try
+            {
+                return model.HoaDonMuas.Where(hdm => hdm.TienNo > 0).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
 
-        /*** TRA CỨU HÓA ĐƠN BÁN ***/
+        /***** TRA CỨU HÓA ĐƠN BÁN *****/
+
+        // Tìm hóa đơn bán theo Mã HDB
         public List<HoaDonBan> hdbTheoMaHDB(string MaHDB)
         {
-            return model.HoaDonBans.Where(hdb => hdb.MaHDB.Contains(MaHDB)).ToList();
+            try
+            {
+                return model.HoaDonBans.Where(hdb => hdb.MaHDB.Contains(MaHDB)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
+        // Tìm hóa đơn bán theo Mã NV
         public List<HoaDonBan> hdbTheoMaNV(string MaNV)
         {
-            return model.HoaDonBans.Where(hdb => hdb.MaNV.Contains(MaNV)).ToList();
+            try
+            {
+                return model.HoaDonBans.Where(hdb => hdb.MaNV.Contains(MaNV)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
+        // Tìm hóa đơn bán theo Mã KH
         public List<HoaDonBan> hdbTheoMaKH(string MaKH)
         {
-            return model.HoaDonBans.Where(hdb => hdb.MaKH.Contains(MaKH)).ToList();
+            try
+            {
+                return model.HoaDonBans.Where(hdb => hdb.MaKH.Contains(MaKH)).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        public List<HoaDonBan> hdbTheoConNo()
+        // Tìm hóa đơn bán theo Còn nợ
+        public List<HoaDonBan> hdbTheoTienNo()
         {
-            return model.HoaDonBans.Where(hdb => hdb.TienNo > 0).ToList();
+            try
+            {
+                return model.HoaDonBans.Where(hdb => hdb.TienNo > 0).ToList();
+            }
+            catch
+            {
+                return null;
+            }
         }
     }
 }
