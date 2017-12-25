@@ -28,6 +28,13 @@ namespace Presentation.Invoice
             dgvChiTietMua.AutoGenerateColumns = false;
             bl.xoaHDM(bl.layHDM());
             dgvHoaDonMua.DataSource = bl.layHDM();
+
+            // Định dạng các giá trị trong DataGridView 
+            foreach (DataGridViewRow row in dgvHoaDonMua.Rows)
+            {
+                row.Cells[4].Value = row.Cells[4].Value.ToString().Replace(".000", "");
+                row.Cells[5].Value = row.Cells[5].Value.ToString().Replace(".000", "");
+            }
         }
 
         // Sự kiện thay đổi lựa chọn trên dgvHoaDonMua => Load danh sách chi tiết mua tương ứng

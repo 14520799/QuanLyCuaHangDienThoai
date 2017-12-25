@@ -26,6 +26,12 @@ namespace Presentation.Customer
         {
             dgvKhachHang.AutoGenerateColumns = false;
             dgvKhachHang.DataSource = bl.layKhachHang();
+
+            // Định dạng các giá trị trong DataGridView 
+            foreach (DataGridViewRow row in dgvKhachHang.Rows)
+            {
+                row.Cells[7].Value = row.Cells[7].Value.ToString().Replace(".000", "");
+            }
         }
 
         // Click Delete để xóa khách hàng

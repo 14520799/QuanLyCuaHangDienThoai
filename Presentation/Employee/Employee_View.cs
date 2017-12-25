@@ -25,7 +25,12 @@ namespace Presentation.Employee
         private void Employee_View_Load(object sender, EventArgs e)
         {
             dgvNhanVien.AutoGenerateColumns = false;
-            dgvNhanVien.DataSource = bl.layNhanVien();
+
+            foreach(NhanVien nv in bl.layNhanVien())
+            {
+                if (nv.Quyen.Equals("Nhân viên"))
+                    dgvNhanVien.Rows.Add(nv.MaNV, nv.TenNV, nv.NgaySinh, nv.GioiTinh, nv.SoDT, nv.Email, nv.DiaChi, nv.ChucVu, nv.Quyen);
+            }
         }
 
         // Click Delete để xóa nhân viên

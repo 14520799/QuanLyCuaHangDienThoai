@@ -17,17 +17,28 @@ namespace Function
             return regex.Replace(text.Normalize(NormalizationForm.FormD), String.Empty).Replace('\u0111', 'd').Replace('\u0110', 'D').ToLower();
         }
 
+        // Kiểm tra giá trị của các input
+        public static bool emptyInput(Control control)
+        {
+            foreach (Control item in control.Controls)
+            {
+                if ((item is TextBox || item is ComboBox) && item.Text.Equals(string.Empty))
+                    return true;
+            }
 
-        // Hàm clear input
+            return false;
+        }
+
+        // Clear các input
         public static void clearInput(Control control)
         {
             foreach (Control item in control.Controls)
             {
                 if (item is TextBox)
-                    ((TextBox)item).Text = null;
+                    ((TextBox)item).Text = string.Empty;
 
                 if (item is ComboBox)
-                    ((ComboBox)item).Text = null;
+                    ((ComboBox)item).Text = string.Empty;
 
                 clearInput(item);
             }

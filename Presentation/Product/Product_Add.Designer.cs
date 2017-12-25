@@ -97,9 +97,9 @@
             this.d.Location = new System.Drawing.Point(588, 266);
             this.d.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.d.Name = "d";
-            this.d.Size = new System.Drawing.Size(147, 23);
+            this.d.Size = new System.Drawing.Size(137, 23);
             this.d.TabIndex = 18;
-            this.d.Text = "Dung Lượng Pin";
+            this.d.Text = "Dung lượng pin";
             // 
             // txtCPU
             // 
@@ -163,9 +163,9 @@
             this.label20.Location = new System.Drawing.Point(40, 210);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(113, 23);
+            this.label20.Size = new System.Drawing.Size(110, 23);
             this.label20.TabIndex = 12;
-            this.label20.Text = "Camera Sau";
+            this.label20.Text = "Camera sau";
             // 
             // label6
             // 
@@ -175,9 +175,9 @@
             this.label6.Location = new System.Drawing.Point(33, 351);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 23);
+            this.label6.Size = new System.Drawing.Size(60, 23);
             this.label6.TabIndex = 69;
-            this.label6.Text = "Mô Tả";
+            this.label6.Text = "Mô tả";
             // 
             // txtTheNho
             // 
@@ -197,9 +197,9 @@
             this.a.Location = new System.Drawing.Point(588, 156);
             this.a.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.a.Name = "a";
-            this.a.Size = new System.Drawing.Size(83, 23);
+            this.a.Size = new System.Drawing.Size(79, 23);
             this.a.TabIndex = 10;
-            this.a.Text = "Thẻ Nhớ";
+            this.a.Text = "Thẻ nhớ";
             // 
             // txtCameraTruoc
             // 
@@ -219,9 +219,9 @@
             this.label14.Location = new System.Drawing.Point(588, 102);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(128, 23);
+            this.label14.Size = new System.Drawing.Size(119, 23);
             this.label14.TabIndex = 8;
-            this.label14.Text = "Bộ Nhớ Trong";
+            this.label14.Text = "Bộ nhớ trong";
             // 
             // txtBoNhoTrong
             // 
@@ -241,9 +241,9 @@
             this.label11.Location = new System.Drawing.Point(40, 156);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(134, 23);
+            this.label11.Size = new System.Drawing.Size(129, 23);
             this.label11.TabIndex = 6;
-            this.label11.Text = "Camera Trước";
+            this.label11.Text = "Camera trước";
             // 
             // txtHDH
             // 
@@ -297,9 +297,9 @@
             this.label9.Location = new System.Drawing.Point(40, 52);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 23);
+            this.label9.Size = new System.Drawing.Size(89, 23);
             this.label9.TabIndex = 0;
-            this.label9.Text = "Màn Hình";
+            this.label9.Text = "Màn hình";
             // 
             // txtSoLuong
             // 
@@ -341,9 +341,9 @@
             this.label8.Location = new System.Drawing.Point(606, 46);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 23);
+            this.label8.Size = new System.Drawing.Size(86, 23);
             this.label8.TabIndex = 17;
-            this.label8.Text = "Hình Ảnh";
+            this.label8.Text = "Hình ảnh";
             // 
             // btnAdd
             // 
@@ -365,9 +365,9 @@
             this.label3.Location = new System.Drawing.Point(33, 299);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(92, 23);
+            this.label3.Size = new System.Drawing.Size(84, 23);
             this.label3.TabIndex = 67;
-            this.label3.Text = "Số Lượng";
+            this.label3.Text = "Số lượng";
             // 
             // cbTenHang
             // 
@@ -384,8 +384,8 @@
             this.cbTenLoai.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenLoai.FormattingEnabled = true;
             this.cbTenLoai.Items.AddRange(new object[] {
-            "Linh Kiện",
-            "Điện Thoại"});
+            "Linh kiện",
+            "Điện thoại"});
             this.cbTenLoai.Location = new System.Drawing.Point(155, 144);
             this.cbTenLoai.Margin = new System.Windows.Forms.Padding(4);
             this.cbTenLoai.Name = "cbTenLoai";
@@ -445,9 +445,9 @@
             this.label7.Location = new System.Drawing.Point(34, 250);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(81, 23);
+            this.label7.Size = new System.Drawing.Size(75, 23);
             this.label7.TabIndex = 14;
-            this.label7.Text = "Đơn Giá";
+            this.label7.Text = "Đơn giá";
             // 
             // txtDonGia
             // 

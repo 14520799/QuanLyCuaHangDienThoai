@@ -26,6 +26,12 @@ namespace Presentation.Product
         {
             dgvSanPham.AutoGenerateColumns = false;
             dgvSanPham.DataSource = bl.laySanPham();
+
+            // Định dạng các giá trị trong DataGridView 
+            foreach (DataGridViewRow row in dgvSanPham.Rows)
+            {
+                row.Cells[3].Value = row.Cells[3].Value.ToString().Replace(".000", "");
+            }
         }
 
         // Click Delete để xóa sản phẩm

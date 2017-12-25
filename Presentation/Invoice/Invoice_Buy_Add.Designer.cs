@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Invoice_Buy_Add));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbTenHang = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +42,6 @@
             this.txtMaHDM = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.err = new System.Windows.Forms.Label();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtDonGia = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -51,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtSoLuong = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.info = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.PictureBox();
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.dgvChiTietMua = new System.Windows.Forms.DataGridView();
@@ -127,7 +125,6 @@
             this.groupBox1.Controls.Add(this.cbTenHang);
             this.groupBox1.Controls.Add(this.label16);
             this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Controls.Add(this.err);
             this.groupBox1.Controls.Add(this.txtMaNV);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -238,16 +235,6 @@
             this.label15.TabIndex = 78;
             this.label15.Text = "Ngày Mua";
             // 
-            // err
-            // 
-            this.err.AutoSize = true;
-            this.err.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.err.Location = new System.Drawing.Point(517, 212);
-            this.err.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.err.Name = "err";
-            this.err.Size = new System.Drawing.Size(0, 17);
-            this.err.TabIndex = 73;
-            // 
             // txtMaNV
             // 
             this.txtMaNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -347,16 +334,6 @@
             this.label14.TabIndex = 81;
             this.label14.Text = "Số Lượng";
             // 
-            // info
-            // 
-            this.info.AutoSize = true;
-            this.info.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.info.Location = new System.Drawing.Point(813, 109);
-            this.info.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.info.Name = "info";
-            this.info.Size = new System.Drawing.Size(0, 17);
-            this.info.TabIndex = 80;
-            // 
             // btnDelete
             // 
             this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
@@ -398,8 +375,8 @@
             this.dgvChiTietMua.Name = "dgvChiTietMua";
             this.dgvChiTietMua.ReadOnly = true;
             this.dgvChiTietMua.RowHeadersVisible = false;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.dgvChiTietMua.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.dgvChiTietMua.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvChiTietMua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvChiTietMua.Size = new System.Drawing.Size(752, 263);
             this.dgvChiTietMua.TabIndex = 2;
@@ -459,7 +436,6 @@
             this.grde.Controls.Add(this.label2);
             this.grde.Controls.Add(this.txtSoLuong);
             this.grde.Controls.Add(this.label14);
-            this.grde.Controls.Add(this.info);
             this.grde.Controls.Add(this.btnDelete);
             this.grde.Controls.Add(this.dgvChiTietMua);
             this.grde.Controls.Add(this.txtDonGia);
@@ -603,7 +579,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label err;
         private System.Windows.Forms.TextBox txtMaNV;
         private System.Windows.Forms.TextBox txtDonGia;
         private System.Windows.Forms.Label label11;
@@ -612,7 +587,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSoLuong;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label info;
         private System.Windows.Forms.PictureBox btnDelete;
         private System.Windows.Forms.PictureBox btnAdd;
         private System.Windows.Forms.DataGridView dgvChiTietMua;

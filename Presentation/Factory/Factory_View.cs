@@ -26,6 +26,7 @@ namespace Presentation.Factory
         private void Factory_View_Load(object sender, EventArgs e)
         {
             dgvHangSX.AutoGenerateColumns = false;
+            dgvSanPhamHang.AutoGenerateColumns = false;
             dgvHangSX.DataSource = bl.layHangSX();
 
             foreach (HangSanXuat hsx in bl.layHangSX())
@@ -91,8 +92,13 @@ namespace Presentation.Factory
 
                 try
                 {
-                    dgvSanPhamHang.DataSource = null;
                     dgvSanPhamHang.DataSource = bl.spTheoMaHang(bl.MaHang);
+
+                    // Định dạng các giá trị trong DataGridView 
+                    foreach (DataGridViewRow row in dgvSanPhamHang.Rows)
+                    {
+                        row.Cells[2].Value = row.Cells[2].Value.ToString().Replace(".000", "");
+                    }
                 }
                 catch
                 {

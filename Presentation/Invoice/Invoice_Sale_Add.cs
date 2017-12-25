@@ -78,7 +78,6 @@ namespace Presentation.Invoice
                     // Không được phép chỉnh sửa nếu đã tạo hóa đơn bán
                     if (bl.themHDB(hdb))
                     {
-                        MessageBox.Show("Thêm thành công");
                         txtMaHDB.ReadOnly = true;   
                         txtMaNV.ReadOnly = true;    
                         txtMaKH.ReadOnly = true;
@@ -105,15 +104,23 @@ namespace Presentation.Invoice
                     }
                 }
 
-                bl.TongTien += decimal.Parse(txtThanhTien.Text);
-                txtTongTien.Text = bl.TongTien.ToString();
-                dgvChiTietBan.Rows.Add(txtMaCTB.Text, cbTenSP.Text, txtDonGia.Text, txtSoLuong.Text, txtGiamGia.Text, txtThanhTien.Text);
-                txtMaCTB.Text = string.Empty;
-                cbTenSP.Text = string.Empty;
-                txtSoLuong.Text = "1";
-                txtDonGia.Text = "0";
-                txtGiamGia.Text = "0";
-                txtThanhTien.Text = "0";
+                if (!Algorithm.emptyInput(this))
+                {
+                    bl.TongTien += decimal.Parse(txtThanhTien.Text);
+                    txtTongTien.Text = bl.TongTien.ToString().Replace(".000", "");
+                    dgvChiTietBan.Rows.Add(txtMaCTB.Text, cbTenSP.Text, txtDonGia.Text, txtSoLuong.Text, txtGiamGia.Text, txtThanhTien.Text);
+                    txtMaCTB.Text = string.Empty;
+                    cbTenSP.Text = string.Empty;
+                    txtSoLuong.Text = "1";
+                    txtDonGia.Text = "0";
+                    txtGiamGia.Text = "0";
+                    txtThanhTien.Text = "0";
+                }
+                else
+                {
+                    MessageBox.Show("Vui lòng kiểm tra lại");
+                    return;
+                }
             }
             catch
             {
@@ -229,8 +236,8 @@ namespace Presentation.Invoice
                 if (sp.TenSP.Equals(cbTenSP.Text))
                 {
                     bl.MaSP = sp.MaSP;
-                    txtDonGia.Text = sp.DonGia.ToString();
-                    txtThanhTien.Text = (int.Parse(txtSoLuong.Text) * decimal.Parse(txtDonGia.Text) - decimal.Parse(txtGiamGia.Text)).ToString();
+                    txtDonGia.Text = sp.DonGia.ToString().Replace(".000", "");
+                    txtThanhTien.Text = (int.Parse(txtSoLuong.Text) * decimal.Parse(txtDonGia.Text) - decimal.Parse(txtGiamGia.Text)).ToString().Replace(".000", "");
                     return;
                 }
             }
@@ -240,7 +247,7 @@ namespace Presentation.Invoice
         private void txtSoLuong_TextChanged(object sender, EventArgs e)
         {
             if (!txtSoLuong.Text.Equals(string.Empty) && !txtGiamGia.Text.Equals(string.Empty))
-                txtThanhTien.Text = (int.Parse(txtSoLuong.Text) * decimal.Parse(txtDonGia.Text) - decimal.Parse(txtGiamGia.Text)).ToString();
+                txtThanhTien.Text = (int.Parse(txtSoLuong.Text) * decimal.Parse(txtDonGia.Text) - decimal.Parse(txtGiamGia.Text)).ToString().Replace(".000", "");
         }
 
         // Sự kiện khi thay đổi giảm giá
