@@ -44,8 +44,6 @@
             this.menu_invoice_sale_view = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_invoice_sale_add = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_statistic = new System.Windows.Forms.MenuStrip();
-            //this.menu_statistic_grow = new System.Windows.Forms.ToolStripMenuItem();
-            //this.menu_statistic_math = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_customer = new System.Windows.Forms.MenuStrip();
             this.menu_customer_view = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_customer_add = new System.Windows.Forms.ToolStripMenuItem();
@@ -58,7 +56,7 @@
             this.menu_product_add = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_factory_view = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_factory_add = new System.Windows.Forms.ToolStripMenuItem();
-            this.logo = new System.Windows.Forms.PictureBox();
+            this.logo_home = new System.Windows.Forms.PictureBox();
             this.panel_logout = new System.Windows.Forms.Panel();
             this.button_logout = new System.Windows.Forms.PictureBox();
             this.label_logout = new System.Windows.Forms.Label();
@@ -74,11 +72,10 @@
             this.menu_bar.SuspendLayout();
             this.panel_left.SuspendLayout();
             this.panel_invoice.SuspendLayout();
-            this.panel_statistic.SuspendLayout();
             this.panel_customer.SuspendLayout();
             this.panel_home.SuspendLayout();
             this.panel_product.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_home)).BeginInit();
             this.panel_logout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button_logout)).BeginInit();
             this.panel_employee.SuspendLayout();
@@ -162,7 +159,7 @@
             this.button_statistic.Name = "button_statistic";
             this.button_statistic.Size = new System.Drawing.Size(171, 54);
             this.button_statistic.Text = "Thống kê";
-            this.button_statistic.Click += new System.EventHandler(Button_statistic_Click);
+            this.button_statistic.Click += new System.EventHandler(this.Button_statistic_Click);
             // 
             // panel_above
             // 
@@ -182,7 +179,7 @@
             this.panel_left.Controls.Add(this.panel_customer);
             this.panel_left.Controls.Add(this.panel_home);
             this.panel_left.Controls.Add(this.panel_product);
-            this.panel_left.Controls.Add(this.logo);
+            this.panel_left.Controls.Add(this.logo_home);
             this.panel_left.Controls.Add(this.panel_logout);
             this.panel_left.Controls.Add(this.panel_employee);
             this.panel_left.Dock = System.Windows.Forms.DockStyle.Left;
@@ -265,36 +262,12 @@
             this.panel_statistic.Dock = System.Windows.Forms.DockStyle.None;
             this.panel_statistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_statistic.ImageScalingSize = new System.Drawing.Size(30, 30);
-            //this.panel_statistic.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            //this.menu_statistic_grow,
-            //this.menu_statistic_math});
             this.panel_statistic.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.panel_statistic.Location = new System.Drawing.Point(15, 126);
             this.panel_statistic.Name = "panel_statistic";
             this.panel_statistic.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.panel_statistic.Size = new System.Drawing.Size(321, 167);
             this.panel_statistic.TabIndex = 9;
-            //// 
-            //// menu_statistic_grow
-            //// 
-            //this.menu_statistic_grow.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            //this.menu_statistic_grow.ForeColor = System.Drawing.Color.White;
-            //this.menu_statistic_grow.Image = ((System.Drawing.Image)(resources.GetObject("menu_statistic_grow.Image")));
-            //this.menu_statistic_grow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.menu_statistic_grow.Name = "menu_statistic_grow";
-            //this.menu_statistic_grow.Size = new System.Drawing.Size(312, 34);
-            //this.menu_statistic_grow.Text = "Growth rate deverlop";
-            //this.menu_statistic_grow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //// 
-            //// menu_statistic_math
-            //// 
-            //this.menu_statistic_math.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            //this.menu_statistic_math.ForeColor = System.Drawing.Color.WhiteSmoke;
-            //this.menu_statistic_math.Image = ((System.Drawing.Image)(resources.GetObject("menu_statistic_math.Image")));
-            //this.menu_statistic_math.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //this.menu_statistic_math.Name = "menu_statistic_math";
-            //this.menu_statistic_math.Size = new System.Drawing.Size(312, 34);
-            //this.menu_statistic_math.Text = "Statistic";
             // 
             // panel_customer
             // 
@@ -453,16 +426,17 @@
             this.menu_factory_add.Text = "Thêm hãng sản xuất";
             this.menu_factory_add.Click += new System.EventHandler(this.menu_factory_add_Click);
             // 
-            // logo
+            // logo_home
             // 
-            this.logo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo.BackgroundImage")));
-            this.logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.logo.Location = new System.Drawing.Point(119, 7);
-            this.logo.Margin = new System.Windows.Forms.Padding(4);
-            this.logo.Name = "logo";
-            this.logo.Size = new System.Drawing.Size(93, 86);
-            this.logo.TabIndex = 5;
-            this.logo.TabStop = false;
+            this.logo_home.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("logo_home.BackgroundImage")));
+            this.logo_home.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.logo_home.Location = new System.Drawing.Point(119, 25);
+            this.logo_home.Margin = new System.Windows.Forms.Padding(4);
+            this.logo_home.Name = "logo_home";
+            this.logo_home.Size = new System.Drawing.Size(93, 86);
+            this.logo_home.TabIndex = 5;
+            this.logo_home.TabStop = false;
+            this.logo_home.Click += new System.EventHandler(this.logo_home_Click);
             // 
             // panel_logout
             // 
@@ -480,7 +454,7 @@
             // 
             this.button_logout.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_logout.BackgroundImage")));
             this.button_logout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button_logout.Location = new System.Drawing.Point(13, 63);
+            this.button_logout.Location = new System.Drawing.Point(24, 46);
             this.button_logout.Margin = new System.Windows.Forms.Padding(4);
             this.button_logout.Name = "button_logout";
             this.button_logout.Size = new System.Drawing.Size(50, 47);
@@ -493,7 +467,7 @@
             this.label_logout.AutoSize = true;
             this.label_logout.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_logout.ForeColor = System.Drawing.Color.White;
-            this.label_logout.Location = new System.Drawing.Point(75, 85);
+            this.label_logout.Location = new System.Drawing.Point(86, 70);
             this.label_logout.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_logout.Name = "label_logout";
             this.label_logout.Size = new System.Drawing.Size(85, 26);
@@ -505,7 +479,7 @@
             this.lblMaNV.AutoSize = true;
             this.lblMaNV.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMaNV.ForeColor = System.Drawing.Color.White;
-            this.lblMaNV.Location = new System.Drawing.Point(75, 59);
+            this.lblMaNV.Location = new System.Drawing.Point(86, 44);
             this.lblMaNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblMaNV.Name = "lblMaNV";
             this.lblMaNV.Size = new System.Drawing.Size(0, 26);
@@ -572,15 +546,15 @@
             this.lblTenNV.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblTenNV.Location = new System.Drawing.Point(41, 28);
             this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(143, 35);
+            this.lblTenNV.Size = new System.Drawing.Size(99, 35);
             this.lblTenNV.TabIndex = 5;
-            this.lblTenNV.Text = "Welcome, ";
+            this.lblTenNV.Text = "Chào, ";
             // 
             // picture_welcome
             // 
             this.picture_welcome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picture_welcome.BackgroundImage")));
             this.picture_welcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picture_welcome.Location = new System.Drawing.Point(170, 106);
+            this.picture_welcome.Location = new System.Drawing.Point(158, 79);
             this.picture_welcome.Margin = new System.Windows.Forms.Padding(4);
             this.picture_welcome.Name = "picture_welcome";
             this.picture_welcome.Size = new System.Drawing.Size(811, 399);
@@ -630,15 +604,13 @@
             this.panel_left.ResumeLayout(false);
             this.panel_invoice.ResumeLayout(false);
             this.panel_invoice.PerformLayout();
-            this.panel_statistic.ResumeLayout(false);
-            this.panel_statistic.PerformLayout();
             this.panel_customer.ResumeLayout(false);
             this.panel_customer.PerformLayout();
             this.panel_home.ResumeLayout(false);
             this.panel_home.PerformLayout();
             this.panel_product.ResumeLayout(false);
             this.panel_product.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.logo_home)).EndInit();
             this.panel_logout.ResumeLayout(false);
             this.panel_logout.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button_logout)).EndInit();
@@ -649,6 +621,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picture_welcome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion
@@ -678,7 +651,7 @@
         private System.Windows.Forms.ToolStripMenuItem menu_product_add;
         private System.Windows.Forms.ToolStripMenuItem menu_factory_view;
         private System.Windows.Forms.ToolStripMenuItem menu_factory_add;
-        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.PictureBox logo_home;
         private System.Windows.Forms.Panel panel_logout;
         private System.Windows.Forms.PictureBox button_logout;
         private System.Windows.Forms.Label label_logout;

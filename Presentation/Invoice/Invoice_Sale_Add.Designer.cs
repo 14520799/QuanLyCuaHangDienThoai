@@ -85,7 +85,7 @@
             // 
             this.txtGiamGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGiamGia.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGiamGia.Location = new System.Drawing.Point(558, 83);
+            this.txtGiamGia.Location = new System.Drawing.Point(558, 85);
             this.txtGiamGia.Margin = new System.Windows.Forms.Padding(4);
             this.txtGiamGia.Name = "txtGiamGia";
             this.txtGiamGia.Size = new System.Drawing.Size(193, 30);
@@ -98,10 +98,10 @@
             // 
             this.btnAddNew.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddNew.BackgroundImage")));
             this.btnAddNew.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddNew.Location = new System.Drawing.Point(435, 815);
+            this.btnAddNew.Location = new System.Drawing.Point(435, 822);
             this.btnAddNew.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddNew.Name = "btnAddNew";
-            this.btnAddNew.Size = new System.Drawing.Size(133, 48);
+            this.btnAddNew.Size = new System.Drawing.Size(125, 48);
             this.btnAddNew.TabIndex = 102;
             this.btnAddNew.TabStop = false;
             this.btnAddNew.Click += new System.EventHandler(this.btnAddNew_Click);
@@ -110,7 +110,7 @@
             // 
             this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdd.Location = new System.Drawing.Point(558, 160);
+            this.btnAdd.Location = new System.Drawing.Point(558, 166);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 35);
@@ -140,7 +140,7 @@
             this.grde.Controls.Add(this.label10);
             this.grde.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.grde.ForeColor = System.Drawing.Color.Red;
-            this.grde.Location = new System.Drawing.Point(22, 256);
+            this.grde.Location = new System.Drawing.Point(40, 276);
             this.grde.Margin = new System.Windows.Forms.Padding(4);
             this.grde.Name = "grde";
             this.grde.Padding = new System.Windows.Forms.Padding(4);
@@ -153,7 +153,7 @@
             // 
             this.cbTenHang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbTenHang.FormattingEnabled = true;
-            this.cbTenHang.Location = new System.Drawing.Point(166, 83);
+            this.cbTenHang.Location = new System.Drawing.Point(166, 85);
             this.cbTenHang.Margin = new System.Windows.Forms.Padding(4);
             this.cbTenHang.Name = "cbTenHang";
             this.cbTenHang.Size = new System.Drawing.Size(193, 30);
@@ -188,7 +188,7 @@
             this.txtThanhTien.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.txtThanhTien.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtThanhTien.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtThanhTien.Location = new System.Drawing.Point(558, 118);
+            this.txtThanhTien.Location = new System.Drawing.Point(558, 122);
             this.txtThanhTien.Margin = new System.Windows.Forms.Padding(4);
             this.txtThanhTien.Name = "txtThanhTien";
             this.txtThanhTien.ReadOnly = true;
@@ -247,7 +247,7 @@
             // 
             this.txtSoLuong.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoLuong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoLuong.Location = new System.Drawing.Point(166, 161);
+            this.txtSoLuong.Location = new System.Drawing.Point(166, 159);
             this.txtSoLuong.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoLuong.Name = "txtSoLuong";
             this.txtSoLuong.Size = new System.Drawing.Size(193, 30);
@@ -261,7 +261,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(40, 160);
+            this.label14.Location = new System.Drawing.Point(40, 159);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(92, 23);
@@ -282,7 +282,7 @@
             // 
             this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(659, 160);
+            this.btnDelete.Location = new System.Drawing.Point(659, 166);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(92, 35);
@@ -398,10 +398,10 @@
             // 
             this.btnSubmit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSubmit.BackgroundImage")));
             this.btnSubmit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSubmit.Location = new System.Drawing.Point(293, 815);
+            this.btnSubmit.Location = new System.Drawing.Point(293, 822);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(133, 48);
+            this.btnSubmit.Size = new System.Drawing.Size(125, 48);
             this.btnSubmit.TabIndex = 103;
             this.btnSubmit.TabStop = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
@@ -442,7 +442,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(22, 13);
+            this.groupBox1.Location = new System.Drawing.Point(40, 31);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -599,7 +599,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1112, 733);
+            this.ClientSize = new System.Drawing.Size(894, 733);
             this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.grde);
             this.Controls.Add(this.btnSubmit);

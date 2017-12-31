@@ -44,7 +44,7 @@
             // 
             this.cbThuocTinh.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbThuocTinh.FormattingEnabled = true;
-            this.cbThuocTinh.Location = new System.Drawing.Point(209, 46);
+            this.cbThuocTinh.Location = new System.Drawing.Point(218, 35);
             this.cbThuocTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbThuocTinh.Name = "cbThuocTinh";
             this.cbThuocTinh.Size = new System.Drawing.Size(148, 29);
@@ -62,7 +62,7 @@
             "Sản phẩm",
             "Hóa đơn mua",
             "Hóa đơn bán"});
-            this.cbDanhMuc.Location = new System.Drawing.Point(28, 46);
+            this.cbDanhMuc.Location = new System.Drawing.Point(37, 35);
             this.cbDanhMuc.Margin = new System.Windows.Forms.Padding(4);
             this.cbDanhMuc.Name = "cbDanhMuc";
             this.cbDanhMuc.Size = new System.Drawing.Size(148, 29);
@@ -74,7 +74,7 @@
             // 
             this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
             this.btnSearch.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearch.Location = new System.Drawing.Point(642, 41);
+            this.btnSearch.Location = new System.Drawing.Point(651, 30);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(4);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(107, 40);
@@ -96,7 +96,7 @@
             this.SearchBox.Controls.Add(this.dgvKetQua);
             this.SearchBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SearchBox.ForeColor = System.Drawing.Color.Red;
-            this.SearchBox.Location = new System.Drawing.Point(28, 97);
+            this.SearchBox.Location = new System.Drawing.Point(37, 86);
             this.SearchBox.Margin = new System.Windows.Forms.Padding(4);
             this.SearchBox.Name = "SearchBox";
             this.SearchBox.Padding = new System.Windows.Forms.Padding(4);
@@ -117,7 +117,7 @@
             "Hãng Sản Xuất",
             "Hóa Đơn Mua",
             "Hóa Đơn Bán"});
-            this.cbTuKhoa.Location = new System.Drawing.Point(389, 46);
+            this.cbTuKhoa.Location = new System.Drawing.Point(398, 35);
             this.cbTuKhoa.Margin = new System.Windows.Forms.Padding(4);
             this.cbTuKhoa.Name = "cbTuKhoa";
             this.cbTuKhoa.Size = new System.Drawing.Size(220, 29);

@@ -109,7 +109,7 @@ namespace Presentation.Product
                 txtTenSP.Text = dgvSanPham.CurrentRow.Cells[1].Value.ToString();
                 picHinhAnh.Image = Image.FromFile(Application.StartupPath + @"\Image\" + dgvSanPham.CurrentRow.Cells[2].Value.ToString());
                 picHinhAnh.Text = dgvSanPham.CurrentRow.Cells[2].Value.ToString();
-                txtDonGia.Text = dgvSanPham.CurrentRow.Cells[3].Value.ToString();
+                txtDonGia.Text = dgvSanPham.CurrentRow.Cells[3].Value.ToString().Replace(".000", "");
                 txtMoTa.Text = dgvSanPham.CurrentRow.Cells[4].Value.ToString();
                 txtSoLuong.Text = dgvSanPham.CurrentRow.Cells[5].Value.ToString();
                 txtManHinh.Text = dgvSanPham.CurrentRow.Cells[6].Value.ToString();

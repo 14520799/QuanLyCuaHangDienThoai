@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee_Add));
             this.error = new System.Windows.Forms.Label();
             this.InfoBox = new System.Windows.Forms.GroupBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
@@ -48,7 +49,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.PictureBox();
             this.btnClear = new System.Windows.Forms.PictureBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.InfoBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnClear)).BeginInit();
@@ -85,21 +85,30 @@
             this.InfoBox.Controls.Add(this.label1);
             this.InfoBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoBox.ForeColor = System.Drawing.Color.Red;
-            this.InfoBox.Location = new System.Drawing.Point(13, 13);
-            this.InfoBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.InfoBox.Location = new System.Drawing.Point(37, 29);
+            this.InfoBox.Margin = new System.Windows.Forms.Padding(4);
             this.InfoBox.Name = "InfoBox";
-            this.InfoBox.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.InfoBox.Size = new System.Drawing.Size(1083, 268);
+            this.InfoBox.Padding = new System.Windows.Forms.Padding(4);
+            this.InfoBox.Size = new System.Drawing.Size(1003, 268);
             this.InfoBox.TabIndex = 61;
             this.InfoBox.TabStop = false;
             this.InfoBox.Text = "THÔNG TIN NHÂN VIÊN";
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F);
+            this.txtDiaChi.Location = new System.Drawing.Point(628, 150);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(334, 30);
+            this.txtDiaChi.TabIndex = 62;
             // 
             // txtMaNV
             // 
             this.txtMaNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMaNV.Location = new System.Drawing.Point(154, 45);
-            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaNV.Name = "txtMaNV";
             this.txtMaNV.Size = new System.Drawing.Size(260, 30);
             this.txtMaNV.TabIndex = 61;
@@ -132,7 +141,7 @@
             this.cbChucVu.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.cbChucVu.FormattingEnabled = true;
             this.cbChucVu.Location = new System.Drawing.Point(628, 197);
-            this.cbChucVu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.cbChucVu.Name = "cbChucVu";
             this.cbChucVu.Size = new System.Drawing.Size(334, 30);
             this.cbChucVu.TabIndex = 57;
@@ -194,7 +203,7 @@
             this.txtSoDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoDT.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtSoDT.Location = new System.Drawing.Point(628, 44);
-            this.txtSoDT.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(334, 30);
             this.txtSoDT.TabIndex = 38;
@@ -207,7 +216,7 @@
             "Nam",
             "Nữ"});
             this.cbGioiTinh.Location = new System.Drawing.Point(154, 194);
-            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(260, 30);
             this.cbGioiTinh.TabIndex = 43;
@@ -217,7 +226,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtEmail.Location = new System.Drawing.Point(628, 96);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(334, 30);
             this.txtEmail.TabIndex = 39;
@@ -227,7 +236,7 @@
             this.txtTenNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTenNV.Font = new System.Drawing.Font("Times New Roman", 12F);
             this.txtTenNV.Location = new System.Drawing.Point(154, 93);
-            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(260, 30);
             this.txtTenNV.TabIndex = 37;
@@ -275,10 +284,10 @@
             // 
             this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdd.Location = new System.Drawing.Point(362, 316);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(393, 318);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(125, 43);
+            this.btnAdd.Size = new System.Drawing.Size(115, 43);
             this.btnAdd.TabIndex = 62;
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -287,22 +296,13 @@
             // 
             this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClear.Location = new System.Drawing.Point(522, 316);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnClear.Location = new System.Drawing.Point(521, 318);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(125, 43);
+            this.btnClear.Size = new System.Drawing.Size(115, 43);
             this.btnClear.TabIndex = 63;
             this.btnClear.TabStop = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F);
-            this.txtDiaChi.Location = new System.Drawing.Point(628, 150);
-            this.txtDiaChi.Multiline = true;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(334, 30);
-            this.txtDiaChi.TabIndex = 62;
             // 
             // Employee_Add
             // 
@@ -310,7 +310,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(989, 533);
+            this.ClientSize = new System.Drawing.Size(1074, 399);
             this.Controls.Add(this.error);
             this.Controls.Add(this.InfoBox);
             this.Controls.Add(this.btnAdd);

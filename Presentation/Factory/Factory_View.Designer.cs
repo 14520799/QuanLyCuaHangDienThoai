@@ -34,6 +34,11 @@
             this.label14 = new System.Windows.Forms.Label();
             this.gbHangSX = new System.Windows.Forms.GroupBox();
             this.dgvHangSX = new System.Windows.Forms.DataGridView();
+            this.MaSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.error = new System.Windows.Forms.Label();
             this.InfoBox = new System.Windows.Forms.GroupBox();
             this.cbTenHang = new System.Windows.Forms.ComboBox();
@@ -45,19 +50,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvSanPhamHang = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnCancel = new System.Windows.Forms.PictureBox();
-            this.btnUpdate = new System.Windows.Forms.PictureBox();
-            this.btnDelete = new System.Windows.Forms.PictureBox();
-            this.MaSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenSX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GiaBan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCancel = new System.Windows.Forms.PictureBox();
+            this.btnUpdate = new System.Windows.Forms.PictureBox();
+            this.btnDelete = new System.Windows.Forms.PictureBox();
             this.gbHangSX.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHangSX)).BeginInit();
             this.InfoBox.SuspendLayout();
@@ -72,7 +72,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(381, 80);
+            this.label14.Location = new System.Drawing.Point(393, 89);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(288, 42);
@@ -85,7 +85,7 @@
             this.gbHangSX.Controls.Add(this.label14);
             this.gbHangSX.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbHangSX.ForeColor = System.Drawing.Color.Red;
-            this.gbHangSX.Location = new System.Drawing.Point(18, 13);
+            this.gbHangSX.Location = new System.Drawing.Point(30, 22);
             this.gbHangSX.Margin = new System.Windows.Forms.Padding(4);
             this.gbHangSX.Name = "gbHangSX";
             this.gbHangSX.Padding = new System.Windows.Forms.Padding(4);
@@ -107,7 +107,7 @@
             this.Email1,
             this.DiaChi});
             this.dgvHangSX.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvHangSX.Location = new System.Drawing.Point(24, 34);
+            this.dgvHangSX.Location = new System.Drawing.Point(19, 35);
             this.dgvHangSX.Margin = new System.Windows.Forms.Padding(4);
             this.dgvHangSX.MultiSelect = false;
             this.dgvHangSX.Name = "dgvHangSX";
@@ -119,201 +119,6 @@
             this.dgvHangSX.Size = new System.Drawing.Size(1052, 168);
             this.dgvHangSX.TabIndex = 2;
             this.dgvHangSX.SelectionChanged += new System.EventHandler(this.dgvHangSX_SelectionChanged);
-            // 
-            // error
-            // 
-            this.error.AutoSize = true;
-            this.error.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.error.ForeColor = System.Drawing.Color.Red;
-            this.error.Location = new System.Drawing.Point(493, 283);
-            this.error.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.error.Name = "error";
-            this.error.Size = new System.Drawing.Size(0, 18);
-            this.error.TabIndex = 34;
-            // 
-            // InfoBox
-            // 
-            this.InfoBox.Controls.Add(this.cbTenHang);
-            this.InfoBox.Controls.Add(this.txtDiaChi);
-            this.InfoBox.Controls.Add(this.txtEmail);
-            this.InfoBox.Controls.Add(this.txtSoDT);
-            this.InfoBox.Controls.Add(this.label5);
-            this.InfoBox.Controls.Add(this.label4);
-            this.InfoBox.Controls.Add(this.label3);
-            this.InfoBox.Controls.Add(this.label1);
-            this.InfoBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InfoBox.ForeColor = System.Drawing.Color.Red;
-            this.InfoBox.Location = new System.Drawing.Point(18, 283);
-            this.InfoBox.Margin = new System.Windows.Forms.Padding(4);
-            this.InfoBox.Name = "InfoBox";
-            this.InfoBox.Padding = new System.Windows.Forms.Padding(4);
-            this.InfoBox.Size = new System.Drawing.Size(467, 214);
-            this.InfoBox.TabIndex = 30;
-            this.InfoBox.TabStop = false;
-            this.InfoBox.Text = "CHI TIẾT HÃNG SẢN XUẤT";
-            // 
-            // cbTenHang
-            // 
-            this.cbTenHang.FormattingEnabled = true;
-            this.cbTenHang.Location = new System.Drawing.Point(161, 43);
-            this.cbTenHang.Name = "cbTenHang";
-            this.cbTenHang.Size = new System.Drawing.Size(271, 31);
-            this.cbTenHang.TabIndex = 42;
-            // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDiaChi.Location = new System.Drawing.Point(161, 157);
-            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(271, 30);
-            this.txtDiaChi.TabIndex = 41;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(161, 119);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(271, 30);
-            this.txtEmail.TabIndex = 39;
-            // 
-            // txtSoDT
-            // 
-            this.txtSoDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSoDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDT.Location = new System.Drawing.Point(161, 81);
-            this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
-            this.txtSoDT.Name = "txtSoDT";
-            this.txtSoDT.Size = new System.Drawing.Size(271, 30);
-            this.txtSoDT.TabIndex = 38;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(36, 161);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(68, 23);
-            this.label5.TabIndex = 34;
-            this.label5.Text = "Địa chỉ";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(36, 123);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 23);
-            this.label4.TabIndex = 33;
-            this.label4.Text = "Email";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(36, 85);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 23);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Số ĐT";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(36, 47);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 23);
-            this.label1.TabIndex = 30;
-            this.label1.Text = "Tên hãng";
-            // 
-            // dgvSanPhamHang
-            // 
-            this.dgvSanPhamHang.AllowUserToAddRows = false;
-            this.dgvSanPhamHang.AllowUserToDeleteRows = false;
-            this.dgvSanPhamHang.BackgroundColor = System.Drawing.Color.LightGray;
-            this.dgvSanPhamHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.TenSP,
-            this.GiaBan,
-            this.Column1});
-            this.dgvSanPhamHang.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvSanPhamHang.Location = new System.Drawing.Point(26, 35);
-            this.dgvSanPhamHang.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvSanPhamHang.MultiSelect = false;
-            this.dgvSanPhamHang.Name = "dgvSanPhamHang";
-            this.dgvSanPhamHang.ReadOnly = true;
-            this.dgvSanPhamHang.RowHeadersVisible = false;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OrangeRed;
-            this.dgvSanPhamHang.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvSanPhamHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSanPhamHang.Size = new System.Drawing.Size(544, 220);
-            this.dgvSanPhamHang.TabIndex = 3;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.dgvSanPhamHang);
-            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(524, 283);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(584, 276);
-            this.groupBox1.TabIndex = 35;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "SẢN PHẨM CỦA HÃNG";
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
-            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.Location = new System.Drawing.Point(317, 516);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(125, 43);
-            this.btnCancel.TabIndex = 32;
-            this.btnCancel.TabStop = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // btnUpdate
-            // 
-            this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
-            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUpdate.Location = new System.Drawing.Point(51, 516);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(125, 43);
-            this.btnUpdate.TabIndex = 31;
-            this.btnUpdate.TabStop = false;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
-            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(184, 516);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(125, 43);
-            this.btnDelete.TabIndex = 33;
-            this.btnDelete.TabStop = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // MaSX
             // 
@@ -355,6 +160,151 @@
             this.DiaChi.Name = "DiaChi";
             this.DiaChi.ReadOnly = true;
             // 
+            // error
+            // 
+            this.error.AutoSize = true;
+            this.error.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.error.ForeColor = System.Drawing.Color.Red;
+            this.error.Location = new System.Drawing.Point(505, 292);
+            this.error.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.error.Name = "error";
+            this.error.Size = new System.Drawing.Size(0, 18);
+            this.error.TabIndex = 34;
+            // 
+            // InfoBox
+            // 
+            this.InfoBox.Controls.Add(this.cbTenHang);
+            this.InfoBox.Controls.Add(this.txtDiaChi);
+            this.InfoBox.Controls.Add(this.txtEmail);
+            this.InfoBox.Controls.Add(this.txtSoDT);
+            this.InfoBox.Controls.Add(this.label5);
+            this.InfoBox.Controls.Add(this.label4);
+            this.InfoBox.Controls.Add(this.label3);
+            this.InfoBox.Controls.Add(this.label1);
+            this.InfoBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InfoBox.ForeColor = System.Drawing.Color.Red;
+            this.InfoBox.Location = new System.Drawing.Point(30, 292);
+            this.InfoBox.Margin = new System.Windows.Forms.Padding(4);
+            this.InfoBox.Name = "InfoBox";
+            this.InfoBox.Padding = new System.Windows.Forms.Padding(4);
+            this.InfoBox.Size = new System.Drawing.Size(489, 214);
+            this.InfoBox.TabIndex = 30;
+            this.InfoBox.TabStop = false;
+            this.InfoBox.Text = "CHI TIẾT HÃNG SẢN XUẤT";
+            // 
+            // cbTenHang
+            // 
+            this.cbTenHang.FormattingEnabled = true;
+            this.cbTenHang.Location = new System.Drawing.Point(172, 46);
+            this.cbTenHang.Name = "cbTenHang";
+            this.cbTenHang.Size = new System.Drawing.Size(271, 31);
+            this.cbTenHang.TabIndex = 42;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDiaChi.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDiaChi.Location = new System.Drawing.Point(172, 160);
+            this.txtDiaChi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(271, 30);
+            this.txtDiaChi.TabIndex = 41;
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(172, 122);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(271, 30);
+            this.txtEmail.TabIndex = 39;
+            // 
+            // txtSoDT
+            // 
+            this.txtSoDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSoDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSoDT.Location = new System.Drawing.Point(172, 84);
+            this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoDT.Name = "txtSoDT";
+            this.txtSoDT.Size = new System.Drawing.Size(271, 30);
+            this.txtSoDT.TabIndex = 38;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label5.Location = new System.Drawing.Point(47, 164);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(68, 23);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "Địa chỉ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label4.Location = new System.Drawing.Point(47, 126);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 23);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Email";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Location = new System.Drawing.Point(47, 88);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(63, 23);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Số ĐT";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Location = new System.Drawing.Point(47, 50);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 23);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Tên hãng";
+            // 
+            // dgvSanPhamHang
+            // 
+            this.dgvSanPhamHang.AllowUserToAddRows = false;
+            this.dgvSanPhamHang.AllowUserToDeleteRows = false;
+            this.dgvSanPhamHang.BackgroundColor = System.Drawing.Color.LightGray;
+            this.dgvSanPhamHang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.TenSP,
+            this.GiaBan,
+            this.Column1});
+            this.dgvSanPhamHang.GridColor = System.Drawing.SystemColors.Control;
+            this.dgvSanPhamHang.Location = new System.Drawing.Point(21, 36);
+            this.dgvSanPhamHang.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvSanPhamHang.MultiSelect = false;
+            this.dgvSanPhamHang.Name = "dgvSanPhamHang";
+            this.dgvSanPhamHang.ReadOnly = true;
+            this.dgvSanPhamHang.RowHeadersVisible = false;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OrangeRed;
+            this.dgvSanPhamHang.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvSanPhamHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvSanPhamHang.Size = new System.Drawing.Size(544, 220);
+            this.dgvSanPhamHang.TabIndex = 3;
+            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "MaHang";
@@ -384,13 +334,63 @@
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvSanPhamHang);
+            this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Red;
+            this.groupBox1.Location = new System.Drawing.Point(536, 292);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(584, 276);
+            this.groupBox1.TabIndex = 35;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "SẢN PHẨM CỦA HÃNG";
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancel.Location = new System.Drawing.Point(337, 525);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(115, 43);
+            this.btnCancel.TabIndex = 32;
+            this.btnCancel.TabStop = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnUpdate
+            // 
+            this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
+            this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnUpdate.Location = new System.Drawing.Point(81, 525);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(115, 43);
+            this.btnUpdate.TabIndex = 31;
+            this.btnUpdate.TabStop = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
+            this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDelete.Location = new System.Drawing.Point(209, 525);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(115, 43);
+            this.btnDelete.TabIndex = 33;
+            this.btnDelete.TabStop = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
             // Factory_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1127, 611);
+            this.ClientSize = new System.Drawing.Size(1151, 611);
             this.Controls.Add(this.gbHangSX);
             this.Controls.Add(this.error);
             this.Controls.Add(this.InfoBox);

@@ -55,6 +55,15 @@
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
             this.DetailBox = new System.Windows.Forms.GroupBox();
             this.dgvNhanVien = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,15 +86,6 @@
             this.btnDelete = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.PictureBox();
             this.btnUpdate = new System.Windows.Forms.PictureBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InfoBox.SuspendLayout();
             this.DetailBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNhanVien)).BeginInit();
@@ -98,7 +98,7 @@
             // 
             this.txtTenNV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTenNV.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTenNV.Location = new System.Drawing.Point(160, 38);
+            this.txtTenNV.Location = new System.Drawing.Point(169, 51);
             this.txtTenNV.Margin = new System.Windows.Forms.Padding(4);
             this.txtTenNV.Name = "txtTenNV";
             this.txtTenNV.Size = new System.Drawing.Size(268, 30);
@@ -110,7 +110,7 @@
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.Black;
             this.label5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label5.Location = new System.Drawing.Point(481, 90);
+            this.label5.Location = new System.Drawing.Point(490, 103);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 23);
@@ -123,7 +123,7 @@
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label3.Location = new System.Drawing.Point(40, 189);
+            this.label3.Location = new System.Drawing.Point(49, 202);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(63, 23);
@@ -136,7 +136,7 @@
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.Black;
             this.label4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label4.Location = new System.Drawing.Point(481, 39);
+            this.label4.Location = new System.Drawing.Point(490, 52);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(58, 23);
@@ -149,7 +149,7 @@
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label6.ForeColor = System.Drawing.Color.Black;
             this.label6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label6.Location = new System.Drawing.Point(40, 139);
+            this.label6.Location = new System.Drawing.Point(49, 152);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(85, 23);
@@ -162,7 +162,7 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label2.Location = new System.Drawing.Point(40, 90);
+            this.label2.Location = new System.Drawing.Point(49, 103);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 23);
@@ -175,7 +175,7 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label1.Location = new System.Drawing.Point(40, 42);
+            this.label1.Location = new System.Drawing.Point(49, 55);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(75, 23);
@@ -186,7 +186,7 @@
             // 
             this.txtSoDT.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoDT.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSoDT.Location = new System.Drawing.Point(160, 185);
+            this.txtSoDT.Location = new System.Drawing.Point(169, 198);
             this.txtSoDT.Margin = new System.Windows.Forms.Padding(4);
             this.txtSoDT.Name = "txtSoDT";
             this.txtSoDT.Size = new System.Drawing.Size(268, 30);
@@ -196,7 +196,7 @@
             // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(601, 36);
+            this.txtEmail.Location = new System.Drawing.Point(610, 49);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(268, 30);
@@ -209,7 +209,7 @@
             this.cbQuyen.Items.AddRange(new object[] {
             "Quản trị",
             "Nhân viên"});
-            this.cbQuyen.Location = new System.Drawing.Point(601, 137);
+            this.cbQuyen.Location = new System.Drawing.Point(610, 150);
             this.cbQuyen.Margin = new System.Windows.Forms.Padding(4);
             this.cbQuyen.Name = "cbQuyen";
             this.cbQuyen.Size = new System.Drawing.Size(268, 30);
@@ -221,7 +221,7 @@
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label10.ForeColor = System.Drawing.Color.Black;
             this.label10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label10.Location = new System.Drawing.Point(481, 140);
+            this.label10.Location = new System.Drawing.Point(490, 153);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(66, 23);
@@ -230,6 +230,9 @@
             // 
             // InfoBox
             // 
+            this.InfoBox.Controls.Add(this.btnDelete);
+            this.InfoBox.Controls.Add(this.btnCancel);
+            this.InfoBox.Controls.Add(this.btnUpdate);
             this.InfoBox.Controls.Add(this.txtDiaChi);
             this.InfoBox.Controls.Add(this.dtNgaySinh);
             this.InfoBox.Controls.Add(this.cbChucVu);
@@ -248,18 +251,18 @@
             this.InfoBox.Controls.Add(this.label1);
             this.InfoBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.InfoBox.ForeColor = System.Drawing.Color.Red;
-            this.InfoBox.Location = new System.Drawing.Point(25, 389);
+            this.InfoBox.Location = new System.Drawing.Point(34, 385);
             this.InfoBox.Margin = new System.Windows.Forms.Padding(4);
             this.InfoBox.Name = "InfoBox";
             this.InfoBox.Padding = new System.Windows.Forms.Padding(4);
-            this.InfoBox.Size = new System.Drawing.Size(1091, 255);
+            this.InfoBox.Size = new System.Drawing.Size(1117, 359);
             this.InfoBox.TabIndex = 47;
             this.InfoBox.TabStop = false;
             this.InfoBox.Text = "CHI TIẾT NHÂN VIÊN";
             // 
             // txtDiaChi
             // 
-            this.txtDiaChi.Location = new System.Drawing.Point(601, 86);
+            this.txtDiaChi.Location = new System.Drawing.Point(610, 99);
             this.txtDiaChi.Multiline = true;
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(268, 30);
@@ -270,7 +273,7 @@
             this.dtNgaySinh.CustomFormat = "dd/MM/yyyy";
             this.dtNgaySinh.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtNgaySinh.Location = new System.Drawing.Point(160, 84);
+            this.dtNgaySinh.Location = new System.Drawing.Point(169, 97);
             this.dtNgaySinh.Name = "dtNgaySinh";
             this.dtNgaySinh.Size = new System.Drawing.Size(268, 30);
             this.dtNgaySinh.TabIndex = 70;
@@ -279,7 +282,7 @@
             // 
             this.cbChucVu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbChucVu.FormattingEnabled = true;
-            this.cbChucVu.Location = new System.Drawing.Point(601, 189);
+            this.cbChucVu.Location = new System.Drawing.Point(610, 202);
             this.cbChucVu.Margin = new System.Windows.Forms.Padding(4);
             this.cbChucVu.Name = "cbChucVu";
             this.cbChucVu.Size = new System.Drawing.Size(268, 30);
@@ -291,7 +294,7 @@
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Black;
             this.label9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label9.Location = new System.Drawing.Point(481, 192);
+            this.label9.Location = new System.Drawing.Point(490, 205);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(80, 23);
@@ -305,7 +308,7 @@
             this.cbGioiTinh.Items.AddRange(new object[] {
             "Nam",
             "Nữ"});
-            this.cbGioiTinh.Location = new System.Drawing.Point(160, 135);
+            this.cbGioiTinh.Location = new System.Drawing.Point(169, 148);
             this.cbGioiTinh.Margin = new System.Windows.Forms.Padding(4);
             this.cbGioiTinh.Name = "cbGioiTinh";
             this.cbGioiTinh.Size = new System.Drawing.Size(268, 30);
@@ -317,11 +320,11 @@
             this.DetailBox.Controls.Add(this.label14);
             this.DetailBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailBox.ForeColor = System.Drawing.Color.Red;
-            this.DetailBox.Location = new System.Drawing.Point(25, 27);
+            this.DetailBox.Location = new System.Drawing.Point(34, 23);
             this.DetailBox.Margin = new System.Windows.Forms.Padding(4);
             this.DetailBox.Name = "DetailBox";
             this.DetailBox.Padding = new System.Windows.Forms.Padding(4);
-            this.DetailBox.Size = new System.Drawing.Size(1091, 308);
+            this.DetailBox.Size = new System.Drawing.Size(1117, 317);
             this.DetailBox.TabIndex = 45;
             this.DetailBox.TabStop = false;
             this.DetailBox.Text = "DANH SÁCH NHÂN VIÊN";
@@ -345,7 +348,7 @@
             this.Column9,
             this.Column8});
             this.dgvNhanVien.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvNhanVien.Location = new System.Drawing.Point(16, 37);
+            this.dgvNhanVien.Location = new System.Drawing.Point(25, 38);
             this.dgvNhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgvNhanVien.MultiSelect = false;
             this.dgvNhanVien.Name = "dgvNhanVien";
@@ -358,11 +361,82 @@
             this.dgvNhanVien.TabIndex = 11;
             this.dgvNhanVien.SelectionChanged += new System.EventHandler(this.dgvNhanVien_SelectionChanged);
             // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaNV";
+            this.Column1.HeaderText = "Mã NV";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "TenNV";
+            this.Column2.HeaderText = "Tên NV";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Width = 104;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "NgaySinh";
+            this.Column3.HeaderText = "Ngày sinh";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 121;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "GioiTinh";
+            this.Column4.HeaderText = "Giới tính";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            this.Column4.Width = 114;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "SoDT";
+            this.Column5.HeaderText = "Số ĐT";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            this.Column5.Width = 92;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "Email";
+            this.Column6.HeaderText = "Email";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            this.Column6.Width = 87;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "DiaChi";
+            this.Column7.HeaderText = "Địa chỉ";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Width = 97;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "ChucVu";
+            this.Column9.HeaderText = "Chức vụ";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            this.Column9.Width = 109;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Quyen";
+            this.Column8.HeaderText = "Quyền";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Width = 95;
+            // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(360, 68);
+            this.label14.Location = new System.Drawing.Point(369, 64);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(288, 42);
@@ -500,107 +574,34 @@
             // 
             this.btnDelete.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDelete.BackgroundImage")));
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDelete.Location = new System.Drawing.Point(428, 682);
+            this.btnDelete.Location = new System.Drawing.Point(458, 277);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(125, 43);
-            this.btnDelete.TabIndex = 53;
+            this.btnDelete.Size = new System.Drawing.Size(115, 43);
+            this.btnDelete.TabIndex = 74;
             this.btnDelete.TabStop = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.Location = new System.Drawing.Point(568, 682);
+            this.btnCancel.Location = new System.Drawing.Point(581, 277);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(125, 43);
-            this.btnCancel.TabIndex = 52;
+            this.btnCancel.Size = new System.Drawing.Size(115, 43);
+            this.btnCancel.TabIndex = 73;
             this.btnCancel.TabStop = false;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUpdate.Location = new System.Drawing.Point(286, 682);
+            this.btnUpdate.Location = new System.Drawing.Point(335, 277);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(125, 43);
-            this.btnUpdate.TabIndex = 51;
+            this.btnUpdate.Size = new System.Drawing.Size(115, 43);
+            this.btnUpdate.TabIndex = 72;
             this.btnUpdate.TabStop = false;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "MaNV";
-            this.Column1.HeaderText = "Mã NV";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "TenNV";
-            this.Column2.HeaderText = "Tên NV";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 104;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "NgaySinh";
-            this.Column3.HeaderText = "Ngày sinh";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 121;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "GioiTinh";
-            this.Column4.HeaderText = "Giới tính";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 114;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "SoDT";
-            this.Column5.HeaderText = "Số ĐT";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 92;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "Email";
-            this.Column6.HeaderText = "Email";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 87;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "DiaChi";
-            this.Column7.HeaderText = "Địa chỉ";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Width = 97;
-            // 
-            // Column9
-            // 
-            this.Column9.DataPropertyName = "ChucVu";
-            this.Column9.HeaderText = "Chức vụ";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            this.Column9.Width = 109;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Quyen";
-            this.Column8.HeaderText = "Quyền";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Width = 95;
             // 
             // Employee_View
             // 
@@ -608,10 +609,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(901, 699);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnUpdate);
+            this.ClientSize = new System.Drawing.Size(1198, 733);
             this.Controls.Add(this.InfoBox);
             this.Controls.Add(this.DetailBox);
             this.Name = "Employee_View";
@@ -668,9 +666,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.TextBox txtDiaChi;
-        private System.Windows.Forms.PictureBox btnDelete;
-        private System.Windows.Forms.PictureBox btnCancel;
-        private System.Windows.Forms.PictureBox btnUpdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -680,5 +675,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.PictureBox btnDelete;
+        private System.Windows.Forms.PictureBox btnCancel;
+        private System.Windows.Forms.PictureBox btnUpdate;
     }
 }

@@ -79,3 +79,4 @@ C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.pdb
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Admin.Admin_Search.resources
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Statistic.Statistic_View.resources
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Statistic.Statistic_View.resources

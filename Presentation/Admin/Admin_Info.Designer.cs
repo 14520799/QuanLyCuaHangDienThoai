@@ -40,12 +40,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.info = new System.Windows.Forms.GroupBox();
+            this.txtMaNV = new System.Windows.Forms.TextBox();
+            this.txtDiaChi = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.dtNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.cbGioiTinh = new System.Windows.Forms.ComboBox();
-            this.txtDiaChi = new System.Windows.Forms.TextBox();
-            this.txtMaNV = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnUpdate)).BeginInit();
             this.info.SuspendLayout();
@@ -55,10 +55,10 @@
             // 
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCancel.Location = new System.Drawing.Point(301, 455);
+            this.btnCancel.Location = new System.Drawing.Point(278, 467);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(125, 43);
+            this.btnCancel.Size = new System.Drawing.Size(115, 43);
             this.btnCancel.TabIndex = 28;
             this.btnCancel.TabStop = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -67,10 +67,10 @@
             // 
             this.btnUpdate.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnUpdate.BackgroundImage")));
             this.btnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnUpdate.Location = new System.Drawing.Point(164, 455);
+            this.btnUpdate.Location = new System.Drawing.Point(155, 467);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 43);
+            this.btnUpdate.Size = new System.Drawing.Size(115, 43);
             this.btnUpdate.TabIndex = 27;
             this.btnUpdate.TabStop = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
@@ -193,14 +193,44 @@
             this.info.Controls.Add(this.label1);
             this.info.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.info.ForeColor = System.Drawing.Color.Red;
-            this.info.Location = new System.Drawing.Point(13, 14);
+            this.info.Location = new System.Drawing.Point(38, 28);
             this.info.Margin = new System.Windows.Forms.Padding(4);
             this.info.Name = "info";
             this.info.Padding = new System.Windows.Forms.Padding(4);
-            this.info.Size = new System.Drawing.Size(551, 415);
+            this.info.Size = new System.Drawing.Size(475, 415);
             this.info.TabIndex = 29;
             this.info.TabStop = false;
             this.info.Text = "THÔNG TIN QUẢN TRỊ VIÊN";
+            // 
+            // txtMaNV
+            // 
+            this.txtMaNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.txtMaNV.Location = new System.Drawing.Point(170, 52);
+            this.txtMaNV.Name = "txtMaNV";
+            this.txtMaNV.ReadOnly = true;
+            this.txtMaNV.Size = new System.Drawing.Size(255, 30);
+            this.txtMaNV.TabIndex = 73;
+            // 
+            // txtDiaChi
+            // 
+            this.txtDiaChi.Location = new System.Drawing.Point(170, 347);
+            this.txtDiaChi.Multiline = true;
+            this.txtDiaChi.Name = "txtDiaChi";
+            this.txtDiaChi.Size = new System.Drawing.Size(255, 30);
+            this.txtDiaChi.TabIndex = 71;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label7.Location = new System.Drawing.Point(42, 55);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(86, 23);
+            this.label7.TabIndex = 72;
+            this.label7.Text = "Mã QTV";
             // 
             // txtTenNV
             // 
@@ -239,42 +269,12 @@
             this.cbGioiTinh.TabIndex = 14;
             this.cbGioiTinh.Text = "Nam";
             // 
-            // txtDiaChi
-            // 
-            this.txtDiaChi.Location = new System.Drawing.Point(170, 347);
-            this.txtDiaChi.Multiline = true;
-            this.txtDiaChi.Name = "txtDiaChi";
-            this.txtDiaChi.Size = new System.Drawing.Size(255, 30);
-            this.txtDiaChi.TabIndex = 71;
-            // 
-            // txtMaNV
-            // 
-            this.txtMaNV.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.txtMaNV.Location = new System.Drawing.Point(170, 52);
-            this.txtMaNV.Name = "txtMaNV";
-            this.txtMaNV.ReadOnly = true;
-            this.txtMaNV.Size = new System.Drawing.Size(255, 30);
-            this.txtMaNV.TabIndex = 73;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.label7.Location = new System.Drawing.Point(42, 55);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 23);
-            this.label7.TabIndex = 72;
-            this.label7.Text = "Mã QTV";
-            // 
             // Admin_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(581, 522);
+            this.ClientSize = new System.Drawing.Size(865, 548);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.info);

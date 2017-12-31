@@ -62,11 +62,11 @@
             this.InfoBox.Controls.Add(this.label1);
             this.InfoBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.InfoBox.ForeColor = System.Drawing.Color.Red;
-            this.InfoBox.Location = new System.Drawing.Point(18, 13);
+            this.InfoBox.Location = new System.Drawing.Point(34, 25);
             this.InfoBox.Margin = new System.Windows.Forms.Padding(4);
             this.InfoBox.Name = "InfoBox";
             this.InfoBox.Padding = new System.Windows.Forms.Padding(4);
-            this.InfoBox.Size = new System.Drawing.Size(519, 331);
+            this.InfoBox.Size = new System.Drawing.Size(484, 275);
             this.InfoBox.TabIndex = 63;
             this.InfoBox.TabStop = false;
             this.InfoBox.Text = "THÔNG TIN HÃNG SẢN XUẤT";
@@ -200,10 +200,10 @@
             // 
             this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnClear.Location = new System.Drawing.Point(287, 370);
+            this.btnClear.Location = new System.Drawing.Point(279, 320);
             this.btnClear.Margin = new System.Windows.Forms.Padding(4);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(125, 43);
+            this.btnClear.Size = new System.Drawing.Size(115, 43);
             this.btnClear.TabIndex = 65;
             this.btnClear.TabStop = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -212,10 +212,10 @@
             // 
             this.btnAdd.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAdd.BackgroundImage")));
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAdd.Location = new System.Drawing.Point(127, 370);
+            this.btnAdd.Location = new System.Drawing.Point(149, 320);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(125, 43);
+            this.btnAdd.Size = new System.Drawing.Size(115, 43);
             this.btnAdd.TabIndex = 64;
             this.btnAdd.TabStop = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);

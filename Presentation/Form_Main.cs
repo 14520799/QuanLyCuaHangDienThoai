@@ -18,7 +18,7 @@ namespace Presentation
         {
             InitializeComponent();
             lblMaNV.Text = MaNV.ToUpper();
-            lblTenNV.Text = "Welcome, " + TenNV;
+            lblTenNV.Text = "Chào, " + TenNV + " !";
             this.MaNV = MaNV;
         }
 
@@ -404,10 +404,10 @@ namespace Presentation
             panel_statistic.Visible = true;
         }
 
-        // Đóng tất cả các form
-        private void Form_Main_FormClosed(object sender, FormClosedEventArgs e)
+        // Click logo home để quay về trang quản trị
+        private void logo_home_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            button_admin_Click(sender, e);
         }
 
         // Click Logout để đăng xuất
@@ -415,6 +415,12 @@ namespace Presentation
         {
             Hide();
             new Admin.Admin_Login().Show();
+        }
+
+        // Đóng tất cả các form
+        private void Form_Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

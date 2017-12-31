@@ -37,7 +37,7 @@
             // 
             this.picWelcome.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picWelcome.BackgroundImage")));
             this.picWelcome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.picWelcome.Location = new System.Drawing.Point(276, 115);
+            this.picWelcome.Location = new System.Drawing.Point(157, 79);
             this.picWelcome.Margin = new System.Windows.Forms.Padding(4);
             this.picWelcome.Name = "picWelcome";
             this.picWelcome.Size = new System.Drawing.Size(811, 399);

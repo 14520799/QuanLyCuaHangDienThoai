@@ -58,7 +58,7 @@
             this.DetailBox.Controls.Add(this.dgvHoaDonMua);
             this.DetailBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailBox.ForeColor = System.Drawing.Color.Red;
-            this.DetailBox.Location = new System.Drawing.Point(13, 13);
+            this.DetailBox.Location = new System.Drawing.Point(33, 24);
             this.DetailBox.Margin = new System.Windows.Forms.Padding(4);
             this.DetailBox.Name = "DetailBox";
             this.DetailBox.Padding = new System.Windows.Forms.Padding(4);
@@ -81,7 +81,7 @@
             this.TongTien,
             this.SoTienNo});
             this.dgvHoaDonMua.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvHoaDonMua.Location = new System.Drawing.Point(16, 36);
+            this.dgvHoaDonMua.Location = new System.Drawing.Point(20, 35);
             this.dgvHoaDonMua.Margin = new System.Windows.Forms.Padding(4);
             this.dgvHoaDonMua.MultiSelect = false;
             this.dgvHoaDonMua.Name = "dgvHoaDonMua";
@@ -145,7 +145,7 @@
             this.groupBox1.Controls.Add(this.dgvChiTietMua);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(13, 367);
+            this.groupBox1.Location = new System.Drawing.Point(33, 378);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -168,7 +168,7 @@
             this.GiamGia,
             this.HinhAnh});
             this.dgvChiTietMua.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvChiTietMua.Location = new System.Drawing.Point(23, 36);
+            this.dgvChiTietMua.Location = new System.Drawing.Point(19, 37);
             this.dgvChiTietMua.Margin = new System.Windows.Forms.Padding(4);
             this.dgvChiTietMua.MultiSelect = false;
             this.dgvChiTietMua.Name = "dgvChiTietMua";
@@ -228,7 +228,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1129, 733);
+            this.ClientSize = new System.Drawing.Size(1146, 697);
             this.Controls.Add(this.DetailBox);
             this.Controls.Add(this.groupBox1);
             this.Name = "Invoice_Buy_View";
