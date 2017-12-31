@@ -46,8 +46,8 @@ namespace Presentation
 
         private void button_admin_Click(object sender, EventArgs e)
         {
-            Admin.Admin_Info admin_info = new Admin.Admin_Info(MaNV);
-            embed(admin_info);
+            Admin.Admin_Logo admin_logo = new Admin.Admin_Logo();
+            embed(admin_logo);
 
             panel_home.Visible = true;
             panel_employee.Visible = false;
@@ -389,6 +389,19 @@ namespace Presentation
 
             menu_invoice_sale_add.BackColor = Color.White;
             menu_invoice_sale_add.ForeColor = Color.OrangeRed;
+        }
+
+        private void Button_statistic_Click(object sender, System.EventArgs e)
+        {
+            Statistic.Statistic_View statistic_view = new Statistic.Statistic_View();
+            embed(statistic_view);
+
+            panel_home.Visible = false;
+            panel_employee.Visible = false;
+            panel_customer.Visible = false;
+            panel_product.Visible = false;
+            panel_invoice.Visible = false;
+            panel_statistic.Visible = true;
         }
 
         // Đóng tất cả các form

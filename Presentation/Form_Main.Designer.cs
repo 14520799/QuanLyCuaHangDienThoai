@@ -44,8 +44,8 @@
             this.menu_invoice_sale_view = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_invoice_sale_add = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_statistic = new System.Windows.Forms.MenuStrip();
-            this.menu_statistic_grow = new System.Windows.Forms.ToolStripMenuItem();
-            this.menu_statistic_math = new System.Windows.Forms.ToolStripMenuItem();
+            //this.menu_statistic_grow = new System.Windows.Forms.ToolStripMenuItem();
+            //this.menu_statistic_math = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_customer = new System.Windows.Forms.MenuStrip();
             this.menu_customer_view = new System.Windows.Forms.ToolStripMenuItem();
             this.menu_customer_add = new System.Windows.Forms.ToolStripMenuItem();
@@ -162,6 +162,7 @@
             this.button_statistic.Name = "button_statistic";
             this.button_statistic.Size = new System.Drawing.Size(171, 54);
             this.button_statistic.Text = "Thống kê";
+            this.button_statistic.Click += new System.EventHandler(Button_statistic_Click);
             // 
             // panel_above
             // 
@@ -264,36 +265,36 @@
             this.panel_statistic.Dock = System.Windows.Forms.DockStyle.None;
             this.panel_statistic.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_statistic.ImageScalingSize = new System.Drawing.Size(30, 30);
-            this.panel_statistic.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menu_statistic_grow,
-            this.menu_statistic_math});
+            //this.panel_statistic.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            //this.menu_statistic_grow,
+            //this.menu_statistic_math});
             this.panel_statistic.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow;
             this.panel_statistic.Location = new System.Drawing.Point(15, 126);
             this.panel_statistic.Name = "panel_statistic";
             this.panel_statistic.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
             this.panel_statistic.Size = new System.Drawing.Size(321, 167);
             this.panel_statistic.TabIndex = 9;
-            // 
-            // menu_statistic_grow
-            // 
-            this.menu_statistic_grow.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.menu_statistic_grow.ForeColor = System.Drawing.Color.White;
-            this.menu_statistic_grow.Image = ((System.Drawing.Image)(resources.GetObject("menu_statistic_grow.Image")));
-            this.menu_statistic_grow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_statistic_grow.Name = "menu_statistic_grow";
-            this.menu_statistic_grow.Size = new System.Drawing.Size(312, 34);
-            this.menu_statistic_grow.Text = "Growth rate deverlop";
-            this.menu_statistic_grow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // menu_statistic_math
-            // 
-            this.menu_statistic_math.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
-            this.menu_statistic_math.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.menu_statistic_math.Image = ((System.Drawing.Image)(resources.GetObject("menu_statistic_math.Image")));
-            this.menu_statistic_math.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.menu_statistic_math.Name = "menu_statistic_math";
-            this.menu_statistic_math.Size = new System.Drawing.Size(312, 34);
-            this.menu_statistic_math.Text = "Statistic";
+            //// 
+            //// menu_statistic_grow
+            //// 
+            //this.menu_statistic_grow.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            //this.menu_statistic_grow.ForeColor = System.Drawing.Color.White;
+            //this.menu_statistic_grow.Image = ((System.Drawing.Image)(resources.GetObject("menu_statistic_grow.Image")));
+            //this.menu_statistic_grow.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //this.menu_statistic_grow.Name = "menu_statistic_grow";
+            //this.menu_statistic_grow.Size = new System.Drawing.Size(312, 34);
+            //this.menu_statistic_grow.Text = "Growth rate deverlop";
+            //this.menu_statistic_grow.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //// 
+            //// menu_statistic_math
+            //// 
+            //this.menu_statistic_math.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold);
+            //this.menu_statistic_math.ForeColor = System.Drawing.Color.WhiteSmoke;
+            //this.menu_statistic_math.Image = ((System.Drawing.Image)(resources.GetObject("menu_statistic_math.Image")));
+            //this.menu_statistic_math.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            //this.menu_statistic_math.Name = "menu_statistic_math";
+            //this.menu_statistic_math.Size = new System.Drawing.Size(312, 34);
+            //this.menu_statistic_math.Text = "Statistic";
             // 
             // panel_customer
             // 
@@ -648,7 +649,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.picture_welcome)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -668,8 +668,8 @@
         private System.Windows.Forms.ToolStripMenuItem menu_invoice_sale_view;
         private System.Windows.Forms.ToolStripMenuItem menu_invoice_sale_add;
         private System.Windows.Forms.MenuStrip panel_statistic;
-        private System.Windows.Forms.ToolStripMenuItem menu_statistic_grow;
-        private System.Windows.Forms.ToolStripMenuItem menu_statistic_math;
+        //private System.Windows.Forms.ToolStripMenuItem menu_statistic_grow;
+        //private System.Windows.Forms.ToolStripMenuItem menu_statistic_math;
         private System.Windows.Forms.MenuStrip panel_customer;
         private System.Windows.Forms.ToolStripMenuItem menu_customer_view;
         private System.Windows.Forms.ToolStripMenuItem menu_customer_add;
