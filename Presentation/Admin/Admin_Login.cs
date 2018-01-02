@@ -35,6 +35,7 @@ namespace Presentation.Admin
             }
 
             MessageBox.Show("Vui lòng kiểm tra lại");
+            Application.Exit();
         }
 
         // Nhấn Enter để đăng nhập

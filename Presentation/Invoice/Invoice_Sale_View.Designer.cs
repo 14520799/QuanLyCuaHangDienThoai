@@ -58,11 +58,9 @@
             this.DetailBox.Controls.Add(this.dgvHoaDonBan);
             this.DetailBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailBox.ForeColor = System.Drawing.Color.Red;
-            this.DetailBox.Location = new System.Drawing.Point(34, 23);
-            this.DetailBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DetailBox.Location = new System.Drawing.Point(26, 19);
             this.DetailBox.Name = "DetailBox";
-            this.DetailBox.Padding = new System.Windows.Forms.Padding(4);
-            this.DetailBox.Size = new System.Drawing.Size(1080, 312);
+            this.DetailBox.Size = new System.Drawing.Size(642, 258);
             this.DetailBox.TabIndex = 43;
             this.DetailBox.TabStop = false;
             this.DetailBox.Text = "DANH SÁCH HÓA ĐƠN BÁN";
@@ -81,8 +79,7 @@
             this.TongTien,
             this.SoTienNo});
             this.dgvHoaDonBan.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvHoaDonBan.Location = new System.Drawing.Point(21, 38);
-            this.dgvHoaDonBan.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvHoaDonBan.Location = new System.Drawing.Point(16, 31);
             this.dgvHoaDonBan.MultiSelect = false;
             this.dgvHoaDonBan.Name = "dgvHoaDonBan";
             this.dgvHoaDonBan.ReadOnly = true;
@@ -92,7 +89,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OrangeRed;
             this.dgvHoaDonBan.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHoaDonBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDonBan.Size = new System.Drawing.Size(1045, 253);
+            this.dgvHoaDonBan.Size = new System.Drawing.Size(611, 206);
             this.dgvHoaDonBan.TabIndex = 11;
             this.dgvHoaDonBan.SelectionChanged += new System.EventHandler(this.dgvHoaDonBan_SelectionChanged);
             // 
@@ -145,11 +142,9 @@
             this.groupBox1.Controls.Add(this.dgvChiTietBan);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(34, 377);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(26, 306);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1080, 277);
+            this.groupBox1.Size = new System.Drawing.Size(642, 231);
             this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CHI TIẾT HÓA ĐƠN BÁN";
@@ -168,8 +163,7 @@
             this.GiamGia,
             this.HinhAnh});
             this.dgvChiTietBan.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvChiTietBan.Location = new System.Drawing.Point(20, 37);
-            this.dgvChiTietBan.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvChiTietBan.Location = new System.Drawing.Point(15, 30);
             this.dgvChiTietBan.MultiSelect = false;
             this.dgvChiTietBan.Name = "dgvChiTietBan";
             this.dgvChiTietBan.ReadOnly = true;
@@ -177,7 +171,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.OrangeRed;
             this.dgvChiTietBan.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChiTietBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChiTietBan.Size = new System.Drawing.Size(1038, 220);
+            this.dgvChiTietBan.Size = new System.Drawing.Size(612, 179);
             this.dgvChiTietBan.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
@@ -224,13 +218,14 @@
             // 
             // Invoice_Sale_View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1145, 733);
+            this.ClientSize = new System.Drawing.Size(687, 596);
             this.Controls.Add(this.DetailBox);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Invoice_Sale_View";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Invoice_Sale_View_Load);

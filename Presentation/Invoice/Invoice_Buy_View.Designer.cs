@@ -58,11 +58,9 @@
             this.DetailBox.Controls.Add(this.dgvHoaDonMua);
             this.DetailBox.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DetailBox.ForeColor = System.Drawing.Color.Red;
-            this.DetailBox.Location = new System.Drawing.Point(33, 24);
-            this.DetailBox.Margin = new System.Windows.Forms.Padding(4);
+            this.DetailBox.Location = new System.Drawing.Point(25, 20);
             this.DetailBox.Name = "DetailBox";
-            this.DetailBox.Padding = new System.Windows.Forms.Padding(4);
-            this.DetailBox.Size = new System.Drawing.Size(1080, 309);
+            this.DetailBox.Size = new System.Drawing.Size(555, 255);
             this.DetailBox.TabIndex = 36;
             this.DetailBox.TabStop = false;
             this.DetailBox.Text = "DANH SÁCH HÓA ĐƠN MUA";
@@ -81,8 +79,7 @@
             this.TongTien,
             this.SoTienNo});
             this.dgvHoaDonMua.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvHoaDonMua.Location = new System.Drawing.Point(20, 35);
-            this.dgvHoaDonMua.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvHoaDonMua.Location = new System.Drawing.Point(15, 28);
             this.dgvHoaDonMua.MultiSelect = false;
             this.dgvHoaDonMua.Name = "dgvHoaDonMua";
             this.dgvHoaDonMua.ReadOnly = true;
@@ -92,7 +89,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.OrangeRed;
             this.dgvHoaDonMua.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvHoaDonMua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHoaDonMua.Size = new System.Drawing.Size(1045, 253);
+            this.dgvHoaDonMua.Size = new System.Drawing.Size(525, 206);
             this.dgvHoaDonMua.TabIndex = 11;
             this.dgvHoaDonMua.SelectionChanged += new System.EventHandler(this.dgvHoaDonMua_SelectionChanged);
             // 
@@ -145,11 +142,9 @@
             this.groupBox1.Controls.Add(this.dgvChiTietMua);
             this.groupBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Red;
-            this.groupBox1.Location = new System.Drawing.Point(33, 378);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Location = new System.Drawing.Point(25, 307);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(1080, 277);
+            this.groupBox1.Size = new System.Drawing.Size(555, 230);
             this.groupBox1.TabIndex = 42;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "CHI TIẾT HÓA ĐƠN MUA";
@@ -168,8 +163,7 @@
             this.GiamGia,
             this.HinhAnh});
             this.dgvChiTietMua.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvChiTietMua.Location = new System.Drawing.Point(19, 37);
-            this.dgvChiTietMua.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvChiTietMua.Location = new System.Drawing.Point(14, 30);
             this.dgvChiTietMua.MultiSelect = false;
             this.dgvChiTietMua.Name = "dgvChiTietMua";
             this.dgvChiTietMua.ReadOnly = true;
@@ -177,7 +171,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.OrangeRed;
             this.dgvChiTietMua.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChiTietMua.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChiTietMua.Size = new System.Drawing.Size(1038, 220);
+            this.dgvChiTietMua.Size = new System.Drawing.Size(526, 179);
             this.dgvChiTietMua.TabIndex = 3;
             // 
             // dataGridViewTextBoxColumn1
@@ -224,13 +218,14 @@
             // 
             // Invoice_Buy_View
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.ClientSize = new System.Drawing.Size(1146, 697);
+            this.ClientSize = new System.Drawing.Size(605, 566);
             this.Controls.Add(this.DetailBox);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Invoice_Buy_View";
             this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Invoice_Buy_View_Load);

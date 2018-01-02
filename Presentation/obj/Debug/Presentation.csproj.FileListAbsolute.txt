@@ -37,6 +37,8 @@ G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Prese
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Product.Product_View.resources
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Properties.Resources.resources
 G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.csproj.GenerateResource.Cache
+G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Admin.Admin_Search.resources
+G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Statistic.Statistic_View.resources
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\bin\Debug\Presentation.exe.config
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\bin\Debug\Presentation.exe
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\bin\Debug\Presentation.pdb
@@ -74,9 +76,7 @@ C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Product.Product_Logo.resources
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Product.Product_View.resources
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Properties.Resources.resources
+C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Statistic.Statistic_View.resources
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.csproj.GenerateResource.Cache
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.exe
 C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.pdb
-G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Admin.Admin_Search.resources
-G:\Phuc\TLHT\MHHH\DOANMONHOC\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Statistic.Statistic_View.resources
-C:\Users\Admin\GitHub\QuanLyCuaHangDienThoai\Presentation\obj\Debug\Presentation.Statistic.Statistic_View.resources
